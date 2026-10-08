@@ -1,0 +1,10 @@
+{
+  "schema": "affinity-corpus-profile-v1",
+  "profile_id": "profile-004-scandinavian-modernist",
+  "version": "0.1.0",
+  "updated": "2026-10-08",
+  "status": "draft",
+  "persona": "scandinavian modernist buyer; skonvirke lineage, sculptural organic silver, handwrought",
+  "seeded_affinities": { "organic_modern": 1.0, "mid_century_modernist": 0.7 },
+  "rationale": "the skonvirke and scandinavian-modern etsy queries surface exactly this pairing (georg jensen, holger fischer c1905 danish skonvirke, 830s silver); the structural table has them as mutual neighbors (organic_modern 0.1456 in brutalist's path aside, mcm listed among organic_modern's computed neighbors). evidence: marketplace-evidence/etsy-listings.jsonl run ids vrwweozPhnz5ehXfk, 8AVThCBBSoijw3NLS; affinity-table.json"
+}

@@ -1,0 +1,10 @@
+{
+  "schema": "affinity-corpus-profile-v1",
+  "profile_id": "profile-002-antique-cluster",
+  "version": "0.1.0",
+  "updated": "2026-10-08",
+  "status": "draft",
+  "persona": "antique-era collector; ornate metalwork, repousse, era language over stones",
+  "seeded_affinities": { "victorian": 1.0, "georgian": 0.9, "edwardian": 0.8, "art_nouveau": 0.6 },
+  "rationale": "the computed mutual antique cluster (georgian/victorian/art_nouveau/edwardian at 0.40-0.53) is mirrored in the marketplace: ebay titles stack 'victorian edwardian' 21/58, 'georgian victorian' 9/58. evidence: affinity-table.json, marketplace-evidence/phrase-frequencies.jsonl"
+}

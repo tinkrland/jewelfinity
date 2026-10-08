@@ -1,0 +1,10 @@
+{
+  "schema": "affinity-corpus-profile-v1",
+  "profile_id": "profile-001-gothic-biker",
+  "version": "0.1.0",
+  "updated": "2026-10-08",
+  "status": "draft",
+  "persona": "dark-metal buyer; skull-and-chain pieces, stainless and heavy silver, no stones",
+  "seeded_affinities": { "gothic": 1.0, "biker": 0.9 },
+  "rationale": "the strongest pair in both the structural table (mutual top, 0.62) and the marketplace corpus: ebay titles co-title gothic and biker at scale (gothic bucket holds 50 biker titles of 151; biker bucket holds 52 gothic of 104; bigrams 'gothic biker' 16, 'biker gothic' 11). evidence: marketplace-evidence/phrase-frequencies.jsonl and ebay-listings.jsonl"
+}

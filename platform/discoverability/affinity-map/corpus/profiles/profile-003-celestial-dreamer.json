@@ -1,0 +1,10 @@
+{
+  "schema": "affinity-corpus-profile-v1",
+  "profile_id": "profile-003-celestial-dreamer",
+  "version": "0.1.0",
+  "updated": "2026-10-08",
+  "status": "draft",
+  "persona": "celestial buyer; moons, stars, suns, crescents in silver and gold",
+  "seeded_affinities": { "celestial": 1.0, "element_water": 0.5, "sign_cancer": 0.4, "metal_silver": 0.5 },
+  "rationale": "celestial is the symbol-richest style record; the marketplace shows moon/star/sun/crescent in exactly that order of prevalence (81/37/30/23 of 102 ebay titles), and the structural table puts metal_silver and sign_cancer in celestial's top neighbors. cross-vocabulary seeding exercises the union design. evidence: affinity-table.json, marketplace-evidence/phrase-frequencies.jsonl"
+}
