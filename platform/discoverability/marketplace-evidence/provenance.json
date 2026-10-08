@@ -28,7 +28,7 @@
   {
    "platform": "etsy",
    "actor": "automation-lab/etsy-scraper",
-   "items": 100,
+   "items": 500,
    "runs": [
     {
      "query": "brutalist jewelry",
@@ -41,19 +41,27 @@
     {
      "query": "egyptian revival jewelry",
      "run_id": "NlMk17klLsJ9AQ3xD"
+    },
+    {
+     "query": "skonvirke jewelry",
+     "run_id": "vrwweozPhnz5ehXfk"
+    },
+    {
+     "query": "scandinavian modern jewelry",
+     "run_id": "8AVThCBBSoijw3NLS"
     }
    ]
   }
  ],
- "method_notes": "ebay style assignment is deterministic title matching (a listing can match several styles). etsy rows carry their search query. solimet_title_check is a deterministic offline filter flagging stone/plastic terms in titles; false negatives possible (listing photos may show stones). apify free-plan dataset retention is 7 days; these files are the durable snapshot.",
+ "method_notes": "ebay style assignment is deterministic title matching (a listing can match several styles). etsy rows carry their search query. solimet_title_check is a deterministic offline filter flagging stone/plastic terms in titles; false negatives possible (listing photos may show stones). apify free-plan dataset retention is 7 days; these files are the durable snapshot. the skonvirke and scandinavian-modern queries (2026-10-08 follow-up) are kept as raw listings under style_query organic_modern and are not folded into phrase-frequencies.jsonl, to avoid double-counting that style's bucket.",
  "files": {
   "ebay-listings.jsonl": {
    "rows": 852,
    "sha256": "63b27199aee0cb7f1e81fcdf15e97380a786a2600da96ac2d0859dbc5978c6e7"
   },
   "etsy-listings.jsonl": {
-   "rows": 300,
-   "sha256": "f2a31b097e894594f7d0e473dde1cde14703c50b6f07f8ddf2f7717fb56bef9a"
+   "rows": 500,
+   "sha256": "832f82cec8a52636591294c5da0c29f6093a440a030afbc547b63fb30513c333"
   },
   "phrase-frequencies.jsonl": {
    "rows": 726,
