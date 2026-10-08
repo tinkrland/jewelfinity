@@ -18,6 +18,9 @@ what it is for:
 
 honest findings from this snapshot, kept here so they are not relearned:
 
+- etsy needs the query "georgian era jewelry": plain "georgian jewelry"
+  returns zero items there (run succeeded, empty dataset, twice)
+
 - brutalist and organic modern are nearly absent from ebay's solimet space
   (1 and 3 title matches in 852 listings); brutalist lives on etsy (handmade
   silver modernist work), organic modern does not map cleanly to any etsy

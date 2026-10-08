@@ -724,3 +724,503 @@
 {"source": "etsy", "style_id": "egyptian_revival", "n_items": 100, "phrase": "inlayed winged", "count": 3, "kind": "bigram"}
 {"source": "etsy", "style_id": "egyptian_revival", "n_items": 100, "phrase": "scarab beatle", "count": 3, "kind": "bigram"}
 {"source": "etsy", "style_id": "egyptian_revival", "n_items": 100, "phrase": "deco egyptian", "count": 3, "kind": "bigram"}
+{"source": "etsy", "style_id": "georgian", "n_items": 100, "phrase": "georgian", "count": 89, "kind": "unigram"}
+{"source": "etsy", "style_id": "georgian", "n_items": 100, "phrase": "cut", "count": 55, "kind": "unigram"}
+{"source": "etsy", "style_id": "georgian", "n_items": 100, "phrase": "gold", "count": 55, "kind": "unigram"}
+{"source": "etsy", "style_id": "georgian", "n_items": 100, "phrase": "diamond", "count": 41, "kind": "unigram"}
+{"source": "etsy", "style_id": "georgian", "n_items": 100, "phrase": "moissanite", "count": 40, "kind": "unigram"}
+{"source": "etsy", "style_id": "georgian", "n_items": 100, "phrase": "down", "count": 23, "kind": "unigram"}
+{"source": "etsy", "style_id": "georgian", "n_items": 100, "phrase": "back", "count": 23, "kind": "unigram"}
+{"source": "etsy", "style_id": "georgian", "n_items": 100, "phrase": "blackened", "count": 22, "kind": "unigram"}
+{"source": "etsy", "style_id": "georgian", "n_items": 100, "phrase": "silver", "count": 21, "kind": "unigram"}
+{"source": "etsy", "style_id": "georgian", "n_items": 100, "phrase": "old", "count": 19, "kind": "unigram"}
+{"source": "etsy", "style_id": "georgian", "n_items": 100, "phrase": "victorian", "count": 18, "kind": "unigram"}
+{"source": "etsy", "style_id": "georgian", "n_items": 100, "phrase": "lab", "count": 17, "kind": "unigram"}
+{"source": "etsy", "style_id": "georgian", "n_items": 100, "phrase": "round", "count": 16, "kind": "unigram"}
+{"source": "etsy", "style_id": "georgian", "n_items": 100, "phrase": "button", "count": 16, "kind": "unigram"}
+{"source": "etsy", "style_id": "georgian", "n_items": 100, "phrase": "solid", "count": 15, "kind": "unigram"}
+{"source": "etsy", "style_id": "georgian", "n_items": 100, "phrase": "hoop", "count": 13, "kind": "unigram"}
+{"source": "etsy", "style_id": "georgian", "n_items": 100, "phrase": "mine", "count": 13, "kind": "unigram"}
+{"source": "etsy", "style_id": "georgian", "n_items": 100, "phrase": "sterling", "count": 12, "kind": "unigram"}
+{"source": "etsy", "style_id": "georgian", "n_items": 100, "phrase": "wedding", "count": 12, "kind": "unigram"}
+{"source": "etsy", "style_id": "georgian", "n_items": 100, "phrase": "rose", "count": 12, "kind": "unigram"}
+{"source": "etsy", "style_id": "georgian", "n_items": 100, "phrase": "drop", "count": 11, "kind": "unigram"}
+{"source": "etsy", "style_id": "georgian", "n_items": 100, "phrase": "pear", "count": 11, "kind": "unigram"}
+{"source": "etsy", "style_id": "georgian", "n_items": 100, "phrase": "solitaire", "count": 11, "kind": "unigram"}
+{"source": "etsy", "style_id": "georgian", "n_items": 100, "phrase": "paste", "count": 10, "kind": "unigram"}
+{"source": "etsy", "style_id": "georgian", "n_items": 100, "phrase": "amethyst", "count": 10, "kind": "unigram"}
+{"source": "etsy", "style_id": "georgian", "n_items": 100, "phrase": "yellow", "count": 10, "kind": "unigram"}
+{"source": "etsy", "style_id": "georgian", "n_items": 100, "phrase": "oval", "count": 9, "kind": "unigram"}
+{"source": "etsy", "style_id": "georgian", "n_items": 100, "phrase": "grown", "count": 9, "kind": "unigram"}
+{"source": "etsy", "style_id": "georgian", "n_items": 100, "phrase": "collet", "count": 8, "kind": "unigram"}
+{"source": "etsy", "style_id": "georgian", "n_items": 100, "phrase": "her", "count": 8, "kind": "unigram"}
+{"source": "etsy", "style_id": "georgian", "n_items": 100, "phrase": "cut down", "count": 22, "kind": "bigram"}
+{"source": "etsy", "style_id": "georgian", "n_items": 100, "phrase": "georgian cut", "count": 21, "kind": "bigram"}
+{"source": "etsy", "style_id": "georgian", "n_items": 100, "phrase": "button back", "count": 16, "kind": "bigram"}
+{"source": "etsy", "style_id": "georgian", "n_items": 100, "phrase": "old mine", "count": 13, "kind": "bigram"}
+{"source": "etsy", "style_id": "georgian", "n_items": 100, "phrase": "solid gold", "count": 12, "kind": "bigram"}
+{"source": "etsy", "style_id": "georgian", "n_items": 100, "phrase": "sterling silver", "count": 12, "kind": "bigram"}
+{"source": "etsy", "style_id": "georgian", "n_items": 100, "phrase": "down button", "count": 11, "kind": "bigram"}
+{"source": "etsy", "style_id": "georgian", "n_items": 100, "phrase": "moissanite georgian", "count": 10, "kind": "bigram"}
+{"source": "etsy", "style_id": "georgian", "n_items": 100, "phrase": "yellow gold", "count": 10, "kind": "bigram"}
+{"source": "etsy", "style_id": "georgian", "n_items": 100, "phrase": "cut diamond", "count": 10, "kind": "bigram"}
+{"source": "etsy", "style_id": "georgian", "n_items": 100, "phrase": "blackened gold", "count": 9, "kind": "bigram"}
+{"source": "etsy", "style_id": "georgian", "n_items": 100, "phrase": "lab grown", "count": 9, "kind": "bigram"}
+{"source": "etsy", "style_id": "georgian", "n_items": 100, "phrase": "round moissanite", "count": 9, "kind": "bigram"}
+{"source": "etsy", "style_id": "georgian", "n_items": 100, "phrase": "grown diamond", "count": 8, "kind": "bigram"}
+{"source": "etsy", "style_id": "georgian", "n_items": 100, "phrase": "georgian victorian", "count": 7, "kind": "bigram"}
+{"source": "etsy", "style_id": "georgian", "n_items": 100, "phrase": "rose cut", "count": 7, "kind": "bigram"}
+{"source": "etsy", "style_id": "georgian", "n_items": 100, "phrase": "cut moissanite", "count": 7, "kind": "bigram"}
+{"source": "etsy", "style_id": "georgian", "n_items": 100, "phrase": "lab diamond", "count": 6, "kind": "bigram"}
+{"source": "etsy", "style_id": "georgian", "n_items": 100, "phrase": "georgian inspired", "count": 5, "kind": "bigram"}
+{"source": "etsy", "style_id": "georgian", "n_items": 100, "phrase": "gypset hoop", "count": 5, "kind": "bigram"}
+{"source": "etsy", "style_id": "victorian", "n_items": 100, "phrase": "victorian", "count": 58, "kind": "unigram"}
+{"source": "etsy", "style_id": "victorian", "n_items": 100, "phrase": "gold", "count": 36, "kind": "unigram"}
+{"source": "etsy", "style_id": "victorian", "n_items": 100, "phrase": "silver", "count": 31, "kind": "unigram"}
+{"source": "etsy", "style_id": "victorian", "n_items": 100, "phrase": "sterling", "count": 24, "kind": "unigram"}
+{"source": "etsy", "style_id": "victorian", "n_items": 100, "phrase": "art", "count": 21, "kind": "unigram"}
+{"source": "etsy", "style_id": "victorian", "n_items": 100, "phrase": "gothic", "count": 16, "kind": "unigram"}
+{"source": "etsy", "style_id": "victorian", "n_items": 100, "phrase": "diamond", "count": 16, "kind": "unigram"}
+{"source": "etsy", "style_id": "victorian", "n_items": 100, "phrase": "ruby", "count": 12, "kind": "unigram"}
+{"source": "etsy", "style_id": "victorian", "n_items": 100, "phrase": "cut", "count": 12, "kind": "unigram"}
+{"source": "etsy", "style_id": "victorian", "n_items": 100, "phrase": "rose", "count": 10, "kind": "unigram"}
+{"source": "etsy", "style_id": "victorian", "n_items": 100, "phrase": "bridal", "count": 10, "kind": "unigram"}
+{"source": "etsy", "style_id": "victorian", "n_items": 100, "phrase": "deco", "count": 10, "kind": "unigram"}
+{"source": "etsy", "style_id": "victorian", "n_items": 100, "phrase": "crystal", "count": 9, "kind": "unigram"}
+{"source": "etsy", "style_id": "victorian", "n_items": 100, "phrase": "renaissance", "count": 9, "kind": "unigram"}
+{"source": "etsy", "style_id": "victorian", "n_items": 100, "phrase": "red", "count": 8, "kind": "unigram"}
+{"source": "etsy", "style_id": "victorian", "n_items": 100, "phrase": "her", "count": 8, "kind": "unigram"}
+{"source": "etsy", "style_id": "victorian", "n_items": 100, "phrase": "nouveau", "count": 8, "kind": "unigram"}
+{"source": "etsy", "style_id": "victorian", "n_items": 100, "phrase": "filigree", "count": 7, "kind": "unigram"}
+{"source": "etsy", "style_id": "victorian", "n_items": 100, "phrase": "cameo", "count": 7, "kind": "unigram"}
+{"source": "etsy", "style_id": "victorian", "n_items": 100, "phrase": "plated", "count": 7, "kind": "unigram"}
+{"source": "etsy", "style_id": "victorian", "n_items": 100, "phrase": "blue", "count": 7, "kind": "unigram"}
+{"source": "etsy", "style_id": "victorian", "n_items": 100, "phrase": "floral", "count": 7, "kind": "unigram"}
+{"source": "etsy", "style_id": "victorian", "n_items": 100, "phrase": "engagement", "count": 7, "kind": "unigram"}
+{"source": "etsy", "style_id": "victorian", "n_items": 100, "phrase": "natural", "count": 7, "kind": "unigram"}
+{"source": "etsy", "style_id": "victorian", "n_items": 100, "phrase": "stone", "count": 6, "kind": "unigram"}
+{"source": "etsy", "style_id": "victorian", "n_items": 100, "phrase": "anniversary", "count": 6, "kind": "unigram"}
+{"source": "etsy", "style_id": "victorian", "n_items": 100, "phrase": "edwardian", "count": 6, "kind": "unigram"}
+{"source": "etsy", "style_id": "victorian", "n_items": 100, "phrase": "pearl", "count": 6, "kind": "unigram"}
+{"source": "etsy", "style_id": "victorian", "n_items": 100, "phrase": "solid", "count": 6, "kind": "unigram"}
+{"source": "etsy", "style_id": "victorian", "n_items": 100, "phrase": "indian", "count": 6, "kind": "unigram"}
+{"source": "etsy", "style_id": "victorian", "n_items": 100, "phrase": "sterling silver", "count": 23, "kind": "bigram"}
+{"source": "etsy", "style_id": "victorian", "n_items": 100, "phrase": "art deco", "count": 10, "kind": "bigram"}
+{"source": "etsy", "style_id": "victorian", "n_items": 100, "phrase": "art nouveau", "count": 8, "kind": "bigram"}
+{"source": "etsy", "style_id": "victorian", "n_items": 100, "phrase": "gold plated", "count": 7, "kind": "bigram"}
+{"source": "etsy", "style_id": "victorian", "n_items": 100, "phrase": "victorian art", "count": 5, "kind": "bigram"}
+{"source": "etsy", "style_id": "victorian", "n_items": 100, "phrase": "stainless steel", "count": 4, "kind": "bigram"}
+{"source": "etsy", "style_id": "victorian", "n_items": 100, "phrase": "pave diamond", "count": 4, "kind": "bigram"}
+{"source": "etsy", "style_id": "victorian", "n_items": 100, "phrase": "yellow gold", "count": 4, "kind": "bigram"}
+{"source": "etsy", "style_id": "victorian", "n_items": 100, "phrase": "cut diamond", "count": 4, "kind": "bigram"}
+{"source": "etsy", "style_id": "victorian", "n_items": 100, "phrase": "nouveau art", "count": 4, "kind": "bigram"}
+{"source": "etsy", "style_id": "victorian", "n_items": 100, "phrase": "deco edwardian", "count": 4, "kind": "bigram"}
+{"source": "etsy", "style_id": "victorian", "n_items": 100, "phrase": "silver gold", "count": 4, "kind": "bigram"}
+{"source": "etsy", "style_id": "victorian", "n_items": 100, "phrase": "diamond gold", "count": 3, "kind": "bigram"}
+{"source": "etsy", "style_id": "victorian", "n_items": 100, "phrase": "silver victorian", "count": 3, "kind": "bigram"}
+{"source": "etsy", "style_id": "victorian", "n_items": 100, "phrase": "victorian handcrafted", "count": 3, "kind": "bigram"}
+{"source": "etsy", "style_id": "victorian", "n_items": 100, "phrase": "handcrafted gold", "count": 3, "kind": "bigram"}
+{"source": "etsy", "style_id": "victorian", "n_items": 100, "phrase": "red garnet", "count": 3, "kind": "bigram"}
+{"source": "etsy", "style_id": "victorian", "n_items": 100, "phrase": "rose cut", "count": 3, "kind": "bigram"}
+{"source": "etsy", "style_id": "victorian", "n_items": 100, "phrase": "renaissance victorian", "count": 3, "kind": "bigram"}
+{"source": "etsy", "style_id": "victorian", "n_items": 100, "phrase": "diamond sterling", "count": 3, "kind": "bigram"}
+{"source": "etsy", "style_id": "art_nouveau", "n_items": 100, "phrase": "art", "count": 80, "kind": "unigram"}
+{"source": "etsy", "style_id": "art_nouveau", "n_items": 100, "phrase": "nouveau", "count": 70, "kind": "unigram"}
+{"source": "etsy", "style_id": "art_nouveau", "n_items": 100, "phrase": "silver", "count": 32, "kind": "unigram"}
+{"source": "etsy", "style_id": "art_nouveau", "n_items": 100, "phrase": "gold", "count": 24, "kind": "unigram"}
+{"source": "etsy", "style_id": "art_nouveau", "n_items": 100, "phrase": "sterling", "count": 20, "kind": "unigram"}
+{"source": "etsy", "style_id": "art_nouveau", "n_items": 100, "phrase": "victorian", "count": 16, "kind": "unigram"}
+{"source": "etsy", "style_id": "art_nouveau", "n_items": 100, "phrase": "brass", "count": 15, "kind": "unigram"}
+{"source": "etsy", "style_id": "art_nouveau", "n_items": 100, "phrase": "floral", "count": 12, "kind": "unigram"}
+{"source": "etsy", "style_id": "art_nouveau", "n_items": 100, "phrase": "deco", "count": 11, "kind": "unigram"}
+{"source": "etsy", "style_id": "art_nouveau", "n_items": 100, "phrase": "mucha", "count": 10, "kind": "unigram"}
+{"source": "etsy", "style_id": "art_nouveau", "n_items": 100, "phrase": "enamel", "count": 10, "kind": "unigram"}
+{"source": "etsy", "style_id": "art_nouveau", "n_items": 100, "phrase": "diamond", "count": 10, "kind": "unigram"}
+{"source": "etsy", "style_id": "art_nouveau", "n_items": 100, "phrase": "pearl", "count": 9, "kind": "unigram"}
+{"source": "etsy", "style_id": "art_nouveau", "n_items": 100, "phrase": "hand", "count": 9, "kind": "unigram"}
+{"source": "etsy", "style_id": "art_nouveau", "n_items": 100, "phrase": "gothic", "count": 8, "kind": "unigram"}
+{"source": "etsy", "style_id": "art_nouveau", "n_items": 100, "phrase": "wedding", "count": 8, "kind": "unigram"}
+{"source": "etsy", "style_id": "art_nouveau", "n_items": 100, "phrase": "ref", "count": 8, "kind": "unigram"}
+{"source": "etsy", "style_id": "art_nouveau", "n_items": 100, "phrase": "botanical", "count": 8, "kind": "unigram"}
+{"source": "etsy", "style_id": "art_nouveau", "n_items": 100, "phrase": "renaissance", "count": 7, "kind": "unigram"}
+{"source": "etsy", "style_id": "art_nouveau", "n_items": 100, "phrase": "natural", "count": 7, "kind": "unigram"}
+{"source": "etsy", "style_id": "art_nouveau", "n_items": 100, "phrase": "her", "count": 7, "kind": "unigram"}
+{"source": "etsy", "style_id": "art_nouveau", "n_items": 100, "phrase": "engagement", "count": 7, "kind": "unigram"}
+{"source": "etsy", "style_id": "art_nouveau", "n_items": 100, "phrase": "flower", "count": 7, "kind": "unigram"}
+{"source": "etsy", "style_id": "art_nouveau", "n_items": 100, "phrase": "dragonfly", "count": 7, "kind": "unigram"}
+{"source": "etsy", "style_id": "art_nouveau", "n_items": 100, "phrase": "painted", "count": 7, "kind": "unigram"}
+{"source": "etsy", "style_id": "art_nouveau", "n_items": 100, "phrase": "band", "count": 7, "kind": "unigram"}
+{"source": "etsy", "style_id": "art_nouveau", "n_items": 100, "phrase": "statement", "count": 7, "kind": "unigram"}
+{"source": "etsy", "style_id": "art_nouveau", "n_items": 100, "phrase": "edwardian", "count": 6, "kind": "unigram"}
+{"source": "etsy", "style_id": "art_nouveau", "n_items": 100, "phrase": "gemstone", "count": 6, "kind": "unigram"}
+{"source": "etsy", "style_id": "art_nouveau", "n_items": 100, "phrase": "design", "count": 6, "kind": "unigram"}
+{"source": "etsy", "style_id": "art_nouveau", "n_items": 100, "phrase": "art nouveau", "count": 66, "kind": "bigram"}
+{"source": "etsy", "style_id": "art_nouveau", "n_items": 100, "phrase": "sterling silver", "count": 20, "kind": "bigram"}
+{"source": "etsy", "style_id": "art_nouveau", "n_items": 100, "phrase": "art deco", "count": 11, "kind": "bigram"}
+{"source": "etsy", "style_id": "art_nouveau", "n_items": 100, "phrase": "victorian art", "count": 7, "kind": "bigram"}
+{"source": "etsy", "style_id": "art_nouveau", "n_items": 100, "phrase": "hand painted", "count": 7, "kind": "bigram"}
+{"source": "etsy", "style_id": "art_nouveau", "n_items": 100, "phrase": "nouveau sterling", "count": 7, "kind": "bigram"}
+{"source": "etsy", "style_id": "art_nouveau", "n_items": 100, "phrase": "painted enamel", "count": 5, "kind": "bigram"}
+{"source": "etsy", "style_id": "art_nouveau", "n_items": 100, "phrase": "nouveau victorian", "count": 4, "kind": "bigram"}
+{"source": "etsy", "style_id": "art_nouveau", "n_items": 100, "phrase": "renaissance edwardian", "count": 4, "kind": "bigram"}
+{"source": "etsy", "style_id": "art_nouveau", "n_items": 100, "phrase": "solid brass", "count": 4, "kind": "bigram"}
+{"source": "etsy", "style_id": "art_nouveau", "n_items": 100, "phrase": "nouveau floral", "count": 4, "kind": "bigram"}
+{"source": "etsy", "style_id": "art_nouveau", "n_items": 100, "phrase": "yellow gold", "count": 3, "kind": "bigram"}
+{"source": "etsy", "style_id": "art_nouveau", "n_items": 100, "phrase": "gold plated", "count": 3, "kind": "bigram"}
+{"source": "etsy", "style_id": "art_nouveau", "n_items": 100, "phrase": "nouveau gold", "count": 3, "kind": "bigram"}
+{"source": "etsy", "style_id": "art_nouveau", "n_items": 100, "phrase": "gold art", "count": 3, "kind": "bigram"}
+{"source": "etsy", "style_id": "art_nouveau", "n_items": 100, "phrase": "design art", "count": 3, "kind": "bigram"}
+{"source": "etsy", "style_id": "art_nouveau", "n_items": 100, "phrase": "silver blue", "count": 3, "kind": "bigram"}
+{"source": "etsy", "style_id": "art_nouveau", "n_items": 100, "phrase": "lab grown", "count": 3, "kind": "bigram"}
+{"source": "etsy", "style_id": "art_nouveau", "n_items": 100, "phrase": "grown diamond", "count": 3, "kind": "bigram"}
+{"source": "etsy", "style_id": "art_nouveau", "n_items": 100, "phrase": "wedding band", "count": 3, "kind": "bigram"}
+{"source": "etsy", "style_id": "edwardian", "n_items": 100, "phrase": "edwardian", "count": 76, "kind": "unigram"}
+{"source": "etsy", "style_id": "edwardian", "n_items": 100, "phrase": "diamond", "count": 38, "kind": "unigram"}
+{"source": "etsy", "style_id": "edwardian", "n_items": 100, "phrase": "art", "count": 34, "kind": "unigram"}
+{"source": "etsy", "style_id": "edwardian", "n_items": 100, "phrase": "gold", "count": 33, "kind": "unigram"}
+{"source": "etsy", "style_id": "edwardian", "n_items": 100, "phrase": "silver", "count": 30, "kind": "unigram"}
+{"source": "etsy", "style_id": "edwardian", "n_items": 100, "phrase": "engagement", "count": 28, "kind": "unigram"}
+{"source": "etsy", "style_id": "edwardian", "n_items": 100, "phrase": "deco", "count": 27, "kind": "unigram"}
+{"source": "etsy", "style_id": "edwardian", "n_items": 100, "phrase": "sterling", "count": 17, "kind": "unigram"}
+{"source": "etsy", "style_id": "edwardian", "n_items": 100, "phrase": "victorian", "count": 17, "kind": "unigram"}
+{"source": "etsy", "style_id": "edwardian", "n_items": 100, "phrase": "sapphire", "count": 16, "kind": "unigram"}
+{"source": "etsy", "style_id": "edwardian", "n_items": 100, "phrase": "stone", "count": 16, "kind": "unigram"}
+{"source": "etsy", "style_id": "edwardian", "n_items": 100, "phrase": "cut", "count": 16, "kind": "unigram"}
+{"source": "etsy", "style_id": "edwardian", "n_items": 100, "phrase": "moissanite", "count": 14, "kind": "unigram"}
+{"source": "etsy", "style_id": "edwardian", "n_items": 100, "phrase": "filigree", "count": 14, "kind": "unigram"}
+{"source": "etsy", "style_id": "edwardian", "n_items": 100, "phrase": "chelsea", "count": 12, "kind": "unigram"}
+{"source": "etsy", "style_id": "edwardian", "n_items": 100, "phrase": "leigh", "count": 12, "kind": "unigram"}
+{"source": "etsy", "style_id": "edwardian", "n_items": 100, "phrase": "company", "count": 12, "kind": "unigram"}
+{"source": "etsy", "style_id": "edwardian", "n_items": 100, "phrase": "pearl", "count": 11, "kind": "unigram"}
+{"source": "etsy", "style_id": "edwardian", "n_items": 100, "phrase": "bridal", "count": 10, "kind": "unigram"}
+{"source": "etsy", "style_id": "edwardian", "n_items": 100, "phrase": "wedding", "count": 9, "kind": "unigram"}
+{"source": "etsy", "style_id": "edwardian", "n_items": 100, "phrase": "blue", "count": 9, "kind": "unigram"}
+{"source": "etsy", "style_id": "edwardian", "n_items": 100, "phrase": "circa", "count": 9, "kind": "unigram"}
+{"source": "etsy", "style_id": "edwardian", "n_items": 100, "phrase": "platinum", "count": 9, "kind": "unigram"}
+{"source": "etsy", "style_id": "edwardian", "n_items": 100, "phrase": "round", "count": 8, "kind": "unigram"}
+{"source": "etsy", "style_id": "edwardian", "n_items": 100, "phrase": "old", "count": 8, "kind": "unigram"}
+{"source": "etsy", "style_id": "edwardian", "n_items": 100, "phrase": "european", "count": 8, "kind": "unigram"}
+{"source": "etsy", "style_id": "edwardian", "n_items": 100, "phrase": "drop", "count": 7, "kind": "unigram"}
+{"source": "etsy", "style_id": "edwardian", "n_items": 100, "phrase": "nouveau", "count": 7, "kind": "unigram"}
+{"source": "etsy", "style_id": "edwardian", "n_items": 100, "phrase": "retro", "count": 7, "kind": "unigram"}
+{"source": "etsy", "style_id": "edwardian", "n_items": 100, "phrase": "cluster", "count": 7, "kind": "unigram"}
+{"source": "etsy", "style_id": "edwardian", "n_items": 100, "phrase": "art deco", "count": 27, "kind": "bigram"}
+{"source": "etsy", "style_id": "edwardian", "n_items": 100, "phrase": "sterling silver", "count": 17, "kind": "bigram"}
+{"source": "etsy", "style_id": "edwardian", "n_items": 100, "phrase": "chelsea leigh", "count": 12, "kind": "bigram"}
+{"source": "etsy", "style_id": "edwardian", "n_items": 100, "phrase": "leigh company", "count": 12, "kind": "bigram"}
+{"source": "etsy", "style_id": "edwardian", "n_items": 100, "phrase": "edwardian diamond", "count": 8, "kind": "bigram"}
+{"source": "etsy", "style_id": "edwardian", "n_items": 100, "phrase": "art nouveau", "count": 7, "kind": "bigram"}
+{"source": "etsy", "style_id": "edwardian", "n_items": 100, "phrase": "old european", "count": 7, "kind": "bigram"}
+{"source": "etsy", "style_id": "edwardian", "n_items": 100, "phrase": "engagement chelsea", "count": 7, "kind": "bigram"}
+{"source": "etsy", "style_id": "edwardian", "n_items": 100, "phrase": "edwardian gold", "count": 6, "kind": "bigram"}
+{"source": "etsy", "style_id": "edwardian", "n_items": 100, "phrase": "carat edwardian", "count": 6, "kind": "bigram"}
+{"source": "etsy", "style_id": "edwardian", "n_items": 100, "phrase": "diamond engagement", "count": 6, "kind": "bigram"}
+{"source": "etsy", "style_id": "edwardian", "n_items": 100, "phrase": "edwardian sterling", "count": 5, "kind": "bigram"}
+{"source": "etsy", "style_id": "edwardian", "n_items": 100, "phrase": "cut diamond", "count": 5, "kind": "bigram"}
+{"source": "etsy", "style_id": "edwardian", "n_items": 100, "phrase": "round cut", "count": 4, "kind": "bigram"}
+{"source": "etsy", "style_id": "edwardian", "n_items": 100, "phrase": "blue sapphire", "count": 4, "kind": "bigram"}
+{"source": "etsy", "style_id": "edwardian", "n_items": 100, "phrase": "victorian edwardian", "count": 4, "kind": "bigram"}
+{"source": "etsy", "style_id": "edwardian", "n_items": 100, "phrase": "bloomington circa", "count": 4, "kind": "bigram"}
+{"source": "etsy", "style_id": "edwardian", "n_items": 100, "phrase": "european cut", "count": 4, "kind": "bigram"}
+{"source": "etsy", "style_id": "edwardian", "n_items": 100, "phrase": "yellow gold", "count": 4, "kind": "bigram"}
+{"source": "etsy", "style_id": "edwardian", "n_items": 100, "phrase": "cut moissanite", "count": 4, "kind": "bigram"}
+{"source": "etsy", "style_id": "art_deco", "n_items": 100, "phrase": "gold", "count": 65, "kind": "unigram"}
+{"source": "etsy", "style_id": "art_deco", "n_items": 100, "phrase": "art", "count": 57, "kind": "unigram"}
+{"source": "etsy", "style_id": "art_deco", "n_items": 100, "phrase": "deco", "count": 54, "kind": "unigram"}
+{"source": "etsy", "style_id": "art_deco", "n_items": 100, "phrase": "cut", "count": 37, "kind": "unigram"}
+{"source": "etsy", "style_id": "art_deco", "n_items": 100, "phrase": "engagement", "count": 30, "kind": "unigram"}
+{"source": "etsy", "style_id": "art_deco", "n_items": 100, "phrase": "silver", "count": 30, "kind": "unigram"}
+{"source": "etsy", "style_id": "art_deco", "n_items": 100, "phrase": "moissanite", "count": 28, "kind": "unigram"}
+{"source": "etsy", "style_id": "art_deco", "n_items": 100, "phrase": "wedding", "count": 27, "kind": "unigram"}
+{"source": "etsy", "style_id": "art_deco", "n_items": 100, "phrase": "diamond", "count": 25, "kind": "unigram"}
+{"source": "etsy", "style_id": "art_deco", "n_items": 100, "phrase": "sterling", "count": 23, "kind": "unigram"}
+{"source": "etsy", "style_id": "art_deco", "n_items": 100, "phrase": "band", "count": 22, "kind": "unigram"}
+{"source": "etsy", "style_id": "art_deco", "n_items": 100, "phrase": "baguette", "count": 16, "kind": "unigram"}
+{"source": "etsy", "style_id": "art_deco", "n_items": 100, "phrase": "bridal", "count": 14, "kind": "unigram"}
+{"source": "etsy", "style_id": "art_deco", "n_items": 100, "phrase": "sapphire", "count": 14, "kind": "unigram"}
+{"source": "etsy", "style_id": "art_deco", "n_items": 100, "phrase": "women", "count": 13, "kind": "unigram"}
+{"source": "etsy", "style_id": "art_deco", "n_items": 100, "phrase": "blue", "count": 13, "kind": "unigram"}
+{"source": "etsy", "style_id": "art_deco", "n_items": 100, "phrase": "her", "count": 12, "kind": "unigram"}
+{"source": "etsy", "style_id": "art_deco", "n_items": 100, "phrase": "oval", "count": 12, "kind": "unigram"}
+{"source": "etsy", "style_id": "art_deco", "n_items": 100, "phrase": "promise", "count": 12, "kind": "unigram"}
+{"source": "etsy", "style_id": "art_deco", "n_items": 100, "phrase": "green", "count": 12, "kind": "unigram"}
+{"source": "etsy", "style_id": "art_deco", "n_items": 100, "phrase": "emerald", "count": 12, "kind": "unigram"}
+{"source": "etsy", "style_id": "art_deco", "n_items": 100, "phrase": "natural", "count": 11, "kind": "unigram"}
+{"source": "etsy", "style_id": "art_deco", "n_items": 100, "phrase": "statement", "count": 11, "kind": "unigram"}
+{"source": "etsy", "style_id": "art_deco", "n_items": 100, "phrase": "yellow", "count": 11, "kind": "unigram"}
+{"source": "etsy", "style_id": "art_deco", "n_items": 100, "phrase": "anniversary", "count": 10, "kind": "unigram"}
+{"source": "etsy", "style_id": "art_deco", "n_items": 100, "phrase": "white", "count": 10, "kind": "unigram"}
+{"source": "etsy", "style_id": "art_deco", "n_items": 100, "phrase": "stone", "count": 10, "kind": "unigram"}
+{"source": "etsy", "style_id": "art_deco", "n_items": 100, "phrase": "gemstone", "count": 9, "kind": "unigram"}
+{"source": "etsy", "style_id": "art_deco", "n_items": 100, "phrase": "plated", "count": 9, "kind": "unigram"}
+{"source": "etsy", "style_id": "art_deco", "n_items": 100, "phrase": "marquise", "count": 9, "kind": "unigram"}
+{"source": "etsy", "style_id": "art_deco", "n_items": 100, "phrase": "art deco", "count": 54, "kind": "bigram"}
+{"source": "etsy", "style_id": "art_deco", "n_items": 100, "phrase": "sterling silver", "count": 21, "kind": "bigram"}
+{"source": "etsy", "style_id": "art_deco", "n_items": 100, "phrase": "yellow gold", "count": 9, "kind": "bigram"}
+{"source": "etsy", "style_id": "art_deco", "n_items": 100, "phrase": "gold plated", "count": 9, "kind": "bigram"}
+{"source": "etsy", "style_id": "art_deco", "n_items": 100, "phrase": "white gold", "count": 9, "kind": "bigram"}
+{"source": "etsy", "style_id": "art_deco", "n_items": 100, "phrase": "cut moissanite", "count": 9, "kind": "bigram"}
+{"source": "etsy", "style_id": "art_deco", "n_items": 100, "phrase": "wedding band", "count": 8, "kind": "bigram"}
+{"source": "etsy", "style_id": "art_deco", "n_items": 100, "phrase": "emerald cut", "count": 7, "kind": "bigram"}
+{"source": "etsy", "style_id": "art_deco", "n_items": 100, "phrase": "moissanite engagement", "count": 7, "kind": "bigram"}
+{"source": "etsy", "style_id": "art_deco", "n_items": 100, "phrase": "silver gold", "count": 6, "kind": "bigram"}
+{"source": "etsy", "style_id": "art_deco", "n_items": 100, "phrase": "oval cut", "count": 6, "kind": "bigram"}
+{"source": "etsy", "style_id": "art_deco", "n_items": 100, "phrase": "rose gold", "count": 6, "kind": "bigram"}
+{"source": "etsy", "style_id": "art_deco", "n_items": 100, "phrase": "solid gold", "count": 5, "kind": "bigram"}
+{"source": "etsy", "style_id": "art_deco", "n_items": 100, "phrase": "deco gold", "count": 5, "kind": "bigram"}
+{"source": "etsy", "style_id": "art_deco", "n_items": 100, "phrase": "deco wedding", "count": 5, "kind": "bigram"}
+{"source": "etsy", "style_id": "art_deco", "n_items": 100, "phrase": "marquise cut", "count": 5, "kind": "bigram"}
+{"source": "etsy", "style_id": "art_deco", "n_items": 100, "phrase": "anniversary her", "count": 4, "kind": "bigram"}
+{"source": "etsy", "style_id": "art_deco", "n_items": 100, "phrase": "geometric gold", "count": 4, "kind": "bigram"}
+{"source": "etsy", "style_id": "art_deco", "n_items": 100, "phrase": "gold art", "count": 4, "kind": "bigram"}
+{"source": "etsy", "style_id": "art_deco", "n_items": 100, "phrase": "deco baguette", "count": 4, "kind": "bigram"}
+{"source": "etsy", "style_id": "retro", "n_items": 100, "phrase": "gold", "count": 42, "kind": "unigram"}
+{"source": "etsy", "style_id": "retro", "n_items": 100, "phrase": "retro", "count": 23, "kind": "unigram"}
+{"source": "etsy", "style_id": "retro", "n_items": 100, "phrase": "yellow", "count": 17, "kind": "unigram"}
+{"source": "etsy", "style_id": "retro", "n_items": 100, "phrase": "diamond", "count": 14, "kind": "unigram"}
+{"source": "etsy", "style_id": "retro", "n_items": 100, "phrase": "art", "count": 13, "kind": "unigram"}
+{"source": "etsy", "style_id": "retro", "n_items": 100, "phrase": "white", "count": 12, "kind": "unigram"}
+{"source": "etsy", "style_id": "retro", "n_items": 100, "phrase": "deco", "count": 11, "kind": "unigram"}
+{"source": "etsy", "style_id": "retro", "n_items": 100, "phrase": "bakelite", "count": 10, "kind": "unigram"}
+{"source": "etsy", "style_id": "retro", "n_items": 100, "phrase": "fine", "count": 10, "kind": "unigram"}
+{"source": "etsy", "style_id": "retro", "n_items": 100, "phrase": "fakelite", "count": 9, "kind": "unigram"}
+{"source": "etsy", "style_id": "retro", "n_items": 100, "phrase": "timeless", "count": 9, "kind": "unigram"}
+{"source": "etsy", "style_id": "retro", "n_items": 100, "phrase": "sustainability", "count": 9, "kind": "unigram"}
+{"source": "etsy", "style_id": "retro", "n_items": 100, "phrase": "cameo", "count": 9, "kind": "unigram"}
+{"source": "etsy", "style_id": "retro", "n_items": 100, "phrase": "luxulite", "count": 8, "kind": "unigram"}
+{"source": "etsy", "style_id": "retro", "n_items": 100, "phrase": "silver", "count": 8, "kind": "unigram"}
+{"source": "etsy", "style_id": "retro", "n_items": 100, "phrase": "tone", "count": 8, "kind": "unigram"}
+{"source": "etsy", "style_id": "retro", "n_items": 100, "phrase": "gemstone", "count": 7, "kind": "unigram"}
+{"source": "etsy", "style_id": "retro", "n_items": 100, "phrase": "black", "count": 7, "kind": "unigram"}
+{"source": "etsy", "style_id": "retro", "n_items": 100, "phrase": "blue", "count": 7, "kind": "unigram"}
+{"source": "etsy", "style_id": "retro", "n_items": 100, "phrase": "engagement", "count": 7, "kind": "unigram"}
+{"source": "etsy", "style_id": "retro", "n_items": 100, "phrase": "rhinestone", "count": 7, "kind": "unigram"}
+{"source": "etsy", "style_id": "retro", "n_items": 100, "phrase": "circa", "count": 7, "kind": "unigram"}
+{"source": "etsy", "style_id": "retro", "n_items": 100, "phrase": "lucite", "count": 6, "kind": "unigram"}
+{"source": "etsy", "style_id": "retro", "n_items": 100, "phrase": "handmade", "count": 6, "kind": "unigram"}
+{"source": "etsy", "style_id": "retro", "n_items": 100, "phrase": "sterling", "count": 6, "kind": "unigram"}
+{"source": "etsy", "style_id": "retro", "n_items": 100, "phrase": "estate", "count": 6, "kind": "unigram"}
+{"source": "etsy", "style_id": "retro", "n_items": 100, "phrase": "beads", "count": 6, "kind": "unigram"}
+{"source": "etsy", "style_id": "retro", "n_items": 100, "phrase": "quot", "count": 6, "kind": "unigram"}
+{"source": "etsy", "style_id": "retro", "n_items": 100, "phrase": "inspired", "count": 5, "kind": "unigram"}
+{"source": "etsy", "style_id": "retro", "n_items": 100, "phrase": "mid", "count": 5, "kind": "unigram"}
+{"source": "etsy", "style_id": "retro", "n_items": 100, "phrase": "yellow gold", "count": 14, "kind": "bigram"}
+{"source": "etsy", "style_id": "retro", "n_items": 100, "phrase": "art deco", "count": 10, "kind": "bigram"}
+{"source": "etsy", "style_id": "retro", "n_items": 100, "phrase": "gold timeless", "count": 9, "kind": "bigram"}
+{"source": "etsy", "style_id": "retro", "n_items": 100, "phrase": "timeless sustainability", "count": 9, "kind": "bigram"}
+{"source": "etsy", "style_id": "retro", "n_items": 100, "phrase": "sustainability fine", "count": 8, "kind": "bigram"}
+{"source": "etsy", "style_id": "retro", "n_items": 100, "phrase": "white gold", "count": 7, "kind": "bigram"}
+{"source": "etsy", "style_id": "retro", "n_items": 100, "phrase": "mid century", "count": 5, "kind": "bigram"}
+{"source": "etsy", "style_id": "retro", "n_items": 100, "phrase": "gold filled", "count": 5, "kind": "bigram"}
+{"source": "etsy", "style_id": "retro", "n_items": 100, "phrase": "sterling silver", "count": 5, "kind": "bigram"}
+{"source": "etsy", "style_id": "retro", "n_items": 100, "phrase": "bakelite fakelite", "count": 5, "kind": "bigram"}
+{"source": "etsy", "style_id": "retro", "n_items": 100, "phrase": "cameo gemstone", "count": 5, "kind": "bigram"}
+{"source": "etsy", "style_id": "retro", "n_items": 100, "phrase": "gemstone gold", "count": 5, "kind": "bigram"}
+{"source": "etsy", "style_id": "retro", "n_items": 100, "phrase": "two tone", "count": 4, "kind": "bigram"}
+{"source": "etsy", "style_id": "retro", "n_items": 100, "phrase": "beads strand", "count": 4, "kind": "bigram"}
+{"source": "etsy", "style_id": "retro", "n_items": 100, "phrase": "inspired fakelite", "count": 3, "kind": "bigram"}
+{"source": "etsy", "style_id": "retro", "n_items": 100, "phrase": "fakelite resin", "count": 3, "kind": "bigram"}
+{"source": "etsy", "style_id": "retro", "n_items": 100, "phrase": "gold retro", "count": 3, "kind": "bigram"}
+{"source": "etsy", "style_id": "retro", "n_items": 100, "phrase": "fakelite novelty", "count": 3, "kind": "bigram"}
+{"source": "etsy", "style_id": "retro", "n_items": 100, "phrase": "gold diamond", "count": 3, "kind": "bigram"}
+{"source": "etsy", "style_id": "retro", "n_items": 100, "phrase": "layaway available", "count": 3, "kind": "bigram"}
+{"source": "etsy", "style_id": "mid_century_modernist", "n_items": 100, "phrase": "modern", "count": 64, "kind": "unigram"}
+{"source": "etsy", "style_id": "mid_century_modernist", "n_items": 100, "phrase": "mid", "count": 63, "kind": "unigram"}
+{"source": "etsy", "style_id": "mid_century_modernist", "n_items": 100, "phrase": "century", "count": 62, "kind": "unigram"}
+{"source": "etsy", "style_id": "mid_century_modernist", "n_items": 100, "phrase": "fabric", "count": 37, "kind": "unigram"}
+{"source": "etsy", "style_id": "mid_century_modernist", "n_items": 100, "phrase": "silver", "count": 31, "kind": "unigram"}
+{"source": "etsy", "style_id": "mid_century_modernist", "n_items": 100, "phrase": "gold", "count": 25, "kind": "unigram"}
+{"source": "etsy", "style_id": "mid_century_modernist", "n_items": 100, "phrase": "sterling", "count": 24, "kind": "unigram"}
+{"source": "etsy", "style_id": "mid_century_modernist", "n_items": 100, "phrase": "retro", "count": 20, "kind": "unigram"}
+{"source": "etsy", "style_id": "mid_century_modernist", "n_items": 100, "phrase": "statement", "count": 18, "kind": "unigram"}
+{"source": "etsy", "style_id": "mid_century_modernist", "n_items": 100, "phrase": "diamond", "count": 15, "kind": "unigram"}
+{"source": "etsy", "style_id": "mid_century_modernist", "n_items": 100, "phrase": "yard", "count": 15, "kind": "unigram"}
+{"source": "etsy", "style_id": "mid_century_modernist", "n_items": 100, "phrase": "geometric", "count": 14, "kind": "unigram"}
+{"source": "etsy", "style_id": "mid_century_modernist", "n_items": 100, "phrase": "mcm", "count": 14, "kind": "unigram"}
+{"source": "etsy", "style_id": "mid_century_modernist", "n_items": 100, "phrase": "spoonflower", "count": 12, "kind": "unigram"}
+{"source": "etsy", "style_id": "mid_century_modernist", "n_items": 100, "phrase": "anniversary", "count": 10, "kind": "unigram"}
+{"source": "etsy", "style_id": "mid_century_modernist", "n_items": 100, "phrase": "green", "count": 10, "kind": "unigram"}
+{"source": "etsy", "style_id": "mid_century_modernist", "n_items": 100, "phrase": "band", "count": 10, "kind": "unigram"}
+{"source": "etsy", "style_id": "mid_century_modernist", "n_items": 100, "phrase": "cut", "count": 9, "kind": "unigram"}
+{"source": "etsy", "style_id": "mid_century_modernist", "n_items": 100, "phrase": "mod", "count": 9, "kind": "unigram"}
+{"source": "etsy", "style_id": "mid_century_modernist", "n_items": 100, "phrase": "her", "count": 8, "kind": "unigram"}
+{"source": "etsy", "style_id": "mid_century_modernist", "n_items": 100, "phrase": "flower", "count": 7, "kind": "unigram"}
+{"source": "etsy", "style_id": "mid_century_modernist", "n_items": 100, "phrase": "tone", "count": 7, "kind": "unigram"}
+{"source": "etsy", "style_id": "mid_century_modernist", "n_items": 100, "phrase": "atomic", "count": 7, "kind": "unigram"}
+{"source": "etsy", "style_id": "mid_century_modernist", "n_items": 100, "phrase": "orange", "count": 7, "kind": "unigram"}
+{"source": "etsy", "style_id": "mid_century_modernist", "n_items": 100, "phrase": "modernist", "count": 7, "kind": "unigram"}
+{"source": "etsy", "style_id": "mid_century_modernist", "n_items": 100, "phrase": "dangle", "count": 7, "kind": "unigram"}
+{"source": "etsy", "style_id": "mid_century_modernist", "n_items": 100, "phrase": "minimalist", "count": 7, "kind": "unigram"}
+{"source": "etsy", "style_id": "mid_century_modernist", "n_items": 100, "phrase": "engagement", "count": 7, "kind": "unigram"}
+{"source": "etsy", "style_id": "mid_century_modernist", "n_items": 100, "phrase": "decor", "count": 7, "kind": "unigram"}
+{"source": "etsy", "style_id": "mid_century_modernist", "n_items": 100, "phrase": "wedding", "count": 6, "kind": "unigram"}
+{"source": "etsy", "style_id": "mid_century_modernist", "n_items": 100, "phrase": "mid century", "count": 62, "kind": "bigram"}
+{"source": "etsy", "style_id": "mid_century_modernist", "n_items": 100, "phrase": "century modern", "count": 51, "kind": "bigram"}
+{"source": "etsy", "style_id": "mid_century_modernist", "n_items": 100, "phrase": "sterling silver", "count": 19, "kind": "bigram"}
+{"source": "etsy", "style_id": "mid_century_modernist", "n_items": 100, "phrase": "fabric yard", "count": 15, "kind": "bigram"}
+{"source": "etsy", "style_id": "mid_century_modernist", "n_items": 100, "phrase": "yard spoonflower", "count": 9, "kind": "bigram"}
+{"source": "etsy", "style_id": "mid_century_modernist", "n_items": 100, "phrase": "silver mid", "count": 6, "kind": "bigram"}
+{"source": "etsy", "style_id": "mid_century_modernist", "n_items": 100, "phrase": "geometric fabric", "count": 6, "kind": "bigram"}
+{"source": "etsy", "style_id": "mid_century_modernist", "n_items": 100, "phrase": "gold tone", "count": 5, "kind": "bigram"}
+{"source": "etsy", "style_id": "mid_century_modernist", "n_items": 100, "phrase": "home decor", "count": 5, "kind": "bigram"}
+{"source": "etsy", "style_id": "mid_century_modernist", "n_items": 100, "phrase": "lab grown", "count": 5, "kind": "bigram"}
+{"source": "etsy", "style_id": "mid_century_modernist", "n_items": 100, "phrase": "grown diamond", "count": 5, "kind": "bigram"}
+{"source": "etsy", "style_id": "mid_century_modernist", "n_items": 100, "phrase": "anniversary christmas", "count": 5, "kind": "bigram"}
+{"source": "etsy", "style_id": "mid_century_modernist", "n_items": 100, "phrase": "yellow gold", "count": 5, "kind": "bigram"}
+{"source": "etsy", "style_id": "mid_century_modernist", "n_items": 100, "phrase": "christmas birthday", "count": 4, "kind": "bigram"}
+{"source": "etsy", "style_id": "mid_century_modernist", "n_items": 100, "phrase": "solid yellow", "count": 4, "kind": "bigram"}
+{"source": "etsy", "style_id": "mid_century_modernist", "n_items": 100, "phrase": "diamond engagement", "count": 3, "kind": "bigram"}
+{"source": "etsy", "style_id": "mid_century_modernist", "n_items": 100, "phrase": "three stone", "count": 3, "kind": "bigram"}
+{"source": "etsy", "style_id": "mid_century_modernist", "n_items": 100, "phrase": "olive green", "count": 3, "kind": "bigram"}
+{"source": "etsy", "style_id": "mid_century_modernist", "n_items": 100, "phrase": "yard mid", "count": 3, "kind": "bigram"}
+{"source": "etsy", "style_id": "mid_century_modernist", "n_items": 100, "phrase": "modern home", "count": 3, "kind": "bigram"}
+{"source": "etsy", "style_id": "celestial", "n_items": 100, "phrase": "celestial", "count": 65, "kind": "unigram"}
+{"source": "etsy", "style_id": "celestial", "n_items": 100, "phrase": "gold", "count": 59, "kind": "unigram"}
+{"source": "etsy", "style_id": "celestial", "n_items": 100, "phrase": "star", "count": 58, "kind": "unigram"}
+{"source": "etsy", "style_id": "celestial", "n_items": 100, "phrase": "moon", "count": 55, "kind": "unigram"}
+{"source": "etsy", "style_id": "celestial", "n_items": 100, "phrase": "silver", "count": 29, "kind": "unigram"}
+{"source": "etsy", "style_id": "celestial", "n_items": 100, "phrase": "dainty", "count": 21, "kind": "unigram"}
+{"source": "etsy", "style_id": "celestial", "n_items": 100, "phrase": "her", "count": 19, "kind": "unigram"}
+{"source": "etsy", "style_id": "celestial", "n_items": 100, "phrase": "sterling", "count": 18, "kind": "unigram"}
+{"source": "etsy", "style_id": "celestial", "n_items": 100, "phrase": "moissanite", "count": 16, "kind": "unigram"}
+{"source": "etsy", "style_id": "celestial", "n_items": 100, "phrase": "sun", "count": 15, "kind": "unigram"}
+{"source": "etsy", "style_id": "celestial", "n_items": 100, "phrase": "crescent", "count": 15, "kind": "unigram"}
+{"source": "etsy", "style_id": "celestial", "n_items": 100, "phrase": "minimalist", "count": 14, "kind": "unigram"}
+{"source": "etsy", "style_id": "celestial", "n_items": 100, "phrase": "engagement", "count": 14, "kind": "unigram"}
+{"source": "etsy", "style_id": "celestial", "n_items": 100, "phrase": "women", "count": 13, "kind": "unigram"}
+{"source": "etsy", "style_id": "celestial", "n_items": 100, "phrase": "moonstone", "count": 13, "kind": "unigram"}
+{"source": "etsy", "style_id": "celestial", "n_items": 100, "phrase": "diamond", "count": 10, "kind": "unigram"}
+{"source": "etsy", "style_id": "celestial", "n_items": 100, "phrase": "stud", "count": 10, "kind": "unigram"}
+{"source": "etsy", "style_id": "celestial", "n_items": 100, "phrase": "solid", "count": 10, "kind": "unigram"}
+{"source": "etsy", "style_id": "celestial", "n_items": 100, "phrase": "stone", "count": 10, "kind": "unigram"}
+{"source": "etsy", "style_id": "celestial", "n_items": 100, "phrase": "north", "count": 9, "kind": "unigram"}
+{"source": "etsy", "style_id": "celestial", "n_items": 100, "phrase": "gemstone", "count": 9, "kind": "unigram"}
+{"source": "etsy", "style_id": "celestial", "n_items": 100, "phrase": "boho", "count": 9, "kind": "unigram"}
+{"source": "etsy", "style_id": "celestial", "n_items": 100, "phrase": "handmade", "count": 8, "kind": "unigram"}
+{"source": "etsy", "style_id": "celestial", "n_items": 100, "phrase": "yellow", "count": 8, "kind": "unigram"}
+{"source": "etsy", "style_id": "celestial", "n_items": 100, "phrase": "wedding", "count": 8, "kind": "unigram"}
+{"source": "etsy", "style_id": "celestial", "n_items": 100, "phrase": "statement", "count": 8, "kind": "unigram"}
+{"source": "etsy", "style_id": "celestial", "n_items": 100, "phrase": "rose", "count": 7, "kind": "unigram"}
+{"source": "etsy", "style_id": "celestial", "n_items": 100, "phrase": "blue", "count": 7, "kind": "unigram"}
+{"source": "etsy", "style_id": "celestial", "n_items": 100, "phrase": "birthday", "count": 6, "kind": "unigram"}
+{"source": "etsy", "style_id": "celestial", "n_items": 100, "phrase": "hoop", "count": 6, "kind": "unigram"}
+{"source": "etsy", "style_id": "celestial", "n_items": 100, "phrase": "sterling silver", "count": 18, "kind": "bigram"}
+{"source": "etsy", "style_id": "celestial", "n_items": 100, "phrase": "moon star", "count": 12, "kind": "bigram"}
+{"source": "etsy", "style_id": "celestial", "n_items": 100, "phrase": "crescent moon", "count": 11, "kind": "bigram"}
+{"source": "etsy", "style_id": "celestial", "n_items": 100, "phrase": "north star", "count": 9, "kind": "bigram"}
+{"source": "etsy", "style_id": "celestial", "n_items": 100, "phrase": "solid gold", "count": 9, "kind": "bigram"}
+{"source": "etsy", "style_id": "celestial", "n_items": 100, "phrase": "yellow gold", "count": 7, "kind": "bigram"}
+{"source": "etsy", "style_id": "celestial", "n_items": 100, "phrase": "gold star", "count": 7, "kind": "bigram"}
+{"source": "etsy", "style_id": "celestial", "n_items": 100, "phrase": "gold celestial", "count": 6, "kind": "bigram"}
+{"source": "etsy", "style_id": "celestial", "n_items": 100, "phrase": "sun moon", "count": 5, "kind": "bigram"}
+{"source": "etsy", "style_id": "celestial", "n_items": 100, "phrase": "gold plated", "count": 5, "kind": "bigram"}
+{"source": "etsy", "style_id": "celestial", "n_items": 100, "phrase": "gold moon", "count": 5, "kind": "bigram"}
+{"source": "etsy", "style_id": "celestial", "n_items": 100, "phrase": "rose gold", "count": 5, "kind": "bigram"}
+{"source": "etsy", "style_id": "celestial", "n_items": 100, "phrase": "diamond star", "count": 4, "kind": "bigram"}
+{"source": "etsy", "style_id": "celestial", "n_items": 100, "phrase": "star celestial", "count": 4, "kind": "bigram"}
+{"source": "etsy", "style_id": "celestial", "n_items": 100, "phrase": "moon phase", "count": 4, "kind": "bigram"}
+{"source": "etsy", "style_id": "celestial", "n_items": 100, "phrase": "silver celestial", "count": 4, "kind": "bigram"}
+{"source": "etsy", "style_id": "celestial", "n_items": 100, "phrase": "star gold", "count": 4, "kind": "bigram"}
+{"source": "etsy", "style_id": "celestial", "n_items": 100, "phrase": "gold crescent", "count": 4, "kind": "bigram"}
+{"source": "etsy", "style_id": "celestial", "n_items": 100, "phrase": "rings women", "count": 4, "kind": "bigram"}
+{"source": "etsy", "style_id": "celestial", "n_items": 100, "phrase": "celestial dainty", "count": 4, "kind": "bigram"}
+{"source": "etsy", "style_id": "gothic", "n_items": 100, "phrase": "gothic", "count": 82, "kind": "unigram"}
+{"source": "etsy", "style_id": "gothic", "n_items": 100, "phrase": "silver", "count": 40, "kind": "unigram"}
+{"source": "etsy", "style_id": "gothic", "n_items": 100, "phrase": "black", "count": 22, "kind": "unigram"}
+{"source": "etsy", "style_id": "gothic", "n_items": 100, "phrase": "sterling", "count": 20, "kind": "unigram"}
+{"source": "etsy", "style_id": "gothic", "n_items": 100, "phrase": "steel", "count": 19, "kind": "unigram"}
+{"source": "etsy", "style_id": "gothic", "n_items": 100, "phrase": "stainless", "count": 18, "kind": "unigram"}
+{"source": "etsy", "style_id": "gothic", "n_items": 100, "phrase": "bat", "count": 13, "kind": "unigram"}
+{"source": "etsy", "style_id": "gothic", "n_items": 100, "phrase": "halloween", "count": 11, "kind": "unigram"}
+{"source": "etsy", "style_id": "gothic", "n_items": 100, "phrase": "goth", "count": 11, "kind": "unigram"}
+{"source": "etsy", "style_id": "gothic", "n_items": 100, "phrase": "gold", "count": 11, "kind": "unigram"}
+{"source": "etsy", "style_id": "gothic", "n_items": 100, "phrase": "victorian", "count": 10, "kind": "unigram"}
+{"source": "etsy", "style_id": "gothic", "n_items": 100, "phrase": "pearl", "count": 9, "kind": "unigram"}
+{"source": "etsy", "style_id": "gothic", "n_items": 100, "phrase": "handmade", "count": 8, "kind": "unigram"}
+{"source": "etsy", "style_id": "gothic", "n_items": 100, "phrase": "statement", "count": 8, "kind": "unigram"}
+{"source": "etsy", "style_id": "gothic", "n_items": 100, "phrase": "punk", "count": 8, "kind": "unigram"}
+{"source": "etsy", "style_id": "gothic", "n_items": 100, "phrase": "dark", "count": 8, "kind": "unigram"}
+{"source": "etsy", "style_id": "gothic", "n_items": 100, "phrase": "ear", "count": 8, "kind": "unigram"}
+{"source": "etsy", "style_id": "gothic", "n_items": 100, "phrase": "hoop", "count": 7, "kind": "unigram"}
+{"source": "etsy", "style_id": "gothic", "n_items": 100, "phrase": "wedding", "count": 7, "kind": "unigram"}
+{"source": "etsy", "style_id": "gothic", "n_items": 100, "phrase": "skull", "count": 7, "kind": "unigram"}
+{"source": "etsy", "style_id": "gothic", "n_items": 100, "phrase": "her", "count": 7, "kind": "unigram"}
+{"source": "etsy", "style_id": "gothic", "n_items": 100, "phrase": "women", "count": 7, "kind": "unigram"}
+{"source": "etsy", "style_id": "gothic", "n_items": 100, "phrase": "unique", "count": 7, "kind": "unigram"}
+{"source": "etsy", "style_id": "gothic", "n_items": 100, "phrase": "fleur", "count": 7, "kind": "unigram"}
+{"source": "etsy", "style_id": "gothic", "n_items": 100, "phrase": "lis", "count": 7, "kind": "unigram"}
+{"source": "etsy", "style_id": "gothic", "n_items": 100, "phrase": "stone", "count": 6, "kind": "unigram"}
+{"source": "etsy", "style_id": "gothic", "n_items": 100, "phrase": "band", "count": 6, "kind": "unigram"}
+{"source": "etsy", "style_id": "gothic", "n_items": 100, "phrase": "ornate", "count": 6, "kind": "unigram"}
+{"source": "etsy", "style_id": "gothic", "n_items": 100, "phrase": "cross", "count": 6, "kind": "unigram"}
+{"source": "etsy", "style_id": "gothic", "n_items": 100, "phrase": "baroque", "count": 6, "kind": "unigram"}
+{"source": "etsy", "style_id": "gothic", "n_items": 100, "phrase": "sterling silver", "count": 20, "kind": "bigram"}
+{"source": "etsy", "style_id": "gothic", "n_items": 100, "phrase": "stainless steel", "count": 18, "kind": "bigram"}
+{"source": "etsy", "style_id": "gothic", "n_items": 100, "phrase": "fleur lis", "count": 7, "kind": "bigram"}
+{"source": "etsy", "style_id": "gothic", "n_items": 100, "phrase": "steel gothic", "count": 6, "kind": "bigram"}
+{"source": "etsy", "style_id": "gothic", "n_items": 100, "phrase": "silver gothic", "count": 4, "kind": "bigram"}
+{"source": "etsy", "style_id": "gothic", "n_items": 100, "phrase": "gothic goth", "count": 4, "kind": "bigram"}
+{"source": "etsy", "style_id": "gothic", "n_items": 100, "phrase": "silver bat", "count": 4, "kind": "bigram"}
+{"source": "etsy", "style_id": "gothic", "n_items": 100, "phrase": "black gold", "count": 4, "kind": "bigram"}
+{"source": "etsy", "style_id": "gothic", "n_items": 100, "phrase": "gothic gothic", "count": 4, "kind": "bigram"}
+{"source": "etsy", "style_id": "gothic", "n_items": 100, "phrase": "black onyx", "count": 3, "kind": "bigram"}
+{"source": "etsy", "style_id": "gothic", "n_items": 100, "phrase": "gothic bat", "count": 3, "kind": "bigram"}
+{"source": "etsy", "style_id": "gothic", "n_items": 100, "phrase": "silver stainless", "count": 3, "kind": "bigram"}
+{"source": "etsy", "style_id": "gothic", "n_items": 100, "phrase": "gothic cathedral", "count": 3, "kind": "bigram"}
+{"source": "etsy", "style_id": "gothic", "n_items": 100, "phrase": "gothic dark", "count": 3, "kind": "bigram"}
+{"source": "etsy", "style_id": "gothic", "n_items": 100, "phrase": "art deco", "count": 3, "kind": "bigram"}
+{"source": "etsy", "style_id": "gothic", "n_items": 100, "phrase": "unique gothic", "count": 3, "kind": "bigram"}
+{"source": "etsy", "style_id": "gothic", "n_items": 100, "phrase": "black beaded", "count": 3, "kind": "bigram"}
+{"source": "etsy", "style_id": "gothic", "n_items": 100, "phrase": "gothic wedding", "count": 3, "kind": "bigram"}
+{"source": "etsy", "style_id": "gothic", "n_items": 100, "phrase": "gothic ornate", "count": 3, "kind": "bigram"}
+{"source": "etsy", "style_id": "gothic", "n_items": 100, "phrase": "ornate rings", "count": 3, "kind": "bigram"}
+{"source": "etsy", "style_id": "biker", "n_items": 100, "phrase": "biker", "count": 62, "kind": "unigram"}
+{"source": "etsy", "style_id": "biker", "n_items": 100, "phrase": "silver", "count": 51, "kind": "unigram"}
+{"source": "etsy", "style_id": "biker", "n_items": 100, "phrase": "gothic", "count": 34, "kind": "unigram"}
+{"source": "etsy", "style_id": "biker", "n_items": 100, "phrase": "sterling", "count": 34, "kind": "unigram"}
+{"source": "etsy", "style_id": "biker", "n_items": 100, "phrase": "skull", "count": 32, "kind": "unigram"}
+{"source": "etsy", "style_id": "biker", "n_items": 100, "phrase": "steel", "count": 26, "kind": "unigram"}
+{"source": "etsy", "style_id": "biker", "n_items": 100, "phrase": "motorcycle", "count": 23, "kind": "unigram"}
+{"source": "etsy", "style_id": "biker", "n_items": 100, "phrase": "men", "count": 22, "kind": "unigram"}
+{"source": "etsy", "style_id": "biker", "n_items": 100, "phrase": "bike", "count": 21, "kind": "unigram"}
+{"source": "etsy", "style_id": "biker", "n_items": 100, "phrase": "punk", "count": 19, "kind": "unigram"}
+{"source": "etsy", "style_id": "biker", "n_items": 100, "phrase": "stainless", "count": 18, "kind": "unigram"}
+{"source": "etsy", "style_id": "biker", "n_items": 100, "phrase": "handmade", "count": 14, "kind": "unigram"}
+{"source": "etsy", "style_id": "biker", "n_items": 100, "phrase": "heavy", "count": 13, "kind": "unigram"}
+{"source": "etsy", "style_id": "biker", "n_items": 100, "phrase": "him", "count": 12, "kind": "unigram"}
+{"source": "etsy", "style_id": "biker", "n_items": 100, "phrase": "statement", "count": 11, "kind": "unigram"}
+{"source": "etsy", "style_id": "biker", "n_items": 100, "phrase": "oxidized", "count": 11, "kind": "unigram"}
+{"source": "etsy", "style_id": "biker", "n_items": 100, "phrase": "rider", "count": 9, "kind": "unigram"}
+{"source": "etsy", "style_id": "biker", "n_items": 100, "phrase": "signet", "count": 9, "kind": "unigram"}
+{"source": "etsy", "style_id": "biker", "n_items": 100, "phrase": "bicycle", "count": 8, "kind": "unigram"}
+{"source": "etsy", "style_id": "biker", "n_items": 100, "phrase": "band", "count": 8, "kind": "unigram"}
+{"source": "etsy", "style_id": "biker", "n_items": 100, "phrase": "titanium", "count": 8, "kind": "unigram"}
+{"source": "etsy", "style_id": "biker", "n_items": 100, "phrase": "harley", "count": 7, "kind": "unigram"}
+{"source": "etsy", "style_id": "biker", "n_items": 100, "phrase": "gold", "count": 7, "kind": "unigram"}
+{"source": "etsy", "style_id": "biker", "n_items": 100, "phrase": "davidson", "count": 6, "kind": "unigram"}
+{"source": "etsy", "style_id": "biker", "n_items": 100, "phrase": "unisex", "count": 6, "kind": "unigram"}
+{"source": "etsy", "style_id": "biker", "n_items": 100, "phrase": "metal", "count": 6, "kind": "unigram"}
+{"source": "etsy", "style_id": "biker", "n_items": 100, "phrase": "rock", "count": 6, "kind": "unigram"}
+{"source": "etsy", "style_id": "biker", "n_items": 100, "phrase": "double", "count": 6, "kind": "unigram"}
+{"source": "etsy", "style_id": "biker", "n_items": 100, "phrase": "minimalist", "count": 5, "kind": "unigram"}
+{"source": "etsy", "style_id": "biker", "n_items": 100, "phrase": "personalized", "count": 5, "kind": "unigram"}
+{"source": "etsy", "style_id": "biker", "n_items": 100, "phrase": "sterling silver", "count": 33, "kind": "bigram"}
+{"source": "etsy", "style_id": "biker", "n_items": 100, "phrase": "stainless steel", "count": 17, "kind": "bigram"}
+{"source": "etsy", "style_id": "biker", "n_items": 100, "phrase": "gothic biker", "count": 11, "kind": "bigram"}
+{"source": "etsy", "style_id": "biker", "n_items": 100, "phrase": "punk biker", "count": 9, "kind": "bigram"}
+{"source": "etsy", "style_id": "biker", "n_items": 100, "phrase": "motorcycle rider", "count": 7, "kind": "bigram"}
+{"source": "etsy", "style_id": "biker", "n_items": 100, "phrase": "silver skull", "count": 7, "kind": "bigram"}
+{"source": "etsy", "style_id": "biker", "n_items": 100, "phrase": "handmade sterling", "count": 7, "kind": "bigram"}
+{"source": "etsy", "style_id": "biker", "n_items": 100, "phrase": "titanium steel", "count": 7, "kind": "bigram"}
+{"source": "etsy", "style_id": "biker", "n_items": 100, "phrase": "harley davidson", "count": 6, "kind": "bigram"}
+{"source": "etsy", "style_id": "biker", "n_items": 100, "phrase": "heavy metal", "count": 6, "kind": "bigram"}
+{"source": "etsy", "style_id": "biker", "n_items": 100, "phrase": "hip hop", "count": 4, "kind": "bigram"}
+{"source": "etsy", "style_id": "biker", "n_items": 100, "phrase": "hop punk", "count": 4, "kind": "bigram"}
+{"source": "etsy", "style_id": "biker", "n_items": 100, "phrase": "silver men", "count": 4, "kind": "bigram"}
+{"source": "etsy", "style_id": "biker", "n_items": 100, "phrase": "biker stainless", "count": 4, "kind": "bigram"}
+{"source": "etsy", "style_id": "biker", "n_items": 100, "phrase": "skull sterling", "count": 4, "kind": "bigram"}
+{"source": "etsy", "style_id": "biker", "n_items": 100, "phrase": "biker men", "count": 4, "kind": "bigram"}
+{"source": "etsy", "style_id": "biker", "n_items": 100, "phrase": "biker punk", "count": 4, "kind": "bigram"}
+{"source": "etsy", "style_id": "biker", "n_items": 100, "phrase": "biker skull", "count": 3, "kind": "bigram"}
+{"source": "etsy", "style_id": "biker", "n_items": 100, "phrase": "unisex hip", "count": 3, "kind": "bigram"}
+{"source": "etsy", "style_id": "biker", "n_items": 100, "phrase": "bicycle bike", "count": 3, "kind": "bigram"}

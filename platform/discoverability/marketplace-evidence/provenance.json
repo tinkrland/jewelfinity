@@ -28,7 +28,7 @@
   {
    "platform": "etsy",
    "actor": "automation-lab/etsy-scraper",
-   "items": 500,
+   "items": 1500,
    "runs": [
     {
      "query": "brutalist jewelry",
@@ -49,23 +49,73 @@
     {
      "query": "scandinavian modern jewelry",
      "run_id": "8AVThCBBSoijw3NLS"
+    },
+    {
+     "query": "georgian era jewelry",
+     "run_id": "wjORe71jJLuXAhHlC",
+     "note": "plain 'georgian jewelry' returned zero items on etsy; 'georgian era jewelry' used"
+    },
+    {
+     "query": "victorian jewelry",
+     "run_id": "ZDTqIuHxC0Gk9m3Ql",
+     "note": null
+    },
+    {
+     "query": "art nouveau jewelry",
+     "run_id": "oanH5wk9llTDtH3Ww",
+     "note": null
+    },
+    {
+     "query": "edwardian jewelry",
+     "run_id": "H0qI3XxLFEBWt7SZp",
+     "note": null
+    },
+    {
+     "query": "art deco jewelry",
+     "run_id": "4hyHnBJuCCiljaRJ5",
+     "note": null
+    },
+    {
+     "query": "retro 40s jewelry",
+     "run_id": "QM0Se6JHJeQbiI9y1",
+     "note": null
+    },
+    {
+     "query": "mid century modern jewelry",
+     "run_id": "S53SEaalwJzzqfzJf",
+     "note": null
+    },
+    {
+     "query": "celestial jewelry",
+     "run_id": "yXttahULeQWp7hQCB",
+     "note": null
+    },
+    {
+     "query": "gothic jewelry",
+     "run_id": "OhgEIPTem8lS5Fwni",
+     "note": null
+    },
+    {
+     "query": "biker jewelry",
+     "run_id": "1PPY1CE7nTUwQIiVp",
+     "note": null
     }
    ]
   }
  ],
- "method_notes": "ebay style assignment is deterministic title matching (a listing can match several styles). etsy rows carry their search query. solimet_title_check is a deterministic offline filter flagging stone/plastic terms in titles; false negatives possible (listing photos may show stones). apify free-plan dataset retention is 7 days; these files are the durable snapshot. the skonvirke and scandinavian-modern queries (2026-10-08 follow-up) are kept as raw listings under style_query organic_modern and are not folded into phrase-frequencies.jsonl, to avoid double-counting that style's bucket.",
+ "method_notes": "ebay style assignment is deterministic title matching (a listing can match several styles). etsy rows carry their search query. solimet_title_check is a deterministic offline filter flagging stone/plastic terms in titles; false negatives possible (listing photos may show stones). apify free-plan dataset retention is 7 days; these files are the durable snapshot. the skonvirke and scandinavian-modern queries (2026-10-08 follow-up), and the balance pass over the remaining ten styles, are kept as raw listings under style_query organic_modern and are not folded into phrase-frequencies.jsonl, to avoid double-counting that style's bucket.",
  "files": {
   "ebay-listings.jsonl": {
    "rows": 852,
    "sha256": "63b27199aee0cb7f1e81fcdf15e97380a786a2600da96ac2d0859dbc5978c6e7"
   },
   "etsy-listings.jsonl": {
-   "rows": 500,
-   "sha256": "832f82cec8a52636591294c5da0c29f6093a440a030afbc547b63fb30513c333"
+   "rows": 1500,
+   "sha256": "fcdbdc477dec0feea77a4deea6e8672760265ade3efe2f5815a2ae5c57d019d3"
   },
   "phrase-frequencies.jsonl": {
-   "rows": 726,
-   "sha256": "e78619d97c4cee17445a1d06ba768efb88edcf4d6b214e46956914e5f01f6e46"
+   "rows": 1226,
+   "sha256": "b12b736a928759d37a32ed7ed890a60a7b2524101d23bfca9fc1ae80b303dfd1"
   }
  }
 }
