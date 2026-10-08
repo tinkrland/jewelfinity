@@ -1,0 +1,63 @@
+{
+ "captured": "2026-10-08",
+ "purpose": "marketplace listing-language evidence for the style vocabularies and confusable_with edges. evidence only: nothing here authors vocabulary content without review",
+ "runs": [
+  {
+   "platform": "ebay",
+   "actor": "automation-lab/ebay-scraper",
+   "run_id": "OL5BTOSiu8QiiMBjo",
+   "dataset_id": "RNpqbPNkbxei1KRFa",
+   "items": 852,
+   "queries": [
+    "georgian jewelry",
+    "victorian jewelry",
+    "art nouveau jewelry",
+    "edwardian jewelry",
+    "art deco jewelry",
+    "retro 1940s jewelry",
+    "mid century modern jewelry",
+    "brutalist jewelry",
+    "organic modern jewelry",
+    "celestial jewelry",
+    "gothic jewelry",
+    "biker jewelry",
+    "egyptian revival jewelry"
+   ],
+   "exclusions": "-diamond -gemstone -sapphire -ruby -emerald -pearl -opal -amethyst -stone -bakelite -lucite -plastic -resin -crystal"
+  },
+  {
+   "platform": "etsy",
+   "actor": "automation-lab/etsy-scraper",
+   "items": 100,
+   "runs": [
+    {
+     "query": "brutalist jewelry",
+     "run_id": "WremJcxSDq7NNPQdN"
+    },
+    {
+     "query": "organic modern jewelry",
+     "run_id": "75fUSuU1nOruf4r7Q"
+    },
+    {
+     "query": "egyptian revival jewelry",
+     "run_id": "NlMk17klLsJ9AQ3xD"
+    }
+   ]
+  }
+ ],
+ "method_notes": "ebay style assignment is deterministic title matching (a listing can match several styles). etsy rows carry their search query. solimet_title_check is a deterministic offline filter flagging stone/plastic terms in titles; false negatives possible (listing photos may show stones). apify free-plan dataset retention is 7 days; these files are the durable snapshot.",
+ "files": {
+  "ebay-listings.jsonl": {
+   "rows": 852,
+   "sha256": "63b27199aee0cb7f1e81fcdf15e97380a786a2600da96ac2d0859dbc5978c6e7"
+  },
+  "etsy-listings.jsonl": {
+   "rows": 300,
+   "sha256": "f2a31b097e894594f7d0e473dde1cde14703c50b6f07f8ddf2f7717fb56bef9a"
+  },
+  "phrase-frequencies.jsonl": {
+   "rows": 726,
+   "sha256": "e78619d97c4cee17445a1d06ba768efb88edcf4d6b214e46956914e5f01f6e46"
+  }
+ }
+}
