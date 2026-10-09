@@ -25,10 +25,13 @@ all twelve signs title cleanly and unambiguously in jewelry titles:
 aries 5/5, taurus 5/3, gemini 5/4, cancer 7/4, leo 10/6, virgo 10/8,
 libra 10/9, scorpio 8/6, sagittarius 7/6, capricorn 4/4, aquarius 5/5,
 pisces 11/8. "zodiac" itself: 101/70. the etsy zodiac segment is 71%
-solimet-clean; ebay returned nothing usable for the same query (empty
-titles, run f1w0zi... - segment lives on etsy). single-word caveats:
-"cancer" and "leo" can be common words elsewhere, but in jewelry titles
-they are the sign.
+solimet-clean. correction from the first draft: the ebay zodiac run is
+NOT empty - 74/100 titles are on-segment - but the segment there is
+dominated by "natural crystal healing" stretch bracelets, stone-heavy
+and almost entirely outside solimet. ebay zodiac exists but is not our
+market; the sign phrase evidence should come from the etsy segment.
+single-word caveats: "cancer" and "leo" can be common words elsewhere,
+but in jewelry titles they are the sign.
 
 ### element records - no honest title language
 
@@ -58,23 +61,36 @@ tone, gold plated, rose gold). no phrase candidate; gold's symbol
 detection would ride on sun/celestial language, which belongs to the
 celestial style record, not this vocabulary.
 
-## flagged for a separate decision: tarot
+## flagged for a separate decision: tarot (deep-dive added 2026-10-09)
 
-the tarot segment is big and very solimet-friendly: "tarot" 103/97,
-"tarot card" 71/70, "major arcana" 22/22, 94% solimet-clean capture.
-card title counts from the capture: sun 20, moon 15, star 13, lovers 9,
-empress 9, magician 7, fool 6, priestess 5, hermit 3. querit corroborates
-a real dealer segment (lavanijewels' dedicated tarot collection,
-dragonweave sterling tarot pendants, search_ids in querit-2026-10-09/).
+the tarot segment is big, the cleanest in the whole program, and lives
+on both platforms. pooled per-card counts over 300 tarot titles
+(etsy tarot 100 + etsy major arcana 100 + ebay tarot 100, run ids
+below), total/clean:
 
-options, not decisions:
-- (a) new tarot records in the symbol vocabulary (kind: tarot_card) -
-  the honest fit, but it is a vocabulary extension, new records, and
-  needs its own evidence pass per card
-- (b) tarot phrases attached to existing celestial motifs (the moon,
-  star, sun cards) - cheaper, but conflates card symbolism with
-  celestial objects
-- (c) defer tarot entirely until the phrase layer proves out
+sun 41/38, moon 33/28, star 29/27, magician 22/17, empress 18/17,
+lovers 17/16, priestess 15/15, fool 13/12, world 9/9, strength 9/9,
+tower 7/7, wheel 7/7, hermit 5/5, chariot 4/4, temperance 4/4,
+death 3/3, hanged 3/3, justice 3/3, judgement 2/2, devil 2/2.
+
+282/300 solimet-clean (94%). ebay tarot is on-segment: 98/100 titles,
+89 clean - unlike zodiac, tarot lives on ebay too, and without the
+crystal-healing pollution. querit corroborates a real dealer segment
+(lavanijewels' dedicated tarot collection, dragonweave sterling tarot
+pendants, merryshine wholesale death pendants, search_ids in
+querit-2026-10-09/).
+
+options, with the conflation cost now measured:
+- (a) new tarot records in the symbol vocabulary (kind: tarot_card).
+  every card titles cleanly; the top eight (sun, moon, star, magician,
+  empress, lovers, priestess, fool) each carry 13+ title hits. the
+  honest fit. recommended, if tarot belongs in the product at all.
+- (b) tarot phrases attached to existing celestial motifs (moon, star,
+  sun cards). the cost is now concrete: 29 of the 300 tarot titles
+  carry both card and celestial-object language, so a shared phrase
+  layer double-fires and the two segments cannot be told apart in the
+  eval. not recommended.
+- (c) defer. leaves the cleanest segment on the table.
 
 ## what this unlocks
 
