@@ -40,6 +40,14 @@ SUPPORTS_MAP = {
 }
 # query-level curation: a run whose query names a style supports that term.
 QUERY_TERM_MAP = {
+    "everyday necklace": ["everyday_wear"],
+    "stackable bangle": ["stacks"],
+    "wedding band": ["ceremony_commitment"],
+    "anniversary band": ["ceremony_commitment"],
+    "alchemy necklace": ["metal_mercury"],
+    "alchemical symbols necklace": [
+        "element_air", "element_earth", "element_fire", "element_water",
+        "metal_mercury"],
     "brutalist jewelry": ["brutalist"], "organic modern jewelry": ["organic_modern"],
     "georgian jewelry": ["georgian"], "victorian jewelry": ["victorian"],
     "art nouveau jewelry": ["art_nouveau"], "edwardian jewelry": ["edwardian"],

@@ -31,10 +31,14 @@ findings:
    "alchemical symbols"; mercury appears by name. the metal_* terms
    can be evidenced as symbol-segment phrases (alchemy, alchemical,
    mercury) rather than material words.
-3. elements remain unprovable in titles: air/earth/fire/water word
-  hits are false positives (e.g. "solitaire" contains "air") or
-  non-element usage. consistent with the earlier finding: elements
-  never title. no evidence edge for element_*.
+3. elements DO title - inside the alchemical niche. 34 solimet-clean
+  titles carry element words, all from the alchemical-symbols query,
+  as explicit symbol products: "Air Element Symbol Silver Necklace",
+  "Alchemy Elements Necklace, Four Elements Pendant, Fire Water Air
+  Earth". this revises "elements never title": in mainstream segment
+  queries they never do, but the alchemical/occult symbol niche names
+  all four by product type. element_* terms earn a niche evidence
+  edge with this capture.
 4. anniversary band is a weak query (10% clean): ceremony evidence
    should ride on wedding/bridal phrases instead.
 
