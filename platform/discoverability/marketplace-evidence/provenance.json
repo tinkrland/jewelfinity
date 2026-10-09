@@ -101,6 +101,31 @@
      "note": null
     }
    ]
+  },
+  {
+   "name": "drift-edge co-occurrence probes 2026-10-09",
+   "purpose": "test whether the two remaining drift edges (celestial->art_deco, retro->mid_century_modernist) are real marketplace crossovers, per the celestial->gothic precedent",
+   "runs": [
+    {
+     "query": "art deco celestial jewelry",
+     "platform": "etsy",
+     "run_id": "v8j0gsCzxSXrVZudC",
+     "items": 100
+    },
+    {
+     "query": "art deco celestial jewelry",
+     "platform": "ebay",
+     "run_id": "hyw7ikDchIZajyFm3",
+     "items": 100
+    },
+    {
+     "query": "retro mid century jewelry",
+     "platform": "ebay",
+     "run_id": "abiMX0CnL3oDNcTfK",
+     "items": 100
+    }
+   ],
+   "method_note": "co-titling rates are biased upward by query echo (sellers keyword-stuff search terms into titles); the evidence that counts is specific crossover exemplars, named in the probe README. also 6 querit search-API passes saved under querit-2026-10-09/ with search_ids in each file."
   }
  ],
  "method_notes": "ebay style assignment is deterministic title matching (a listing can match several styles). etsy rows carry their search query. solimet_title_check is a deterministic offline filter flagging stone/plastic terms in titles; false negatives possible (listing photos may show stones). apify free-plan dataset retention is 7 days; these files are the durable snapshot. the skonvirke and scandinavian-modern queries (2026-10-08 follow-up), and the balance pass over the remaining ten styles, are kept as raw listings under style_query organic_modern and are not folded into phrase-frequencies.jsonl, to avoid double-counting that style's bucket.",
@@ -116,6 +141,10 @@
   "phrase-frequencies.jsonl": {
    "rows": 1226,
    "sha256": "b12b736a928759d37a32ed7ed890a60a7b2524101d23bfca9fc1ae80b303dfd1"
+  },
+  "co-occurrence-probes/probes.jsonl": {
+   "rows": 300,
+   "sha256": "1d8abc97d3a1a9ed5e08ae8688c1c24f697091417ba80ab12ef61c53f3eef761"
   }
  }
 }
