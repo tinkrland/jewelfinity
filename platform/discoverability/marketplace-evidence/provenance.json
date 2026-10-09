@@ -143,7 +143,7 @@
      "platform": "ebay",
      "run_id": "F1w0ZIlLuZdg4mDDv",
      "items": 100,
-     "note": "empty titles, unusable"
+     "note": "CORRECTION: not empty - 74/100 on-segment, but stone-heavy crystal-healing segment, outside solimet"
     },
     {
      "query": "tarot jewelry",
@@ -165,6 +165,20 @@
      "run_id": "XvGKHmBq4jOmhGMoq",
      "items": 100,
      "note": "white gold title language; 0 platinum"
+    },
+    {
+     "query": "major arcana necklace",
+     "platform": "etsy",
+     "run_id": "X8wbkmJu9gYlEPoG9",
+     "items": 100,
+     "note": "99 clean; card counts pooled into proposal appendix"
+    },
+    {
+     "query": "tarot necklace",
+     "platform": "ebay",
+     "run_id": "lOH5pbAfUvInBB86y",
+     "items": 100,
+     "note": "98/100 on-segment, 89 clean - tarot lives on ebay"
     }
    ],
    "querit": [
