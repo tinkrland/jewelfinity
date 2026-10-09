@@ -50,7 +50,12 @@ QUERY_TERM_MAP = {
 }
 
 def main():
+    # two passes: ALL nodes first, then ALL edges. an edge statement
+    # MATCHes both endpoints; if an endpoint is created later the MATCH
+    # silently binds nothing and the edge is lost with no error. found by
+    # running against live falkordb 2026-10-09 (83 of 162 edges lost).
     out = ["// affinity provenance graph load - deterministic, idempotent"]
+    nodes, edges = [], []
     table = json.load(open(AM / "affinity-table.json"))
     prior = {
         "engine_version": table["summary"].get("engine_version", "0.1.0"),
@@ -81,7 +86,7 @@ def main():
                      "left_class": sf.get("left_class"), "right_class": sf.get("right_class"),
                      "contribution": sf.get("contribution"), "prior_input_hash": ih}
                 out.append(f"MATCH (a:Term {{id: {cy(term['term'])}}}), (b:Term {{id: {cy(nb['term'])}}}) "
-                           f"MERGE (a)-[x:SHARES_FACET]->(b) SET x += {props(s)}")
+                           f"MERGE (a)-[x:SHARES_FACET {{facet: {cy(sf['facet'])}}}]->(b) SET x += {props(s)}")
 
     # evidence provenance
     prov = json.load(open(EV / "provenance.json"))
@@ -122,7 +127,10 @@ def main():
             out.append(f"MATCH (p:Profile {{profile_id: {cy(pid)}}}), (t:Term {{id: {cy(exp['term'])}}}) "
                        f"MERGE (p)-[xa:EXPECTED_AFFINITY]->(t) SET xa += {props({'score': exp['score'], 'rank': rank, 'method': 'latent-blend', 'prior_input_hash': ih})}")
 
-    print("\n".join(out))
+    header, body = out[0], out[1:]
+    node_stmts = [l for l in body if not l.startswith("MATCH ")]
+    edge_stmts = [l for l in body if l.startswith("MATCH ")]
+    print("\n".join([header] + node_stmts + edge_stmts))
 
 if __name__ == "__main__":
     main()
