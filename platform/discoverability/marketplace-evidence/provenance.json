@@ -1,260 +1,314 @@
 {
- "captured": "2026-10-08",
- "purpose": "marketplace listing-language evidence for the style vocabularies and confusable_with edges. evidence only: nothing here authors vocabulary content without review",
- "runs": [
-  {
-   "platform": "ebay",
-   "actor": "automation-lab/ebay-scraper",
-   "run_id": "OL5BTOSiu8QiiMBjo",
-   "dataset_id": "RNpqbPNkbxei1KRFa",
-   "items": 852,
-   "queries": [
-    "georgian jewelry",
-    "victorian jewelry",
-    "art nouveau jewelry",
-    "edwardian jewelry",
-    "art deco jewelry",
-    "retro 1940s jewelry",
-    "mid century modern jewelry",
-    "brutalist jewelry",
-    "organic modern jewelry",
-    "celestial jewelry",
-    "gothic jewelry",
-    "biker jewelry",
-    "egyptian revival jewelry"
-   ],
-   "exclusions": "-diamond -gemstone -sapphire -ruby -emerald -pearl -opal -amethyst -stone -bakelite -lucite -plastic -resin -crystal"
-  },
-  {
-   "platform": "etsy",
-   "actor": "automation-lab/etsy-scraper",
-   "items": 1500,
-   "runs": [
+  "captured": "2026-10-08",
+  "purpose": "marketplace listing-language evidence for the style vocabularies and confusable_with edges. evidence only: nothing here authors vocabulary content without review",
+  "runs": [
     {
-     "query": "brutalist jewelry",
-     "run_id": "WremJcxSDq7NNPQdN"
+      "platform": "ebay",
+      "actor": "automation-lab/ebay-scraper",
+      "run_id": "OL5BTOSiu8QiiMBjo",
+      "dataset_id": "RNpqbPNkbxei1KRFa",
+      "items": 852,
+      "queries": [
+        "georgian jewelry",
+        "victorian jewelry",
+        "art nouveau jewelry",
+        "edwardian jewelry",
+        "art deco jewelry",
+        "retro 1940s jewelry",
+        "mid century modern jewelry",
+        "brutalist jewelry",
+        "organic modern jewelry",
+        "celestial jewelry",
+        "gothic jewelry",
+        "biker jewelry",
+        "egyptian revival jewelry"
+      ],
+      "exclusions": "-diamond -gemstone -sapphire -ruby -emerald -pearl -opal -amethyst -stone -bakelite -lucite -plastic -resin -crystal"
     },
     {
-     "query": "organic modern jewelry",
-     "run_id": "75fUSuU1nOruf4r7Q"
+      "platform": "etsy",
+      "actor": "automation-lab/etsy-scraper",
+      "items": 1500,
+      "runs": [
+        {
+          "query": "brutalist jewelry",
+          "run_id": "WremJcxSDq7NNPQdN"
+        },
+        {
+          "query": "organic modern jewelry",
+          "run_id": "75fUSuU1nOruf4r7Q"
+        },
+        {
+          "query": "egyptian revival jewelry",
+          "run_id": "NlMk17klLsJ9AQ3xD"
+        },
+        {
+          "query": "skonvirke jewelry",
+          "run_id": "vrwweozPhnz5ehXfk"
+        },
+        {
+          "query": "scandinavian modern jewelry",
+          "run_id": "8AVThCBBSoijw3NLS"
+        },
+        {
+          "query": "georgian era jewelry",
+          "run_id": "wjORe71jJLuXAhHlC",
+          "note": "plain 'georgian jewelry' returned zero items on etsy; 'georgian era jewelry' used"
+        },
+        {
+          "query": "victorian jewelry",
+          "run_id": "ZDTqIuHxC0Gk9m3Ql",
+          "note": null
+        },
+        {
+          "query": "art nouveau jewelry",
+          "run_id": "oanH5wk9llTDtH3Ww",
+          "note": null
+        },
+        {
+          "query": "edwardian jewelry",
+          "run_id": "H0qI3XxLFEBWt7SZp",
+          "note": null
+        },
+        {
+          "query": "art deco jewelry",
+          "run_id": "4hyHnBJuCCiljaRJ5",
+          "note": null
+        },
+        {
+          "query": "retro 40s jewelry",
+          "run_id": "QM0Se6JHJeQbiI9y1",
+          "note": null
+        },
+        {
+          "query": "mid century modern jewelry",
+          "run_id": "S53SEaalwJzzqfzJf",
+          "note": null
+        },
+        {
+          "query": "celestial jewelry",
+          "run_id": "yXttahULeQWp7hQCB",
+          "note": null
+        },
+        {
+          "query": "gothic jewelry",
+          "run_id": "OhgEIPTem8lS5Fwni",
+          "note": null
+        },
+        {
+          "query": "biker jewelry",
+          "run_id": "1PPY1CE7nTUwQIiVp",
+          "note": null
+        }
+      ]
     },
     {
-     "query": "egyptian revival jewelry",
-     "run_id": "NlMk17klLsJ9AQ3xD"
+      "name": "drift-edge co-occurrence probes 2026-10-09",
+      "purpose": "test whether the two remaining drift edges (celestial->art_deco, retro->mid_century_modernist) are real marketplace crossovers, per the celestial->gothic precedent",
+      "runs": [
+        {
+          "query": "art deco celestial jewelry",
+          "platform": "etsy",
+          "run_id": "v8j0gsCzxSXrVZudC",
+          "items": 100
+        },
+        {
+          "query": "art deco celestial jewelry",
+          "platform": "ebay",
+          "run_id": "hyw7ikDchIZajyFm3",
+          "items": 100
+        },
+        {
+          "query": "retro mid century jewelry",
+          "platform": "ebay",
+          "run_id": "abiMX0CnL3oDNcTfK",
+          "items": 100
+        }
+      ],
+      "method_note": "co-titling rates are biased upward by query echo (sellers keyword-stuff search terms into titles); the evidence that counts is specific crossover exemplars, named in the probe README. also 6 querit search-API passes saved under querit-2026-10-09/ with search_ids in each file."
     },
     {
-     "query": "skonvirke jewelry",
-     "run_id": "vrwweozPhnz5ehXfk"
+      "name": "symbol-segment capture 2026-10-09",
+      "purpose": "symbol marketplace phrase evidence: zodiac signs, tarot, celestial objects, white gold",
+      "runs": [
+        {
+          "query": "zodiac necklace",
+          "platform": "etsy",
+          "run_id": "5rW00Wz1q2pKgGV7c",
+          "items": 100,
+          "note": "71% solimet-clean, all 12 signs present"
+        },
+        {
+          "query": "zodiac jewelry",
+          "platform": "ebay",
+          "run_id": "F1w0ZIlLuZdg4mDDv",
+          "items": 100,
+          "note": "CORRECTION: not empty - 74/100 on-segment, but stone-heavy crystal-healing segment, outside solimet"
+        },
+        {
+          "query": "tarot jewelry",
+          "platform": "etsy",
+          "run_id": "PnyAYpCpTlw4GRS6P",
+          "items": 100,
+          "note": "94% solimet-clean; sun 20, moon 15, star 13 cards"
+        },
+        {
+          "query": "celestial jewelry",
+          "platform": "etsy",
+          "run_id": "qdjbTeYbKmrEo0IBC",
+          "items": 100,
+          "note": "41% solimet-clean, moonstone pollution"
+        },
+        {
+          "query": "white gold necklace",
+          "platform": "etsy",
+          "run_id": "XvGKHmBq4jOmhGMoq",
+          "items": 100,
+          "note": "white gold title language; 0 platinum"
+        },
+        {
+          "query": "major arcana necklace",
+          "platform": "etsy",
+          "run_id": "X8wbkmJu9gYlEPoG9",
+          "items": 100,
+          "note": "99 clean; card counts pooled into proposal appendix"
+        },
+        {
+          "query": "tarot necklace",
+          "platform": "ebay",
+          "run_id": "lOH5pbAfUvInBB86y",
+          "items": 100,
+          "note": "98/100 on-segment, 89 clean - tarot lives on ebay"
+        },
+        {
+          "query": "tarot necklace",
+          "platform": "mercari-us",
+          "run_id": "101dhvACIUqVTiMXO",
+          "items": 100,
+          "note": "91/100 on-segment, 88 clean; resale register"
+        },
+        {
+          "query": "zodiac necklace",
+          "platform": "mercari-us",
+          "run_id": "iBMiM4UJm2l5kzgkJ",
+          "items": 100,
+          "note": "97/100 on-segment, 90 clean, all 12 signs"
+        },
+        {
+          "query": "tarot jewelry",
+          "platform": "shein",
+          "run_id": "RebJEMKIsN3xoJuNk",
+          "items": 100,
+          "note": "80/100 on-segment, 80 clean; SEO keyword-essay register"
+        },
+        {
+          "source": "shopify products.json",
+          "store": "evryjewels.com",
+          "products": 250,
+          "sha256": "952fabb365e68afe546e7d180656af3aa5e70a9eafb48bfe1cd59b9530f0b606",
+          "note": "DTC register: punny names, symbols not in titles"
+        },
+        {
+          "source": "shopify products.json",
+          "store": "aweinspired.com",
+          "products": 250,
+          "sha256": "b4c60145d5bf95e0a163258ea29a365850aa1a1834b335994c29c93b2f3e94a5",
+          "note": "celestial 23, moon 15, tarot 3 in title+tags"
+        },
+        {
+          "source": "shopify products.json",
+          "store": "caitlynminimalist.com",
+          "products": 250,
+          "sha256": "4ae0caecf9bf580f529fb032d740d9efc87ae1472ad26675e89e63cea19c309b",
+          "note": "symbol words largely out of titles; moonstone/diamond products outside solimet"
+        },
+        {
+          "source": "shopify products.json",
+          "store": "solisdivinitytarot.com",
+          "products": 12,
+          "sha256": "544c0dc6132c90170125858f40b9c7c0e7965a43c5ebc9d7c54650adb412a68e",
+          "note": "tarot decks not jewelry - excluded as evidence"
+        }
+      ],
+      "querit": [
+        "tarot jewelry motifs (search_id 484506263637973405)",
+        "zodiac sign jewelry market (search_id 1824280908952667630)",
+        "tarot shopify stores (search_id 415468486036996252)"
+      ],
+      "output": "symbol-phrase-extension-proposal.md"
     },
     {
-     "query": "scandinavian modern jewelry",
-     "run_id": "8AVThCBBSoijw3NLS"
-    },
-    {
-     "query": "georgian era jewelry",
-     "run_id": "wjORe71jJLuXAhHlC",
-     "note": "plain 'georgian jewelry' returned zero items on etsy; 'georgian era jewelry' used"
-    },
-    {
-     "query": "victorian jewelry",
-     "run_id": "ZDTqIuHxC0Gk9m3Ql",
-     "note": null
-    },
-    {
-     "query": "art nouveau jewelry",
-     "run_id": "oanH5wk9llTDtH3Ww",
-     "note": null
-    },
-    {
-     "query": "edwardian jewelry",
-     "run_id": "H0qI3XxLFEBWt7SZp",
-     "note": null
-    },
-    {
-     "query": "art deco jewelry",
-     "run_id": "4hyHnBJuCCiljaRJ5",
-     "note": null
-    },
-    {
-     "query": "retro 40s jewelry",
-     "run_id": "QM0Se6JHJeQbiI9y1",
-     "note": null
-    },
-    {
-     "query": "mid century modern jewelry",
-     "run_id": "S53SEaalwJzzqfzJf",
-     "note": null
-    },
-    {
-     "query": "celestial jewelry",
-     "run_id": "yXttahULeQWp7hQCB",
-     "note": null
-    },
-    {
-     "query": "gothic jewelry",
-     "run_id": "OhgEIPTem8lS5Fwni",
-     "note": null
-    },
-    {
-     "query": "biker jewelry",
-     "run_id": "1PPY1CE7nTUwQIiVp",
-     "note": null
+      "name": "wear-symbol segment capture 2026-10-09",
+      "purpose": "wear-context and metal-symbol phrase evidence: everyday, stackable, wedding/anniversary, alchemical metals",
+      "runs": [
+        {
+          "query": "everyday necklace",
+          "platform": "etsy",
+          "run_id": "6491eagoznGlXW5IJ",
+          "items": 100,
+          "sha256": "6edd4f9555c1ce8c8bea37c9917b1431a61d96dbd6b854857e3272ae0ddf5687",
+          "note": "72/100 solimet-clean"
+        },
+        {
+          "query": "stackable bangle",
+          "platform": "etsy",
+          "run_id": "eD6b0Q07Jdf0bgjxa",
+          "items": 100,
+          "sha256": "3664fca80296dfa3319c4ebc37cc8030967b9ee8b9a0be60dfdf2f8e88b9fc2a",
+          "note": "82/100 solimet-clean"
+        },
+        {
+          "query": "wedding band",
+          "platform": "etsy",
+          "run_id": "e2GGvEgyPoAzpPWgZ",
+          "items": 100,
+          "sha256": "161ba5f110ec7311a3e8e997acafb4ed82df56588a214e7d4fb7242a07f4cd5e",
+          "note": "41/100 solimet-clean"
+        },
+        {
+          "query": "anniversary band",
+          "platform": "etsy",
+          "run_id": "khtzxsOv9NYNtukPc",
+          "items": 100,
+          "sha256": "a30e51e35f4d13b7560f08f2f62c479074a84ef8859823041c930e459733b959",
+          "note": "10/100 solimet-clean"
+        },
+        {
+          "query": "alchemy necklace",
+          "platform": "etsy",
+          "run_id": "lQlkN1OcfbwNGctH5",
+          "items": 100,
+          "sha256": "ec0f1e71f052a6f9493ca0f143155a9e6c6679f5acf644237e35e8cb05032016",
+          "note": "68/100 solimet-clean"
+        },
+        {
+          "query": "alchemical symbols necklace",
+          "platform": "etsy",
+          "run_id": "ps1pBzK0FRuxJhQNH",
+          "items": 100,
+          "sha256": "eea95b6014e61a05c66ce0aa2bc8327c378dcc827e90c332e1fce2dcbff35965",
+          "note": "81/100 solimet-clean"
+        }
+      ]
     }
-   ]
-  },
-  {
-   "name": "drift-edge co-occurrence probes 2026-10-09",
-   "purpose": "test whether the two remaining drift edges (celestial->art_deco, retro->mid_century_modernist) are real marketplace crossovers, per the celestial->gothic precedent",
-   "runs": [
-    {
-     "query": "art deco celestial jewelry",
-     "platform": "etsy",
-     "run_id": "v8j0gsCzxSXrVZudC",
-     "items": 100
+  ],
+  "method_notes": "ebay style assignment is deterministic title matching (a listing can match several styles). etsy rows carry their search query. solimet_title_check is a deterministic offline filter flagging stone/plastic terms in titles; false negatives possible (listing photos may show stones). apify free-plan dataset retention is 7 days; these files are the durable snapshot. the skonvirke and scandinavian-modern queries (2026-10-08 follow-up), and the balance pass over the remaining ten styles, are kept as raw listings under style_query organic_modern and are not folded into phrase-frequencies.jsonl, to avoid double-counting that style's bucket.",
+  "files": {
+    "ebay-listings.jsonl": {
+      "rows": 852,
+      "sha256": "63b27199aee0cb7f1e81fcdf15e97380a786a2600da96ac2d0859dbc5978c6e7"
     },
-    {
-     "query": "art deco celestial jewelry",
-     "platform": "ebay",
-     "run_id": "hyw7ikDchIZajyFm3",
-     "items": 100
+    "etsy-listings.jsonl": {
+      "rows": 1500,
+      "sha256": "fcdbdc477dec0feea77a4deea6e8672760265ade3efe2f5815a2ae5c57d019d3"
     },
-    {
-     "query": "retro mid century jewelry",
-     "platform": "ebay",
-     "run_id": "abiMX0CnL3oDNcTfK",
-     "items": 100
+    "phrase-frequencies.jsonl": {
+      "rows": 1226,
+      "sha256": "b12b736a928759d37a32ed7ed890a60a7b2524101d23bfca9fc1ae80b303dfd1"
+    },
+    "co-occurrence-probes/probes.jsonl": {
+      "rows": 300,
+      "sha256": "1d8abc97d3a1a9ed5e08ae8688c1c24f697091417ba80ab12ef61c53f3eef761"
     }
-   ],
-   "method_note": "co-titling rates are biased upward by query echo (sellers keyword-stuff search terms into titles); the evidence that counts is specific crossover exemplars, named in the probe README. also 6 querit search-API passes saved under querit-2026-10-09/ with search_ids in each file."
-  },
-  {
-   "name": "symbol-segment capture 2026-10-09",
-   "purpose": "symbol marketplace phrase evidence: zodiac signs, tarot, celestial objects, white gold",
-   "runs": [
-    {
-     "query": "zodiac necklace",
-     "platform": "etsy",
-     "run_id": "5rW00Wz1q2pKgGV7c",
-     "items": 100,
-     "note": "71% solimet-clean, all 12 signs present"
-    },
-    {
-     "query": "zodiac jewelry",
-     "platform": "ebay",
-     "run_id": "F1w0ZIlLuZdg4mDDv",
-     "items": 100,
-     "note": "CORRECTION: not empty - 74/100 on-segment, but stone-heavy crystal-healing segment, outside solimet"
-    },
-    {
-     "query": "tarot jewelry",
-     "platform": "etsy",
-     "run_id": "PnyAYpCpTlw4GRS6P",
-     "items": 100,
-     "note": "94% solimet-clean; sun 20, moon 15, star 13 cards"
-    },
-    {
-     "query": "celestial jewelry",
-     "platform": "etsy",
-     "run_id": "qdjbTeYbKmrEo0IBC",
-     "items": 100,
-     "note": "41% solimet-clean, moonstone pollution"
-    },
-    {
-     "query": "white gold necklace",
-     "platform": "etsy",
-     "run_id": "XvGKHmBq4jOmhGMoq",
-     "items": 100,
-     "note": "white gold title language; 0 platinum"
-    },
-    {
-     "query": "major arcana necklace",
-     "platform": "etsy",
-     "run_id": "X8wbkmJu9gYlEPoG9",
-     "items": 100,
-     "note": "99 clean; card counts pooled into proposal appendix"
-    },
-    {
-     "query": "tarot necklace",
-     "platform": "ebay",
-     "run_id": "lOH5pbAfUvInBB86y",
-     "items": 100,
-     "note": "98/100 on-segment, 89 clean - tarot lives on ebay"
-    },
-    {
-     "query": "tarot necklace",
-     "platform": "mercari-us",
-     "run_id": "101dhvACIUqVTiMXO",
-     "items": 100,
-     "note": "91/100 on-segment, 88 clean; resale register"
-    },
-    {
-     "query": "zodiac necklace",
-     "platform": "mercari-us",
-     "run_id": "iBMiM4UJm2l5kzgkJ",
-     "items": 100,
-     "note": "97/100 on-segment, 90 clean, all 12 signs"
-    },
-    {
-     "query": "tarot jewelry",
-     "platform": "shein",
-     "run_id": "RebJEMKIsN3xoJuNk",
-     "items": 100,
-     "note": "80/100 on-segment, 80 clean; SEO keyword-essay register"
-    },
-    {
-     "source": "shopify products.json",
-     "store": "evryjewels.com",
-     "products": 250,
-     "sha256": "952fabb365e68afe546e7d180656af3aa5e70a9eafb48bfe1cd59b9530f0b606",
-     "note": "DTC register: punny names, symbols not in titles"
-    },
-    {
-     "source": "shopify products.json",
-     "store": "aweinspired.com",
-     "products": 250,
-     "sha256": "b4c60145d5bf95e0a163258ea29a365850aa1a1834b335994c29c93b2f3e94a5",
-     "note": "celestial 23, moon 15, tarot 3 in title+tags"
-    },
-    {
-     "source": "shopify products.json",
-     "store": "caitlynminimalist.com",
-     "products": 250,
-     "sha256": "4ae0caecf9bf580f529fb032d740d9efc87ae1472ad26675e89e63cea19c309b",
-     "note": "symbol words largely out of titles; moonstone/diamond products outside solimet"
-    },
-    {
-     "source": "shopify products.json",
-     "store": "solisdivinitytarot.com",
-     "products": 12,
-     "sha256": "544c0dc6132c90170125858f40b9c7c0e7965a43c5ebc9d7c54650adb412a68e",
-     "note": "tarot decks not jewelry - excluded as evidence"
-    }
-   ],
-   "querit": [
-    "tarot jewelry motifs (search_id 484506263637973405)",
-    "zodiac sign jewelry market (search_id 1824280908952667630)",
-    "tarot shopify stores (search_id 415468486036996252)"
-   ],
-   "output": "symbol-phrase-extension-proposal.md"
   }
- ],
- "method_notes": "ebay style assignment is deterministic title matching (a listing can match several styles). etsy rows carry their search query. solimet_title_check is a deterministic offline filter flagging stone/plastic terms in titles; false negatives possible (listing photos may show stones). apify free-plan dataset retention is 7 days; these files are the durable snapshot. the skonvirke and scandinavian-modern queries (2026-10-08 follow-up), and the balance pass over the remaining ten styles, are kept as raw listings under style_query organic_modern and are not folded into phrase-frequencies.jsonl, to avoid double-counting that style's bucket.",
- "files": {
-  "ebay-listings.jsonl": {
-   "rows": 852,
-   "sha256": "63b27199aee0cb7f1e81fcdf15e97380a786a2600da96ac2d0859dbc5978c6e7"
-  },
-  "etsy-listings.jsonl": {
-   "rows": 1500,
-   "sha256": "fcdbdc477dec0feea77a4deea6e8672760265ade3efe2f5815a2ae5c57d019d3"
-  },
-  "phrase-frequencies.jsonl": {
-   "rows": 1226,
-   "sha256": "b12b736a928759d37a32ed7ed890a60a7b2524101d23bfca9fc1ae80b303dfd1"
-  },
-  "co-occurrence-probes/probes.jsonl": {
-   "rows": 300,
-   "sha256": "1d8abc97d3a1a9ed5e08ae8688c1c24f697091417ba80ab12ef61c53f3eef761"
-  }
- }
 }
