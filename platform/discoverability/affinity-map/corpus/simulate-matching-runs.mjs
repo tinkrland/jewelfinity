@@ -29,7 +29,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import { roundTo, sha256File } from "../build-affinity-table.mjs";
-import { loadProfiles, computeExpectedTopk } from "./pin-expected-topk.mjs";
+import { loadProfiles, computeExpectedTopk, buildFacetContext } from "./pin-expected-topk.mjs";
 
 const CORPUS_DIR = path.dirname(fileURLToPath(import.meta.url));
 const MODULE_DIR = path.dirname(CORPUS_DIR);
@@ -94,7 +94,7 @@ function main() {
     }
   }
   const expected = new Map(
-    profiles.map(({ profile }) => [profile.profile_id, computeExpectedTopk(table, profile)]),
+    profiles.map(({ profile }) => [profile.profile_id, computeExpectedTopk(buildFacetContext(), profile)]),
   );
 
   const results = profiles.map(({ profile }) => {

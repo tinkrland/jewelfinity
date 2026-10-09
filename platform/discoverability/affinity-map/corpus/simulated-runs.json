@@ -58,7 +58,7 @@
       "unobserved_expected": [
         {
           "term": "retro",
-          "score": 0.100162408,
+          "score": 0.190036108,
           "detectable_in_titles": true,
           "driven_by_facets": [
             {
@@ -70,7 +70,7 @@
         },
         {
           "term": "organic_modern",
-          "score": 0.067345145,
+          "score": 0.091021149,
           "detectable_in_titles": true,
           "driven_by_facets": [
             {
@@ -82,7 +82,7 @@
         },
         {
           "term": "mid_century_modernist",
-          "score": 0.063089779,
+          "score": 0.085269757,
           "detectable_in_titles": true,
           "driven_by_facets": [
             {
@@ -94,7 +94,7 @@
         },
         {
           "term": "georgian",
-          "score": 0.061716456,
+          "score": 0.083413626,
           "detectable_in_titles": true,
           "driven_by_facets": [
             {
@@ -141,12 +141,22 @@
           "term": "organic_modern",
           "detectable_in_titles": true,
           "engaged_listings_matching": 0
+        },
+        {
+          "term": "art_deco",
+          "detectable_in_titles": true,
+          "engaged_listings_matching": 0
+        },
+        {
+          "term": "gothic",
+          "detectable_in_titles": true,
+          "engaged_listings_matching": 0
         }
       ],
       "unobserved_expected": [
         {
           "term": "retro",
-          "score": 0.285728432,
+          "score": 0.369817348,
           "detectable_in_titles": true,
           "driven_by_facets": [
             {
@@ -178,7 +188,7 @@
         },
         {
           "term": "egyptian_revival",
-          "score": 0.232995228,
+          "score": 0.348382868,
           "detectable_in_titles": true,
           "driven_by_facets": [
             {
@@ -210,7 +220,7 @@
         },
         {
           "term": "organic_modern",
-          "score": 0.083414238,
+          "score": 0.200353311,
           "detectable_in_titles": true,
           "driven_by_facets": [
             {
@@ -229,6 +239,18 @@
               "contribution": 0.5
             }
           ]
+        },
+        {
+          "term": "art_deco",
+          "score": 0.139992235,
+          "detectable_in_titles": true,
+          "driven_by_facets": []
+        },
+        {
+          "term": "gothic",
+          "score": 0.127962389,
+          "detectable_in_titles": true,
+          "driven_by_facets": []
         }
       ],
       "notes": []
@@ -257,16 +279,6 @@
           "engaged_listings_matching": 0
         },
         {
-          "term": "metal_gold",
-          "detectable_in_titles": false,
-          "engaged_listings_matching": 0
-        },
-        {
-          "term": "sign_leo",
-          "detectable_in_titles": true,
-          "engaged_listings_matching": 0
-        },
-        {
           "term": "sign_pisces",
           "detectable_in_titles": true,
           "engaged_listings_matching": 0
@@ -275,12 +287,22 @@
           "term": "sign_scorpio",
           "detectable_in_titles": true,
           "engaged_listings_matching": 0
+        },
+        {
+          "term": "metal_gold",
+          "detectable_in_titles": false,
+          "engaged_listings_matching": 0
+        },
+        {
+          "term": "sign_leo",
+          "detectable_in_titles": true,
+          "engaged_listings_matching": 0
         }
       ],
       "unobserved_expected": [
         {
           "term": "element_air",
-          "score": 0.208333333,
+          "score": 0.300344714,
           "detectable_in_titles": false,
           "driven_by_facets": [
             {
@@ -296,32 +318,8 @@
           ]
         },
         {
-          "term": "metal_gold",
-          "score": 0.104837418,
-          "detectable_in_titles": false,
-          "driven_by_facets": [
-            {
-              "seed": "celestial",
-              "facet": "sun",
-              "contribution": 0.7
-            }
-          ]
-        },
-        {
-          "term": "sign_leo",
-          "score": 0.085599394,
-          "detectable_in_titles": true,
-          "driven_by_facets": [
-            {
-              "seed": "celestial",
-              "facet": "sun",
-              "contribution": 0.7
-            }
-          ]
-        },
-        {
           "term": "sign_pisces",
-          "score": 0.085051727,
+          "score": 0.20270714,
           "detectable_in_titles": true,
           "driven_by_facets": [
             {
@@ -333,13 +331,37 @@
         },
         {
           "term": "sign_scorpio",
-          "score": 0.085051727,
+          "score": 0.20270714,
           "detectable_in_titles": true,
           "driven_by_facets": [
             {
               "seed": "element_water",
               "facet": "water",
               "contribution": 1
+            }
+          ]
+        },
+        {
+          "term": "metal_gold",
+          "score": 0.151139349,
+          "detectable_in_titles": false,
+          "driven_by_facets": [
+            {
+              "seed": "celestial",
+              "facet": "sun",
+              "contribution": 0.7
+            }
+          ]
+        },
+        {
+          "term": "sign_leo",
+          "score": 0.123404762,
+          "detectable_in_titles": true,
+          "driven_by_facets": [
+            {
+              "seed": "celestial",
+              "facet": "sun",
+              "contribution": 0.7
             }
           ]
         }
@@ -381,12 +403,12 @@
           "engaged_listings_matching": 0
         },
         {
-          "term": "victorian",
+          "term": "art_deco",
           "detectable_in_titles": true,
           "engaged_listings_matching": 0
         },
         {
-          "term": "retro",
+          "term": "victorian",
           "detectable_in_titles": true,
           "engaged_listings_matching": 0
         }
@@ -394,7 +416,7 @@
       "unobserved_expected": [
         {
           "term": "art_nouveau",
-          "score": 0.269869595,
+          "score": 0.317751157,
           "detectable_in_titles": true,
           "driven_by_facets": [
             {
@@ -416,7 +438,7 @@
         },
         {
           "term": "biker",
-          "score": 0.138473975,
+          "score": 0.163042694,
           "detectable_in_titles": true,
           "driven_by_facets": [
             {
@@ -432,31 +454,26 @@
           ]
         },
         {
+          "term": "art_deco",
+          "score": 0.110461255,
+          "detectable_in_titles": true,
+          "driven_by_facets": [
+            {
+              "seed": "mid_century_modernist",
+              "facet": "clean",
+              "contribution": 0.56
+            }
+          ]
+        },
+        {
           "term": "victorian",
-          "score": 0.078830628,
+          "score": 0.092817138,
           "detectable_in_titles": true,
           "driven_by_facets": [
             {
               "seed": "organic_modern",
               "facet": "organic",
               "contribution": 0.51
-            }
-          ]
-        },
-        {
-          "term": "retro",
-          "score": 0.055903156,
-          "detectable_in_titles": true,
-          "driven_by_facets": [
-            {
-              "seed": "mid_century_modernist",
-              "facet": "postwar_era",
-              "contribution": 0.25
-            },
-            {
-              "seed": "mid_century_modernist",
-              "facet": "sphere",
-              "contribution": 0.24
             }
           ]
         }

@@ -19,7 +19,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
-import { loadProfiles, computeExpectedTopk } from "./pin-expected-topk.mjs";
+import { loadProfiles, computeExpectedTopk, buildFacetContext } from "./pin-expected-topk.mjs";
 
 const CORPUS_DIR = path.dirname(fileURLToPath(import.meta.url));
 const MODULE_DIR = path.dirname(CORPUS_DIR);
@@ -33,6 +33,7 @@ function check(name, condition, detail = "") {
 
 function main() {
   const table = JSON.parse(fs.readFileSync(TABLE_PATH, "utf8"));
+  const ctx = buildFacetContext();
   const termIds = new Set(table.terms.map((t) => t.term));
   const profiles = loadProfiles();
 
@@ -79,7 +80,7 @@ function main() {
         profile_version: profile.version,
         status: profile.status,
         file,
-        expected_topk: computeExpectedTopk(table, profile),
+        expected_topk: computeExpectedTopk(ctx, profile),
       })),
     };
     check("pin covers exactly the committed profiles", pin.profiles.length === profiles.length);
@@ -90,7 +91,7 @@ function main() {
   process.stdout.write(
     profiles
       .map(({ profile }) => {
-        const topk = computeExpectedTopk(table, profile);
+        const topk = computeExpectedTopk(ctx, profile);
         return `${profile.profile_id} (${profile.status}) expected top-k: ${topk
           .map((e) => `${e.term} ${e.score}`)
           .join(", ")}`;

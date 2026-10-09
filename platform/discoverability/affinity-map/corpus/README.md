@@ -26,7 +26,16 @@ merge, per the standing gate.
 
 - pin-expected-topk.mjs computes and writes expected-top-k.json, pinned to
   the committed table's input/output hashes. run it after any table
-  rebuild; it is deterministic and byte-identical on rerun.
+  rebuild; it is deterministic and byte-identical on rerun. matching is
+  latent similarity affinity: a profile's seeds blend into one latent
+  taste vector in the governed facet space, and candidates rank by
+  cosine to that position. it is NOT pairwise semantic similarity to
+  each seed (owner correction 2026-10-09): a buyer who loves both gothic
+  and celestial has a latent midpoint taste, and the engine matches the
+  midpoint, not the poles. rankings shifted accordingly: art_deco
+  entered scandinavian-modernist's and antique-cluster's expected
+  results (retro dropped from scandinavian-modernist's); pisces and
+  scorpio rose above leo for celestial-dreamer.
 - check-corpus-profiles.mjs validates every profile (schema, fields,
   weight bounds, seed terms against the governed vocabulary, rationale
   evidence citation, filename = profile_id) and verifies the pin is
