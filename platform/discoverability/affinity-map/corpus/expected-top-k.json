@@ -1,0 +1,138 @@
+{
+  "schema": "corpus-expected-topk-v1",
+  "description": "computed expected top-k results per corpus profile, derived deterministically from the seeded affinities and the committed affinity table. never hand-written; regenerate with pin-expected-topk.mjs after any table rebuild.",
+  "pinned_to": {
+    "engine": {
+      "name": "affinity-map",
+      "version": "0.1.0"
+    },
+    "table_schema": "affinity-table-v1",
+    "input_hash": "6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44",
+    "output_hash": "9fa1508302febf7ca22b1b4c47df37e27dba83afd33b50841fa18ac556179735"
+  },
+  "method": "expected score = sum over seeds of (seed weight x table similarity) / total seed weight; candidates exclude the profile's own seeds; pairs below the table min_score contribute zero; k = table summary.top_k.",
+  "profiles": [
+    {
+      "profile_id": "profile-001-gothic-biker",
+      "profile_version": "0.1.0",
+      "status": "draft",
+      "file": "profile-001-gothic-biker.json",
+      "expected_topk": [
+        {
+          "term": "brutalist",
+          "vocabulary": "style-vocabulary",
+          "score": 0.296036677
+        },
+        {
+          "term": "retro",
+          "vocabulary": "style-vocabulary",
+          "score": 0.100162408
+        },
+        {
+          "term": "organic_modern",
+          "vocabulary": "style-vocabulary",
+          "score": 0.067345145
+        },
+        {
+          "term": "mid_century_modernist",
+          "vocabulary": "style-vocabulary",
+          "score": 0.063089779
+        },
+        {
+          "term": "georgian",
+          "vocabulary": "style-vocabulary",
+          "score": 0.061716456
+        }
+      ]
+    },
+    {
+      "profile_id": "profile-002-antique-cluster",
+      "profile_version": "0.1.0",
+      "status": "draft",
+      "file": "profile-002-antique-cluster.json",
+      "expected_topk": [
+        {
+          "term": "retro",
+          "vocabulary": "style-vocabulary",
+          "score": 0.285728432
+        },
+        {
+          "term": "egyptian_revival",
+          "vocabulary": "style-vocabulary",
+          "score": 0.232995228
+        },
+        {
+          "term": "organic_modern",
+          "vocabulary": "style-vocabulary",
+          "score": 0.083414238
+        }
+      ]
+    },
+    {
+      "profile_id": "profile-003-celestial-dreamer",
+      "profile_version": "0.1.0",
+      "status": "draft",
+      "file": "profile-003-celestial-dreamer.json",
+      "expected_topk": [
+        {
+          "term": "element_air",
+          "vocabulary": "symbol",
+          "score": 0.208333333
+        },
+        {
+          "term": "metal_gold",
+          "vocabulary": "symbol",
+          "score": 0.104837418
+        },
+        {
+          "term": "sign_leo",
+          "vocabulary": "symbol",
+          "score": 0.085599394
+        },
+        {
+          "term": "sign_pisces",
+          "vocabulary": "symbol",
+          "score": 0.085051727
+        },
+        {
+          "term": "sign_scorpio",
+          "vocabulary": "symbol",
+          "score": 0.085051727
+        }
+      ]
+    },
+    {
+      "profile_id": "profile-004-scandinavian-modernist",
+      "profile_version": "0.1.0",
+      "status": "draft",
+      "file": "profile-004-scandinavian-modernist.json",
+      "expected_topk": [
+        {
+          "term": "art_nouveau",
+          "vocabulary": "style-vocabulary",
+          "score": 0.269869595
+        },
+        {
+          "term": "brutalist",
+          "vocabulary": "style-vocabulary",
+          "score": 0.141851886
+        },
+        {
+          "term": "biker",
+          "vocabulary": "style-vocabulary",
+          "score": 0.138473975
+        },
+        {
+          "term": "victorian",
+          "vocabulary": "style-vocabulary",
+          "score": 0.078830628
+        },
+        {
+          "term": "retro",
+          "vocabulary": "style-vocabulary",
+          "score": 0.055903156
+        }
+      ]
+    }
+  ]
+}

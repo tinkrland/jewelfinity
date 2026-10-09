@@ -22,10 +22,20 @@ merge, per the standing gate.
   expected block is pinned per table version by a check script
 - profiles never change silently; a profile edit is a version bump
 
-## open items (next session)
+## tooling
 
-- corpus profile check script: term existence, weight bounds, computed
-  expected top-k pinned against the current table version, per-profile
-  pass rates
+- pin-expected-topk.mjs computes and writes expected-top-k.json, pinned to
+  the committed table's input/output hashes. run it after any table
+  rebuild; it is deterministic and byte-identical on rerun.
+- check-corpus-profiles.mjs validates every profile (schema, fields,
+  weight bounds, seed terms against the governed vocabulary, rationale
+  evidence citation, filename = profile_id) and verifies the pin is
+  fresh and byte-identical to a fresh recomputation. prints the
+  expected top-k per profile.
+
+## open items
+
+- per-profile pass rates need simulated matching runs; the expected
+  top-k pin is the ground truth they will be scored against
 - more profiles only as evidence supports them; thin styles get honest
   thin representation, not padding
