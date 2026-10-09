@@ -126,6 +126,52 @@
     }
    ],
    "method_note": "co-titling rates are biased upward by query echo (sellers keyword-stuff search terms into titles); the evidence that counts is specific crossover exemplars, named in the probe README. also 6 querit search-API passes saved under querit-2026-10-09/ with search_ids in each file."
+  },
+  {
+   "name": "symbol-segment capture 2026-10-09",
+   "purpose": "symbol marketplace phrase evidence: zodiac signs, tarot, celestial objects, white gold",
+   "runs": [
+    {
+     "query": "zodiac necklace",
+     "platform": "etsy",
+     "run_id": "5rW00Wz1q2pKgGV7c",
+     "items": 100,
+     "note": "71% solimet-clean, all 12 signs present"
+    },
+    {
+     "query": "zodiac jewelry",
+     "platform": "ebay",
+     "run_id": "F1w0ZIlLuZdg4mDDv",
+     "items": 100,
+     "note": "empty titles, unusable"
+    },
+    {
+     "query": "tarot jewelry",
+     "platform": "etsy",
+     "run_id": "PnyAYpCpTlw4GRS6P",
+     "items": 100,
+     "note": "94% solimet-clean; sun 20, moon 15, star 13 cards"
+    },
+    {
+     "query": "celestial jewelry",
+     "platform": "etsy",
+     "run_id": "qdjbTeYbKmrEo0IBC",
+     "items": 100,
+     "note": "41% solimet-clean, moonstone pollution"
+    },
+    {
+     "query": "white gold necklace",
+     "platform": "etsy",
+     "run_id": "XvGKHmBq4jOmhGMoq",
+     "items": 100,
+     "note": "white gold title language; 0 platinum"
+    }
+   ],
+   "querit": [
+    "tarot jewelry motifs (search_id 484506263637973405)",
+    "zodiac sign jewelry market (search_id 1824280908952667630)"
+   ],
+   "output": "symbol-phrase-extension-proposal.md"
   }
  ],
  "method_notes": "ebay style assignment is deterministic title matching (a listing can match several styles). etsy rows carry their search query. solimet_title_check is a deterministic offline filter flagging stone/plastic terms in titles; false negatives possible (listing photos may show stones). apify free-plan dataset retention is 7 days; these files are the durable snapshot. the skonvirke and scandinavian-modern queries (2026-10-08 follow-up), and the balance pass over the remaining ten styles, are kept as raw listings under style_query organic_modern and are not folded into phrase-frequencies.jsonl, to avoid double-counting that style's bucket.",
