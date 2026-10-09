@@ -92,6 +92,17 @@ options, with the conflation cost now measured:
   eval. not recommended.
 - (c) defer. leaves the cleanest segment on the table.
 
+## cross-platform corroboration (added 2026-10-09, mercari us + shein + shopify DTC)
+
+mercari us repeats both segments: zodiac 97/100 on-segment, 90 clean,
+all twelve signs again; tarot 91/100 on-segment, 88 clean. shein's
+tarot titles are SEO essays but still card-named, 80/80 clean. the
+sign-name and card-name phrases are therefore not an etsy artifact.
+one honest caveat from the shopify DTC catalogs (evry jewels, awe
+inspired, caitlyn minimalist): brands name symbol products with
+lifestyle puns, not keywords - title phrases will never see that
+register. details in symbol-segment/platform-register-notes.md.
+
 ## what this unlocks
 
 with signs phraseable, celestial-dreamer's expected top-k becomes 3/5

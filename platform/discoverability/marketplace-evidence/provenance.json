@@ -179,11 +179,61 @@
      "run_id": "lOH5pbAfUvInBB86y",
      "items": 100,
      "note": "98/100 on-segment, 89 clean - tarot lives on ebay"
+    },
+    {
+     "query": "tarot necklace",
+     "platform": "mercari-us",
+     "run_id": "101dhvACIUqVTiMXO",
+     "items": 100,
+     "note": "91/100 on-segment, 88 clean; resale register"
+    },
+    {
+     "query": "zodiac necklace",
+     "platform": "mercari-us",
+     "run_id": "iBMiM4UJm2l5kzgkJ",
+     "items": 100,
+     "note": "97/100 on-segment, 90 clean, all 12 signs"
+    },
+    {
+     "query": "tarot jewelry",
+     "platform": "shein",
+     "run_id": "RebJEMKIsN3xoJuNk",
+     "items": 100,
+     "note": "80/100 on-segment, 80 clean; SEO keyword-essay register"
+    },
+    {
+     "source": "shopify products.json",
+     "store": "evryjewels.com",
+     "products": 250,
+     "sha256": "952fabb365e68afe546e7d180656af3aa5e70a9eafb48bfe1cd59b9530f0b606",
+     "note": "DTC register: punny names, symbols not in titles"
+    },
+    {
+     "source": "shopify products.json",
+     "store": "aweinspired.com",
+     "products": 250,
+     "sha256": "b4c60145d5bf95e0a163258ea29a365850aa1a1834b335994c29c93b2f3e94a5",
+     "note": "celestial 23, moon 15, tarot 3 in title+tags"
+    },
+    {
+     "source": "shopify products.json",
+     "store": "caitlynminimalist.com",
+     "products": 250,
+     "sha256": "4ae0caecf9bf580f529fb032d740d9efc87ae1472ad26675e89e63cea19c309b",
+     "note": "symbol words largely out of titles; moonstone/diamond products outside solimet"
+    },
+    {
+     "source": "shopify products.json",
+     "store": "solisdivinitytarot.com",
+     "products": 12,
+     "sha256": "544c0dc6132c90170125858f40b9c7c0e7965a43c5ebc9d7c54650adb412a68e",
+     "note": "tarot decks not jewelry - excluded as evidence"
     }
    ],
    "querit": [
     "tarot jewelry motifs (search_id 484506263637973405)",
-    "zodiac sign jewelry market (search_id 1824280908952667630)"
+    "zodiac sign jewelry market (search_id 1824280908952667630)",
+    "tarot shopify stores (search_id 415468486036996252)"
    ],
    "output": "symbol-phrase-extension-proposal.md"
   }
