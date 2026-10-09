@@ -32,10 +32,35 @@ merge, per the standing gate.
   evidence citation, filename = profile_id) and verifies the pin is
   fresh and byte-identical to a fresh recomputation. prints the
   expected top-k per profile.
+- simulate-matching-runs.mjs runs the per-profile pass-rate eval over
+  the solimet-clean marketplace corpus (1724 listings): a listing passes
+  when it matches a profile's seed phrases and at least one non-seed
+  expected-top-k term's phrases. writes simulated-runs.json, pinned to
+  the table hashes and corpus file hashes, with facet tracking for
+  unobserved expected terms. deterministic.
+
+## cold-start pass rates (simulated runs, 2026-10-09)
+
+- gothic-biker: 2/39 engaged pass, rate 0.0513
+- antique-cluster: 0/2, rate 0 (n too small to mean anything)
+- celestial-dreamer: 0/59, not measurable - all five expected results
+  are symbol-layer terms and the symbol vocabulary has no marketplace
+  phrases yet
+- scandinavian-modernist: 20/160, rate 0.125 (the strongest: skonvirke
+  lineage titles co-title with mcm language)
+
+what the numbers honestly say: the style phrases are buyer-language by
+design ("very old looking", "chunky vintage", "witchy"), so seller
+titles rarely trigger the engagement gate - 116 solimet-clean titles
+literally say "victorian" but only 2 match the authored phrases. the
+pass rates therefore measure the buyer-language assumption, not just
+the engine. the largest eval gap is the symbol layer: zero phrases,
+so celestial's neighbors are invisible in titles.
 
 ## open items
 
-- per-profile pass rates need simulated matching runs; the expected
-  top-k pin is the ground truth they will be scored against
+- symbol marketplace phrases: the symbol vocabulary carries none;
+  celestial-dreamer's expected results cannot be evaluated until it
+  does
 - more profiles only as evidence supports them; thin styles get honest
   thin representation, not padding
