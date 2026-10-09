@@ -82,11 +82,25 @@ and release-to-facet edges are simple typed relations, and content-based
 matching is joins plus vector math, not traversal. postgres tables are the
 primary store for signals and character records.
 
-falkordb stays the chosen backend pairing but earns its seat in phase two,
-when co-occurrence features arrive: co-saves, co-follows, neighborhood
-queries, the multi-hop association graph. that graph is derived and
-rebuildable from the event log. falkordb never holds primary truth, so it
-can be dropped and rebuilt without losing anything.
+falkordb stays the chosen backend pairing and, per owner direction
+2026-10-09, also holds the affinity provenance graph: the why-layer.
+every structural affinity edge carries its per-facet contribution rows
+(which facets, which intensities, which classes made the engine think
+two terms relate); every term carries the evidence provenance that
+justifies it (runs, queries, run ids, hashes, item counts); profiles
+carry their seeds and expected affinities. "why does the engine think
+x relates to y" is a graph query, not a documentation dig. the
+provenance-graph/ prototype (schema, deterministic loader, query set)
+defines it; committed artifacts stay primary truth and the graph stays
+derived and rebuildable. the phase-two co-occurrence features - co-saves,
+co-follows, neighborhood queries, the multi-hop association graph - load
+into the same instance as a separate relationship family. falkordb never
+holds primary truth, so it can be dropped and rebuilt without losing
+anything.
+
+positioning, same ruling: this is a deep-understanding engine first.
+recommendations are a surface on top of the affinity understanding -
+affinity-related, never a product-push layer for marketing.
 
 either way, no store computes the affinity math. scoring runs in-process
 over loaded facet vectors. the core is a pure function over its inputs,

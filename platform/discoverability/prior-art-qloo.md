@@ -59,3 +59,29 @@ many", locality intelligence, agent grounding, on-device inference.
   learned models; the engine here is deterministic end to end.
 - scale: 600m entities vs 13 styles + 37 symbols + 4 contexts. the
   comparison is about the shape of the thinking, not the size.
+
+## study pass 2026-10-09 (docs.qloo.com)
+
+read their knowledge center: affinity, insights api, score methodology.
+
+- their affinity score: 0 to +1, strength of relationship between
+  inputs and outputs. same scale and same name as the engine's scores.
+  theirs is "a sophisticated blend of ai models"; ours is authored and
+  deterministic. the scale is the kinship, not the machinery.
+- their insights api: "predictions draw on two things together: real
+  behavioral signal, and a structured knowledge graph of entities, tags,
+  and locations that gives that signal cultural context." that is the
+  spec's two halves stated as one sentence - the structural prior and
+  the engagement layer, each useless without the other.
+- their output: "a ranked list of recommendations... ranked by
+  affinity", from "a movie they liked, or a musician they follow" as
+  input. same shape as the latent blend: a few follows in, a ranked
+  affinity list out, cold-start included.
+- their compliance framing: inferences from abstracted entity arrays,
+  no pii, "compliant by design". the spec's privacy-as-architecture
+  stance, again independently arrived at.
+- what they do not have: authored, evidence-gated vocabulary, and a
+  why-layer you can query per edge. their explainability is model
+  output ("which entities, which attributes"), the provenance graph
+  here is the actual computation, edge by edge. that is the honest
+  difference worth keeping.

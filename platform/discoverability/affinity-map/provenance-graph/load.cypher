@@ -1,0 +1,1258 @@
+// affinity provenance graph load - deterministic, idempotent
+CREATE (p:Prior {built: '', engine_version: '0.1.0', input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', output_hash: '9fa1508302febf7ca22b1b4c47df37e27dba83afd33b50841fa18ac556179735', table_schema: 'affinity-table-v1'})
+MERGE (t:Term {id: 'georgian'}) SET t += {facet_count: 7, id: 'georgian', name: 'georgian style', norm: 1.6941074346, updated: '2026-09-28', version: '0.3.0', vocabulary: 'style-vocabulary'}
+MERGE (f:Facet {name: 'antique', class: 'axis'})
+MATCH (t:Term {id: 'georgian'}), (f:Facet {name: 'antique', class: 'axis'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 1, sources: '[\'axes\']', weight: 1}
+MERGE (f:Facet {name: 'cannetille', class: 'feature'})
+MATCH (t:Term {id: 'georgian'}), (f:Facet {name: 'cannetille', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.5, sources: '[\'features\']', weight: 1}
+MERGE (f:Facet {name: 'floral', class: 'feature'})
+MATCH (t:Term {id: 'georgian'}), (f:Facet {name: 'floral', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.4, sources: '[\'features\']', weight: 1}
+MERGE (f:Facet {name: 'nature', class: 'feature'})
+MATCH (t:Term {id: 'georgian'}), (f:Facet {name: 'nature', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.5, sources: '[\'features\']', weight: 1}
+MERGE (f:Facet {name: 'ornate', class: 'feature'})
+MATCH (t:Term {id: 'georgian'}), (f:Facet {name: 'ornate', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.7, sources: '[\'features\', \'axes\']', weight: 1}
+MERGE (f:Facet {name: 'repousse', class: 'feature'})
+MATCH (t:Term {id: 'georgian'}), (f:Facet {name: 'repousse', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.6, sources: '[\'features\']', weight: 1}
+MERGE (f:Facet {name: 'scrollwork', class: 'feature'})
+MATCH (t:Term {id: 'georgian'}), (f:Facet {name: 'scrollwork', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.6, sources: '[\'features\']', weight: 1}
+MATCH (a:Term {id: 'georgian'}), (b:Term {id: 'art_nouveau'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 1, score: 0.5788182372}
+MATCH (a:Term {id: 'georgian'}), (b:Term {id: 'art_nouveau'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.7, facet: 'antique', left: 1, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.7, right_class: 'axis'}
+MATCH (a:Term {id: 'georgian'}), (b:Term {id: 'art_nouveau'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.42, facet: 'ornate', left: 0.7, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.6, right_class: 'axis'}
+MATCH (a:Term {id: 'georgian'}), (b:Term {id: 'art_nouveau'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.4, facet: 'nature', left: 0.5, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.8, right_class: 'feature'}
+MATCH (a:Term {id: 'georgian'}), (b:Term {id: 'art_nouveau'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.36, facet: 'floral', left: 0.4, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.9, right_class: 'feature'}
+MATCH (a:Term {id: 'georgian'}), (b:Term {id: 'art_nouveau'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.3, facet: 'scrollwork', left: 0.6, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.5, right_class: 'feature'}
+MATCH (a:Term {id: 'georgian'}), (b:Term {id: 'victorian'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 2, score: 0.5679984805}
+MATCH (a:Term {id: 'georgian'}), (b:Term {id: 'victorian'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.9, facet: 'antique', left: 1, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.9, right_class: 'axis'}
+MATCH (a:Term {id: 'georgian'}), (b:Term {id: 'victorian'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.56, facet: 'ornate', left: 0.7, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.8, right_class: 'axis'}
+MATCH (a:Term {id: 'georgian'}), (b:Term {id: 'victorian'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.3, facet: 'scrollwork', left: 0.6, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.5, right_class: 'feature'}
+MATCH (a:Term {id: 'georgian'}), (b:Term {id: 'victorian'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.24, facet: 'floral', left: 0.4, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.6, right_class: 'feature'}
+MATCH (a:Term {id: 'georgian'}), (b:Term {id: 'edwardian'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 3, score: 0.4316788452}
+MATCH (a:Term {id: 'georgian'}), (b:Term {id: 'edwardian'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.8, facet: 'antique', left: 1, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.8, right_class: 'axis'}
+MATCH (a:Term {id: 'georgian'}), (b:Term {id: 'edwardian'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.42, facet: 'ornate', left: 0.7, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.6, right_class: 'axis'}
+MATCH (a:Term {id: 'georgian'}), (b:Term {id: 'edwardian'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.3, facet: 'scrollwork', left: 0.6, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.5, right_class: 'feature'}
+MATCH (a:Term {id: 'georgian'}), (b:Term {id: 'egyptian_revival'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 4, score: 0.3414121943}
+MATCH (a:Term {id: 'georgian'}), (b:Term {id: 'egyptian_revival'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.6, facet: 'antique', left: 1, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.6, right_class: 'axis'}
+MATCH (a:Term {id: 'georgian'}), (b:Term {id: 'egyptian_revival'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.42, facet: 'ornate', left: 0.7, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.6, right_class: 'axis'}
+MATCH (a:Term {id: 'georgian'}), (b:Term {id: 'retro'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 5, score: 0.3356380283}
+MATCH (a:Term {id: 'georgian'}), (b:Term {id: 'retro'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.4, facet: 'antique', left: 1, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.4, right_class: 'axis'}
+MATCH (a:Term {id: 'georgian'}), (b:Term {id: 'retro'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.35, facet: 'ornate', left: 0.7, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.5, right_class: 'axis'}
+MATCH (a:Term {id: 'georgian'}), (b:Term {id: 'retro'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.3, facet: 'scrollwork', left: 0.6, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.5, right_class: 'feature'}
+MERGE (t:Term {id: 'victorian'}) SET t += {facet_count: 10, id: 'victorian', name: 'victorian style', norm: 2.0784609691, updated: '2026-10-09', version: '0.3.1', vocabulary: 'style-vocabulary'}
+MERGE (f:Facet {name: 'antique', class: 'axis'})
+MATCH (t:Term {id: 'victorian'}), (f:Facet {name: 'antique', class: 'axis'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.9, sources: '[\'axes\']', weight: 1}
+MERGE (f:Facet {name: 'bird', class: 'feature'})
+MATCH (t:Term {id: 'victorian'}), (f:Facet {name: 'bird', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.5, sources: '[\'features\']', weight: 1}
+MERGE (f:Facet {name: 'floral', class: 'feature'})
+MATCH (t:Term {id: 'victorian'}), (f:Facet {name: 'floral', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.6, sources: '[\'features\']', weight: 1}
+MERGE (f:Facet {name: 'heart', class: 'feature'})
+MATCH (t:Term {id: 'victorian'}), (f:Facet {name: 'heart', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.8, sources: '[\'features\']', weight: 1}
+MERGE (f:Facet {name: 'knot', class: 'feature'})
+MATCH (t:Term {id: 'victorian'}), (f:Facet {name: 'knot', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.7, sources: '[\'features\']', weight: 1}
+MERGE (f:Facet {name: 'organic', class: 'axis'})
+MATCH (t:Term {id: 'victorian'}), (f:Facet {name: 'organic', class: 'axis'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.6, sources: '[\'axes\']', weight: 1}
+MERGE (f:Facet {name: 'ornate', class: 'axis'})
+MATCH (t:Term {id: 'victorian'}), (f:Facet {name: 'ornate', class: 'axis'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.8, sources: '[\'axes\']', weight: 1}
+MERGE (f:Facet {name: 'scrollwork', class: 'feature'})
+MATCH (t:Term {id: 'victorian'}), (f:Facet {name: 'scrollwork', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.5, sources: '[\'features\']', weight: 1}
+MERGE (f:Facet {name: 'serpent', class: 'feature'})
+MATCH (t:Term {id: 'victorian'}), (f:Facet {name: 'serpent', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.6, sources: '[\'features\']', weight: 1}
+MERGE (f:Facet {name: 'tree', class: 'feature'})
+MATCH (t:Term {id: 'victorian'}), (f:Facet {name: 'tree', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.4, sources: '[\'features\']', weight: 1}
+MATCH (a:Term {id: 'victorian'}), (b:Term {id: 'georgian'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 1, score: 0.5679984805}
+MATCH (a:Term {id: 'victorian'}), (b:Term {id: 'georgian'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.9, facet: 'antique', left: 0.9, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'axis'}
+MATCH (a:Term {id: 'victorian'}), (b:Term {id: 'georgian'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.56, facet: 'ornate', left: 0.8, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.7, right_class: 'feature'}
+MATCH (a:Term {id: 'victorian'}), (b:Term {id: 'georgian'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.3, facet: 'scrollwork', left: 0.5, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.6, right_class: 'feature'}
+MATCH (a:Term {id: 'victorian'}), (b:Term {id: 'georgian'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.24, facet: 'floral', left: 0.6, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.4, right_class: 'feature'}
+MATCH (a:Term {id: 'victorian'}), (b:Term {id: 'art_nouveau'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 2, score: 0.5345418851}
+MATCH (a:Term {id: 'victorian'}), (b:Term {id: 'art_nouveau'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.63, facet: 'antique', left: 0.9, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.7, right_class: 'axis'}
+MATCH (a:Term {id: 'victorian'}), (b:Term {id: 'art_nouveau'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.57, facet: 'organic', left: 0.6, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.95, right_class: 'axis'}
+MATCH (a:Term {id: 'victorian'}), (b:Term {id: 'art_nouveau'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.54, facet: 'floral', left: 0.6, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.9, right_class: 'feature'}
+MATCH (a:Term {id: 'victorian'}), (b:Term {id: 'art_nouveau'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.48, facet: 'ornate', left: 0.8, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.6, right_class: 'axis'}
+MATCH (a:Term {id: 'victorian'}), (b:Term {id: 'art_nouveau'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.25, facet: 'scrollwork', left: 0.5, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.5, right_class: 'feature'}
+MATCH (a:Term {id: 'victorian'}), (b:Term {id: 'edwardian'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 3, score: 0.3356481481}
+MATCH (a:Term {id: 'victorian'}), (b:Term {id: 'edwardian'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.72, facet: 'antique', left: 0.9, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.8, right_class: 'axis'}
+MATCH (a:Term {id: 'victorian'}), (b:Term {id: 'edwardian'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.48, facet: 'ornate', left: 0.8, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.6, right_class: 'axis'}
+MATCH (a:Term {id: 'victorian'}), (b:Term {id: 'edwardian'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.25, facet: 'scrollwork', left: 0.5, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.5, right_class: 'feature'}
+MATCH (a:Term {id: 'victorian'}), (b:Term {id: 'egyptian_revival'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 4, score: 0.2782775069}
+MATCH (a:Term {id: 'victorian'}), (b:Term {id: 'egyptian_revival'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.54, facet: 'antique', left: 0.9, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.6, right_class: 'axis'}
+MATCH (a:Term {id: 'victorian'}), (b:Term {id: 'egyptian_revival'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.48, facet: 'ornate', left: 0.8, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.6, right_class: 'axis'}
+MATCH (a:Term {id: 'victorian'}), (b:Term {id: 'retro'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 5, score: 0.2631493556}
+MATCH (a:Term {id: 'victorian'}), (b:Term {id: 'retro'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.4, facet: 'ornate', left: 0.8, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.5, right_class: 'axis'}
+MATCH (a:Term {id: 'victorian'}), (b:Term {id: 'retro'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.36, facet: 'antique', left: 0.9, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.4, right_class: 'axis'}
+MATCH (a:Term {id: 'victorian'}), (b:Term {id: 'retro'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.25, facet: 'scrollwork', left: 0.5, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.5, right_class: 'feature'}
+MERGE (t:Term {id: 'art_nouveau'}) SET t += {facet_count: 8, id: 'art_nouveau', name: 'art nouveau style', norm: 2.2231734075, updated: '2026-09-28', version: '0.3.0', vocabulary: 'style-vocabulary'}
+MERGE (f:Facet {name: 'antique', class: 'axis'})
+MATCH (t:Term {id: 'art_nouveau'}), (f:Facet {name: 'antique', class: 'axis'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.7, sources: '[\'axes\']', weight: 1}
+MERGE (f:Facet {name: 'floral', class: 'feature'})
+MATCH (t:Term {id: 'art_nouveau'}), (f:Facet {name: 'floral', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.9, sources: '[\'features\']', weight: 1}
+MERGE (f:Facet {name: 'freeform_asymmetry', class: 'feature'})
+MATCH (t:Term {id: 'art_nouveau'}), (f:Facet {name: 'freeform_asymmetry', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.7, sources: '[\'features\']', weight: 1}
+MERGE (f:Facet {name: 'nature', class: 'feature'})
+MATCH (t:Term {id: 'art_nouveau'}), (f:Facet {name: 'nature', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.8, sources: '[\'features\']', weight: 1}
+MERGE (f:Facet {name: 'organic', class: 'axis'})
+MATCH (t:Term {id: 'art_nouveau'}), (f:Facet {name: 'organic', class: 'axis'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.95, sources: '[\'axes\']', weight: 1}
+MERGE (f:Facet {name: 'ornate', class: 'axis'})
+MATCH (t:Term {id: 'art_nouveau'}), (f:Facet {name: 'ornate', class: 'axis'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.6, sources: '[\'axes\']', weight: 1}
+MERGE (f:Facet {name: 'scrollwork', class: 'feature'})
+MATCH (t:Term {id: 'art_nouveau'}), (f:Facet {name: 'scrollwork', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.5, sources: '[\'features\']', weight: 1}
+MERGE (f:Facet {name: 'whiplash_curve', class: 'feature'})
+MATCH (t:Term {id: 'art_nouveau'}), (f:Facet {name: 'whiplash_curve', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 1, sources: '[\'features\']', weight: 1}
+MATCH (a:Term {id: 'art_nouveau'}), (b:Term {id: 'georgian'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 1, score: 0.5788182372}
+MATCH (a:Term {id: 'art_nouveau'}), (b:Term {id: 'georgian'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.7, facet: 'antique', left: 0.7, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'axis'}
+MATCH (a:Term {id: 'art_nouveau'}), (b:Term {id: 'georgian'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.42, facet: 'ornate', left: 0.6, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.7, right_class: 'feature'}
+MATCH (a:Term {id: 'art_nouveau'}), (b:Term {id: 'georgian'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.4, facet: 'nature', left: 0.8, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.5, right_class: 'feature'}
+MATCH (a:Term {id: 'art_nouveau'}), (b:Term {id: 'georgian'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.36, facet: 'floral', left: 0.9, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.4, right_class: 'feature'}
+MATCH (a:Term {id: 'art_nouveau'}), (b:Term {id: 'georgian'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.3, facet: 'scrollwork', left: 0.5, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.6, right_class: 'feature'}
+MATCH (a:Term {id: 'art_nouveau'}), (b:Term {id: 'victorian'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 2, score: 0.5345418851}
+MATCH (a:Term {id: 'art_nouveau'}), (b:Term {id: 'victorian'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.63, facet: 'antique', left: 0.7, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.9, right_class: 'axis'}
+MATCH (a:Term {id: 'art_nouveau'}), (b:Term {id: 'victorian'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.57, facet: 'organic', left: 0.95, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.6, right_class: 'axis'}
+MATCH (a:Term {id: 'art_nouveau'}), (b:Term {id: 'victorian'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.54, facet: 'floral', left: 0.9, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.6, right_class: 'feature'}
+MATCH (a:Term {id: 'art_nouveau'}), (b:Term {id: 'victorian'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.48, facet: 'ornate', left: 0.6, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.8, right_class: 'axis'}
+MATCH (a:Term {id: 'art_nouveau'}), (b:Term {id: 'victorian'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.25, facet: 'scrollwork', left: 0.5, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.5, right_class: 'feature'}
+MATCH (a:Term {id: 'art_nouveau'}), (b:Term {id: 'organic_modern'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 3, score: 0.458778311}
+MATCH (a:Term {id: 'art_nouveau'}), (b:Term {id: 'organic_modern'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.8075, facet: 'organic', left: 0.95, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.85, right_class: 'axis'}
+MATCH (a:Term {id: 'art_nouveau'}), (b:Term {id: 'organic_modern'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.56, facet: 'nature', left: 0.8, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.7, right_class: 'feature'}
+MATCH (a:Term {id: 'art_nouveau'}), (b:Term {id: 'organic_modern'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.5, facet: 'whiplash_curve', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.5, right_class: 'feature'}
+MATCH (a:Term {id: 'art_nouveau'}), (b:Term {id: 'edwardian'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 4, score: 0.2532040508}
+MATCH (a:Term {id: 'art_nouveau'}), (b:Term {id: 'edwardian'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.56, facet: 'antique', left: 0.7, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.8, right_class: 'axis'}
+MATCH (a:Term {id: 'art_nouveau'}), (b:Term {id: 'edwardian'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.36, facet: 'ornate', left: 0.6, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.6, right_class: 'axis'}
+MATCH (a:Term {id: 'art_nouveau'}), (b:Term {id: 'edwardian'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.25, facet: 'scrollwork', left: 0.5, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.5, right_class: 'feature'}
+MATCH (a:Term {id: 'art_nouveau'}), (b:Term {id: 'retro'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 5, score: 0.2021750522}
+MATCH (a:Term {id: 'art_nouveau'}), (b:Term {id: 'retro'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.3, facet: 'ornate', left: 0.6, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.5, right_class: 'axis'}
+MATCH (a:Term {id: 'art_nouveau'}), (b:Term {id: 'retro'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.28, facet: 'antique', left: 0.7, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.4, right_class: 'axis'}
+MATCH (a:Term {id: 'art_nouveau'}), (b:Term {id: 'retro'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.25, facet: 'scrollwork', left: 0.5, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.5, right_class: 'feature'}
+MERGE (t:Term {id: 'edwardian'}) SET t += {facet_count: 8, id: 'edwardian', name: 'edwardian style', norm: 2.0784609691, updated: '2026-09-28', version: '0.3.0', vocabulary: 'style-vocabulary'}
+MERGE (f:Facet {name: 'antique', class: 'axis'})
+MATCH (t:Term {id: 'edwardian'}), (f:Facet {name: 'antique', class: 'axis'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.8, sources: '[\'axes\']', weight: 1}
+MERGE (f:Facet {name: 'bow', class: 'feature'})
+MATCH (t:Term {id: 'edwardian'}), (f:Facet {name: 'bow', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.9, sources: '[\'features\']', weight: 1}
+MERGE (f:Facet {name: 'dainty', class: 'axis'})
+MATCH (t:Term {id: 'edwardian'}), (f:Facet {name: 'dainty', class: 'axis'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.8, sources: '[\'axes\']', weight: 1}
+MERGE (f:Facet {name: 'garland', class: 'feature'})
+MATCH (t:Term {id: 'edwardian'}), (f:Facet {name: 'garland', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.8, sources: '[\'features\']', weight: 1}
+MERGE (f:Facet {name: 'lace', class: 'feature'})
+MATCH (t:Term {id: 'edwardian'}), (f:Facet {name: 'lace', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.7, sources: '[\'features\']', weight: 1}
+MERGE (f:Facet {name: 'ornate', class: 'axis'})
+MATCH (t:Term {id: 'edwardian'}), (f:Facet {name: 'ornate', class: 'axis'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.6, sources: '[\'axes\']', weight: 1}
+MERGE (f:Facet {name: 'ribbon', class: 'feature'})
+MATCH (t:Term {id: 'edwardian'}), (f:Facet {name: 'ribbon', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.7, sources: '[\'features\']', weight: 1}
+MERGE (f:Facet {name: 'scrollwork', class: 'feature'})
+MATCH (t:Term {id: 'edwardian'}), (f:Facet {name: 'scrollwork', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.5, sources: '[\'features\']', weight: 1}
+MATCH (a:Term {id: 'edwardian'}), (b:Term {id: 'georgian'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 1, score: 0.4316788452}
+MATCH (a:Term {id: 'edwardian'}), (b:Term {id: 'georgian'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.8, facet: 'antique', left: 0.8, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'axis'}
+MATCH (a:Term {id: 'edwardian'}), (b:Term {id: 'georgian'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.42, facet: 'ornate', left: 0.6, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.7, right_class: 'feature'}
+MATCH (a:Term {id: 'edwardian'}), (b:Term {id: 'georgian'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.3, facet: 'scrollwork', left: 0.5, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.6, right_class: 'feature'}
+MATCH (a:Term {id: 'edwardian'}), (b:Term {id: 'victorian'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 2, score: 0.3356481481}
+MATCH (a:Term {id: 'edwardian'}), (b:Term {id: 'victorian'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.72, facet: 'antique', left: 0.8, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.9, right_class: 'axis'}
+MATCH (a:Term {id: 'edwardian'}), (b:Term {id: 'victorian'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.48, facet: 'ornate', left: 0.6, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.8, right_class: 'axis'}
+MATCH (a:Term {id: 'edwardian'}), (b:Term {id: 'victorian'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.25, facet: 'scrollwork', left: 0.5, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.5, right_class: 'feature'}
+MATCH (a:Term {id: 'edwardian'}), (b:Term {id: 'retro'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 3, score: 0.3204690172}
+MATCH (a:Term {id: 'edwardian'}), (b:Term {id: 'retro'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.36, facet: 'bow', left: 0.9, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.4, right_class: 'feature'}
+MATCH (a:Term {id: 'edwardian'}), (b:Term {id: 'retro'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.32, facet: 'antique', left: 0.8, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.4, right_class: 'axis'}
+MATCH (a:Term {id: 'edwardian'}), (b:Term {id: 'retro'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.3, facet: 'ornate', left: 0.6, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.5, right_class: 'axis'}
+MATCH (a:Term {id: 'edwardian'}), (b:Term {id: 'retro'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.25, facet: 'scrollwork', left: 0.5, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.5, right_class: 'feature'}
+MATCH (a:Term {id: 'edwardian'}), (b:Term {id: 'art_nouveau'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 4, score: 0.2532040508}
+MATCH (a:Term {id: 'edwardian'}), (b:Term {id: 'art_nouveau'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.56, facet: 'antique', left: 0.8, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.7, right_class: 'axis'}
+MATCH (a:Term {id: 'edwardian'}), (b:Term {id: 'art_nouveau'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.36, facet: 'ornate', left: 0.6, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.6, right_class: 'axis'}
+MATCH (a:Term {id: 'edwardian'}), (b:Term {id: 'art_nouveau'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.25, facet: 'scrollwork', left: 0.5, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.5, right_class: 'feature'}
+MATCH (a:Term {id: 'edwardian'}), (b:Term {id: 'egyptian_revival'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 5, score: 0.2291697116}
+MATCH (a:Term {id: 'edwardian'}), (b:Term {id: 'egyptian_revival'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.48, facet: 'antique', left: 0.8, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.6, right_class: 'axis'}
+MATCH (a:Term {id: 'edwardian'}), (b:Term {id: 'egyptian_revival'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.36, facet: 'ornate', left: 0.6, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.6, right_class: 'axis'}
+MERGE (t:Term {id: 'art_deco'}) SET t += {facet_count: 12, id: 'art_deco', name: 'art deco style', norm: 2.4561148182, updated: '2026-10-09', version: '0.2.2', vocabulary: 'style-vocabulary'}
+MERGE (f:Facet {name: 'antique', class: 'axis'})
+MATCH (t:Term {id: 'art_deco'}), (f:Facet {name: 'antique', class: 'axis'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.6, sources: '[\'axes\']', weight: 1}
+MERGE (f:Facet {name: 'calibre', class: 'feature'})
+MATCH (t:Term {id: 'art_deco'}), (f:Facet {name: 'calibre', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.5, sources: '[\'features\']', weight: 1}
+MERGE (f:Facet {name: 'chevron', class: 'feature'})
+MATCH (t:Term {id: 'art_deco'}), (f:Facet {name: 'chevron', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.8, sources: '[\'features\']', weight: 1}
+MERGE (f:Facet {name: 'clean', class: 'axis'})
+MATCH (t:Term {id: 'art_deco'}), (f:Facet {name: 'clean', class: 'axis'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.7, sources: '[\'axes\']', weight: 1}
+MERGE (f:Facet {name: 'contrast', class: 'feature'})
+MATCH (t:Term {id: 'art_deco'}), (f:Facet {name: 'contrast', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.6, sources: '[\'features\']', weight: 1}
+MERGE (f:Facet {name: 'fan', class: 'feature'})
+MATCH (t:Term {id: 'art_deco'}), (f:Facet {name: 'fan', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.7, sources: '[\'features\']', weight: 1}
+MERGE (f:Facet {name: 'geometric', class: 'axis'})
+MATCH (t:Term {id: 'art_deco'}), (f:Facet {name: 'geometric', class: 'axis'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.9, sources: '[\'axes\']', weight: 1}
+MERGE (f:Facet {name: 'geometric_step', class: 'feature'})
+MATCH (t:Term {id: 'art_deco'}), (f:Facet {name: 'geometric_step', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.9, sources: '[\'features\']', weight: 1}
+MERGE (f:Facet {name: 'sun_motif', class: 'feature'})
+MATCH (t:Term {id: 'art_deco'}), (f:Facet {name: 'sun_motif', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.5, sources: '[\'features\']', weight: 1}
+MERGE (f:Facet {name: 'sunburst', class: 'feature'})
+MATCH (t:Term {id: 'art_deco'}), (f:Facet {name: 'sunburst', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.7, sources: '[\'features\']', weight: 1}
+MERGE (f:Facet {name: 'symmetry', class: 'feature'})
+MATCH (t:Term {id: 'art_deco'}), (f:Facet {name: 'symmetry', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.85, sources: '[\'features\']', weight: 1}
+MERGE (f:Facet {name: 'zigzag', class: 'feature'})
+MATCH (t:Term {id: 'art_deco'}), (f:Facet {name: 'zigzag', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.6, sources: '[\'features\']', weight: 1}
+MATCH (a:Term {id: 'art_deco'}), (b:Term {id: 'egyptian_revival'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 1, score: 0.2701201623}
+MATCH (a:Term {id: 'art_deco'}), (b:Term {id: 'egyptian_revival'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.45, facet: 'geometric', left: 0.9, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.5, right_class: 'axis'}
+MATCH (a:Term {id: 'art_deco'}), (b:Term {id: 'egyptian_revival'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.36, facet: 'antique', left: 0.6, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.6, right_class: 'axis'}
+MATCH (a:Term {id: 'art_deco'}), (b:Term {id: 'egyptian_revival'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.36, facet: 'geometric_step', left: 0.9, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.4, right_class: 'feature'}
+MATCH (a:Term {id: 'art_deco'}), (b:Term {id: 'georgian'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 2, score: 0.1441987968}
+MATCH (a:Term {id: 'art_deco'}), (b:Term {id: 'georgian'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.6, facet: 'antique', left: 0.6, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'axis'}
+MATCH (a:Term {id: 'art_deco'}), (b:Term {id: 'mid_century_modernist'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 3, score: 0.116656161}
+MATCH (a:Term {id: 'art_deco'}), (b:Term {id: 'mid_century_modernist'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.56, facet: 'clean', left: 0.7, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.8, right_class: 'axis'}
+MATCH (a:Term {id: 'art_deco'}), (b:Term {id: 'victorian'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 4, score: 0.1057799168}
+MATCH (a:Term {id: 'art_deco'}), (b:Term {id: 'victorian'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.54, facet: 'antique', left: 0.6, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.9, right_class: 'axis'}
+MATCH (a:Term {id: 'art_deco'}), (b:Term {id: 'edwardian'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 5, score: 0.0940265927}
+MATCH (a:Term {id: 'art_deco'}), (b:Term {id: 'edwardian'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.48, facet: 'antique', left: 0.6, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.8, right_class: 'axis'}
+MERGE (t:Term {id: 'retro'}) SET t += {facet_count: 10, id: 'retro', name: 'retro style', norm: 1.8466185313, updated: '2026-10-09', version: '0.3.3', vocabulary: 'style-vocabulary'}
+MERGE (f:Facet {name: 'antique', class: 'axis'})
+MATCH (t:Term {id: 'retro'}), (f:Facet {name: 'antique', class: 'axis'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.4, sources: '[\'axes\']', weight: 1}
+MERGE (f:Facet {name: 'bold_curves', class: 'feature'})
+MATCH (t:Term {id: 'retro'}), (f:Facet {name: 'bold_curves', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.7, sources: '[\'features\']', weight: 1}
+MERGE (f:Facet {name: 'bow', class: 'feature'})
+MATCH (t:Term {id: 'retro'}), (f:Facet {name: 'bow', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.4, sources: '[\'features\']', weight: 1}
+MERGE (f:Facet {name: 'chunky', class: 'axis'})
+MATCH (t:Term {id: 'retro'}), (f:Facet {name: 'chunky', class: 'axis'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.8, sources: '[\'axes\']', weight: 1}
+MERGE (f:Facet {name: 'dimensional_goldwork', class: 'feature'})
+MATCH (t:Term {id: 'retro'}), (f:Facet {name: 'dimensional_goldwork', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.7, sources: '[\'features\']', weight: 1}
+MERGE (f:Facet {name: 'fabric_motif', class: 'feature'})
+MATCH (t:Term {id: 'retro'}), (f:Facet {name: 'fabric_motif', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.6, sources: '[\'features\']', weight: 1}
+MERGE (f:Facet {name: 'ornate', class: 'axis'})
+MATCH (t:Term {id: 'retro'}), (f:Facet {name: 'ornate', class: 'axis'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.5, sources: '[\'axes\']', weight: 1}
+MERGE (f:Facet {name: 'postwar_era', class: 'axis'})
+MATCH (t:Term {id: 'retro'}), (f:Facet {name: 'postwar_era', class: 'axis'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.5, sources: '[\'axes\']', weight: 1}
+MERGE (f:Facet {name: 'scrollwork', class: 'feature'})
+MATCH (t:Term {id: 'retro'}), (f:Facet {name: 'scrollwork', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.5, sources: '[\'features\']', weight: 1}
+MERGE (f:Facet {name: 'sphere', class: 'feature'})
+MATCH (t:Term {id: 'retro'}), (f:Facet {name: 'sphere', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.6, sources: '[\'features\']', weight: 1}
+MATCH (a:Term {id: 'retro'}), (b:Term {id: 'georgian'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 1, score: 0.3356380283}
+MATCH (a:Term {id: 'retro'}), (b:Term {id: 'georgian'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.4, facet: 'antique', left: 0.4, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'axis'}
+MATCH (a:Term {id: 'retro'}), (b:Term {id: 'georgian'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.35, facet: 'ornate', left: 0.5, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.7, right_class: 'feature'}
+MATCH (a:Term {id: 'retro'}), (b:Term {id: 'georgian'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.3, facet: 'scrollwork', left: 0.5, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.6, right_class: 'feature'}
+MATCH (a:Term {id: 'retro'}), (b:Term {id: 'edwardian'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 2, score: 0.3204690172}
+MATCH (a:Term {id: 'retro'}), (b:Term {id: 'edwardian'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.36, facet: 'bow', left: 0.4, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.9, right_class: 'feature'}
+MATCH (a:Term {id: 'retro'}), (b:Term {id: 'edwardian'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.32, facet: 'antique', left: 0.4, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.8, right_class: 'axis'}
+MATCH (a:Term {id: 'retro'}), (b:Term {id: 'edwardian'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.3, facet: 'ornate', left: 0.5, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.6, right_class: 'axis'}
+MATCH (a:Term {id: 'retro'}), (b:Term {id: 'edwardian'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.25, facet: 'scrollwork', left: 0.5, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.5, right_class: 'feature'}
+MATCH (a:Term {id: 'retro'}), (b:Term {id: 'victorian'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 3, score: 0.2631493556}
+MATCH (a:Term {id: 'retro'}), (b:Term {id: 'victorian'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.4, facet: 'ornate', left: 0.5, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.8, right_class: 'axis'}
+MATCH (a:Term {id: 'retro'}), (b:Term {id: 'victorian'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.36, facet: 'antique', left: 0.4, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.9, right_class: 'axis'}
+MATCH (a:Term {id: 'retro'}), (b:Term {id: 'victorian'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.25, facet: 'scrollwork', left: 0.5, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.5, right_class: 'feature'}
+MATCH (a:Term {id: 'retro'}), (b:Term {id: 'biker'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 4, score: 0.2114539725}
+MATCH (a:Term {id: 'retro'}), (b:Term {id: 'biker'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.72, facet: 'chunky', left: 0.8, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.9, right_class: 'axis'}
+MATCH (a:Term {id: 'retro'}), (b:Term {id: 'art_nouveau'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 5, score: 0.2021750522}
+MATCH (a:Term {id: 'retro'}), (b:Term {id: 'art_nouveau'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.3, facet: 'ornate', left: 0.5, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.6, right_class: 'axis'}
+MATCH (a:Term {id: 'retro'}), (b:Term {id: 'art_nouveau'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.28, facet: 'antique', left: 0.4, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.7, right_class: 'axis'}
+MATCH (a:Term {id: 'retro'}), (b:Term {id: 'art_nouveau'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.25, facet: 'scrollwork', left: 0.5, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.5, right_class: 'feature'}
+MERGE (t:Term {id: 'mid_century_modernist'}) SET t += {facet_count: 8, id: 'mid_century_modernist', name: 'mid-century modernist style', norm: 1.9544820286, updated: '2026-10-09', version: '0.3.3', vocabulary: 'style-vocabulary'}
+MERGE (f:Facet {name: 'abstract_form', class: 'feature'})
+MATCH (t:Term {id: 'mid_century_modernist'}), (f:Facet {name: 'abstract_form', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.8, sources: '[\'features\']', weight: 1}
+MERGE (f:Facet {name: 'clean', class: 'axis'})
+MATCH (t:Term {id: 'mid_century_modernist'}), (f:Facet {name: 'clean', class: 'axis'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.8, sources: '[\'axes\']', weight: 1}
+MERGE (f:Facet {name: 'clean_line', class: 'feature'})
+MATCH (t:Term {id: 'mid_century_modernist'}), (f:Facet {name: 'clean_line', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.7, sources: '[\'features\']', weight: 1}
+MERGE (f:Facet {name: 'geometric_abstract', class: 'feature'})
+MATCH (t:Term {id: 'mid_century_modernist'}), (f:Facet {name: 'geometric_abstract', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.6, sources: '[\'features\']', weight: 1}
+MERGE (f:Facet {name: 'modern', class: 'axis'})
+MATCH (t:Term {id: 'mid_century_modernist'}), (f:Facet {name: 'modern', class: 'axis'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.8, sources: '[\'axes\']', weight: 1}
+MERGE (f:Facet {name: 'postwar_era', class: 'axis'})
+MATCH (t:Term {id: 'mid_century_modernist'}), (f:Facet {name: 'postwar_era', class: 'axis'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.5, sources: '[\'axes\']', weight: 1}
+MERGE (f:Facet {name: 'sculptural_form', class: 'feature'})
+MATCH (t:Term {id: 'mid_century_modernist'}), (f:Facet {name: 'sculptural_form', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.8, sources: '[\'features\']', weight: 1}
+MERGE (f:Facet {name: 'sphere', class: 'feature'})
+MATCH (t:Term {id: 'mid_century_modernist'}), (f:Facet {name: 'sphere', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.4, sources: '[\'features\']', weight: 1}
+MATCH (a:Term {id: 'mid_century_modernist'}), (b:Term {id: 'organic_modern'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 1, score: 0.4247442548}
+MATCH (a:Term {id: 'mid_century_modernist'}), (b:Term {id: 'organic_modern'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.64, facet: 'modern', left: 0.8, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.8, right_class: 'axis'}
+MATCH (a:Term {id: 'mid_century_modernist'}), (b:Term {id: 'organic_modern'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.48, facet: 'sculptural_form', left: 0.8, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.6, right_class: 'feature'}
+MATCH (a:Term {id: 'mid_century_modernist'}), (b:Term {id: 'organic_modern'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.4, facet: 'clean', left: 0.8, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.5, right_class: 'axis'}
+MATCH (a:Term {id: 'mid_century_modernist'}), (b:Term {id: 'brutalist'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 2, score: 0.136438536}
+MATCH (a:Term {id: 'mid_century_modernist'}), (b:Term {id: 'brutalist'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.56, facet: 'modern', left: 0.8, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.7, right_class: 'axis'}
+MATCH (a:Term {id: 'mid_century_modernist'}), (b:Term {id: 'retro'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 3, score: 0.1357648078}
+MATCH (a:Term {id: 'mid_century_modernist'}), (b:Term {id: 'retro'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.25, facet: 'postwar_era', left: 0.5, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.5, right_class: 'axis'}
+MATCH (a:Term {id: 'mid_century_modernist'}), (b:Term {id: 'retro'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.24, facet: 'sphere', left: 0.4, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.6, right_class: 'feature'}
+MATCH (a:Term {id: 'mid_century_modernist'}), (b:Term {id: 'biker'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 4, score: 0.1331895334}
+MATCH (a:Term {id: 'mid_century_modernist'}), (b:Term {id: 'biker'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.48, facet: 'modern', left: 0.8, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.6, right_class: 'axis'}
+MATCH (a:Term {id: 'mid_century_modernist'}), (b:Term {id: 'art_deco'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 5, score: 0.116656161}
+MATCH (a:Term {id: 'mid_century_modernist'}), (b:Term {id: 'art_deco'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.56, facet: 'clean', left: 0.8, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.7, right_class: 'axis'}
+MERGE (t:Term {id: 'brutalist'}) SET t += {facet_count: 7, id: 'brutalist', name: 'brutalist style', norm: 2.1, updated: '2026-09-28', version: '0.3.1', vocabulary: 'style-vocabulary'}
+MERGE (f:Facet {name: 'architectural_mass', class: 'feature'})
+MATCH (t:Term {id: 'brutalist'}), (f:Facet {name: 'architectural_mass', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.7, sources: '[\'features\']', weight: 1}
+MERGE (f:Facet {name: 'chunky', class: 'axis'})
+MATCH (t:Term {id: 'brutalist'}), (f:Facet {name: 'chunky', class: 'axis'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.9, sources: '[\'axes\']', weight: 1}
+MERGE (f:Facet {name: 'heavy_form', class: 'feature'})
+MATCH (t:Term {id: 'brutalist'}), (f:Facet {name: 'heavy_form', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.8, sources: '[\'features\']', weight: 1}
+MERGE (f:Facet {name: 'industrial', class: 'feature'})
+MATCH (t:Term {id: 'brutalist'}), (f:Facet {name: 'industrial', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.6, sources: '[\'features\']', weight: 1}
+MERGE (f:Facet {name: 'modern', class: 'axis'})
+MATCH (t:Term {id: 'brutalist'}), (f:Facet {name: 'modern', class: 'axis'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.7, sources: '[\'axes\']', weight: 1}
+MERGE (f:Facet {name: 'raw', class: 'axis'})
+MATCH (t:Term {id: 'brutalist'}), (f:Facet {name: 'raw', class: 'axis'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.9, sources: '[\'axes\']', weight: 1}
+MERGE (f:Facet {name: 'raw_texture', class: 'feature'})
+MATCH (t:Term {id: 'brutalist'}), (f:Facet {name: 'raw_texture', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.9, sources: '[\'features\']', weight: 1}
+MATCH (a:Term {id: 'brutalist'}), (b:Term {id: 'biker'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 1, score: 0.624966319}
+MATCH (a:Term {id: 'brutalist'}), (b:Term {id: 'biker'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.81, facet: 'chunky', left: 0.9, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.9, right_class: 'axis'}
+MATCH (a:Term {id: 'brutalist'}), (b:Term {id: 'biker'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.63, facet: 'raw', left: 0.9, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.7, right_class: 'axis'}
+MATCH (a:Term {id: 'brutalist'}), (b:Term {id: 'biker'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.56, facet: 'heavy_form', left: 0.8, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.7, right_class: 'feature'}
+MATCH (a:Term {id: 'brutalist'}), (b:Term {id: 'biker'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.42, facet: 'modern', left: 0.7, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.6, right_class: 'axis'}
+MATCH (a:Term {id: 'brutalist'}), (b:Term {id: 'retro'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 2, score: 0.1856675524}
+MATCH (a:Term {id: 'brutalist'}), (b:Term {id: 'retro'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.72, facet: 'chunky', left: 0.9, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.8, right_class: 'axis'}
+MATCH (a:Term {id: 'brutalist'}), (b:Term {id: 'organic_modern'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 3, score: 0.1456412303}
+MATCH (a:Term {id: 'brutalist'}), (b:Term {id: 'organic_modern'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.56, facet: 'modern', left: 0.7, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.8, right_class: 'axis'}
+MATCH (a:Term {id: 'brutalist'}), (b:Term {id: 'mid_century_modernist'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 4, score: 0.136438536}
+MATCH (a:Term {id: 'brutalist'}), (b:Term {id: 'mid_century_modernist'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.56, facet: 'modern', left: 0.7, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.8, right_class: 'axis'}
+MERGE (t:Term {id: 'organic_modern'}) SET t += {facet_count: 7, id: 'organic_modern', name: 'organic modern style', norm: 1.8309833424, updated: '2026-10-09', version: '0.3.2', vocabulary: 'style-vocabulary'}
+MERGE (f:Facet {name: 'biomorphic_form', class: 'feature'})
+MATCH (t:Term {id: 'organic_modern'}), (f:Facet {name: 'biomorphic_form', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.8, sources: '[\'features\']', weight: 1}
+MERGE (f:Facet {name: 'clean', class: 'axis'})
+MATCH (t:Term {id: 'organic_modern'}), (f:Facet {name: 'clean', class: 'axis'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.5, sources: '[\'axes\']', weight: 1}
+MERGE (f:Facet {name: 'modern', class: 'axis'})
+MATCH (t:Term {id: 'organic_modern'}), (f:Facet {name: 'modern', class: 'axis'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.8, sources: '[\'axes\']', weight: 1}
+MERGE (f:Facet {name: 'nature', class: 'feature'})
+MATCH (t:Term {id: 'organic_modern'}), (f:Facet {name: 'nature', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.7, sources: '[\'features\']', weight: 1}
+MERGE (f:Facet {name: 'organic', class: 'axis'})
+MATCH (t:Term {id: 'organic_modern'}), (f:Facet {name: 'organic', class: 'axis'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.85, sources: '[\'axes\']', weight: 1}
+MERGE (f:Facet {name: 'sculptural_form', class: 'feature'})
+MATCH (t:Term {id: 'organic_modern'}), (f:Facet {name: 'sculptural_form', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.6, sources: '[\'features\']', weight: 1}
+MERGE (f:Facet {name: 'whiplash_curve', class: 'feature'})
+MATCH (t:Term {id: 'organic_modern'}), (f:Facet {name: 'whiplash_curve', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.5, sources: '[\'features\']', weight: 1}
+MATCH (a:Term {id: 'organic_modern'}), (b:Term {id: 'art_nouveau'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 1, score: 0.458778311}
+MATCH (a:Term {id: 'organic_modern'}), (b:Term {id: 'art_nouveau'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.8075, facet: 'organic', left: 0.85, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.95, right_class: 'axis'}
+MATCH (a:Term {id: 'organic_modern'}), (b:Term {id: 'art_nouveau'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.56, facet: 'nature', left: 0.7, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.8, right_class: 'feature'}
+MATCH (a:Term {id: 'organic_modern'}), (b:Term {id: 'art_nouveau'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.5, facet: 'whiplash_curve', left: 0.5, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'organic_modern'}), (b:Term {id: 'mid_century_modernist'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 2, score: 0.4247442548}
+MATCH (a:Term {id: 'organic_modern'}), (b:Term {id: 'mid_century_modernist'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.64, facet: 'modern', left: 0.8, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.8, right_class: 'axis'}
+MATCH (a:Term {id: 'organic_modern'}), (b:Term {id: 'mid_century_modernist'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.48, facet: 'sculptural_form', left: 0.6, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.8, right_class: 'feature'}
+MATCH (a:Term {id: 'organic_modern'}), (b:Term {id: 'mid_century_modernist'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.4, facet: 'clean', left: 0.5, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.8, right_class: 'axis'}
+MATCH (a:Term {id: 'organic_modern'}), (b:Term {id: 'brutalist'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 3, score: 0.1456412303}
+MATCH (a:Term {id: 'organic_modern'}), (b:Term {id: 'brutalist'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.56, facet: 'modern', left: 0.8, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.7, right_class: 'axis'}
+MATCH (a:Term {id: 'organic_modern'}), (b:Term {id: 'biker'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 4, score: 0.1421730845}
+MATCH (a:Term {id: 'organic_modern'}), (b:Term {id: 'biker'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.48, facet: 'modern', left: 0.8, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.6, right_class: 'axis'}
+MATCH (a:Term {id: 'organic_modern'}), (b:Term {id: 'victorian'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 5, score: 0.1340120681}
+MATCH (a:Term {id: 'organic_modern'}), (b:Term {id: 'victorian'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.51, facet: 'organic', left: 0.85, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.6, right_class: 'axis'}
+MERGE (t:Term {id: 'celestial'}) SET t += {facet_count: 8, id: 'celestial', name: 'celestial style', norm: 1.9672315573, updated: '2026-10-09', version: '0.3.2', vocabulary: 'style-vocabulary'}
+MERGE (f:Facet {name: 'constellation_dot', class: 'feature'})
+MATCH (t:Term {id: 'celestial'}), (f:Facet {name: 'constellation_dot', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.6, sources: '[\'features\']', weight: 1}
+MERGE (f:Facet {name: 'crescent', class: 'feature'})
+MATCH (t:Term {id: 'celestial'}), (f:Facet {name: 'crescent', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.8, sources: '[\'features\']', weight: 1}
+MERGE (f:Facet {name: 'dark_celestial_motif', class: 'feature'})
+MATCH (t:Term {id: 'celestial'}), (f:Facet {name: 'dark_celestial_motif', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.4, sources: '[\'features\']', weight: 1}
+MERGE (f:Facet {name: 'moon', class: 'feature'})
+MATCH (t:Term {id: 'celestial'}), (f:Facet {name: 'moon', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.9, sources: '[\'features\']', weight: 1}
+MERGE (f:Facet {name: 'ornate', class: 'axis'})
+MATCH (t:Term {id: 'celestial'}), (f:Facet {name: 'ornate', class: 'axis'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.4, sources: '[\'axes\']', weight: 1}
+MERGE (f:Facet {name: 'star', class: 'feature'})
+MATCH (t:Term {id: 'celestial'}), (f:Facet {name: 'star', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 1, sources: '[\'features\']', weight: 1}
+MERGE (f:Facet {name: 'sun', class: 'feature'})
+MATCH (t:Term {id: 'celestial'}), (f:Facet {name: 'sun', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.7, sources: '[\'features\']', weight: 1}
+MERGE (f:Facet {name: 'sun_motif', class: 'feature'})
+MATCH (t:Term {id: 'celestial'}), (f:Facet {name: 'sun_motif', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.5, sources: '[\'features\']', weight: 1}
+MATCH (a:Term {id: 'celestial'}), (b:Term {id: 'metal_silver'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 1, score: 0.3234983196}
+MATCH (a:Term {id: 'celestial'}), (b:Term {id: 'metal_silver'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.9, facet: 'moon', left: 0.9, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'celestial'}), (b:Term {id: 'sign_cancer'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 2, score: 0.2641352719}
+MATCH (a:Term {id: 'celestial'}), (b:Term {id: 'sign_cancer'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.9, facet: 'moon', left: 0.9, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'celestial'}), (b:Term {id: 'metal_gold'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 3, score: 0.2516098041}
+MATCH (a:Term {id: 'celestial'}), (b:Term {id: 'metal_gold'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.7, facet: 'sun', left: 0.7, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'celestial'}), (b:Term {id: 'sign_leo'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 4, score: 0.2054385448}
+MATCH (a:Term {id: 'celestial'}), (b:Term {id: 'sign_leo'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.7, facet: 'sun', left: 0.7, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'celestial'}), (b:Term {id: 'gothic'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 5, score: 0.0961724649}
+MATCH (a:Term {id: 'celestial'}), (b:Term {id: 'gothic'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.24, facet: 'ornate', left: 0.4, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.6, right_class: 'axis'}
+MATCH (a:Term {id: 'celestial'}), (b:Term {id: 'gothic'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.16, facet: 'dark_celestial_motif', left: 0.4, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.4, right_class: 'feature'}
+MERGE (t:Term {id: 'gothic'}) SET t += {facet_count: 10, id: 'gothic', name: 'gothic style', norm: 2.1142374512, updated: '2026-10-07', version: '0.2.1', vocabulary: 'style-vocabulary'}
+MERGE (f:Facet {name: 'chain', class: 'feature'})
+MATCH (t:Term {id: 'gothic'}), (f:Facet {name: 'chain', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.6, sources: '[\'features\']', weight: 1}
+MERGE (f:Facet {name: 'cross', class: 'feature'})
+MATCH (t:Term {id: 'gothic'}), (f:Facet {name: 'cross', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.8, sources: '[\'features\']', weight: 1}
+MERGE (f:Facet {name: 'dagger', class: 'feature'})
+MATCH (t:Term {id: 'gothic'}), (f:Facet {name: 'dagger', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.6, sources: '[\'features\']', weight: 1}
+MERGE (f:Facet {name: 'dark', class: 'axis'})
+MATCH (t:Term {id: 'gothic'}), (f:Facet {name: 'dark', class: 'axis'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 1, sources: '[\'axes\']', weight: 1}
+MERGE (f:Facet {name: 'dark_celestial_motif', class: 'feature'})
+MATCH (t:Term {id: 'gothic'}), (f:Facet {name: 'dark_celestial_motif', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.4, sources: '[\'features\']', weight: 1}
+MERGE (f:Facet {name: 'dark_ornate', class: 'feature'})
+MATCH (t:Term {id: 'gothic'}), (f:Facet {name: 'dark_ornate', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.7, sources: '[\'features\']', weight: 1}
+MERGE (f:Facet {name: 'ornate', class: 'axis'})
+MATCH (t:Term {id: 'gothic'}), (f:Facet {name: 'ornate', class: 'axis'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.6, sources: '[\'axes\']', weight: 1}
+MERGE (f:Facet {name: 'oxidized_finish', class: 'feature'})
+MATCH (t:Term {id: 'gothic'}), (f:Facet {name: 'oxidized_finish', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.7, sources: '[\'features\']', weight: 1}
+MERGE (f:Facet {name: 'point', class: 'feature'})
+MATCH (t:Term {id: 'gothic'}), (f:Facet {name: 'point', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.5, sources: '[\'features\']', weight: 1}
+MERGE (f:Facet {name: 'skull', class: 'feature'})
+MATCH (t:Term {id: 'gothic'}), (f:Facet {name: 'skull', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.6, sources: '[\'features\']', weight: 1}
+MATCH (a:Term {id: 'gothic'}), (b:Term {id: 'georgian'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 1, score: 0.1172612665}
+MATCH (a:Term {id: 'gothic'}), (b:Term {id: 'georgian'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.42, facet: 'ornate', left: 0.6, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.7, right_class: 'feature'}
+MATCH (a:Term {id: 'gothic'}), (b:Term {id: 'victorian'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 2, score: 0.1092309227}
+MATCH (a:Term {id: 'gothic'}), (b:Term {id: 'victorian'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.48, facet: 'ornate', left: 0.6, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.8, right_class: 'axis'}
+MATCH (a:Term {id: 'gothic'}), (b:Term {id: 'egyptian_revival'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 3, score: 0.0965536164}
+MATCH (a:Term {id: 'gothic'}), (b:Term {id: 'egyptian_revival'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.36, facet: 'ornate', left: 0.6, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.6, right_class: 'axis'}
+MATCH (a:Term {id: 'gothic'}), (b:Term {id: 'celestial'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 4, score: 0.0961724649}
+MATCH (a:Term {id: 'gothic'}), (b:Term {id: 'celestial'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.24, facet: 'ornate', left: 0.6, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.4, right_class: 'axis'}
+MATCH (a:Term {id: 'gothic'}), (b:Term {id: 'celestial'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.16, facet: 'dark_celestial_motif', left: 0.4, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.4, right_class: 'feature'}
+MATCH (a:Term {id: 'gothic'}), (b:Term {id: 'biker'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 5, score: 0.0923441272}
+MATCH (a:Term {id: 'gothic'}), (b:Term {id: 'biker'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.36, facet: 'skull', left: 0.6, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.6, right_class: 'feature'}
+MERGE (t:Term {id: 'biker'}) SET t += {facet_count: 7, id: 'biker', name: 'biker style', norm: 1.8439088915, updated: '2026-09-28', version: '0.3.0', vocabulary: 'style-vocabulary'}
+MERGE (f:Facet {name: 'chain_link', class: 'feature'})
+MATCH (t:Term {id: 'biker'}), (f:Facet {name: 'chain_link', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.8, sources: '[\'features\']', weight: 1}
+MERGE (f:Facet {name: 'chunky', class: 'axis'})
+MATCH (t:Term {id: 'biker'}), (f:Facet {name: 'chunky', class: 'axis'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.9, sources: '[\'axes\']', weight: 1}
+MERGE (f:Facet {name: 'heavy_form', class: 'feature'})
+MATCH (t:Term {id: 'biker'}), (f:Facet {name: 'heavy_form', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.7, sources: '[\'features\']', weight: 1}
+MERGE (f:Facet {name: 'modern', class: 'axis'})
+MATCH (t:Term {id: 'biker'}), (f:Facet {name: 'modern', class: 'axis'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.6, sources: '[\'axes\']', weight: 1}
+MERGE (f:Facet {name: 'raw', class: 'axis'})
+MATCH (t:Term {id: 'biker'}), (f:Facet {name: 'raw', class: 'axis'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.7, sources: '[\'axes\']', weight: 1}
+MERGE (f:Facet {name: 'rope_twist', class: 'feature'})
+MATCH (t:Term {id: 'biker'}), (f:Facet {name: 'rope_twist', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.5, sources: '[\'features\']', weight: 1}
+MERGE (f:Facet {name: 'skull', class: 'feature'})
+MATCH (t:Term {id: 'biker'}), (f:Facet {name: 'skull', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.6, sources: '[\'features\']', weight: 1}
+MATCH (a:Term {id: 'biker'}), (b:Term {id: 'brutalist'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 1, score: 0.624966319}
+MATCH (a:Term {id: 'biker'}), (b:Term {id: 'brutalist'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.81, facet: 'chunky', left: 0.9, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.9, right_class: 'axis'}
+MATCH (a:Term {id: 'biker'}), (b:Term {id: 'brutalist'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.63, facet: 'raw', left: 0.7, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.9, right_class: 'axis'}
+MATCH (a:Term {id: 'biker'}), (b:Term {id: 'brutalist'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.56, facet: 'heavy_form', left: 0.7, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.8, right_class: 'feature'}
+MATCH (a:Term {id: 'biker'}), (b:Term {id: 'brutalist'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.42, facet: 'modern', left: 0.6, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.7, right_class: 'axis'}
+MATCH (a:Term {id: 'biker'}), (b:Term {id: 'retro'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 2, score: 0.2114539725}
+MATCH (a:Term {id: 'biker'}), (b:Term {id: 'retro'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.72, facet: 'chunky', left: 0.9, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.8, right_class: 'axis'}
+MATCH (a:Term {id: 'biker'}), (b:Term {id: 'organic_modern'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 3, score: 0.1421730845}
+MATCH (a:Term {id: 'biker'}), (b:Term {id: 'organic_modern'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.48, facet: 'modern', left: 0.6, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.8, right_class: 'axis'}
+MATCH (a:Term {id: 'biker'}), (b:Term {id: 'mid_century_modernist'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 4, score: 0.1331895334}
+MATCH (a:Term {id: 'biker'}), (b:Term {id: 'mid_century_modernist'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.48, facet: 'modern', left: 0.6, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.8, right_class: 'axis'}
+MATCH (a:Term {id: 'biker'}), (b:Term {id: 'gothic'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 5, score: 0.0923441272}
+MATCH (a:Term {id: 'biker'}), (b:Term {id: 'gothic'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.36, facet: 'skull', left: 0.6, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.6, right_class: 'feature'}
+MERGE (t:Term {id: 'egyptian_revival'}) SET t += {facet_count: 8, id: 'egyptian_revival', name: 'egyptian revival style', norm: 1.7635192089, updated: '2026-09-27', version: '0.2.0', vocabulary: 'style-vocabulary'}
+MERGE (f:Facet {name: 'antique', class: 'axis'})
+MATCH (t:Term {id: 'egyptian_revival'}), (f:Facet {name: 'antique', class: 'axis'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.6, sources: '[\'axes\']', weight: 1}
+MERGE (f:Facet {name: 'eye_of_horus', class: 'feature'})
+MATCH (t:Term {id: 'egyptian_revival'}), (f:Facet {name: 'eye_of_horus', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.6, sources: '[\'features\']', weight: 1}
+MERGE (f:Facet {name: 'geometric', class: 'axis'})
+MATCH (t:Term {id: 'egyptian_revival'}), (f:Facet {name: 'geometric', class: 'axis'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.5, sources: '[\'axes\']', weight: 1}
+MERGE (f:Facet {name: 'geometric_step', class: 'feature'})
+MATCH (t:Term {id: 'egyptian_revival'}), (f:Facet {name: 'geometric_step', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.4, sources: '[\'features\']', weight: 1}
+MERGE (f:Facet {name: 'lotus', class: 'feature'})
+MATCH (t:Term {id: 'egyptian_revival'}), (f:Facet {name: 'lotus', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.8, sources: '[\'features\']', weight: 1}
+MERGE (f:Facet {name: 'ornate', class: 'axis'})
+MATCH (t:Term {id: 'egyptian_revival'}), (f:Facet {name: 'ornate', class: 'axis'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.6, sources: '[\'axes\']', weight: 1}
+MERGE (f:Facet {name: 'pyramid_form', class: 'feature'})
+MATCH (t:Term {id: 'egyptian_revival'}), (f:Facet {name: 'pyramid_form', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.7, sources: '[\'features\']', weight: 1}
+MERGE (f:Facet {name: 'scarab', class: 'feature'})
+MATCH (t:Term {id: 'egyptian_revival'}), (f:Facet {name: 'scarab', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 0.7, sources: '[\'features\']', weight: 1}
+MATCH (a:Term {id: 'egyptian_revival'}), (b:Term {id: 'georgian'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 1, score: 0.3414121943}
+MATCH (a:Term {id: 'egyptian_revival'}), (b:Term {id: 'georgian'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.6, facet: 'antique', left: 0.6, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'axis'}
+MATCH (a:Term {id: 'egyptian_revival'}), (b:Term {id: 'georgian'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.42, facet: 'ornate', left: 0.6, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.7, right_class: 'feature'}
+MATCH (a:Term {id: 'egyptian_revival'}), (b:Term {id: 'victorian'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 2, score: 0.2782775069}
+MATCH (a:Term {id: 'egyptian_revival'}), (b:Term {id: 'victorian'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.54, facet: 'antique', left: 0.6, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.9, right_class: 'axis'}
+MATCH (a:Term {id: 'egyptian_revival'}), (b:Term {id: 'victorian'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.48, facet: 'ornate', left: 0.6, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.8, right_class: 'axis'}
+MATCH (a:Term {id: 'egyptian_revival'}), (b:Term {id: 'art_deco'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 3, score: 0.2701201623}
+MATCH (a:Term {id: 'egyptian_revival'}), (b:Term {id: 'art_deco'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.45, facet: 'geometric', left: 0.5, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.9, right_class: 'axis'}
+MATCH (a:Term {id: 'egyptian_revival'}), (b:Term {id: 'art_deco'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.36, facet: 'antique', left: 0.6, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.6, right_class: 'axis'}
+MATCH (a:Term {id: 'egyptian_revival'}), (b:Term {id: 'art_deco'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.36, facet: 'geometric_step', left: 0.4, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.9, right_class: 'feature'}
+MATCH (a:Term {id: 'egyptian_revival'}), (b:Term {id: 'edwardian'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 4, score: 0.2291697116}
+MATCH (a:Term {id: 'egyptian_revival'}), (b:Term {id: 'edwardian'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.48, facet: 'antique', left: 0.6, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.8, right_class: 'axis'}
+MATCH (a:Term {id: 'egyptian_revival'}), (b:Term {id: 'edwardian'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.36, facet: 'ornate', left: 0.6, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.6, right_class: 'axis'}
+MATCH (a:Term {id: 'egyptian_revival'}), (b:Term {id: 'art_nouveau'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 5, score: 0.1989486833}
+MATCH (a:Term {id: 'egyptian_revival'}), (b:Term {id: 'art_nouveau'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.42, facet: 'antique', left: 0.6, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.7, right_class: 'axis'}
+MATCH (a:Term {id: 'egyptian_revival'}), (b:Term {id: 'art_nouveau'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.36, facet: 'ornate', left: 0.6, left_class: 'axis', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.6, right_class: 'axis'}
+MERGE (t:Term {id: 'metal_gold'}) SET t += {facet_count: 2, id: 'metal_gold', name: 'gold', norm: 1.4142135624, updated: '2026-09-27', version: '0.1.0', vocabulary: 'symbol'}
+MERGE (f:Facet {name: 'gold', class: 'feature'})
+MATCH (t:Term {id: 'metal_gold'}), (f:Facet {name: 'gold', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 1, sources: '[\'symbol_id\']', weight: 1}
+MERGE (f:Facet {name: 'sun', class: 'feature'})
+MATCH (t:Term {id: 'metal_gold'}), (f:Facet {name: 'sun', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 1, sources: '[\'planet\']', weight: 1}
+MATCH (a:Term {id: 'metal_gold'}), (b:Term {id: 'element_earth'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 1, score: 0.5}
+MATCH (a:Term {id: 'metal_gold'}), (b:Term {id: 'element_earth'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'gold', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'metal_gold'}), (b:Term {id: 'element_fire'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 2, score: 0.5}
+MATCH (a:Term {id: 'metal_gold'}), (b:Term {id: 'element_fire'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'gold', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'metal_gold'}), (b:Term {id: 'sign_leo'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 3, score: 0.4082482905}
+MATCH (a:Term {id: 'metal_gold'}), (b:Term {id: 'sign_leo'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'sun', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'metal_gold'}), (b:Term {id: 'celestial'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 4, score: 0.2516098041}
+MATCH (a:Term {id: 'metal_gold'}), (b:Term {id: 'celestial'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.7, facet: 'sun', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.7, right_class: 'feature'}
+MERGE (t:Term {id: 'metal_silver'}) SET t += {facet_count: 2, id: 'metal_silver', name: 'silver', norm: 1.4142135624, updated: '2026-09-27', version: '0.1.0', vocabulary: 'symbol'}
+MERGE (f:Facet {name: 'moon', class: 'feature'})
+MATCH (t:Term {id: 'metal_silver'}), (f:Facet {name: 'moon', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 1, sources: '[\'planet\']', weight: 1}
+MERGE (f:Facet {name: 'silver', class: 'feature'})
+MATCH (t:Term {id: 'metal_silver'}), (f:Facet {name: 'silver', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 1, sources: '[\'symbol_id\']', weight: 1}
+MATCH (a:Term {id: 'metal_silver'}), (b:Term {id: 'element_air'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 1, score: 0.5}
+MATCH (a:Term {id: 'metal_silver'}), (b:Term {id: 'element_air'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'silver', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'metal_silver'}), (b:Term {id: 'element_water'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 2, score: 0.5}
+MATCH (a:Term {id: 'metal_silver'}), (b:Term {id: 'element_water'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'silver', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'metal_silver'}), (b:Term {id: 'sign_cancer'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 3, score: 0.4082482905}
+MATCH (a:Term {id: 'metal_silver'}), (b:Term {id: 'sign_cancer'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'moon', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'metal_silver'}), (b:Term {id: 'celestial'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 4, score: 0.3234983196}
+MATCH (a:Term {id: 'metal_silver'}), (b:Term {id: 'celestial'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 0.9, facet: 'moon', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 0.9, right_class: 'feature'}
+MERGE (t:Term {id: 'metal_platinum'}) SET t += {facet_count: 1, id: 'metal_platinum', name: 'platinum', norm: 1, updated: '2026-09-27', version: '0.1.0', vocabulary: 'symbol'}
+MERGE (f:Facet {name: 'platinum', class: 'feature'})
+MATCH (t:Term {id: 'metal_platinum'}), (f:Facet {name: 'platinum', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 1, sources: '[\'symbol_id\']', weight: 1}
+MERGE (t:Term {id: 'metal_copper'}) SET t += {facet_count: 2, id: 'metal_copper', name: 'copper', norm: 1.4142135624, updated: '2026-09-27', version: '0.1.0', vocabulary: 'symbol'}
+MERGE (f:Facet {name: 'copper', class: 'feature'})
+MATCH (t:Term {id: 'metal_copper'}), (f:Facet {name: 'copper', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 1, sources: '[\'symbol_id\']', weight: 1}
+MERGE (f:Facet {name: 'venus', class: 'feature'})
+MATCH (t:Term {id: 'metal_copper'}), (f:Facet {name: 'venus', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 1, sources: '[\'planet\']', weight: 1}
+MATCH (a:Term {id: 'metal_copper'}), (b:Term {id: 'sign_libra'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 1, score: 0.4082482905}
+MATCH (a:Term {id: 'metal_copper'}), (b:Term {id: 'sign_libra'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'venus', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'metal_copper'}), (b:Term {id: 'sign_taurus'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 2, score: 0.4082482905}
+MATCH (a:Term {id: 'metal_copper'}), (b:Term {id: 'sign_taurus'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'venus', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MERGE (t:Term {id: 'metal_iron'}) SET t += {facet_count: 2, id: 'metal_iron', name: 'iron', norm: 1.4142135624, updated: '2026-09-27', version: '0.1.0', vocabulary: 'symbol'}
+MERGE (f:Facet {name: 'iron', class: 'feature'})
+MATCH (t:Term {id: 'metal_iron'}), (f:Facet {name: 'iron', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 1, sources: '[\'symbol_id\']', weight: 1}
+MERGE (f:Facet {name: 'mars', class: 'feature'})
+MATCH (t:Term {id: 'metal_iron'}), (f:Facet {name: 'mars', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 1, sources: '[\'planet\']', weight: 1}
+MATCH (a:Term {id: 'metal_iron'}), (b:Term {id: 'sign_aries'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 1, score: 0.4082482905}
+MATCH (a:Term {id: 'metal_iron'}), (b:Term {id: 'sign_aries'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'mars', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'metal_iron'}), (b:Term {id: 'sign_scorpio'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 2, score: 0.4082482905}
+MATCH (a:Term {id: 'metal_iron'}), (b:Term {id: 'sign_scorpio'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'mars', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MERGE (t:Term {id: 'metal_tin'}) SET t += {facet_count: 2, id: 'metal_tin', name: 'tin', norm: 1.4142135624, updated: '2026-09-27', version: '0.1.0', vocabulary: 'symbol'}
+MERGE (f:Facet {name: 'jupiter', class: 'feature'})
+MATCH (t:Term {id: 'metal_tin'}), (f:Facet {name: 'jupiter', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 1, sources: '[\'planet\']', weight: 1}
+MERGE (f:Facet {name: 'tin', class: 'feature'})
+MATCH (t:Term {id: 'metal_tin'}), (f:Facet {name: 'tin', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 1, sources: '[\'symbol_id\']', weight: 1}
+MATCH (a:Term {id: 'metal_tin'}), (b:Term {id: 'sign_pisces'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 1, score: 0.4082482905}
+MATCH (a:Term {id: 'metal_tin'}), (b:Term {id: 'sign_pisces'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'jupiter', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'metal_tin'}), (b:Term {id: 'sign_sagittarius'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 2, score: 0.4082482905}
+MATCH (a:Term {id: 'metal_tin'}), (b:Term {id: 'sign_sagittarius'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'jupiter', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MERGE (t:Term {id: 'metal_lead'}) SET t += {facet_count: 2, id: 'metal_lead', name: 'lead', norm: 1.4142135624, updated: '2026-09-27', version: '0.1.0', vocabulary: 'symbol'}
+MERGE (f:Facet {name: 'lead', class: 'feature'})
+MATCH (t:Term {id: 'metal_lead'}), (f:Facet {name: 'lead', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 1, sources: '[\'symbol_id\']', weight: 1}
+MERGE (f:Facet {name: 'saturn', class: 'feature'})
+MATCH (t:Term {id: 'metal_lead'}), (f:Facet {name: 'saturn', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 1, sources: '[\'planet\']', weight: 1}
+MATCH (a:Term {id: 'metal_lead'}), (b:Term {id: 'sign_aquarius'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 1, score: 0.4082482905}
+MATCH (a:Term {id: 'metal_lead'}), (b:Term {id: 'sign_aquarius'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'saturn', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'metal_lead'}), (b:Term {id: 'sign_capricorn'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 2, score: 0.4082482905}
+MATCH (a:Term {id: 'metal_lead'}), (b:Term {id: 'sign_capricorn'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'saturn', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MERGE (t:Term {id: 'metal_mercury'}) SET t += {facet_count: 1, id: 'metal_mercury', name: 'mercury', norm: 1, updated: '2026-09-27', version: '0.1.0', vocabulary: 'symbol'}
+MERGE (f:Facet {name: 'mercury', class: 'feature'})
+MATCH (t:Term {id: 'metal_mercury'}), (f:Facet {name: 'mercury', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 1, sources: '[\'symbol_id\', \'planet\']', weight: 1}
+MATCH (a:Term {id: 'metal_mercury'}), (b:Term {id: 'sign_gemini'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 1, score: 0.5773502692}
+MATCH (a:Term {id: 'metal_mercury'}), (b:Term {id: 'sign_gemini'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'mercury', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'metal_mercury'}), (b:Term {id: 'sign_virgo'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 2, score: 0.5773502692}
+MATCH (a:Term {id: 'metal_mercury'}), (b:Term {id: 'sign_virgo'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'mercury', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MERGE (t:Term {id: 'element_fire'}) SET t += {facet_count: 2, id: 'element_fire', name: 'fire element', norm: 1.4142135624, updated: '2026-09-27', version: '0.1.0', vocabulary: 'symbol'}
+MERGE (f:Facet {name: 'fire', class: 'feature'})
+MATCH (t:Term {id: 'element_fire'}), (f:Facet {name: 'fire', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 1, sources: '[\'symbol_id\']', weight: 1}
+MERGE (f:Facet {name: 'gold', class: 'feature'})
+MATCH (t:Term {id: 'element_fire'}), (f:Facet {name: 'gold', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 1, sources: '[\'metal_affinity\']', weight: 1}
+MATCH (a:Term {id: 'element_fire'}), (b:Term {id: 'element_earth'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 1, score: 0.5}
+MATCH (a:Term {id: 'element_fire'}), (b:Term {id: 'element_earth'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'gold', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'element_fire'}), (b:Term {id: 'metal_gold'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 2, score: 0.5}
+MATCH (a:Term {id: 'element_fire'}), (b:Term {id: 'metal_gold'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'gold', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'element_fire'}), (b:Term {id: 'sign_aries'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 3, score: 0.4082482905}
+MATCH (a:Term {id: 'element_fire'}), (b:Term {id: 'sign_aries'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'fire', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'element_fire'}), (b:Term {id: 'sign_leo'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 4, score: 0.4082482905}
+MATCH (a:Term {id: 'element_fire'}), (b:Term {id: 'sign_leo'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'fire', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'element_fire'}), (b:Term {id: 'sign_sagittarius'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 5, score: 0.4082482905}
+MATCH (a:Term {id: 'element_fire'}), (b:Term {id: 'sign_sagittarius'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'fire', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MERGE (t:Term {id: 'element_earth'}) SET t += {facet_count: 2, id: 'element_earth', name: 'earth element', norm: 1.4142135624, updated: '2026-09-27', version: '0.1.0', vocabulary: 'symbol'}
+MERGE (f:Facet {name: 'earth', class: 'feature'})
+MATCH (t:Term {id: 'element_earth'}), (f:Facet {name: 'earth', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 1, sources: '[\'symbol_id\']', weight: 1}
+MERGE (f:Facet {name: 'gold', class: 'feature'})
+MATCH (t:Term {id: 'element_earth'}), (f:Facet {name: 'gold', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 1, sources: '[\'metal_affinity\']', weight: 1}
+MATCH (a:Term {id: 'element_earth'}), (b:Term {id: 'element_fire'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 1, score: 0.5}
+MATCH (a:Term {id: 'element_earth'}), (b:Term {id: 'element_fire'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'gold', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'element_earth'}), (b:Term {id: 'metal_gold'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 2, score: 0.5}
+MATCH (a:Term {id: 'element_earth'}), (b:Term {id: 'metal_gold'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'gold', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'element_earth'}), (b:Term {id: 'sign_capricorn'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 3, score: 0.4082482905}
+MATCH (a:Term {id: 'element_earth'}), (b:Term {id: 'sign_capricorn'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'earth', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'element_earth'}), (b:Term {id: 'sign_taurus'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 4, score: 0.4082482905}
+MATCH (a:Term {id: 'element_earth'}), (b:Term {id: 'sign_taurus'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'earth', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'element_earth'}), (b:Term {id: 'sign_virgo'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 5, score: 0.4082482905}
+MATCH (a:Term {id: 'element_earth'}), (b:Term {id: 'sign_virgo'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'earth', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MERGE (t:Term {id: 'element_air'}) SET t += {facet_count: 2, id: 'element_air', name: 'air element', norm: 1.4142135624, updated: '2026-09-27', version: '0.1.0', vocabulary: 'symbol'}
+MERGE (f:Facet {name: 'air', class: 'feature'})
+MATCH (t:Term {id: 'element_air'}), (f:Facet {name: 'air', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 1, sources: '[\'symbol_id\']', weight: 1}
+MERGE (f:Facet {name: 'silver', class: 'feature'})
+MATCH (t:Term {id: 'element_air'}), (f:Facet {name: 'silver', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 1, sources: '[\'metal_affinity\']', weight: 1}
+MATCH (a:Term {id: 'element_air'}), (b:Term {id: 'element_water'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 1, score: 0.5}
+MATCH (a:Term {id: 'element_air'}), (b:Term {id: 'element_water'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'silver', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'element_air'}), (b:Term {id: 'metal_silver'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 2, score: 0.5}
+MATCH (a:Term {id: 'element_air'}), (b:Term {id: 'metal_silver'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'silver', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'element_air'}), (b:Term {id: 'sign_aquarius'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 3, score: 0.4082482905}
+MATCH (a:Term {id: 'element_air'}), (b:Term {id: 'sign_aquarius'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'air', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'element_air'}), (b:Term {id: 'sign_gemini'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 4, score: 0.4082482905}
+MATCH (a:Term {id: 'element_air'}), (b:Term {id: 'sign_gemini'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'air', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'element_air'}), (b:Term {id: 'sign_libra'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 5, score: 0.4082482905}
+MATCH (a:Term {id: 'element_air'}), (b:Term {id: 'sign_libra'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'air', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MERGE (t:Term {id: 'element_water'}) SET t += {facet_count: 2, id: 'element_water', name: 'water element', norm: 1.4142135624, updated: '2026-09-27', version: '0.1.0', vocabulary: 'symbol'}
+MERGE (f:Facet {name: 'silver', class: 'feature'})
+MATCH (t:Term {id: 'element_water'}), (f:Facet {name: 'silver', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 1, sources: '[\'metal_affinity\']', weight: 1}
+MERGE (f:Facet {name: 'water', class: 'feature'})
+MATCH (t:Term {id: 'element_water'}), (f:Facet {name: 'water', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 1, sources: '[\'symbol_id\']', weight: 1}
+MATCH (a:Term {id: 'element_water'}), (b:Term {id: 'element_air'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 1, score: 0.5}
+MATCH (a:Term {id: 'element_water'}), (b:Term {id: 'element_air'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'silver', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'element_water'}), (b:Term {id: 'metal_silver'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 2, score: 0.5}
+MATCH (a:Term {id: 'element_water'}), (b:Term {id: 'metal_silver'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'silver', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'element_water'}), (b:Term {id: 'sign_cancer'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 3, score: 0.4082482905}
+MATCH (a:Term {id: 'element_water'}), (b:Term {id: 'sign_cancer'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'water', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'element_water'}), (b:Term {id: 'sign_pisces'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 4, score: 0.4082482905}
+MATCH (a:Term {id: 'element_water'}), (b:Term {id: 'sign_pisces'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'water', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'element_water'}), (b:Term {id: 'sign_scorpio'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 5, score: 0.4082482905}
+MATCH (a:Term {id: 'element_water'}), (b:Term {id: 'sign_scorpio'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'water', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MERGE (t:Term {id: 'sign_aries'}) SET t += {facet_count: 3, id: 'sign_aries', name: 'aries', norm: 1.7320508076, updated: '2026-09-27', version: '0.1.0', vocabulary: 'symbol'}
+MERGE (f:Facet {name: 'cardinal', class: 'feature'})
+MATCH (t:Term {id: 'sign_aries'}), (f:Facet {name: 'cardinal', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 1, sources: '[\'modality\']', weight: 1}
+MERGE (f:Facet {name: 'fire', class: 'feature'})
+MATCH (t:Term {id: 'sign_aries'}), (f:Facet {name: 'fire', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 1, sources: '[\'element\']', weight: 1}
+MERGE (f:Facet {name: 'mars', class: 'feature'})
+MATCH (t:Term {id: 'sign_aries'}), (f:Facet {name: 'mars', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 1, sources: '[\'ruler\']', weight: 1}
+MATCH (a:Term {id: 'sign_aries'}), (b:Term {id: 'element_fire'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 1, score: 0.4082482905}
+MATCH (a:Term {id: 'sign_aries'}), (b:Term {id: 'element_fire'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'fire', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'sign_aries'}), (b:Term {id: 'metal_iron'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 2, score: 0.4082482905}
+MATCH (a:Term {id: 'sign_aries'}), (b:Term {id: 'metal_iron'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'mars', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'sign_aries'}), (b:Term {id: 'sign_cancer'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 3, score: 0.3333333333}
+MATCH (a:Term {id: 'sign_aries'}), (b:Term {id: 'sign_cancer'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'cardinal', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'sign_aries'}), (b:Term {id: 'sign_capricorn'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 4, score: 0.3333333333}
+MATCH (a:Term {id: 'sign_aries'}), (b:Term {id: 'sign_capricorn'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'cardinal', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'sign_aries'}), (b:Term {id: 'sign_leo'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 5, score: 0.3333333333}
+MATCH (a:Term {id: 'sign_aries'}), (b:Term {id: 'sign_leo'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'fire', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MERGE (t:Term {id: 'sign_taurus'}) SET t += {facet_count: 3, id: 'sign_taurus', name: 'taurus', norm: 1.7320508076, updated: '2026-09-27', version: '0.1.0', vocabulary: 'symbol'}
+MERGE (f:Facet {name: 'earth', class: 'feature'})
+MATCH (t:Term {id: 'sign_taurus'}), (f:Facet {name: 'earth', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 1, sources: '[\'element\']', weight: 1}
+MERGE (f:Facet {name: 'fixed', class: 'feature'})
+MATCH (t:Term {id: 'sign_taurus'}), (f:Facet {name: 'fixed', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 1, sources: '[\'modality\']', weight: 1}
+MERGE (f:Facet {name: 'venus', class: 'feature'})
+MATCH (t:Term {id: 'sign_taurus'}), (f:Facet {name: 'venus', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 1, sources: '[\'ruler\']', weight: 1}
+MATCH (a:Term {id: 'sign_taurus'}), (b:Term {id: 'element_earth'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 1, score: 0.4082482905}
+MATCH (a:Term {id: 'sign_taurus'}), (b:Term {id: 'element_earth'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'earth', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'sign_taurus'}), (b:Term {id: 'metal_copper'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 2, score: 0.4082482905}
+MATCH (a:Term {id: 'sign_taurus'}), (b:Term {id: 'metal_copper'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'venus', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'sign_taurus'}), (b:Term {id: 'sign_aquarius'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 3, score: 0.3333333333}
+MATCH (a:Term {id: 'sign_taurus'}), (b:Term {id: 'sign_aquarius'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'fixed', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'sign_taurus'}), (b:Term {id: 'sign_capricorn'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 4, score: 0.3333333333}
+MATCH (a:Term {id: 'sign_taurus'}), (b:Term {id: 'sign_capricorn'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'earth', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'sign_taurus'}), (b:Term {id: 'sign_leo'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 5, score: 0.3333333333}
+MATCH (a:Term {id: 'sign_taurus'}), (b:Term {id: 'sign_leo'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'fixed', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MERGE (t:Term {id: 'sign_gemini'}) SET t += {facet_count: 3, id: 'sign_gemini', name: 'gemini', norm: 1.7320508076, updated: '2026-09-27', version: '0.1.0', vocabulary: 'symbol'}
+MERGE (f:Facet {name: 'air', class: 'feature'})
+MATCH (t:Term {id: 'sign_gemini'}), (f:Facet {name: 'air', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 1, sources: '[\'element\']', weight: 1}
+MERGE (f:Facet {name: 'mercury', class: 'feature'})
+MATCH (t:Term {id: 'sign_gemini'}), (f:Facet {name: 'mercury', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 1, sources: '[\'ruler\']', weight: 1}
+MERGE (f:Facet {name: 'mutable', class: 'feature'})
+MATCH (t:Term {id: 'sign_gemini'}), (f:Facet {name: 'mutable', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 1, sources: '[\'modality\']', weight: 1}
+MATCH (a:Term {id: 'sign_gemini'}), (b:Term {id: 'sign_virgo'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 1, score: 0.6666666667}
+MATCH (a:Term {id: 'sign_gemini'}), (b:Term {id: 'sign_virgo'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'mercury', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'sign_gemini'}), (b:Term {id: 'sign_virgo'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'mutable', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'sign_gemini'}), (b:Term {id: 'metal_mercury'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 2, score: 0.5773502692}
+MATCH (a:Term {id: 'sign_gemini'}), (b:Term {id: 'metal_mercury'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'mercury', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'sign_gemini'}), (b:Term {id: 'element_air'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 3, score: 0.4082482905}
+MATCH (a:Term {id: 'sign_gemini'}), (b:Term {id: 'element_air'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'air', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'sign_gemini'}), (b:Term {id: 'sign_aquarius'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 4, score: 0.3333333333}
+MATCH (a:Term {id: 'sign_gemini'}), (b:Term {id: 'sign_aquarius'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'air', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'sign_gemini'}), (b:Term {id: 'sign_libra'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 5, score: 0.3333333333}
+MATCH (a:Term {id: 'sign_gemini'}), (b:Term {id: 'sign_libra'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'air', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MERGE (t:Term {id: 'sign_cancer'}) SET t += {facet_count: 3, id: 'sign_cancer', name: 'cancer', norm: 1.7320508076, updated: '2026-09-27', version: '0.1.0', vocabulary: 'symbol'}
+MERGE (f:Facet {name: 'cardinal', class: 'feature'})
+MATCH (t:Term {id: 'sign_cancer'}), (f:Facet {name: 'cardinal', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 1, sources: '[\'modality\']', weight: 1}
+MERGE (f:Facet {name: 'moon', class: 'feature'})
+MATCH (t:Term {id: 'sign_cancer'}), (f:Facet {name: 'moon', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 1, sources: '[\'ruler\']', weight: 1}
+MERGE (f:Facet {name: 'water', class: 'feature'})
+MATCH (t:Term {id: 'sign_cancer'}), (f:Facet {name: 'water', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 1, sources: '[\'element\']', weight: 1}
+MATCH (a:Term {id: 'sign_cancer'}), (b:Term {id: 'element_water'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 1, score: 0.4082482905}
+MATCH (a:Term {id: 'sign_cancer'}), (b:Term {id: 'element_water'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'water', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'sign_cancer'}), (b:Term {id: 'metal_silver'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 2, score: 0.4082482905}
+MATCH (a:Term {id: 'sign_cancer'}), (b:Term {id: 'metal_silver'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'moon', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'sign_cancer'}), (b:Term {id: 'sign_aries'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 3, score: 0.3333333333}
+MATCH (a:Term {id: 'sign_cancer'}), (b:Term {id: 'sign_aries'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'cardinal', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'sign_cancer'}), (b:Term {id: 'sign_capricorn'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 4, score: 0.3333333333}
+MATCH (a:Term {id: 'sign_cancer'}), (b:Term {id: 'sign_capricorn'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'cardinal', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'sign_cancer'}), (b:Term {id: 'sign_libra'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 5, score: 0.3333333333}
+MATCH (a:Term {id: 'sign_cancer'}), (b:Term {id: 'sign_libra'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'cardinal', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MERGE (t:Term {id: 'sign_leo'}) SET t += {facet_count: 3, id: 'sign_leo', name: 'leo', norm: 1.7320508076, updated: '2026-09-27', version: '0.1.0', vocabulary: 'symbol'}
+MERGE (f:Facet {name: 'fire', class: 'feature'})
+MATCH (t:Term {id: 'sign_leo'}), (f:Facet {name: 'fire', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 1, sources: '[\'element\']', weight: 1}
+MERGE (f:Facet {name: 'fixed', class: 'feature'})
+MATCH (t:Term {id: 'sign_leo'}), (f:Facet {name: 'fixed', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 1, sources: '[\'modality\']', weight: 1}
+MERGE (f:Facet {name: 'sun', class: 'feature'})
+MATCH (t:Term {id: 'sign_leo'}), (f:Facet {name: 'sun', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 1, sources: '[\'ruler\']', weight: 1}
+MATCH (a:Term {id: 'sign_leo'}), (b:Term {id: 'element_fire'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 1, score: 0.4082482905}
+MATCH (a:Term {id: 'sign_leo'}), (b:Term {id: 'element_fire'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'fire', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'sign_leo'}), (b:Term {id: 'metal_gold'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 2, score: 0.4082482905}
+MATCH (a:Term {id: 'sign_leo'}), (b:Term {id: 'metal_gold'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'sun', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'sign_leo'}), (b:Term {id: 'sign_aquarius'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 3, score: 0.3333333333}
+MATCH (a:Term {id: 'sign_leo'}), (b:Term {id: 'sign_aquarius'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'fixed', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'sign_leo'}), (b:Term {id: 'sign_aries'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 4, score: 0.3333333333}
+MATCH (a:Term {id: 'sign_leo'}), (b:Term {id: 'sign_aries'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'fire', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'sign_leo'}), (b:Term {id: 'sign_sagittarius'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 5, score: 0.3333333333}
+MATCH (a:Term {id: 'sign_leo'}), (b:Term {id: 'sign_sagittarius'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'fire', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MERGE (t:Term {id: 'sign_virgo'}) SET t += {facet_count: 3, id: 'sign_virgo', name: 'virgo', norm: 1.7320508076, updated: '2026-09-27', version: '0.1.0', vocabulary: 'symbol'}
+MERGE (f:Facet {name: 'earth', class: 'feature'})
+MATCH (t:Term {id: 'sign_virgo'}), (f:Facet {name: 'earth', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 1, sources: '[\'element\']', weight: 1}
+MERGE (f:Facet {name: 'mercury', class: 'feature'})
+MATCH (t:Term {id: 'sign_virgo'}), (f:Facet {name: 'mercury', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 1, sources: '[\'ruler\']', weight: 1}
+MERGE (f:Facet {name: 'mutable', class: 'feature'})
+MATCH (t:Term {id: 'sign_virgo'}), (f:Facet {name: 'mutable', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 1, sources: '[\'modality\']', weight: 1}
+MATCH (a:Term {id: 'sign_virgo'}), (b:Term {id: 'sign_gemini'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 1, score: 0.6666666667}
+MATCH (a:Term {id: 'sign_virgo'}), (b:Term {id: 'sign_gemini'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'mercury', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'sign_virgo'}), (b:Term {id: 'sign_gemini'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'mutable', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'sign_virgo'}), (b:Term {id: 'metal_mercury'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 2, score: 0.5773502692}
+MATCH (a:Term {id: 'sign_virgo'}), (b:Term {id: 'metal_mercury'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'mercury', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'sign_virgo'}), (b:Term {id: 'element_earth'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 3, score: 0.4082482905}
+MATCH (a:Term {id: 'sign_virgo'}), (b:Term {id: 'element_earth'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'earth', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'sign_virgo'}), (b:Term {id: 'sign_capricorn'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 4, score: 0.3333333333}
+MATCH (a:Term {id: 'sign_virgo'}), (b:Term {id: 'sign_capricorn'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'earth', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'sign_virgo'}), (b:Term {id: 'sign_pisces'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 5, score: 0.3333333333}
+MATCH (a:Term {id: 'sign_virgo'}), (b:Term {id: 'sign_pisces'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'mutable', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MERGE (t:Term {id: 'sign_libra'}) SET t += {facet_count: 3, id: 'sign_libra', name: 'libra', norm: 1.7320508076, updated: '2026-09-27', version: '0.1.0', vocabulary: 'symbol'}
+MERGE (f:Facet {name: 'air', class: 'feature'})
+MATCH (t:Term {id: 'sign_libra'}), (f:Facet {name: 'air', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 1, sources: '[\'element\']', weight: 1}
+MERGE (f:Facet {name: 'cardinal', class: 'feature'})
+MATCH (t:Term {id: 'sign_libra'}), (f:Facet {name: 'cardinal', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 1, sources: '[\'modality\']', weight: 1}
+MERGE (f:Facet {name: 'venus', class: 'feature'})
+MATCH (t:Term {id: 'sign_libra'}), (f:Facet {name: 'venus', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 1, sources: '[\'ruler\']', weight: 1}
+MATCH (a:Term {id: 'sign_libra'}), (b:Term {id: 'element_air'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 1, score: 0.4082482905}
+MATCH (a:Term {id: 'sign_libra'}), (b:Term {id: 'element_air'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'air', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'sign_libra'}), (b:Term {id: 'metal_copper'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 2, score: 0.4082482905}
+MATCH (a:Term {id: 'sign_libra'}), (b:Term {id: 'metal_copper'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'venus', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'sign_libra'}), (b:Term {id: 'sign_aquarius'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 3, score: 0.3333333333}
+MATCH (a:Term {id: 'sign_libra'}), (b:Term {id: 'sign_aquarius'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'air', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'sign_libra'}), (b:Term {id: 'sign_aries'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 4, score: 0.3333333333}
+MATCH (a:Term {id: 'sign_libra'}), (b:Term {id: 'sign_aries'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'cardinal', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'sign_libra'}), (b:Term {id: 'sign_cancer'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 5, score: 0.3333333333}
+MATCH (a:Term {id: 'sign_libra'}), (b:Term {id: 'sign_cancer'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'cardinal', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MERGE (t:Term {id: 'sign_scorpio'}) SET t += {facet_count: 3, id: 'sign_scorpio', name: 'scorpio', norm: 1.7320508076, updated: '2026-09-27', version: '0.1.0', vocabulary: 'symbol'}
+MERGE (f:Facet {name: 'fixed', class: 'feature'})
+MATCH (t:Term {id: 'sign_scorpio'}), (f:Facet {name: 'fixed', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 1, sources: '[\'modality\']', weight: 1}
+MERGE (f:Facet {name: 'mars', class: 'feature'})
+MATCH (t:Term {id: 'sign_scorpio'}), (f:Facet {name: 'mars', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 1, sources: '[\'ruler\']', weight: 1}
+MERGE (f:Facet {name: 'water', class: 'feature'})
+MATCH (t:Term {id: 'sign_scorpio'}), (f:Facet {name: 'water', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 1, sources: '[\'element\']', weight: 1}
+MATCH (a:Term {id: 'sign_scorpio'}), (b:Term {id: 'element_water'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 1, score: 0.4082482905}
+MATCH (a:Term {id: 'sign_scorpio'}), (b:Term {id: 'element_water'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'water', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'sign_scorpio'}), (b:Term {id: 'metal_iron'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 2, score: 0.4082482905}
+MATCH (a:Term {id: 'sign_scorpio'}), (b:Term {id: 'metal_iron'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'mars', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'sign_scorpio'}), (b:Term {id: 'sign_aquarius'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 3, score: 0.3333333333}
+MATCH (a:Term {id: 'sign_scorpio'}), (b:Term {id: 'sign_aquarius'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'fixed', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'sign_scorpio'}), (b:Term {id: 'sign_aries'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 4, score: 0.3333333333}
+MATCH (a:Term {id: 'sign_scorpio'}), (b:Term {id: 'sign_aries'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'mars', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'sign_scorpio'}), (b:Term {id: 'sign_cancer'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 5, score: 0.3333333333}
+MATCH (a:Term {id: 'sign_scorpio'}), (b:Term {id: 'sign_cancer'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'water', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MERGE (t:Term {id: 'sign_sagittarius'}) SET t += {facet_count: 3, id: 'sign_sagittarius', name: 'sagittarius', norm: 1.7320508076, updated: '2026-09-27', version: '0.1.0', vocabulary: 'symbol'}
+MERGE (f:Facet {name: 'fire', class: 'feature'})
+MATCH (t:Term {id: 'sign_sagittarius'}), (f:Facet {name: 'fire', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 1, sources: '[\'element\']', weight: 1}
+MERGE (f:Facet {name: 'jupiter', class: 'feature'})
+MATCH (t:Term {id: 'sign_sagittarius'}), (f:Facet {name: 'jupiter', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 1, sources: '[\'ruler\']', weight: 1}
+MERGE (f:Facet {name: 'mutable', class: 'feature'})
+MATCH (t:Term {id: 'sign_sagittarius'}), (f:Facet {name: 'mutable', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 1, sources: '[\'modality\']', weight: 1}
+MATCH (a:Term {id: 'sign_sagittarius'}), (b:Term {id: 'sign_pisces'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 1, score: 0.6666666667}
+MATCH (a:Term {id: 'sign_sagittarius'}), (b:Term {id: 'sign_pisces'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'jupiter', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'sign_sagittarius'}), (b:Term {id: 'sign_pisces'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'mutable', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'sign_sagittarius'}), (b:Term {id: 'element_fire'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 2, score: 0.4082482905}
+MATCH (a:Term {id: 'sign_sagittarius'}), (b:Term {id: 'element_fire'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'fire', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'sign_sagittarius'}), (b:Term {id: 'metal_tin'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 3, score: 0.4082482905}
+MATCH (a:Term {id: 'sign_sagittarius'}), (b:Term {id: 'metal_tin'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'jupiter', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'sign_sagittarius'}), (b:Term {id: 'sign_aries'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 4, score: 0.3333333333}
+MATCH (a:Term {id: 'sign_sagittarius'}), (b:Term {id: 'sign_aries'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'fire', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'sign_sagittarius'}), (b:Term {id: 'sign_gemini'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 5, score: 0.3333333333}
+MATCH (a:Term {id: 'sign_sagittarius'}), (b:Term {id: 'sign_gemini'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'mutable', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MERGE (t:Term {id: 'sign_capricorn'}) SET t += {facet_count: 3, id: 'sign_capricorn', name: 'capricorn', norm: 1.7320508076, updated: '2026-09-27', version: '0.1.0', vocabulary: 'symbol'}
+MERGE (f:Facet {name: 'cardinal', class: 'feature'})
+MATCH (t:Term {id: 'sign_capricorn'}), (f:Facet {name: 'cardinal', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 1, sources: '[\'modality\']', weight: 1}
+MERGE (f:Facet {name: 'earth', class: 'feature'})
+MATCH (t:Term {id: 'sign_capricorn'}), (f:Facet {name: 'earth', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 1, sources: '[\'element\']', weight: 1}
+MERGE (f:Facet {name: 'saturn', class: 'feature'})
+MATCH (t:Term {id: 'sign_capricorn'}), (f:Facet {name: 'saturn', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 1, sources: '[\'ruler\']', weight: 1}
+MATCH (a:Term {id: 'sign_capricorn'}), (b:Term {id: 'element_earth'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 1, score: 0.4082482905}
+MATCH (a:Term {id: 'sign_capricorn'}), (b:Term {id: 'element_earth'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'earth', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'sign_capricorn'}), (b:Term {id: 'metal_lead'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 2, score: 0.4082482905}
+MATCH (a:Term {id: 'sign_capricorn'}), (b:Term {id: 'metal_lead'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'saturn', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'sign_capricorn'}), (b:Term {id: 'sign_aquarius'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 3, score: 0.3333333333}
+MATCH (a:Term {id: 'sign_capricorn'}), (b:Term {id: 'sign_aquarius'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'saturn', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'sign_capricorn'}), (b:Term {id: 'sign_aries'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 4, score: 0.3333333333}
+MATCH (a:Term {id: 'sign_capricorn'}), (b:Term {id: 'sign_aries'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'cardinal', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'sign_capricorn'}), (b:Term {id: 'sign_cancer'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 5, score: 0.3333333333}
+MATCH (a:Term {id: 'sign_capricorn'}), (b:Term {id: 'sign_cancer'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'cardinal', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MERGE (t:Term {id: 'sign_aquarius'}) SET t += {facet_count: 3, id: 'sign_aquarius', name: 'aquarius', norm: 1.7320508076, updated: '2026-09-27', version: '0.1.0', vocabulary: 'symbol'}
+MERGE (f:Facet {name: 'air', class: 'feature'})
+MATCH (t:Term {id: 'sign_aquarius'}), (f:Facet {name: 'air', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 1, sources: '[\'element\']', weight: 1}
+MERGE (f:Facet {name: 'fixed', class: 'feature'})
+MATCH (t:Term {id: 'sign_aquarius'}), (f:Facet {name: 'fixed', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 1, sources: '[\'modality\']', weight: 1}
+MERGE (f:Facet {name: 'saturn', class: 'feature'})
+MATCH (t:Term {id: 'sign_aquarius'}), (f:Facet {name: 'saturn', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 1, sources: '[\'ruler\']', weight: 1}
+MATCH (a:Term {id: 'sign_aquarius'}), (b:Term {id: 'element_air'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 1, score: 0.4082482905}
+MATCH (a:Term {id: 'sign_aquarius'}), (b:Term {id: 'element_air'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'air', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'sign_aquarius'}), (b:Term {id: 'metal_lead'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 2, score: 0.4082482905}
+MATCH (a:Term {id: 'sign_aquarius'}), (b:Term {id: 'metal_lead'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'saturn', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'sign_aquarius'}), (b:Term {id: 'sign_capricorn'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 3, score: 0.3333333333}
+MATCH (a:Term {id: 'sign_aquarius'}), (b:Term {id: 'sign_capricorn'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'saturn', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'sign_aquarius'}), (b:Term {id: 'sign_gemini'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 4, score: 0.3333333333}
+MATCH (a:Term {id: 'sign_aquarius'}), (b:Term {id: 'sign_gemini'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'air', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'sign_aquarius'}), (b:Term {id: 'sign_leo'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 5, score: 0.3333333333}
+MATCH (a:Term {id: 'sign_aquarius'}), (b:Term {id: 'sign_leo'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'fixed', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MERGE (t:Term {id: 'sign_pisces'}) SET t += {facet_count: 3, id: 'sign_pisces', name: 'pisces', norm: 1.7320508076, updated: '2026-09-27', version: '0.1.0', vocabulary: 'symbol'}
+MERGE (f:Facet {name: 'jupiter', class: 'feature'})
+MATCH (t:Term {id: 'sign_pisces'}), (f:Facet {name: 'jupiter', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 1, sources: '[\'ruler\']', weight: 1}
+MERGE (f:Facet {name: 'mutable', class: 'feature'})
+MATCH (t:Term {id: 'sign_pisces'}), (f:Facet {name: 'mutable', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 1, sources: '[\'modality\']', weight: 1}
+MERGE (f:Facet {name: 'water', class: 'feature'})
+MATCH (t:Term {id: 'sign_pisces'}), (f:Facet {name: 'water', class: 'feature'}) MERGE (t)-[h:HAS_FACET]->(f) SET h += {raw: 1, sources: '[\'element\']', weight: 1}
+MATCH (a:Term {id: 'sign_pisces'}), (b:Term {id: 'sign_sagittarius'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 1, score: 0.6666666667}
+MATCH (a:Term {id: 'sign_pisces'}), (b:Term {id: 'sign_sagittarius'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'jupiter', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'sign_pisces'}), (b:Term {id: 'sign_sagittarius'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'mutable', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'sign_pisces'}), (b:Term {id: 'element_water'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 2, score: 0.4082482905}
+MATCH (a:Term {id: 'sign_pisces'}), (b:Term {id: 'element_water'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'water', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'sign_pisces'}), (b:Term {id: 'metal_tin'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 3, score: 0.4082482905}
+MATCH (a:Term {id: 'sign_pisces'}), (b:Term {id: 'metal_tin'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'jupiter', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'sign_pisces'}), (b:Term {id: 'sign_cancer'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 4, score: 0.3333333333}
+MATCH (a:Term {id: 'sign_pisces'}), (b:Term {id: 'sign_cancer'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'water', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MATCH (a:Term {id: 'sign_pisces'}), (b:Term {id: 'sign_gemini'}) MERGE (a)-[n:NEIGHBOR_OF]->(b) SET n += {prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 5, score: 0.3333333333}
+MATCH (a:Term {id: 'sign_pisces'}), (b:Term {id: 'sign_gemini'}) MERGE (a)-[x:SHARES_FACET]->(b) SET x += {contribution: 1, facet: 'mutable', left: 1, left_class: 'feature', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', right: 1, right_class: 'feature'}
+MERGE (t:Term {id: 'everyday_wear'}) SET t += {facet_count: 0, id: 'everyday_wear', name: 'everyday wear', norm: 0, updated: '2026-09-27', version: '0.1.0', vocabulary: 'wear-context'}
+MERGE (t:Term {id: 'stacks'}) SET t += {facet_count: 0, id: 'stacks', name: 'stacks', norm: 0, updated: '2026-09-27', version: '0.1.0', vocabulary: 'wear-context'}
+MERGE (t:Term {id: 'special_occasion'}) SET t += {facet_count: 0, id: 'special_occasion', name: 'special occasion', norm: 0, updated: '2026-09-27', version: '0.1.0', vocabulary: 'wear-context'}
+MERGE (t:Term {id: 'ceremony_commitment'}) SET t += {facet_count: 0, id: 'ceremony_commitment', name: 'ceremony and commitment', norm: 0, updated: '2026-09-27', version: '0.1.0', vocabulary: 'wear-context'}
+MERGE (e:Evidence {evidence_id: 'ev-001'}) SET e += {capture: 'ebay-OL5BTOSiu8QiiMBjo', evidence_id: 'ev-001', items: 852, kind: 'apify_run', note: null, platform: 'ebay', query: null, run_id: 'OL5BTOSiu8QiiMBjo', sha256: null}
+MATCH (e:Evidence {evidence_id: 'ev-001'}), (t:Term {id: 'georgian'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 852, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-001'}), (t:Term {id: 'victorian'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 852, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-001'}), (t:Term {id: 'art_nouveau'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 852, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-001'}), (t:Term {id: 'edwardian'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 852, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-001'}), (t:Term {id: 'art_deco'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 852, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-001'}), (t:Term {id: 'retro'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 852, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-001'}), (t:Term {id: 'mid_century_modernist'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 852, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-001'}), (t:Term {id: 'brutalist'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 852, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-001'}), (t:Term {id: 'organic_modern'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 852, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-001'}), (t:Term {id: 'celestial'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 852, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-001'}), (t:Term {id: 'gothic'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 852, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-001'}), (t:Term {id: 'biker'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 852, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-001'}), (t:Term {id: 'egyptian_revival'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 852, note: ''}
+MERGE (e:Evidence {evidence_id: 'ev-002'}) SET e += {capture: 'etsy-1500', evidence_id: 'ev-002', items: null, kind: 'apify_run', note: null, platform: null, query: 'brutalist jewelry', run_id: 'WremJcxSDq7NNPQdN', sha256: null}
+MATCH (e:Evidence {evidence_id: 'ev-002'}), (t:Term {id: 'georgian'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-002'}), (t:Term {id: 'victorian'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-002'}), (t:Term {id: 'art_nouveau'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-002'}), (t:Term {id: 'edwardian'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-002'}), (t:Term {id: 'art_deco'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-002'}), (t:Term {id: 'retro'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-002'}), (t:Term {id: 'mid_century_modernist'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-002'}), (t:Term {id: 'brutalist'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-002'}), (t:Term {id: 'organic_modern'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-002'}), (t:Term {id: 'celestial'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-002'}), (t:Term {id: 'gothic'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-002'}), (t:Term {id: 'biker'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-002'}), (t:Term {id: 'egyptian_revival'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MERGE (e:Evidence {evidence_id: 'ev-003'}) SET e += {capture: 'etsy-1500', evidence_id: 'ev-003', items: null, kind: 'apify_run', note: null, platform: null, query: 'organic modern jewelry', run_id: '75fUSuU1nOruf4r7Q', sha256: null}
+MATCH (e:Evidence {evidence_id: 'ev-003'}), (t:Term {id: 'georgian'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-003'}), (t:Term {id: 'victorian'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-003'}), (t:Term {id: 'art_nouveau'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-003'}), (t:Term {id: 'edwardian'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-003'}), (t:Term {id: 'art_deco'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-003'}), (t:Term {id: 'retro'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-003'}), (t:Term {id: 'mid_century_modernist'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-003'}), (t:Term {id: 'brutalist'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-003'}), (t:Term {id: 'organic_modern'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-003'}), (t:Term {id: 'celestial'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-003'}), (t:Term {id: 'gothic'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-003'}), (t:Term {id: 'biker'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-003'}), (t:Term {id: 'egyptian_revival'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MERGE (e:Evidence {evidence_id: 'ev-004'}) SET e += {capture: 'etsy-1500', evidence_id: 'ev-004', items: null, kind: 'apify_run', note: null, platform: null, query: 'egyptian revival jewelry', run_id: 'NlMk17klLsJ9AQ3xD', sha256: null}
+MATCH (e:Evidence {evidence_id: 'ev-004'}), (t:Term {id: 'georgian'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-004'}), (t:Term {id: 'victorian'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-004'}), (t:Term {id: 'art_nouveau'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-004'}), (t:Term {id: 'edwardian'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-004'}), (t:Term {id: 'art_deco'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-004'}), (t:Term {id: 'retro'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-004'}), (t:Term {id: 'mid_century_modernist'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-004'}), (t:Term {id: 'brutalist'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-004'}), (t:Term {id: 'organic_modern'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-004'}), (t:Term {id: 'celestial'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-004'}), (t:Term {id: 'gothic'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-004'}), (t:Term {id: 'biker'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-004'}), (t:Term {id: 'egyptian_revival'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MERGE (e:Evidence {evidence_id: 'ev-005'}) SET e += {capture: 'etsy-1500', evidence_id: 'ev-005', items: null, kind: 'apify_run', note: null, platform: null, query: 'skonvirke jewelry', run_id: 'vrwweozPhnz5ehXfk', sha256: null}
+MATCH (e:Evidence {evidence_id: 'ev-005'}), (t:Term {id: 'georgian'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-005'}), (t:Term {id: 'victorian'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-005'}), (t:Term {id: 'art_nouveau'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-005'}), (t:Term {id: 'edwardian'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-005'}), (t:Term {id: 'art_deco'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-005'}), (t:Term {id: 'retro'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-005'}), (t:Term {id: 'mid_century_modernist'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-005'}), (t:Term {id: 'brutalist'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-005'}), (t:Term {id: 'organic_modern'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-005'}), (t:Term {id: 'celestial'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-005'}), (t:Term {id: 'gothic'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-005'}), (t:Term {id: 'biker'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-005'}), (t:Term {id: 'egyptian_revival'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MERGE (e:Evidence {evidence_id: 'ev-006'}) SET e += {capture: 'etsy-1500', evidence_id: 'ev-006', items: null, kind: 'apify_run', note: null, platform: null, query: 'scandinavian modern jewelry', run_id: '8AVThCBBSoijw3NLS', sha256: null}
+MATCH (e:Evidence {evidence_id: 'ev-006'}), (t:Term {id: 'georgian'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-006'}), (t:Term {id: 'victorian'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-006'}), (t:Term {id: 'art_nouveau'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-006'}), (t:Term {id: 'edwardian'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-006'}), (t:Term {id: 'art_deco'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-006'}), (t:Term {id: 'retro'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-006'}), (t:Term {id: 'mid_century_modernist'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-006'}), (t:Term {id: 'brutalist'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-006'}), (t:Term {id: 'organic_modern'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-006'}), (t:Term {id: 'celestial'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-006'}), (t:Term {id: 'gothic'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-006'}), (t:Term {id: 'biker'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-006'}), (t:Term {id: 'egyptian_revival'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MERGE (e:Evidence {evidence_id: 'ev-007'}) SET e += {capture: 'etsy-1500', evidence_id: 'ev-007', items: null, kind: 'apify_run', note: 'plain \'georgian jewelry\' returned zero items on etsy; \'georgian era jewelry\' used', platform: null, query: 'georgian era jewelry', run_id: 'wjORe71jJLuXAhHlC', sha256: null}
+MATCH (e:Evidence {evidence_id: 'ev-007'}), (t:Term {id: 'georgian'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: 'plain \'georgian jewelry\' returned zero items on etsy; \'georgian era jewelry\' used'}
+MATCH (e:Evidence {evidence_id: 'ev-007'}), (t:Term {id: 'victorian'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: 'plain \'georgian jewelry\' returned zero items on etsy; \'georgian era jewelry\' used'}
+MATCH (e:Evidence {evidence_id: 'ev-007'}), (t:Term {id: 'art_nouveau'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: 'plain \'georgian jewelry\' returned zero items on etsy; \'georgian era jewelry\' used'}
+MATCH (e:Evidence {evidence_id: 'ev-007'}), (t:Term {id: 'edwardian'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: 'plain \'georgian jewelry\' returned zero items on etsy; \'georgian era jewelry\' used'}
+MATCH (e:Evidence {evidence_id: 'ev-007'}), (t:Term {id: 'art_deco'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: 'plain \'georgian jewelry\' returned zero items on etsy; \'georgian era jewelry\' used'}
+MATCH (e:Evidence {evidence_id: 'ev-007'}), (t:Term {id: 'retro'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: 'plain \'georgian jewelry\' returned zero items on etsy; \'georgian era jewelry\' used'}
+MATCH (e:Evidence {evidence_id: 'ev-007'}), (t:Term {id: 'mid_century_modernist'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: 'plain \'georgian jewelry\' returned zero items on etsy; \'georgian era jewelry\' used'}
+MATCH (e:Evidence {evidence_id: 'ev-007'}), (t:Term {id: 'brutalist'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: 'plain \'georgian jewelry\' returned zero items on etsy; \'georgian era jewelry\' used'}
+MATCH (e:Evidence {evidence_id: 'ev-007'}), (t:Term {id: 'organic_modern'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: 'plain \'georgian jewelry\' returned zero items on etsy; \'georgian era jewelry\' used'}
+MATCH (e:Evidence {evidence_id: 'ev-007'}), (t:Term {id: 'celestial'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: 'plain \'georgian jewelry\' returned zero items on etsy; \'georgian era jewelry\' used'}
+MATCH (e:Evidence {evidence_id: 'ev-007'}), (t:Term {id: 'gothic'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: 'plain \'georgian jewelry\' returned zero items on etsy; \'georgian era jewelry\' used'}
+MATCH (e:Evidence {evidence_id: 'ev-007'}), (t:Term {id: 'biker'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: 'plain \'georgian jewelry\' returned zero items on etsy; \'georgian era jewelry\' used'}
+MATCH (e:Evidence {evidence_id: 'ev-007'}), (t:Term {id: 'egyptian_revival'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: 'plain \'georgian jewelry\' returned zero items on etsy; \'georgian era jewelry\' used'}
+MERGE (e:Evidence {evidence_id: 'ev-008'}) SET e += {capture: 'etsy-1500', evidence_id: 'ev-008', items: null, kind: 'apify_run', note: null, platform: null, query: 'victorian jewelry', run_id: 'ZDTqIuHxC0Gk9m3Ql', sha256: null}
+MATCH (e:Evidence {evidence_id: 'ev-008'}), (t:Term {id: 'georgian'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-008'}), (t:Term {id: 'victorian'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-008'}), (t:Term {id: 'art_nouveau'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-008'}), (t:Term {id: 'edwardian'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-008'}), (t:Term {id: 'art_deco'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-008'}), (t:Term {id: 'retro'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-008'}), (t:Term {id: 'mid_century_modernist'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-008'}), (t:Term {id: 'brutalist'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-008'}), (t:Term {id: 'organic_modern'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-008'}), (t:Term {id: 'celestial'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-008'}), (t:Term {id: 'gothic'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-008'}), (t:Term {id: 'biker'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-008'}), (t:Term {id: 'egyptian_revival'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MERGE (e:Evidence {evidence_id: 'ev-009'}) SET e += {capture: 'etsy-1500', evidence_id: 'ev-009', items: null, kind: 'apify_run', note: null, platform: null, query: 'art nouveau jewelry', run_id: 'oanH5wk9llTDtH3Ww', sha256: null}
+MATCH (e:Evidence {evidence_id: 'ev-009'}), (t:Term {id: 'georgian'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-009'}), (t:Term {id: 'victorian'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-009'}), (t:Term {id: 'art_nouveau'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-009'}), (t:Term {id: 'edwardian'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-009'}), (t:Term {id: 'art_deco'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-009'}), (t:Term {id: 'retro'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-009'}), (t:Term {id: 'mid_century_modernist'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-009'}), (t:Term {id: 'brutalist'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-009'}), (t:Term {id: 'organic_modern'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-009'}), (t:Term {id: 'celestial'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-009'}), (t:Term {id: 'gothic'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-009'}), (t:Term {id: 'biker'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-009'}), (t:Term {id: 'egyptian_revival'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MERGE (e:Evidence {evidence_id: 'ev-010'}) SET e += {capture: 'etsy-1500', evidence_id: 'ev-010', items: null, kind: 'apify_run', note: null, platform: null, query: 'edwardian jewelry', run_id: 'H0qI3XxLFEBWt7SZp', sha256: null}
+MATCH (e:Evidence {evidence_id: 'ev-010'}), (t:Term {id: 'georgian'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-010'}), (t:Term {id: 'victorian'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-010'}), (t:Term {id: 'art_nouveau'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-010'}), (t:Term {id: 'edwardian'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-010'}), (t:Term {id: 'art_deco'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-010'}), (t:Term {id: 'retro'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-010'}), (t:Term {id: 'mid_century_modernist'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-010'}), (t:Term {id: 'brutalist'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-010'}), (t:Term {id: 'organic_modern'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-010'}), (t:Term {id: 'celestial'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-010'}), (t:Term {id: 'gothic'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-010'}), (t:Term {id: 'biker'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-010'}), (t:Term {id: 'egyptian_revival'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MERGE (e:Evidence {evidence_id: 'ev-011'}) SET e += {capture: 'etsy-1500', evidence_id: 'ev-011', items: null, kind: 'apify_run', note: null, platform: null, query: 'art deco jewelry', run_id: '4hyHnBJuCCiljaRJ5', sha256: null}
+MATCH (e:Evidence {evidence_id: 'ev-011'}), (t:Term {id: 'georgian'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-011'}), (t:Term {id: 'victorian'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-011'}), (t:Term {id: 'art_nouveau'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-011'}), (t:Term {id: 'edwardian'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-011'}), (t:Term {id: 'art_deco'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-011'}), (t:Term {id: 'retro'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-011'}), (t:Term {id: 'mid_century_modernist'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-011'}), (t:Term {id: 'brutalist'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-011'}), (t:Term {id: 'organic_modern'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-011'}), (t:Term {id: 'celestial'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-011'}), (t:Term {id: 'gothic'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-011'}), (t:Term {id: 'biker'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-011'}), (t:Term {id: 'egyptian_revival'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MERGE (e:Evidence {evidence_id: 'ev-012'}) SET e += {capture: 'etsy-1500', evidence_id: 'ev-012', items: null, kind: 'apify_run', note: null, platform: null, query: 'retro 40s jewelry', run_id: 'QM0Se6JHJeQbiI9y1', sha256: null}
+MATCH (e:Evidence {evidence_id: 'ev-012'}), (t:Term {id: 'georgian'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-012'}), (t:Term {id: 'victorian'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-012'}), (t:Term {id: 'art_nouveau'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-012'}), (t:Term {id: 'edwardian'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-012'}), (t:Term {id: 'art_deco'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-012'}), (t:Term {id: 'retro'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-012'}), (t:Term {id: 'mid_century_modernist'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-012'}), (t:Term {id: 'brutalist'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-012'}), (t:Term {id: 'organic_modern'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-012'}), (t:Term {id: 'celestial'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-012'}), (t:Term {id: 'gothic'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-012'}), (t:Term {id: 'biker'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-012'}), (t:Term {id: 'egyptian_revival'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MERGE (e:Evidence {evidence_id: 'ev-013'}) SET e += {capture: 'etsy-1500', evidence_id: 'ev-013', items: null, kind: 'apify_run', note: null, platform: null, query: 'mid century modern jewelry', run_id: 'S53SEaalwJzzqfzJf', sha256: null}
+MATCH (e:Evidence {evidence_id: 'ev-013'}), (t:Term {id: 'georgian'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-013'}), (t:Term {id: 'victorian'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-013'}), (t:Term {id: 'art_nouveau'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-013'}), (t:Term {id: 'edwardian'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-013'}), (t:Term {id: 'art_deco'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-013'}), (t:Term {id: 'retro'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-013'}), (t:Term {id: 'mid_century_modernist'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-013'}), (t:Term {id: 'brutalist'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-013'}), (t:Term {id: 'organic_modern'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-013'}), (t:Term {id: 'celestial'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-013'}), (t:Term {id: 'gothic'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-013'}), (t:Term {id: 'biker'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-013'}), (t:Term {id: 'egyptian_revival'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MERGE (e:Evidence {evidence_id: 'ev-014'}) SET e += {capture: 'etsy-1500', evidence_id: 'ev-014', items: null, kind: 'apify_run', note: null, platform: null, query: 'celestial jewelry', run_id: 'yXttahULeQWp7hQCB', sha256: null}
+MATCH (e:Evidence {evidence_id: 'ev-014'}), (t:Term {id: 'georgian'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-014'}), (t:Term {id: 'victorian'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-014'}), (t:Term {id: 'art_nouveau'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-014'}), (t:Term {id: 'edwardian'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-014'}), (t:Term {id: 'art_deco'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-014'}), (t:Term {id: 'retro'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-014'}), (t:Term {id: 'mid_century_modernist'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-014'}), (t:Term {id: 'brutalist'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-014'}), (t:Term {id: 'organic_modern'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-014'}), (t:Term {id: 'celestial'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-014'}), (t:Term {id: 'gothic'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-014'}), (t:Term {id: 'biker'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-014'}), (t:Term {id: 'egyptian_revival'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MERGE (e:Evidence {evidence_id: 'ev-015'}) SET e += {capture: 'etsy-1500', evidence_id: 'ev-015', items: null, kind: 'apify_run', note: null, platform: null, query: 'gothic jewelry', run_id: 'OhgEIPTem8lS5Fwni', sha256: null}
+MATCH (e:Evidence {evidence_id: 'ev-015'}), (t:Term {id: 'georgian'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-015'}), (t:Term {id: 'victorian'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-015'}), (t:Term {id: 'art_nouveau'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-015'}), (t:Term {id: 'edwardian'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-015'}), (t:Term {id: 'art_deco'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-015'}), (t:Term {id: 'retro'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-015'}), (t:Term {id: 'mid_century_modernist'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-015'}), (t:Term {id: 'brutalist'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-015'}), (t:Term {id: 'organic_modern'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-015'}), (t:Term {id: 'celestial'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-015'}), (t:Term {id: 'gothic'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-015'}), (t:Term {id: 'biker'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-015'}), (t:Term {id: 'egyptian_revival'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MERGE (e:Evidence {evidence_id: 'ev-016'}) SET e += {capture: 'etsy-1500', evidence_id: 'ev-016', items: null, kind: 'apify_run', note: null, platform: null, query: 'biker jewelry', run_id: '1PPY1CE7nTUwQIiVp', sha256: null}
+MATCH (e:Evidence {evidence_id: 'ev-016'}), (t:Term {id: 'georgian'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-016'}), (t:Term {id: 'victorian'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-016'}), (t:Term {id: 'art_nouveau'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-016'}), (t:Term {id: 'edwardian'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-016'}), (t:Term {id: 'art_deco'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-016'}), (t:Term {id: 'retro'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-016'}), (t:Term {id: 'mid_century_modernist'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-016'}), (t:Term {id: 'brutalist'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-016'}), (t:Term {id: 'organic_modern'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-016'}), (t:Term {id: 'celestial'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-016'}), (t:Term {id: 'gothic'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-016'}), (t:Term {id: 'biker'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-016'}), (t:Term {id: 'egyptian_revival'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: ''}
+MERGE (e:Evidence {evidence_id: 'ev-017'}) SET e += {capture: 'drift-edge co-occurrence probes 2026-10-09', evidence_id: 'ev-017', items: 100, kind: 'apify_run', note: null, platform: 'etsy', query: 'art deco celestial jewelry', run_id: 'v8j0gsCzxSXrVZudC', sha256: null}
+MATCH (e:Evidence {evidence_id: 'ev-017'}), (t:Term {id: 'retro'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-017'}), (t:Term {id: 'mid_century_modernist'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-017'}), (t:Term {id: 'celestial'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-017'}), (t:Term {id: 'art_deco'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: ''}
+MERGE (e:Evidence {evidence_id: 'ev-018'}) SET e += {capture: 'drift-edge co-occurrence probes 2026-10-09', evidence_id: 'ev-018', items: 100, kind: 'apify_run', note: null, platform: 'ebay', query: 'art deco celestial jewelry', run_id: 'hyw7ikDchIZajyFm3', sha256: null}
+MATCH (e:Evidence {evidence_id: 'ev-018'}), (t:Term {id: 'retro'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-018'}), (t:Term {id: 'mid_century_modernist'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-018'}), (t:Term {id: 'celestial'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-018'}), (t:Term {id: 'art_deco'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: ''}
+MERGE (e:Evidence {evidence_id: 'ev-019'}) SET e += {capture: 'drift-edge co-occurrence probes 2026-10-09', evidence_id: 'ev-019', items: 100, kind: 'apify_run', note: null, platform: 'ebay', query: 'retro mid century jewelry', run_id: 'abiMX0CnL3oDNcTfK', sha256: null}
+MATCH (e:Evidence {evidence_id: 'ev-019'}), (t:Term {id: 'retro'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-019'}), (t:Term {id: 'mid_century_modernist'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-019'}), (t:Term {id: 'celestial'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: ''}
+MATCH (e:Evidence {evidence_id: 'ev-019'}), (t:Term {id: 'art_deco'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: ''}
+MERGE (e:Evidence {evidence_id: 'ev-020'}) SET e += {capture: 'symbol-segment capture 2026-10-09', evidence_id: 'ev-020', items: 100, kind: 'apify_run', note: '71% solimet-clean, all 12 signs present', platform: 'etsy', query: 'zodiac necklace', run_id: '5rW00Wz1q2pKgGV7c', sha256: null}
+MATCH (e:Evidence {evidence_id: 'ev-020'}), (t:Term {id: 'celestial'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '71% solimet-clean, all 12 signs present'}
+MATCH (e:Evidence {evidence_id: 'ev-020'}), (t:Term {id: 'sign_aries'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '71% solimet-clean, all 12 signs present'}
+MATCH (e:Evidence {evidence_id: 'ev-020'}), (t:Term {id: 'sign_taurus'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '71% solimet-clean, all 12 signs present'}
+MATCH (e:Evidence {evidence_id: 'ev-020'}), (t:Term {id: 'sign_gemini'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '71% solimet-clean, all 12 signs present'}
+MATCH (e:Evidence {evidence_id: 'ev-020'}), (t:Term {id: 'sign_cancer'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '71% solimet-clean, all 12 signs present'}
+MATCH (e:Evidence {evidence_id: 'ev-020'}), (t:Term {id: 'sign_leo'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '71% solimet-clean, all 12 signs present'}
+MATCH (e:Evidence {evidence_id: 'ev-020'}), (t:Term {id: 'sign_virgo'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '71% solimet-clean, all 12 signs present'}
+MATCH (e:Evidence {evidence_id: 'ev-020'}), (t:Term {id: 'sign_libra'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '71% solimet-clean, all 12 signs present'}
+MATCH (e:Evidence {evidence_id: 'ev-020'}), (t:Term {id: 'sign_scorpio'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '71% solimet-clean, all 12 signs present'}
+MATCH (e:Evidence {evidence_id: 'ev-020'}), (t:Term {id: 'sign_sagittarius'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '71% solimet-clean, all 12 signs present'}
+MATCH (e:Evidence {evidence_id: 'ev-020'}), (t:Term {id: 'sign_capricorn'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '71% solimet-clean, all 12 signs present'}
+MATCH (e:Evidence {evidence_id: 'ev-020'}), (t:Term {id: 'sign_aquarius'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '71% solimet-clean, all 12 signs present'}
+MATCH (e:Evidence {evidence_id: 'ev-020'}), (t:Term {id: 'sign_pisces'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '71% solimet-clean, all 12 signs present'}
+MERGE (e:Evidence {evidence_id: 'ev-021'}) SET e += {capture: 'symbol-segment capture 2026-10-09', evidence_id: 'ev-021', items: 100, kind: 'apify_run', note: 'CORRECTION: not empty - 74/100 on-segment, but stone-heavy crystal-healing segment, outside solimet', platform: 'ebay', query: 'zodiac jewelry', run_id: 'F1w0ZIlLuZdg4mDDv', sha256: null}
+MATCH (e:Evidence {evidence_id: 'ev-021'}), (t:Term {id: 'celestial'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: 'CORRECTION: not empty - 74/100 on-segment, but stone-heavy crystal-healing segment, outside solimet'}
+MATCH (e:Evidence {evidence_id: 'ev-021'}), (t:Term {id: 'sign_aries'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: 'CORRECTION: not empty - 74/100 on-segment, but stone-heavy crystal-healing segment, outside solimet'}
+MATCH (e:Evidence {evidence_id: 'ev-021'}), (t:Term {id: 'sign_taurus'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: 'CORRECTION: not empty - 74/100 on-segment, but stone-heavy crystal-healing segment, outside solimet'}
+MATCH (e:Evidence {evidence_id: 'ev-021'}), (t:Term {id: 'sign_gemini'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: 'CORRECTION: not empty - 74/100 on-segment, but stone-heavy crystal-healing segment, outside solimet'}
+MATCH (e:Evidence {evidence_id: 'ev-021'}), (t:Term {id: 'sign_cancer'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: 'CORRECTION: not empty - 74/100 on-segment, but stone-heavy crystal-healing segment, outside solimet'}
+MATCH (e:Evidence {evidence_id: 'ev-021'}), (t:Term {id: 'sign_leo'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: 'CORRECTION: not empty - 74/100 on-segment, but stone-heavy crystal-healing segment, outside solimet'}
+MATCH (e:Evidence {evidence_id: 'ev-021'}), (t:Term {id: 'sign_virgo'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: 'CORRECTION: not empty - 74/100 on-segment, but stone-heavy crystal-healing segment, outside solimet'}
+MATCH (e:Evidence {evidence_id: 'ev-021'}), (t:Term {id: 'sign_libra'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: 'CORRECTION: not empty - 74/100 on-segment, but stone-heavy crystal-healing segment, outside solimet'}
+MATCH (e:Evidence {evidence_id: 'ev-021'}), (t:Term {id: 'sign_scorpio'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: 'CORRECTION: not empty - 74/100 on-segment, but stone-heavy crystal-healing segment, outside solimet'}
+MATCH (e:Evidence {evidence_id: 'ev-021'}), (t:Term {id: 'sign_sagittarius'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: 'CORRECTION: not empty - 74/100 on-segment, but stone-heavy crystal-healing segment, outside solimet'}
+MATCH (e:Evidence {evidence_id: 'ev-021'}), (t:Term {id: 'sign_capricorn'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: 'CORRECTION: not empty - 74/100 on-segment, but stone-heavy crystal-healing segment, outside solimet'}
+MATCH (e:Evidence {evidence_id: 'ev-021'}), (t:Term {id: 'sign_aquarius'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: 'CORRECTION: not empty - 74/100 on-segment, but stone-heavy crystal-healing segment, outside solimet'}
+MATCH (e:Evidence {evidence_id: 'ev-021'}), (t:Term {id: 'sign_pisces'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: 'CORRECTION: not empty - 74/100 on-segment, but stone-heavy crystal-healing segment, outside solimet'}
+MERGE (e:Evidence {evidence_id: 'ev-022'}) SET e += {capture: 'symbol-segment capture 2026-10-09', evidence_id: 'ev-022', items: 100, kind: 'apify_run', note: '94% solimet-clean; sun 20, moon 15, star 13 cards', platform: 'etsy', query: 'tarot jewelry', run_id: 'PnyAYpCpTlw4GRS6P', sha256: null}
+MATCH (e:Evidence {evidence_id: 'ev-022'}), (t:Term {id: 'celestial'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '94% solimet-clean; sun 20, moon 15, star 13 cards'}
+MATCH (e:Evidence {evidence_id: 'ev-022'}), (t:Term {id: 'sign_aries'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '94% solimet-clean; sun 20, moon 15, star 13 cards'}
+MATCH (e:Evidence {evidence_id: 'ev-022'}), (t:Term {id: 'sign_taurus'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '94% solimet-clean; sun 20, moon 15, star 13 cards'}
+MATCH (e:Evidence {evidence_id: 'ev-022'}), (t:Term {id: 'sign_gemini'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '94% solimet-clean; sun 20, moon 15, star 13 cards'}
+MATCH (e:Evidence {evidence_id: 'ev-022'}), (t:Term {id: 'sign_cancer'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '94% solimet-clean; sun 20, moon 15, star 13 cards'}
+MATCH (e:Evidence {evidence_id: 'ev-022'}), (t:Term {id: 'sign_leo'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '94% solimet-clean; sun 20, moon 15, star 13 cards'}
+MATCH (e:Evidence {evidence_id: 'ev-022'}), (t:Term {id: 'sign_virgo'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '94% solimet-clean; sun 20, moon 15, star 13 cards'}
+MATCH (e:Evidence {evidence_id: 'ev-022'}), (t:Term {id: 'sign_libra'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '94% solimet-clean; sun 20, moon 15, star 13 cards'}
+MATCH (e:Evidence {evidence_id: 'ev-022'}), (t:Term {id: 'sign_scorpio'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '94% solimet-clean; sun 20, moon 15, star 13 cards'}
+MATCH (e:Evidence {evidence_id: 'ev-022'}), (t:Term {id: 'sign_sagittarius'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '94% solimet-clean; sun 20, moon 15, star 13 cards'}
+MATCH (e:Evidence {evidence_id: 'ev-022'}), (t:Term {id: 'sign_capricorn'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '94% solimet-clean; sun 20, moon 15, star 13 cards'}
+MATCH (e:Evidence {evidence_id: 'ev-022'}), (t:Term {id: 'sign_aquarius'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '94% solimet-clean; sun 20, moon 15, star 13 cards'}
+MATCH (e:Evidence {evidence_id: 'ev-022'}), (t:Term {id: 'sign_pisces'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '94% solimet-clean; sun 20, moon 15, star 13 cards'}
+MERGE (e:Evidence {evidence_id: 'ev-023'}) SET e += {capture: 'symbol-segment capture 2026-10-09', evidence_id: 'ev-023', items: 100, kind: 'apify_run', note: '41% solimet-clean, moonstone pollution', platform: 'etsy', query: 'celestial jewelry', run_id: 'qdjbTeYbKmrEo0IBC', sha256: null}
+MATCH (e:Evidence {evidence_id: 'ev-023'}), (t:Term {id: 'celestial'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '41% solimet-clean, moonstone pollution'}
+MATCH (e:Evidence {evidence_id: 'ev-023'}), (t:Term {id: 'sign_aries'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '41% solimet-clean, moonstone pollution'}
+MATCH (e:Evidence {evidence_id: 'ev-023'}), (t:Term {id: 'sign_taurus'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '41% solimet-clean, moonstone pollution'}
+MATCH (e:Evidence {evidence_id: 'ev-023'}), (t:Term {id: 'sign_gemini'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '41% solimet-clean, moonstone pollution'}
+MATCH (e:Evidence {evidence_id: 'ev-023'}), (t:Term {id: 'sign_cancer'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '41% solimet-clean, moonstone pollution'}
+MATCH (e:Evidence {evidence_id: 'ev-023'}), (t:Term {id: 'sign_leo'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '41% solimet-clean, moonstone pollution'}
+MATCH (e:Evidence {evidence_id: 'ev-023'}), (t:Term {id: 'sign_virgo'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '41% solimet-clean, moonstone pollution'}
+MATCH (e:Evidence {evidence_id: 'ev-023'}), (t:Term {id: 'sign_libra'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '41% solimet-clean, moonstone pollution'}
+MATCH (e:Evidence {evidence_id: 'ev-023'}), (t:Term {id: 'sign_scorpio'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '41% solimet-clean, moonstone pollution'}
+MATCH (e:Evidence {evidence_id: 'ev-023'}), (t:Term {id: 'sign_sagittarius'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '41% solimet-clean, moonstone pollution'}
+MATCH (e:Evidence {evidence_id: 'ev-023'}), (t:Term {id: 'sign_capricorn'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '41% solimet-clean, moonstone pollution'}
+MATCH (e:Evidence {evidence_id: 'ev-023'}), (t:Term {id: 'sign_aquarius'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '41% solimet-clean, moonstone pollution'}
+MATCH (e:Evidence {evidence_id: 'ev-023'}), (t:Term {id: 'sign_pisces'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '41% solimet-clean, moonstone pollution'}
+MERGE (e:Evidence {evidence_id: 'ev-024'}) SET e += {capture: 'symbol-segment capture 2026-10-09', evidence_id: 'ev-024', items: 100, kind: 'apify_run', note: 'white gold title language; 0 platinum', platform: 'etsy', query: 'white gold necklace', run_id: 'XvGKHmBq4jOmhGMoq', sha256: null}
+MATCH (e:Evidence {evidence_id: 'ev-024'}), (t:Term {id: 'celestial'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: 'white gold title language; 0 platinum'}
+MATCH (e:Evidence {evidence_id: 'ev-024'}), (t:Term {id: 'sign_aries'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: 'white gold title language; 0 platinum'}
+MATCH (e:Evidence {evidence_id: 'ev-024'}), (t:Term {id: 'sign_taurus'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: 'white gold title language; 0 platinum'}
+MATCH (e:Evidence {evidence_id: 'ev-024'}), (t:Term {id: 'sign_gemini'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: 'white gold title language; 0 platinum'}
+MATCH (e:Evidence {evidence_id: 'ev-024'}), (t:Term {id: 'sign_cancer'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: 'white gold title language; 0 platinum'}
+MATCH (e:Evidence {evidence_id: 'ev-024'}), (t:Term {id: 'sign_leo'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: 'white gold title language; 0 platinum'}
+MATCH (e:Evidence {evidence_id: 'ev-024'}), (t:Term {id: 'sign_virgo'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: 'white gold title language; 0 platinum'}
+MATCH (e:Evidence {evidence_id: 'ev-024'}), (t:Term {id: 'sign_libra'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: 'white gold title language; 0 platinum'}
+MATCH (e:Evidence {evidence_id: 'ev-024'}), (t:Term {id: 'sign_scorpio'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: 'white gold title language; 0 platinum'}
+MATCH (e:Evidence {evidence_id: 'ev-024'}), (t:Term {id: 'sign_sagittarius'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: 'white gold title language; 0 platinum'}
+MATCH (e:Evidence {evidence_id: 'ev-024'}), (t:Term {id: 'sign_capricorn'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: 'white gold title language; 0 platinum'}
+MATCH (e:Evidence {evidence_id: 'ev-024'}), (t:Term {id: 'sign_aquarius'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: 'white gold title language; 0 platinum'}
+MATCH (e:Evidence {evidence_id: 'ev-024'}), (t:Term {id: 'sign_pisces'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: 'white gold title language; 0 platinum'}
+MERGE (e:Evidence {evidence_id: 'ev-025'}) SET e += {capture: 'symbol-segment capture 2026-10-09', evidence_id: 'ev-025', items: 100, kind: 'apify_run', note: '99 clean; card counts pooled into proposal appendix', platform: 'etsy', query: 'major arcana necklace', run_id: 'X8wbkmJu9gYlEPoG9', sha256: null}
+MATCH (e:Evidence {evidence_id: 'ev-025'}), (t:Term {id: 'celestial'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '99 clean; card counts pooled into proposal appendix'}
+MATCH (e:Evidence {evidence_id: 'ev-025'}), (t:Term {id: 'sign_aries'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '99 clean; card counts pooled into proposal appendix'}
+MATCH (e:Evidence {evidence_id: 'ev-025'}), (t:Term {id: 'sign_taurus'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '99 clean; card counts pooled into proposal appendix'}
+MATCH (e:Evidence {evidence_id: 'ev-025'}), (t:Term {id: 'sign_gemini'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '99 clean; card counts pooled into proposal appendix'}
+MATCH (e:Evidence {evidence_id: 'ev-025'}), (t:Term {id: 'sign_cancer'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '99 clean; card counts pooled into proposal appendix'}
+MATCH (e:Evidence {evidence_id: 'ev-025'}), (t:Term {id: 'sign_leo'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '99 clean; card counts pooled into proposal appendix'}
+MATCH (e:Evidence {evidence_id: 'ev-025'}), (t:Term {id: 'sign_virgo'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '99 clean; card counts pooled into proposal appendix'}
+MATCH (e:Evidence {evidence_id: 'ev-025'}), (t:Term {id: 'sign_libra'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '99 clean; card counts pooled into proposal appendix'}
+MATCH (e:Evidence {evidence_id: 'ev-025'}), (t:Term {id: 'sign_scorpio'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '99 clean; card counts pooled into proposal appendix'}
+MATCH (e:Evidence {evidence_id: 'ev-025'}), (t:Term {id: 'sign_sagittarius'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '99 clean; card counts pooled into proposal appendix'}
+MATCH (e:Evidence {evidence_id: 'ev-025'}), (t:Term {id: 'sign_capricorn'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '99 clean; card counts pooled into proposal appendix'}
+MATCH (e:Evidence {evidence_id: 'ev-025'}), (t:Term {id: 'sign_aquarius'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '99 clean; card counts pooled into proposal appendix'}
+MATCH (e:Evidence {evidence_id: 'ev-025'}), (t:Term {id: 'sign_pisces'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '99 clean; card counts pooled into proposal appendix'}
+MERGE (e:Evidence {evidence_id: 'ev-026'}) SET e += {capture: 'symbol-segment capture 2026-10-09', evidence_id: 'ev-026', items: 100, kind: 'apify_run', note: '98/100 on-segment, 89 clean - tarot lives on ebay', platform: 'ebay', query: 'tarot necklace', run_id: 'lOH5pbAfUvInBB86y', sha256: null}
+MATCH (e:Evidence {evidence_id: 'ev-026'}), (t:Term {id: 'celestial'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '98/100 on-segment, 89 clean - tarot lives on ebay'}
+MATCH (e:Evidence {evidence_id: 'ev-026'}), (t:Term {id: 'sign_aries'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '98/100 on-segment, 89 clean - tarot lives on ebay'}
+MATCH (e:Evidence {evidence_id: 'ev-026'}), (t:Term {id: 'sign_taurus'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '98/100 on-segment, 89 clean - tarot lives on ebay'}
+MATCH (e:Evidence {evidence_id: 'ev-026'}), (t:Term {id: 'sign_gemini'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '98/100 on-segment, 89 clean - tarot lives on ebay'}
+MATCH (e:Evidence {evidence_id: 'ev-026'}), (t:Term {id: 'sign_cancer'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '98/100 on-segment, 89 clean - tarot lives on ebay'}
+MATCH (e:Evidence {evidence_id: 'ev-026'}), (t:Term {id: 'sign_leo'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '98/100 on-segment, 89 clean - tarot lives on ebay'}
+MATCH (e:Evidence {evidence_id: 'ev-026'}), (t:Term {id: 'sign_virgo'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '98/100 on-segment, 89 clean - tarot lives on ebay'}
+MATCH (e:Evidence {evidence_id: 'ev-026'}), (t:Term {id: 'sign_libra'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '98/100 on-segment, 89 clean - tarot lives on ebay'}
+MATCH (e:Evidence {evidence_id: 'ev-026'}), (t:Term {id: 'sign_scorpio'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '98/100 on-segment, 89 clean - tarot lives on ebay'}
+MATCH (e:Evidence {evidence_id: 'ev-026'}), (t:Term {id: 'sign_sagittarius'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '98/100 on-segment, 89 clean - tarot lives on ebay'}
+MATCH (e:Evidence {evidence_id: 'ev-026'}), (t:Term {id: 'sign_capricorn'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '98/100 on-segment, 89 clean - tarot lives on ebay'}
+MATCH (e:Evidence {evidence_id: 'ev-026'}), (t:Term {id: 'sign_aquarius'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '98/100 on-segment, 89 clean - tarot lives on ebay'}
+MATCH (e:Evidence {evidence_id: 'ev-026'}), (t:Term {id: 'sign_pisces'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '98/100 on-segment, 89 clean - tarot lives on ebay'}
+MERGE (e:Evidence {evidence_id: 'ev-027'}) SET e += {capture: 'symbol-segment capture 2026-10-09', evidence_id: 'ev-027', items: 100, kind: 'apify_run', note: '91/100 on-segment, 88 clean; resale register', platform: 'mercari-us', query: 'tarot necklace', run_id: '101dhvACIUqVTiMXO', sha256: null}
+MATCH (e:Evidence {evidence_id: 'ev-027'}), (t:Term {id: 'celestial'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '91/100 on-segment, 88 clean; resale register'}
+MATCH (e:Evidence {evidence_id: 'ev-027'}), (t:Term {id: 'sign_aries'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '91/100 on-segment, 88 clean; resale register'}
+MATCH (e:Evidence {evidence_id: 'ev-027'}), (t:Term {id: 'sign_taurus'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '91/100 on-segment, 88 clean; resale register'}
+MATCH (e:Evidence {evidence_id: 'ev-027'}), (t:Term {id: 'sign_gemini'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '91/100 on-segment, 88 clean; resale register'}
+MATCH (e:Evidence {evidence_id: 'ev-027'}), (t:Term {id: 'sign_cancer'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '91/100 on-segment, 88 clean; resale register'}
+MATCH (e:Evidence {evidence_id: 'ev-027'}), (t:Term {id: 'sign_leo'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '91/100 on-segment, 88 clean; resale register'}
+MATCH (e:Evidence {evidence_id: 'ev-027'}), (t:Term {id: 'sign_virgo'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '91/100 on-segment, 88 clean; resale register'}
+MATCH (e:Evidence {evidence_id: 'ev-027'}), (t:Term {id: 'sign_libra'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '91/100 on-segment, 88 clean; resale register'}
+MATCH (e:Evidence {evidence_id: 'ev-027'}), (t:Term {id: 'sign_scorpio'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '91/100 on-segment, 88 clean; resale register'}
+MATCH (e:Evidence {evidence_id: 'ev-027'}), (t:Term {id: 'sign_sagittarius'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '91/100 on-segment, 88 clean; resale register'}
+MATCH (e:Evidence {evidence_id: 'ev-027'}), (t:Term {id: 'sign_capricorn'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '91/100 on-segment, 88 clean; resale register'}
+MATCH (e:Evidence {evidence_id: 'ev-027'}), (t:Term {id: 'sign_aquarius'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '91/100 on-segment, 88 clean; resale register'}
+MATCH (e:Evidence {evidence_id: 'ev-027'}), (t:Term {id: 'sign_pisces'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '91/100 on-segment, 88 clean; resale register'}
+MERGE (e:Evidence {evidence_id: 'ev-028'}) SET e += {capture: 'symbol-segment capture 2026-10-09', evidence_id: 'ev-028', items: 100, kind: 'apify_run', note: '97/100 on-segment, 90 clean, all 12 signs', platform: 'mercari-us', query: 'zodiac necklace', run_id: 'iBMiM4UJm2l5kzgkJ', sha256: null}
+MATCH (e:Evidence {evidence_id: 'ev-028'}), (t:Term {id: 'celestial'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '97/100 on-segment, 90 clean, all 12 signs'}
+MATCH (e:Evidence {evidence_id: 'ev-028'}), (t:Term {id: 'sign_aries'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '97/100 on-segment, 90 clean, all 12 signs'}
+MATCH (e:Evidence {evidence_id: 'ev-028'}), (t:Term {id: 'sign_taurus'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '97/100 on-segment, 90 clean, all 12 signs'}
+MATCH (e:Evidence {evidence_id: 'ev-028'}), (t:Term {id: 'sign_gemini'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '97/100 on-segment, 90 clean, all 12 signs'}
+MATCH (e:Evidence {evidence_id: 'ev-028'}), (t:Term {id: 'sign_cancer'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '97/100 on-segment, 90 clean, all 12 signs'}
+MATCH (e:Evidence {evidence_id: 'ev-028'}), (t:Term {id: 'sign_leo'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '97/100 on-segment, 90 clean, all 12 signs'}
+MATCH (e:Evidence {evidence_id: 'ev-028'}), (t:Term {id: 'sign_virgo'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '97/100 on-segment, 90 clean, all 12 signs'}
+MATCH (e:Evidence {evidence_id: 'ev-028'}), (t:Term {id: 'sign_libra'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '97/100 on-segment, 90 clean, all 12 signs'}
+MATCH (e:Evidence {evidence_id: 'ev-028'}), (t:Term {id: 'sign_scorpio'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '97/100 on-segment, 90 clean, all 12 signs'}
+MATCH (e:Evidence {evidence_id: 'ev-028'}), (t:Term {id: 'sign_sagittarius'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '97/100 on-segment, 90 clean, all 12 signs'}
+MATCH (e:Evidence {evidence_id: 'ev-028'}), (t:Term {id: 'sign_capricorn'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '97/100 on-segment, 90 clean, all 12 signs'}
+MATCH (e:Evidence {evidence_id: 'ev-028'}), (t:Term {id: 'sign_aquarius'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '97/100 on-segment, 90 clean, all 12 signs'}
+MATCH (e:Evidence {evidence_id: 'ev-028'}), (t:Term {id: 'sign_pisces'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '97/100 on-segment, 90 clean, all 12 signs'}
+MERGE (e:Evidence {evidence_id: 'ev-029'}) SET e += {capture: 'symbol-segment capture 2026-10-09', evidence_id: 'ev-029', items: 100, kind: 'apify_run', note: '80/100 on-segment, 80 clean; SEO keyword-essay register', platform: 'shein', query: 'tarot jewelry', run_id: 'RebJEMKIsN3xoJuNk', sha256: null}
+MATCH (e:Evidence {evidence_id: 'ev-029'}), (t:Term {id: 'celestial'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '80/100 on-segment, 80 clean; SEO keyword-essay register'}
+MATCH (e:Evidence {evidence_id: 'ev-029'}), (t:Term {id: 'sign_aries'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '80/100 on-segment, 80 clean; SEO keyword-essay register'}
+MATCH (e:Evidence {evidence_id: 'ev-029'}), (t:Term {id: 'sign_taurus'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '80/100 on-segment, 80 clean; SEO keyword-essay register'}
+MATCH (e:Evidence {evidence_id: 'ev-029'}), (t:Term {id: 'sign_gemini'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '80/100 on-segment, 80 clean; SEO keyword-essay register'}
+MATCH (e:Evidence {evidence_id: 'ev-029'}), (t:Term {id: 'sign_cancer'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '80/100 on-segment, 80 clean; SEO keyword-essay register'}
+MATCH (e:Evidence {evidence_id: 'ev-029'}), (t:Term {id: 'sign_leo'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '80/100 on-segment, 80 clean; SEO keyword-essay register'}
+MATCH (e:Evidence {evidence_id: 'ev-029'}), (t:Term {id: 'sign_virgo'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '80/100 on-segment, 80 clean; SEO keyword-essay register'}
+MATCH (e:Evidence {evidence_id: 'ev-029'}), (t:Term {id: 'sign_libra'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '80/100 on-segment, 80 clean; SEO keyword-essay register'}
+MATCH (e:Evidence {evidence_id: 'ev-029'}), (t:Term {id: 'sign_scorpio'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '80/100 on-segment, 80 clean; SEO keyword-essay register'}
+MATCH (e:Evidence {evidence_id: 'ev-029'}), (t:Term {id: 'sign_sagittarius'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '80/100 on-segment, 80 clean; SEO keyword-essay register'}
+MATCH (e:Evidence {evidence_id: 'ev-029'}), (t:Term {id: 'sign_capricorn'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '80/100 on-segment, 80 clean; SEO keyword-essay register'}
+MATCH (e:Evidence {evidence_id: 'ev-029'}), (t:Term {id: 'sign_aquarius'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '80/100 on-segment, 80 clean; SEO keyword-essay register'}
+MATCH (e:Evidence {evidence_id: 'ev-029'}), (t:Term {id: 'sign_pisces'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: 100, note: '80/100 on-segment, 80 clean; SEO keyword-essay register'}
+MERGE (e:Evidence {evidence_id: 'ev-030'}) SET e += {capture: 'symbol-segment capture 2026-10-09', evidence_id: 'ev-030', items: null, kind: 'shopify products.json', note: 'DTC register: punny names, symbols not in titles', platform: null, query: 'evryjewels.com', run_id: null, sha256: '952fabb365e68afe546e7d180656af3aa5e70a9eafb48bfe1cd59b9530f0b606'}
+MATCH (e:Evidence {evidence_id: 'ev-030'}), (t:Term {id: 'celestial'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: 'DTC register: punny names, symbols not in titles'}
+MATCH (e:Evidence {evidence_id: 'ev-030'}), (t:Term {id: 'sign_aries'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: 'DTC register: punny names, symbols not in titles'}
+MATCH (e:Evidence {evidence_id: 'ev-030'}), (t:Term {id: 'sign_taurus'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: 'DTC register: punny names, symbols not in titles'}
+MATCH (e:Evidence {evidence_id: 'ev-030'}), (t:Term {id: 'sign_gemini'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: 'DTC register: punny names, symbols not in titles'}
+MATCH (e:Evidence {evidence_id: 'ev-030'}), (t:Term {id: 'sign_cancer'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: 'DTC register: punny names, symbols not in titles'}
+MATCH (e:Evidence {evidence_id: 'ev-030'}), (t:Term {id: 'sign_leo'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: 'DTC register: punny names, symbols not in titles'}
+MATCH (e:Evidence {evidence_id: 'ev-030'}), (t:Term {id: 'sign_virgo'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: 'DTC register: punny names, symbols not in titles'}
+MATCH (e:Evidence {evidence_id: 'ev-030'}), (t:Term {id: 'sign_libra'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: 'DTC register: punny names, symbols not in titles'}
+MATCH (e:Evidence {evidence_id: 'ev-030'}), (t:Term {id: 'sign_scorpio'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: 'DTC register: punny names, symbols not in titles'}
+MATCH (e:Evidence {evidence_id: 'ev-030'}), (t:Term {id: 'sign_sagittarius'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: 'DTC register: punny names, symbols not in titles'}
+MATCH (e:Evidence {evidence_id: 'ev-030'}), (t:Term {id: 'sign_capricorn'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: 'DTC register: punny names, symbols not in titles'}
+MATCH (e:Evidence {evidence_id: 'ev-030'}), (t:Term {id: 'sign_aquarius'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: 'DTC register: punny names, symbols not in titles'}
+MATCH (e:Evidence {evidence_id: 'ev-030'}), (t:Term {id: 'sign_pisces'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: 'DTC register: punny names, symbols not in titles'}
+MERGE (e:Evidence {evidence_id: 'ev-031'}) SET e += {capture: 'symbol-segment capture 2026-10-09', evidence_id: 'ev-031', items: null, kind: 'shopify products.json', note: 'celestial 23, moon 15, tarot 3 in title+tags', platform: null, query: 'aweinspired.com', run_id: null, sha256: 'b4c60145d5bf95e0a163258ea29a365850aa1a1834b335994c29c93b2f3e94a5'}
+MATCH (e:Evidence {evidence_id: 'ev-031'}), (t:Term {id: 'celestial'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: 'celestial 23, moon 15, tarot 3 in title+tags'}
+MATCH (e:Evidence {evidence_id: 'ev-031'}), (t:Term {id: 'sign_aries'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: 'celestial 23, moon 15, tarot 3 in title+tags'}
+MATCH (e:Evidence {evidence_id: 'ev-031'}), (t:Term {id: 'sign_taurus'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: 'celestial 23, moon 15, tarot 3 in title+tags'}
+MATCH (e:Evidence {evidence_id: 'ev-031'}), (t:Term {id: 'sign_gemini'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: 'celestial 23, moon 15, tarot 3 in title+tags'}
+MATCH (e:Evidence {evidence_id: 'ev-031'}), (t:Term {id: 'sign_cancer'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: 'celestial 23, moon 15, tarot 3 in title+tags'}
+MATCH (e:Evidence {evidence_id: 'ev-031'}), (t:Term {id: 'sign_leo'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: 'celestial 23, moon 15, tarot 3 in title+tags'}
+MATCH (e:Evidence {evidence_id: 'ev-031'}), (t:Term {id: 'sign_virgo'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: 'celestial 23, moon 15, tarot 3 in title+tags'}
+MATCH (e:Evidence {evidence_id: 'ev-031'}), (t:Term {id: 'sign_libra'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: 'celestial 23, moon 15, tarot 3 in title+tags'}
+MATCH (e:Evidence {evidence_id: 'ev-031'}), (t:Term {id: 'sign_scorpio'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: 'celestial 23, moon 15, tarot 3 in title+tags'}
+MATCH (e:Evidence {evidence_id: 'ev-031'}), (t:Term {id: 'sign_sagittarius'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: 'celestial 23, moon 15, tarot 3 in title+tags'}
+MATCH (e:Evidence {evidence_id: 'ev-031'}), (t:Term {id: 'sign_capricorn'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: 'celestial 23, moon 15, tarot 3 in title+tags'}
+MATCH (e:Evidence {evidence_id: 'ev-031'}), (t:Term {id: 'sign_aquarius'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: 'celestial 23, moon 15, tarot 3 in title+tags'}
+MATCH (e:Evidence {evidence_id: 'ev-031'}), (t:Term {id: 'sign_pisces'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: 'celestial 23, moon 15, tarot 3 in title+tags'}
+MERGE (e:Evidence {evidence_id: 'ev-032'}) SET e += {capture: 'symbol-segment capture 2026-10-09', evidence_id: 'ev-032', items: null, kind: 'shopify products.json', note: 'symbol words largely out of titles; moonstone/diamond products outside solimet', platform: null, query: 'caitlynminimalist.com', run_id: null, sha256: '4ae0caecf9bf580f529fb032d740d9efc87ae1472ad26675e89e63cea19c309b'}
+MATCH (e:Evidence {evidence_id: 'ev-032'}), (t:Term {id: 'celestial'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: 'symbol words largely out of titles; moonstone/diamond products outside solimet'}
+MATCH (e:Evidence {evidence_id: 'ev-032'}), (t:Term {id: 'sign_aries'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: 'symbol words largely out of titles; moonstone/diamond products outside solimet'}
+MATCH (e:Evidence {evidence_id: 'ev-032'}), (t:Term {id: 'sign_taurus'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: 'symbol words largely out of titles; moonstone/diamond products outside solimet'}
+MATCH (e:Evidence {evidence_id: 'ev-032'}), (t:Term {id: 'sign_gemini'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: 'symbol words largely out of titles; moonstone/diamond products outside solimet'}
+MATCH (e:Evidence {evidence_id: 'ev-032'}), (t:Term {id: 'sign_cancer'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: 'symbol words largely out of titles; moonstone/diamond products outside solimet'}
+MATCH (e:Evidence {evidence_id: 'ev-032'}), (t:Term {id: 'sign_leo'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: 'symbol words largely out of titles; moonstone/diamond products outside solimet'}
+MATCH (e:Evidence {evidence_id: 'ev-032'}), (t:Term {id: 'sign_virgo'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: 'symbol words largely out of titles; moonstone/diamond products outside solimet'}
+MATCH (e:Evidence {evidence_id: 'ev-032'}), (t:Term {id: 'sign_libra'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: 'symbol words largely out of titles; moonstone/diamond products outside solimet'}
+MATCH (e:Evidence {evidence_id: 'ev-032'}), (t:Term {id: 'sign_scorpio'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: 'symbol words largely out of titles; moonstone/diamond products outside solimet'}
+MATCH (e:Evidence {evidence_id: 'ev-032'}), (t:Term {id: 'sign_sagittarius'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: 'symbol words largely out of titles; moonstone/diamond products outside solimet'}
+MATCH (e:Evidence {evidence_id: 'ev-032'}), (t:Term {id: 'sign_capricorn'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: 'symbol words largely out of titles; moonstone/diamond products outside solimet'}
+MATCH (e:Evidence {evidence_id: 'ev-032'}), (t:Term {id: 'sign_aquarius'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: 'symbol words largely out of titles; moonstone/diamond products outside solimet'}
+MATCH (e:Evidence {evidence_id: 'ev-032'}), (t:Term {id: 'sign_pisces'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: 'symbol words largely out of titles; moonstone/diamond products outside solimet'}
+MERGE (e:Evidence {evidence_id: 'ev-033'}) SET e += {capture: 'symbol-segment capture 2026-10-09', evidence_id: 'ev-033', items: null, kind: 'shopify products.json', note: 'tarot decks not jewelry - excluded as evidence', platform: null, query: 'solisdivinitytarot.com', run_id: null, sha256: '544c0dc6132c90170125858f40b9c7c0e7965a43c5ebc9d7c54650adb412a68e'}
+MATCH (e:Evidence {evidence_id: 'ev-033'}), (t:Term {id: 'celestial'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: 'tarot decks not jewelry - excluded as evidence'}
+MATCH (e:Evidence {evidence_id: 'ev-033'}), (t:Term {id: 'sign_aries'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: 'tarot decks not jewelry - excluded as evidence'}
+MATCH (e:Evidence {evidence_id: 'ev-033'}), (t:Term {id: 'sign_taurus'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: 'tarot decks not jewelry - excluded as evidence'}
+MATCH (e:Evidence {evidence_id: 'ev-033'}), (t:Term {id: 'sign_gemini'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: 'tarot decks not jewelry - excluded as evidence'}
+MATCH (e:Evidence {evidence_id: 'ev-033'}), (t:Term {id: 'sign_cancer'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: 'tarot decks not jewelry - excluded as evidence'}
+MATCH (e:Evidence {evidence_id: 'ev-033'}), (t:Term {id: 'sign_leo'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: 'tarot decks not jewelry - excluded as evidence'}
+MATCH (e:Evidence {evidence_id: 'ev-033'}), (t:Term {id: 'sign_virgo'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: 'tarot decks not jewelry - excluded as evidence'}
+MATCH (e:Evidence {evidence_id: 'ev-033'}), (t:Term {id: 'sign_libra'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: 'tarot decks not jewelry - excluded as evidence'}
+MATCH (e:Evidence {evidence_id: 'ev-033'}), (t:Term {id: 'sign_scorpio'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: 'tarot decks not jewelry - excluded as evidence'}
+MATCH (e:Evidence {evidence_id: 'ev-033'}), (t:Term {id: 'sign_sagittarius'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: 'tarot decks not jewelry - excluded as evidence'}
+MATCH (e:Evidence {evidence_id: 'ev-033'}), (t:Term {id: 'sign_capricorn'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: 'tarot decks not jewelry - excluded as evidence'}
+MATCH (e:Evidence {evidence_id: 'ev-033'}), (t:Term {id: 'sign_aquarius'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: 'tarot decks not jewelry - excluded as evidence'}
+MATCH (e:Evidence {evidence_id: 'ev-033'}), (t:Term {id: 'sign_pisces'}) MERGE (e)-[s:SUPPORTS]->(t) SET s += {items: null, note: 'tarot decks not jewelry - excluded as evidence'}
+MERGE (p:Profile {profile_id: 'profile-001-gothic-biker'}) SET p += {status: 'draft', version: '0.1.0'}
+MATCH (p:Profile {profile_id: 'profile-001-gothic-biker'}), (t:Term {id: 'biker'}) MERGE (p)-[sd:SEEDS]->(t) SET sd += {weight: 0.9}
+MATCH (p:Profile {profile_id: 'profile-001-gothic-biker'}), (t:Term {id: 'gothic'}) MERGE (p)-[sd:SEEDS]->(t) SET sd += {weight: 1.0}
+MATCH (p:Profile {profile_id: 'profile-001-gothic-biker'}), (t:Term {id: 'brutalist'}) MERGE (p)-[xa:EXPECTED_AFFINITY]->(t) SET xa += {method: 'latent-blend', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 1, score: 0.400111966}
+MATCH (p:Profile {profile_id: 'profile-001-gothic-biker'}), (t:Term {id: 'retro'}) MERGE (p)-[xa:EXPECTED_AFFINITY]->(t) SET xa += {method: 'latent-blend', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 2, score: 0.190036108}
+MATCH (p:Profile {profile_id: 'profile-001-gothic-biker'}), (t:Term {id: 'organic_modern'}) MERGE (p)-[xa:EXPECTED_AFFINITY]->(t) SET xa += {method: 'latent-blend', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 3, score: 0.091021149}
+MATCH (p:Profile {profile_id: 'profile-001-gothic-biker'}), (t:Term {id: 'mid_century_modernist'}) MERGE (p)-[xa:EXPECTED_AFFINITY]->(t) SET xa += {method: 'latent-blend', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 4, score: 0.085269757}
+MATCH (p:Profile {profile_id: 'profile-001-gothic-biker'}), (t:Term {id: 'georgian'}) MERGE (p)-[xa:EXPECTED_AFFINITY]->(t) SET xa += {method: 'latent-blend', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 5, score: 0.083413626}
+MERGE (p:Profile {profile_id: 'profile-002-antique-cluster'}) SET p += {status: 'draft', version: '0.1.0'}
+MATCH (p:Profile {profile_id: 'profile-002-antique-cluster'}), (t:Term {id: 'art_nouveau'}) MERGE (p)-[sd:SEEDS]->(t) SET sd += {weight: 0.6}
+MATCH (p:Profile {profile_id: 'profile-002-antique-cluster'}), (t:Term {id: 'edwardian'}) MERGE (p)-[sd:SEEDS]->(t) SET sd += {weight: 0.8}
+MATCH (p:Profile {profile_id: 'profile-002-antique-cluster'}), (t:Term {id: 'georgian'}) MERGE (p)-[sd:SEEDS]->(t) SET sd += {weight: 0.9}
+MATCH (p:Profile {profile_id: 'profile-002-antique-cluster'}), (t:Term {id: 'victorian'}) MERGE (p)-[sd:SEEDS]->(t) SET sd += {weight: 1.0}
+MATCH (p:Profile {profile_id: 'profile-002-antique-cluster'}), (t:Term {id: 'retro'}) MERGE (p)-[xa:EXPECTED_AFFINITY]->(t) SET xa += {method: 'latent-blend', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 1, score: 0.369817348}
+MATCH (p:Profile {profile_id: 'profile-002-antique-cluster'}), (t:Term {id: 'egyptian_revival'}) MERGE (p)-[xa:EXPECTED_AFFINITY]->(t) SET xa += {method: 'latent-blend', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 2, score: 0.348382868}
+MATCH (p:Profile {profile_id: 'profile-002-antique-cluster'}), (t:Term {id: 'organic_modern'}) MERGE (p)-[xa:EXPECTED_AFFINITY]->(t) SET xa += {method: 'latent-blend', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 3, score: 0.200353311}
+MATCH (p:Profile {profile_id: 'profile-002-antique-cluster'}), (t:Term {id: 'art_deco'}) MERGE (p)-[xa:EXPECTED_AFFINITY]->(t) SET xa += {method: 'latent-blend', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 4, score: 0.139992235}
+MATCH (p:Profile {profile_id: 'profile-002-antique-cluster'}), (t:Term {id: 'gothic'}) MERGE (p)-[xa:EXPECTED_AFFINITY]->(t) SET xa += {method: 'latent-blend', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 5, score: 0.127962389}
+MERGE (p:Profile {profile_id: 'profile-003-celestial-dreamer'}) SET p += {status: 'draft', version: '0.1.0'}
+MATCH (p:Profile {profile_id: 'profile-003-celestial-dreamer'}), (t:Term {id: 'celestial'}) MERGE (p)-[sd:SEEDS]->(t) SET sd += {weight: 1.0}
+MATCH (p:Profile {profile_id: 'profile-003-celestial-dreamer'}), (t:Term {id: 'element_water'}) MERGE (p)-[sd:SEEDS]->(t) SET sd += {weight: 0.5}
+MATCH (p:Profile {profile_id: 'profile-003-celestial-dreamer'}), (t:Term {id: 'metal_silver'}) MERGE (p)-[sd:SEEDS]->(t) SET sd += {weight: 0.5}
+MATCH (p:Profile {profile_id: 'profile-003-celestial-dreamer'}), (t:Term {id: 'sign_cancer'}) MERGE (p)-[sd:SEEDS]->(t) SET sd += {weight: 0.4}
+MATCH (p:Profile {profile_id: 'profile-003-celestial-dreamer'}), (t:Term {id: 'element_air'}) MERGE (p)-[xa:EXPECTED_AFFINITY]->(t) SET xa += {method: 'latent-blend', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 1, score: 0.300344714}
+MATCH (p:Profile {profile_id: 'profile-003-celestial-dreamer'}), (t:Term {id: 'sign_pisces'}) MERGE (p)-[xa:EXPECTED_AFFINITY]->(t) SET xa += {method: 'latent-blend', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 2, score: 0.20270714}
+MATCH (p:Profile {profile_id: 'profile-003-celestial-dreamer'}), (t:Term {id: 'sign_scorpio'}) MERGE (p)-[xa:EXPECTED_AFFINITY]->(t) SET xa += {method: 'latent-blend', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 3, score: 0.20270714}
+MATCH (p:Profile {profile_id: 'profile-003-celestial-dreamer'}), (t:Term {id: 'metal_gold'}) MERGE (p)-[xa:EXPECTED_AFFINITY]->(t) SET xa += {method: 'latent-blend', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 4, score: 0.151139349}
+MATCH (p:Profile {profile_id: 'profile-003-celestial-dreamer'}), (t:Term {id: 'sign_leo'}) MERGE (p)-[xa:EXPECTED_AFFINITY]->(t) SET xa += {method: 'latent-blend', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 5, score: 0.123404762}
+MERGE (p:Profile {profile_id: 'profile-004-scandinavian-modernist'}) SET p += {status: 'draft', version: '0.1.0'}
+MATCH (p:Profile {profile_id: 'profile-004-scandinavian-modernist'}), (t:Term {id: 'mid_century_modernist'}) MERGE (p)-[sd:SEEDS]->(t) SET sd += {weight: 0.7}
+MATCH (p:Profile {profile_id: 'profile-004-scandinavian-modernist'}), (t:Term {id: 'organic_modern'}) MERGE (p)-[sd:SEEDS]->(t) SET sd += {weight: 1.0}
+MATCH (p:Profile {profile_id: 'profile-004-scandinavian-modernist'}), (t:Term {id: 'art_nouveau'}) MERGE (p)-[xa:EXPECTED_AFFINITY]->(t) SET xa += {method: 'latent-blend', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 1, score: 0.317751157}
+MATCH (p:Profile {profile_id: 'profile-004-scandinavian-modernist'}), (t:Term {id: 'brutalist'}) MERGE (p)-[xa:EXPECTED_AFFINITY]->(t) SET xa += {method: 'latent-blend', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 2, score: 0.16701993}
+MATCH (p:Profile {profile_id: 'profile-004-scandinavian-modernist'}), (t:Term {id: 'biker'}) MERGE (p)-[xa:EXPECTED_AFFINITY]->(t) SET xa += {method: 'latent-blend', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 3, score: 0.163042694}
+MATCH (p:Profile {profile_id: 'profile-004-scandinavian-modernist'}), (t:Term {id: 'art_deco'}) MERGE (p)-[xa:EXPECTED_AFFINITY]->(t) SET xa += {method: 'latent-blend', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 4, score: 0.110461255}
+MATCH (p:Profile {profile_id: 'profile-004-scandinavian-modernist'}), (t:Term {id: 'victorian'}) MERGE (p)-[xa:EXPECTED_AFFINITY]->(t) SET xa += {method: 'latent-blend', prior_input_hash: '6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44', rank: 5, score: 0.092817138}
