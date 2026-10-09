@@ -48,6 +48,27 @@ merge, per the standing gate.
   the table hashes and corpus file hashes, with facet tracking for
   unobserved expected terms. deterministic.
 
+## latent-position demo: a taste description that is not a style term
+
+owner example 2026-10-09: "bold silver colored pieces that are a little
+more than simple plain that you'll see everywhere but still stackable".
+run as an ad-hoc blend (biker 0.5 + brutalist 0.3), the latent vector
+lands on retro 0.222, organic_modern 0.158, mid_century_modernist 0.148,
+gothic 0.064 - the bold, more-than-plain neighborhood. two honest
+limits surfaced:
+
+- "still stackable" cannot enter the blend at all: wear-context
+  facet_sources is empty in config, so stacks/everyday have no facet
+  representation in the structural prior. context binds at the object
+  layer once character records exist, not in cold-start.
+- "silver colored" has no material facet either. styles carry form and
+  feel (chain_link, skull, chunky), not metal; the only silver in facet
+  space is the astro symbol metal_silver, and adding it flips the blend
+  to element_air/element_water/sign_cancer 0.28+ - meaning, not
+  material. material silver, in practice, rides inside style features.
+  the symbol-vs-material distinction is exactly why metal_silver
+  phrases must never match bare "silver".
+
 ## cold-start pass rates (simulated runs, 2026-10-09)
 
 - gothic-biker: 2/39 engaged pass, rate 0.0513
