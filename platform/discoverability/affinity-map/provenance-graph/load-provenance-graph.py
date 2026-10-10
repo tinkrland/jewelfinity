@@ -52,6 +52,20 @@ QUERY_TERM_MAP = {
     "stackable bangle": ["stacks"],
     "wedding band": ["ceremony_commitment"],
     "anniversary band": ["ceremony_commitment"],
+    # ceremony alternatives probed 2026-10-10 (eternity/promise).
+    # note: eternity band is stone-dominated (etsy 3/100, ebay 0/60
+    # clean) - weak evidence, but what exists is honest.
+    "eternity band": ["ceremony_commitment"],
+    "promise ring": ["ceremony_commitment"],
+    # zodiac queries now map per-query (was capture-level only, so
+    # the poshmark zodiac run sat unlinked. fixed 2026-10-10).
+    # tarot queries deliberately UNMAPPED: no tarot terms exist in
+    # v0.1; awaiting the owner's tarot vocabulary decision.
+    "zodiac necklace": [
+        "sign_aries", "sign_taurus", "sign_gemini", "sign_cancer",
+        "sign_leo", "sign_virgo", "sign_libra", "sign_scorpio",
+        "sign_sagittarius", "sign_capricorn", "sign_aquarius",
+        "sign_pisces"],
     "alchemy necklace": ["metal_mercury"],
     "alchemical symbols necklace": [
         "element_air", "element_earth", "element_fire", "element_water",

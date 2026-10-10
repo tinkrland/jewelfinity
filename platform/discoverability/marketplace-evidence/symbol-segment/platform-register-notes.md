@@ -57,3 +57,14 @@ chemistry pendants) rather than the etsy DTC element niche -
 exactly one element title in 100. mercari us has no alchemical
 inventory at all (0 items on both queries). niche-symbol language
 is platform-local; the three-registers conclusion holds.
+
+## depop + shein zodiac added (2026-10-10)
+
+depop (gen-z resale): signs in 65 of 86 clean zodiac titles AND
+everyday in 27 of 84 clean everyday titles - the first resale
+platform that titles wear contexts (mercari does not). shein
+zodiac: 76/100 clean but sign names in only 2 titles - shein says
+"zodiac" generically without naming the sign. four register
+behaviors now documented: DTC brand (no symbol language), etsy
+handmade (names the sign), resale (names the sign, depop also
+names wear), shein SEO (generic "zodiac", no sign names).

@@ -56,3 +56,13 @@ title stack* and wedding. the alchemical element niche is
 etsy-specific: poshmark's equivalent query is the occult register,
 mercari has none. wear-context evidence is now platform-general;
 element-name evidence stays platform-local.
+
+## ceremony alternatives + ebay/depop pass (2026-10-10, see ebay-shein-depop-battery-README.md)
+
+eternity band is the worst solimet category measured: etsy 3/100,
+ebay 0/60 clean (all stone-set). promise ring weak but real:
+etsy 26/100, ebay 29/60, promise in the clean titles on both.
+ebay wear set stone-heavy but phrases title on the clean subset.
+depop titles wear contexts (everyday 27/84) - first resale
+platform to do so. everyday_wear now backed by etsy + poshmark +
+mercari + ebay + depop; stacks by all five.

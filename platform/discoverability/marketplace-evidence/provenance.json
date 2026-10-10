@@ -422,6 +422,140 @@
           "note": "0/0 solimet-clean"
         }
       ]
+    },
+    {
+      "name": "ebay-shein-depop-etsy battery 2026-10-10",
+      "purpose": "close platform gaps: ebay wear-context set (8 queries), ceremony alternatives (eternity band, promise ring on etsy+ebay), depop probe (zodiac+everyday), shein zodiac; shein wear queries failed on all 7 attempts (actor returned 0 items, flaky/blocking) except the zodiac probe run which returned 100. etsy runs used sort most_relevant (sort=relevance is rejected by actor validation).",
+      "runs": [
+        {
+          "query": "everyday necklace",
+          "platform": "ebay",
+          "run_id": "hFf0YkynaWBbqDcTZ",
+          "items": 60,
+          "sha256": "22efd788e09ac471c47fe192d54ba3c66dd029c56ccaba8187727ce3a85dbc02",
+          "note": "43/60 solimet-clean"
+        },
+        {
+          "query": "stackable bangle",
+          "platform": "ebay",
+          "run_id": "1zQhYMhAmwOawX2Sy",
+          "items": 60,
+          "sha256": "f10f3f57b0263bcb7cca30f165477c9927bd2c513bfabfbaa3f220354b5764b2",
+          "note": "33/60 solimet-clean"
+        },
+        {
+          "query": "wedding band",
+          "platform": "ebay",
+          "run_id": "68CW876mMAutGkCK0",
+          "items": 60,
+          "sha256": "85823cdcba27b61db26f28f3e3bd5fadf0de66a50653a1cf33812dcbdf65c6c3",
+          "note": "23/60 solimet-clean"
+        },
+        {
+          "query": "anniversary band",
+          "platform": "ebay",
+          "run_id": "oZIFnh3Dh2LPwBiWe",
+          "items": 60,
+          "sha256": "dfd18ee298866e850090193fa20901122bb467a91d3cce2f2d646d6fb1f4a7b8",
+          "note": "12/60 solimet-clean"
+        },
+        {
+          "query": "eternity band",
+          "platform": "etsy",
+          "run_id": "2EbDJV2Fe1g6G7Jmc",
+          "items": 100,
+          "sha256": "575536a514f84e2b78184696a01fa2a5317ab3983ad35cce9da1c87e0b1f3e1c",
+          "note": "3/100 solimet-clean"
+        },
+        {
+          "query": "eternity band",
+          "platform": "ebay",
+          "run_id": "sT8m6hOJLdGTWByOc",
+          "items": 60,
+          "sha256": "4cac1aed1babebb5ebe7472a9ef9f07eaa5e6e55b280316011f9292a7210a3bf",
+          "note": "0/60 solimet-clean"
+        },
+        {
+          "query": "promise ring",
+          "platform": "etsy",
+          "run_id": "0Vzjuc28jXYz5ZA81",
+          "items": 100,
+          "sha256": "9bf987f3e9a196e4786832f9d4818f77c90381bde822393f483532cf1bc03d81",
+          "note": "26/100 solimet-clean"
+        },
+        {
+          "query": "promise ring",
+          "platform": "ebay",
+          "run_id": "9oX1L7NJFNNctTqX0",
+          "items": 60,
+          "sha256": "2c304bee8cf3bda04c03c78f462db52425ba860063e3e2295f41fb00c4a96cef",
+          "note": "29/60 solimet-clean"
+        },
+        {
+          "query": "zodiac necklace",
+          "platform": "depop",
+          "run_id": "CnyoxDQsRXIi1RzjJ",
+          "items": 100,
+          "sha256": "747922a6dd9279bdeebb892ff06f37beacbcb62d15f194b32675058818fa3c5f",
+          "note": "86/100 solimet-clean"
+        },
+        {
+          "query": "alchemy necklace",
+          "platform": "ebay",
+          "run_id": "wMv4K5OfiFiPY36VP",
+          "items": 60,
+          "sha256": "76c78ffe50355afe92cad354a540ed45241506e6d8db1e737f64eb3d06f6e769",
+          "note": "53/60 solimet-clean"
+        },
+        {
+          "query": "everyday necklace",
+          "platform": "depop",
+          "run_id": "uVnc0PfW1qhvTakll",
+          "items": 100,
+          "sha256": "8f96b7def29a8f44c17ff22d2e2c05367bf33b12422e985128e79042e84c0727",
+          "note": "84/100 solimet-clean"
+        },
+        {
+          "query": "alchemical symbols necklace",
+          "platform": "ebay",
+          "run_id": "vf0a0tyH5PxGhktl9",
+          "items": 76,
+          "sha256": "934c64baed98d1823cdbef3dae3ed59be8159bb07d178a2a35ff3e5367ab911e",
+          "note": "71/76 solimet-clean"
+        },
+        {
+          "query": "zodiac necklace",
+          "platform": "shein",
+          "run_id": "kjW7CTr9FAyOV3IDu",
+          "items": 100,
+          "sha256": "c3a1306b55dfe3e4b98b069b55f39f8ed703452d990a81480374ef7ffe7a7d57",
+          "note": "76/100 solimet-clean; probe-format input, actor ignores maxItems"
+        },
+        {
+          "query": "everyday necklace",
+          "platform": "shein",
+          "run_id": null,
+          "items": 0,
+          "sha256": null,
+          "note": "actor returned 0 items on both attempts (7 runs total, all empty except zodiac probe). non-evidence."
+        },
+        {
+          "query": "stackable bangle",
+          "platform": "shein",
+          "run_id": null,
+          "items": 0,
+          "sha256": null,
+          "note": "actor returned 0 items on both attempts (7 runs total, all empty except zodiac probe). non-evidence."
+        },
+        {
+          "query": "wedding band",
+          "platform": "shein",
+          "run_id": null,
+          "items": 0,
+          "sha256": null,
+          "note": "actor returned 0 items on both attempts (7 runs total, all empty except zodiac probe). non-evidence."
+        }
+      ]
     }
   ],
   "method_notes": "ebay style assignment is deterministic title matching (a listing can match several styles). etsy rows carry their search query. solimet_title_check is a deterministic offline filter flagging stone/plastic terms in titles; false negatives possible (listing photos may show stones). apify free-plan dataset retention is 7 days; these files are the durable snapshot. the skonvirke and scandinavian-modern queries (2026-10-08 follow-up), and the balance pass over the remaining ten styles, are kept as raw listings under style_query organic_modern and are not folded into phrase-frequencies.jsonl, to avoid double-counting that style's bucket.",
