@@ -119,3 +119,4 @@ celestial run qdjbTeYbKmrEo0IBC, etsy white-gold run XvGKHmBq4jOmhGMoq;
 querit passes for tarot and zodiac markets under querit-2026-10-09/.
 queries echo in titles; the counts above are segment-shape evidence,
 not independent corpus counts.
+- citation pass for the symbol vocabulary's classical claims (7 planetary metals, platinum's absent planet, 12 sign-element triplicities, cancer-moon/leo-sun rulerships, alchemical element symbols): querit-citations-2026-10-10/
