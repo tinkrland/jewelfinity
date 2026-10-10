@@ -2,8 +2,11 @@
 
 source: owner-supplied axis table 2026-10-09 (form, silhouette, scale,
 visual weight, finish, structure, detail density, style impression).
-status: PROPOSAL. nothing here changes a vocabulary, table, or config.
-vocabulary changes need explicit authorization per standing rule.
+status: APPLIED 2026-10-10 (owner authorization). smallest-viable path only:
+axis_kinds=impression on all 13 style records (no value changes, no
+table drift), physical axes enumerated in the spec's object character
+record, profile-blend bands documented. no new style facets; the
+affinity table content is unchanged.
 
 ## the principle worth adopting
 

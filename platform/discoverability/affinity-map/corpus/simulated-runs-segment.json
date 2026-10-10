@@ -2,8 +2,8 @@
   "schema": "corpus-simulated-runs-v1",
   "description": "per-profile simulated matching runs over the solimet-clean marketplace corpus. a listing passes when it matches a profile's seed phrases and at least one non-seed expected-top-k term's phrases. pass rate = passed / engaged.",
   "pinned_to": {
-    "table_input_hash": "bb5296f3ce4893777a4515493ddf089ebdbbb3079531724667d3900d2d050a51",
-    "table_output_hash": "a146ae0d18d08ae64fdb76dfce8c7a8bda9cfd9bbe24f283009e225e89fe1db6",
+    "table_input_hash": "a462d4d3d190cfba066ef32c47217597fb690b23109faf58fad7253106f391e3",
+    "table_output_hash": "64be0204d1d1423978baf8cd68f65d7a112c3608601fdf5711aeaa2f4b69e8b5",
     "corpus_files": {
       "ebay-listings.jsonl": "63b27199aee0cb7f1e81fcdf15e97380a786a2600da96ac2d0859dbc5978c6e7",
       "etsy-listings.jsonl": "fcdbdc477dec0feea77a4deea6e8672760265ade3efe2f5815a2ae5c57d019d3",

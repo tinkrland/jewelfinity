@@ -7,8 +7,8 @@
       "version": "0.1.0"
     },
     "table_schema": "affinity-table-v1",
-    "input_hash": "bb5296f3ce4893777a4515493ddf089ebdbbb3079531724667d3900d2d050a51",
-    "output_hash": "a146ae0d18d08ae64fdb76dfce8c7a8bda9cfd9bbe24f283009e225e89fe1db6"
+    "input_hash": "a462d4d3d190cfba066ef32c47217597fb690b23109faf58fad7253106f391e3",
+    "output_hash": "64be0204d1d1423978baf8cd68f65d7a112c3608601fdf5711aeaa2f4b69e8b5"
   },
   "method": "latent similarity affinity matching: expected score = cosine between the profile's latent taste vector (sum of seed unit facet directions weighted by the profile's affinity weights) and each candidate term's facet vector. not pairwise semantic similarity to the seeds. candidates exclude the profile's own seeds; k = config scoring.top_k.",
   "profiles": [

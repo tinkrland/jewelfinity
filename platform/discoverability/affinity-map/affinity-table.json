@@ -13,16 +13,11 @@
     {
       "key": "style-vocabulary",
       "path": "offerings/styles/style-vocabulary.jsonl",
-      "sha256": "5e17ccebc904589a4da21bd9d3b2e8ebd7b2d868daacc2d295e25863f69dcec4",
+      "sha256": "85897cfbb17b796c1b5a88eb5febefb7ecbf0ef7f37f82b59cfd7b572571e941",
       "records": 13,
       "versions": {
-        "0.2.0": 1,
-        "0.2.1": 1,
-        "0.2.2": 1,
-        "0.3.0": 4,
-        "0.3.1": 2,
-        "0.3.2": 2,
-        "0.3.3": 2
+        "0.3.0": 3,
+        "0.4.0": 10
       }
     },
     {
@@ -47,8 +42,8 @@
   ],
   "determinism": {
     "schema": "affinity-map-determinism-v1",
-    "input_hash": "bb5296f3ce4893777a4515493ddf089ebdbbb3079531724667d3900d2d050a51",
-    "output_hash": "a146ae0d18d08ae64fdb76dfce8c7a8bda9cfd9bbe24f283009e225e89fe1db6",
+    "input_hash": "a462d4d3d190cfba066ef32c47217597fb690b23109faf58fad7253106f391e3",
+    "output_hash": "64be0204d1d1423978baf8cd68f65d7a112c3608601fdf5711aeaa2f4b69e8b5",
     "method": "input hash: sha256 over the engine version, config sha256, and each vocabulary key, path and sha256 in config input order. output hash: sha256 over this table serialized canonically (json, two-space indent, trailing newline) with determinism.output_hash set to null. same inputs and config produce identical output, verified by check-affinity-table.mjs.",
     "corpus": null,
     "corpus_note": "the authored affinity corpus is an open item in the spec. v0.1 is the structural prior from the governed vocabulary alone and blends with real co-occurrence counts deterministically later. decay has no meaning here: the structural prior carries no time component."
@@ -58,8 +53,8 @@
       "term": "georgian",
       "name": "georgian style",
       "vocabulary": "style-vocabulary",
-      "version": "0.3.0",
-      "updated": "2026-09-28",
+      "version": "0.4.0",
+      "updated": "2026-10-10",
       "facet_count": 7,
       "facets": {
         "ornate": {
@@ -353,8 +348,8 @@
       "term": "victorian",
       "name": "victorian style",
       "vocabulary": "style-vocabulary",
-      "version": "0.3.1",
-      "updated": "2026-10-09",
+      "version": "0.4.0",
+      "updated": "2026-10-10",
       "facet_count": 10,
       "facets": {
         "heart": {
@@ -671,8 +666,8 @@
       "term": "art_nouveau",
       "name": "art nouveau style",
       "vocabulary": "style-vocabulary",
-      "version": "0.3.0",
-      "updated": "2026-09-28",
+      "version": "0.4.0",
+      "updated": "2026-10-10",
       "facet_count": 8,
       "facets": {
         "whiplash_curve": {
@@ -993,8 +988,8 @@
       "term": "edwardian",
       "name": "edwardian style",
       "vocabulary": "style-vocabulary",
-      "version": "0.3.0",
-      "updated": "2026-09-28",
+      "version": "0.4.0",
+      "updated": "2026-10-10",
       "facet_count": 8,
       "facets": {
         "bow": {
@@ -1275,8 +1270,8 @@
       "term": "art_deco",
       "name": "art deco style",
       "vocabulary": "style-vocabulary",
-      "version": "0.2.2",
-      "updated": "2026-10-09",
+      "version": "0.3.0",
+      "updated": "2026-10-10",
       "facet_count": 12,
       "facets": {
         "geometric_step": {
@@ -1509,8 +1504,8 @@
       "term": "retro",
       "name": "retro style",
       "vocabulary": "style-vocabulary",
-      "version": "0.3.3",
-      "updated": "2026-10-09",
+      "version": "0.4.0",
+      "updated": "2026-10-10",
       "facet_count": 10,
       "facets": {
         "sphere": {
@@ -1797,8 +1792,8 @@
       "term": "mid_century_modernist",
       "name": "mid-century modernist style",
       "vocabulary": "style-vocabulary",
-      "version": "0.3.3",
-      "updated": "2026-10-09",
+      "version": "0.4.0",
+      "updated": "2026-10-10",
       "facet_count": 8,
       "facets": {
         "abstract_form": {
@@ -2009,8 +2004,8 @@
       "term": "brutalist",
       "name": "brutalist style",
       "vocabulary": "style-vocabulary",
-      "version": "0.3.1",
-      "updated": "2026-09-28",
+      "version": "0.4.0",
+      "updated": "2026-10-10",
       "facet_count": 7,
       "facets": {
         "raw_texture": {
@@ -2192,8 +2187,8 @@
       "term": "organic_modern",
       "name": "organic modern style",
       "vocabulary": "style-vocabulary",
-      "version": "0.3.2",
-      "updated": "2026-10-09",
+      "version": "0.4.0",
+      "updated": "2026-10-10",
       "facet_count": 7,
       "facets": {
         "whiplash_curve": {
@@ -2406,8 +2401,8 @@
       "term": "celestial",
       "name": "celestial style",
       "vocabulary": "style-vocabulary",
-      "version": "0.3.2",
-      "updated": "2026-10-09",
+      "version": "0.4.0",
+      "updated": "2026-10-10",
       "facet_count": 8,
       "facets": {
         "star": {
@@ -2588,8 +2583,8 @@
       "term": "gothic",
       "name": "gothic style",
       "vocabulary": "style-vocabulary",
-      "version": "0.2.1",
-      "updated": "2026-10-07",
+      "version": "0.3.0",
+      "updated": "2026-10-10",
       "facet_count": 10,
       "facets": {
         "cross": {
@@ -2796,8 +2791,8 @@
       "term": "biker",
       "name": "biker style",
       "vocabulary": "style-vocabulary",
-      "version": "0.3.0",
-      "updated": "2026-09-28",
+      "version": "0.4.0",
+      "updated": "2026-10-10",
       "facet_count": 7,
       "facets": {
         "chain_link": {
@@ -3000,8 +2995,8 @@
       "term": "egyptian_revival",
       "name": "egyptian revival style",
       "vocabulary": "style-vocabulary",
-      "version": "0.2.0",
-      "updated": "2026-09-27",
+      "version": "0.3.0",
+      "updated": "2026-10-10",
       "facet_count": 8,
       "facets": {
         "lotus": {

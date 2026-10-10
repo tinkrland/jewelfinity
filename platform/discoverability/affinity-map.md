@@ -52,8 +52,14 @@ derived from the release record, versioned. the studio-to-platform
 interface is the release; affinity-map reads release data only and never
 touches studio internals.
 
-- structural facets, typed straight from paracraft state: family,
-  declared ops, metal, finish, scale and weight bands.
+- structural facets, typed straight from paracraft state: family
+  (form), declared ops, metal, and the measured bands below.
+- physical axes (added 2026-10-10, owner-authorized per
+  affinity-map/physical-axes-proposal.md): form, silhouette, scale
+  (mm), visual weight band, finish, structure, detail density band.
+  measured on the object, never authored. style axes are impressions
+  (machine-labeled via `axis_kinds` in the style vocabulary) and are
+  joined - not replaced - by these bands at match time.
 - semantic facets: governed vocabulary terms, collections.
 - creator identity and price are not part of character.
 
@@ -66,6 +72,11 @@ a derived view, recomputable from the signal log.
 - person-to-object affinities. wishlist saves are trust-weighted as
   specced; likes carry lower weight.
 - person-to-creator affinities.
+- the blend may carry physical bands (visual weight, detail density,
+  scale, structure), bound at the object layer - where wear context
+  already binds. "bold silver, a little more than plain, stackable"
+  is expressible there as heavy-ish weight + low-to-medium detail
+  density + small-to-medium scale + linked/layered structure.
 - every facet carries provenance: which signals contributed it and when.
 
 ### affinity corpus
