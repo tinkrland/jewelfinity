@@ -1,7 +1,9 @@
-# symbol phrase-extension proposal (review doc, no vocabulary changes)
+# symbol phrase-extension proposal (APPLIED 2026-10-10 per owner authorization)
 
-drafted 2026-10-09 for the owner's review, same gate as the style phrase
-proposal: nothing below is authored until explicitly authorized. all
+drafted 2026-10-09, authorized and applied 2026-10-10: 12 sign
+records + metal_silver ("white gold") + metal_platinum ("platinum")
+carry phrases at v0.2.0, versioned per-record with authorization
+notes. tarot section below remains a separate open decision. all
 counts pooled over 2,752 recorded titles (852 ebay + 1,500 etsy main
 corpus + 500 symbol-segment capture, run ids in provenance.json; 300
 drift probes excluded to avoid query echo). "clean" = solimet title

@@ -79,6 +79,8 @@ limits surfaced:
 - scandinavian-modernist: 20/160, rate 0.125 (the strongest: skonvirke
   lineage titles co-title with mcm language)
 
+(original 0.1 run; superseded by the 0.2 re-run below)
+
 what the numbers honestly say: the style phrases are buyer-language by
 design ("very old looking", "chunky vintage", "witchy"), so seller
 titles rarely trigger the engagement gate - 116 solimet-clean titles
@@ -87,10 +89,30 @@ pass rates therefore measure the buyer-language assumption, not just
 the engine. the largest eval gap is the symbol layer: zero phrases,
 so celestial's neighbors are invisible in titles.
 
+## re-run after symbol phrases 0.2.0 (2026-10-10)
+
+sign names + "white gold" + "platinum" added to the symbol vocabulary
+per owner authorization. table rebuilt (input hash changed, content
+identical), 193 checks pass, expected top-k re-pinned (unchanged -
+phrases do not participate in affinity scoring). new pass rates:
+
+- gothic-biker: 2/39 (0.0513) - unchanged
+- antique-cluster: 0/2 - unchanged
+- celestial-dreamer: 0/62 - NOW MEASURABLE (leo/pisces/scorpio
+  detectable) but zero overlap: the main corpus holds only 2
+  sign-name titles (both gothic-biker listings), and neither
+  co-titles with celestial language. sign titles live in the zodiac
+  segment captures, deliberately excluded from the sim corpus
+  (query-biased). the honest reading: the symbol layer is now
+  detectable in principle, and the main corpus does not exercise it.
+  exercising it needs either segment-inclusive sims (with the query-
+  echo caveat stated) or an unbiased zodiac corpus.
+- scandinavian-modernist: 20/160 (0.125) - unchanged
+
 ## open items
 
-- symbol marketplace phrases: the symbol vocabulary carries none;
-  celestial-dreamer's expected results cannot be evaluated until it
-  does
+- symbol phrases exist now (0.2.0); the remaining eval gap is corpus
+  coverage, not detectability. tarot_card records still a separate
+  owner decision (proposal section "flagged for a separate decision")
 - more profiles only as evidence supports them; thin styles get honest
   thin representation, not padding

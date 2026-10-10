@@ -28,10 +28,11 @@
     {
       "key": "symbol",
       "path": "offerings/styles/symbol-vocabulary.jsonl",
-      "sha256": "fc5ff410959e87ee5236a6ccf26ca2cec0ada8d75b420f9936a7d9cb4e873925",
+      "sha256": "d1496435563ba51d0055b96c04f899256c7758bec477cfa89146a4b10bd85eec",
       "records": 24,
       "versions": {
-        "0.1.0": 24
+        "0.1.0": 10,
+        "0.2.0": 14
       }
     },
     {
@@ -46,8 +47,8 @@
   ],
   "determinism": {
     "schema": "affinity-map-determinism-v1",
-    "input_hash": "6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44",
-    "output_hash": "9fa1508302febf7ca22b1b4c47df37e27dba83afd33b50841fa18ac556179735",
+    "input_hash": "53f3ea1b950c03764f817596672cc6052e906822f4d611f0cc97662cb34c9c3f",
+    "output_hash": "9ff0fe43f6e690a1802a29e58977ebf0b485608d95fcb7f6a86e3c702fb32ca5",
     "method": "input hash: sha256 over the engine version, config sha256, and each vocabulary key, path and sha256 in config input order. output hash: sha256 over this table serialized canonically (json, two-space indent, trailing newline) with determinism.output_hash set to null. same inputs and config produce identical output, verified by check-affinity-table.mjs.",
     "corpus": null,
     "corpus_note": "the authored affinity corpus is an open item in the spec. v0.1 is the structural prior from the governed vocabulary alone and blends with real co-occurrence counts deterministically later. decay has no meaning here: the structural prior carries no time component."
@@ -3366,8 +3367,8 @@
       "name": "silver",
       "vocabulary": "symbol",
       "kind": "metal_symbol",
-      "version": "0.1.0",
-      "updated": "2026-09-27",
+      "version": "0.2.0",
+      "updated": "2026-10-10",
       "facet_count": 2,
       "facets": {
         "silver": {
@@ -3480,8 +3481,8 @@
       "name": "platinum",
       "vocabulary": "symbol",
       "kind": "metal_symbol",
-      "version": "0.1.0",
-      "updated": "2026-09-27",
+      "version": "0.2.0",
+      "updated": "2026-10-10",
       "facet_count": 1,
       "facets": {
         "platinum": {
@@ -4394,8 +4395,8 @@
       "name": "aries",
       "vocabulary": "symbol",
       "kind": "zodiac_sign",
-      "version": "0.1.0",
-      "updated": "2026-09-27",
+      "version": "0.2.0",
+      "updated": "2026-10-10",
       "facet_count": 3,
       "facets": {
         "fire": {
@@ -4537,8 +4538,8 @@
       "name": "taurus",
       "vocabulary": "symbol",
       "kind": "zodiac_sign",
-      "version": "0.1.0",
-      "updated": "2026-09-27",
+      "version": "0.2.0",
+      "updated": "2026-10-10",
       "facet_count": 3,
       "facets": {
         "earth": {
@@ -4680,8 +4681,8 @@
       "name": "gemini",
       "vocabulary": "symbol",
       "kind": "zodiac_sign",
-      "version": "0.1.0",
-      "updated": "2026-09-27",
+      "version": "0.2.0",
+      "updated": "2026-10-10",
       "facet_count": 3,
       "facets": {
         "air": {
@@ -4833,8 +4834,8 @@
       "name": "cancer",
       "vocabulary": "symbol",
       "kind": "zodiac_sign",
-      "version": "0.1.0",
-      "updated": "2026-09-27",
+      "version": "0.2.0",
+      "updated": "2026-10-10",
       "facet_count": 3,
       "facets": {
         "water": {
@@ -4976,8 +4977,8 @@
       "name": "leo",
       "vocabulary": "symbol",
       "kind": "zodiac_sign",
-      "version": "0.1.0",
-      "updated": "2026-09-27",
+      "version": "0.2.0",
+      "updated": "2026-10-10",
       "facet_count": 3,
       "facets": {
         "fire": {
@@ -5119,8 +5120,8 @@
       "name": "virgo",
       "vocabulary": "symbol",
       "kind": "zodiac_sign",
-      "version": "0.1.0",
-      "updated": "2026-09-27",
+      "version": "0.2.0",
+      "updated": "2026-10-10",
       "facet_count": 3,
       "facets": {
         "earth": {
@@ -5272,8 +5273,8 @@
       "name": "libra",
       "vocabulary": "symbol",
       "kind": "zodiac_sign",
-      "version": "0.1.0",
-      "updated": "2026-09-27",
+      "version": "0.2.0",
+      "updated": "2026-10-10",
       "facet_count": 3,
       "facets": {
         "air": {
@@ -5415,8 +5416,8 @@
       "name": "scorpio",
       "vocabulary": "symbol",
       "kind": "zodiac_sign",
-      "version": "0.1.0",
-      "updated": "2026-09-27",
+      "version": "0.2.0",
+      "updated": "2026-10-10",
       "facet_count": 3,
       "facets": {
         "water": {
@@ -5558,8 +5559,8 @@
       "name": "sagittarius",
       "vocabulary": "symbol",
       "kind": "zodiac_sign",
-      "version": "0.1.0",
-      "updated": "2026-09-27",
+      "version": "0.2.0",
+      "updated": "2026-10-10",
       "facet_count": 3,
       "facets": {
         "fire": {
@@ -5711,8 +5712,8 @@
       "name": "capricorn",
       "vocabulary": "symbol",
       "kind": "zodiac_sign",
-      "version": "0.1.0",
-      "updated": "2026-09-27",
+      "version": "0.2.0",
+      "updated": "2026-10-10",
       "facet_count": 3,
       "facets": {
         "earth": {
@@ -5854,8 +5855,8 @@
       "name": "aquarius",
       "vocabulary": "symbol",
       "kind": "zodiac_sign",
-      "version": "0.1.0",
-      "updated": "2026-09-27",
+      "version": "0.2.0",
+      "updated": "2026-10-10",
       "facet_count": 3,
       "facets": {
         "air": {
@@ -5997,8 +5998,8 @@
       "name": "pisces",
       "vocabulary": "symbol",
       "kind": "zodiac_sign",
-      "version": "0.1.0",
-      "updated": "2026-09-27",
+      "version": "0.2.0",
+      "updated": "2026-10-10",
       "facet_count": 3,
       "facets": {
         "water": {

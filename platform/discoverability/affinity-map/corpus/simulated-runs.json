@@ -2,8 +2,8 @@
   "schema": "corpus-simulated-runs-v1",
   "description": "per-profile simulated matching runs over the solimet-clean marketplace corpus. a listing passes when it matches a profile's seed phrases and at least one non-seed expected-top-k term's phrases. pass rate = passed / engaged.",
   "pinned_to": {
-    "table_input_hash": "6d5d3c726886db10cc78ae9c0cd6c25a3cb9875b45357577bbedd5a517c94e44",
-    "table_output_hash": "9fa1508302febf7ca22b1b4c47df37e27dba83afd33b50841fa18ac556179735",
+    "table_input_hash": "53f3ea1b950c03764f817596672cc6052e906822f4d611f0cc97662cb34c9c3f",
+    "table_output_hash": "9ff0fe43f6e690a1802a29e58977ebf0b485608d95fcb7f6a86e3c702fb32ca5",
     "corpus_files": {
       "ebay-listings.jsonl": "63b27199aee0cb7f1e81fcdf15e97380a786a2600da96ac2d0859dbc5978c6e7",
       "etsy-listings.jsonl": "fcdbdc477dec0feea77a4deea6e8672760265ade3efe2f5815a2ae5c57d019d3"
@@ -267,9 +267,10 @@
       ],
       "detectable_seeds": [
         "celestial",
+        "metal_silver",
         "sign_cancer"
       ],
-      "engaged": 59,
+      "engaged": 62,
       "passed": 0,
       "pass_rate": 0,
       "expected_topk": [
@@ -367,7 +368,7 @@
         }
       ],
       "notes": [
-        "seeds without marketplace phrases (undetectable engagement): element_water, metal_silver",
+        "seeds without marketplace phrases (undetectable engagement): element_water",
         "expected results without marketplace phrases (undetectable): element_air, metal_gold; a zero pass rate against them means not measurable yet, not engine-wrong"
       ]
     },
