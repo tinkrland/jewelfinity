@@ -32,17 +32,31 @@ import { roundTo, sha256File } from "../build-affinity-table.mjs";
 import { loadProfiles, computeExpectedTopk, buildFacetContext } from "./pin-expected-topk.mjs";
 
 const CORPUS_DIR = path.dirname(fileURLToPath(import.meta.url));
+const SEGMENT_MODE = process.argv.includes("--segment");
 const MODULE_DIR = path.dirname(CORPUS_DIR);
 const REPO_ROOT = path.resolve(MODULE_DIR, "..", "..", "..");
 const TABLE_PATH = path.join(MODULE_DIR, "affinity-table.json");
 const EVIDENCE_DIR = path.join(REPO_ROOT, "platform", "discoverability", "marketplace-evidence");
-const CORPUS_FILES = ["ebay-listings.jsonl", "etsy-listings.jsonl"];
+const MAIN_FILES = ["ebay-listings.jsonl", "etsy-listings.jsonl"];
+// segment mode: add every processed segment capture (solimet-checked
+// jsonl only). QUERY-BIASED: these titles were pulled with segment
+// queries ("zodiac necklace", "tarot jewelry", ...), so phrase
+// co-occurrence inside them is inflated by query echo. the segment
+// pass answers "is the symbol layer detectable at all", never
+// "what is the unbiased pass rate". the default run stays the
+// unbiased comparison.
+const SEGMENT_DIRS = ["symbol-segment", "symbol-segment/poshmark", "wear-symbol-segment"];
+const SEGMENT_FILES = SEGMENT_DIRS.flatMap((d) =>
+  fs.readdirSync(path.join(EVIDENCE_DIR, d)).filter((f) => f.endsWith(".jsonl"))
+    .map((f) => `${d}/${f}`),
+).sort();
+const CORPUS_FILES = SEGMENT_MODE ? [...MAIN_FILES, ...SEGMENT_FILES] : MAIN_FILES;
 const VOCAB_PATHS = {
   "style-vocabulary": path.join(REPO_ROOT, "offerings", "styles", "style-vocabulary.jsonl"),
   "symbol-vocabulary": path.join(REPO_ROOT, "offerings", "styles", "symbol-vocabulary.jsonl"),
   "wear-context-vocabulary": path.join(REPO_ROOT, "offerings", "styles", "wear-context-vocabulary.jsonl"),
 };
-const OUTPUT_PATH = path.join(CORPUS_DIR, "simulated-runs.json");
+const OUTPUT_PATH = path.join(CORPUS_DIR, SEGMENT_MODE ? "simulated-runs-segment.json" : "simulated-runs.json");
 
 function tokens(s) {
   return (s || "").toLowerCase().split(/[^a-z0-9]+/).filter(Boolean);
@@ -185,6 +199,7 @@ function main() {
       probes_excluded: "co-occurrence probes excluded: their queries bias titles toward the drift edges",
     },
     corpus_size: listings.length,
+    corpus_mode: SEGMENT_MODE ? "segment-inclusive (query-biased: segment titles were pulled with segment queries; answers detectability, never an unbiased pass rate)" : "main-corpus only (unbiased comparison)",
     runs: results,
   };
   fs.writeFileSync(OUTPUT_PATH, `${JSON.stringify(artifact, null, 2)}\n`);

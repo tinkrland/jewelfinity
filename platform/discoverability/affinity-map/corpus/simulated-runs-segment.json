@@ -6,13 +6,57 @@
     "table_output_hash": "a146ae0d18d08ae64fdb76dfce8c7a8bda9cfd9bbe24f283009e225e89fe1db6",
     "corpus_files": {
       "ebay-listings.jsonl": "63b27199aee0cb7f1e81fcdf15e97380a786a2600da96ac2d0859dbc5978c6e7",
-      "etsy-listings.jsonl": "fcdbdc477dec0feea77a4deea6e8672760265ade3efe2f5815a2ae5c57d019d3"
+      "etsy-listings.jsonl": "fcdbdc477dec0feea77a4deea6e8672760265ade3efe2f5815a2ae5c57d019d3",
+      "symbol-segment/depop-zodiac-necklace.jsonl": "dfafceeb46bdb3a3b85db4a1984afb3a39d022e73ea2a9a490d64de4cff66c67",
+      "symbol-segment/ebay-tarot.solimet.jsonl": "e50ef7e6e2edfd029ffb6ee4cd1ee0ded05a148994c031de38a5ce0a2e72eb3b",
+      "symbol-segment/ebay-zodiac.solimet.jsonl": "31dc9dfa45499eb4d2d29ef8341037089b523b036b79b609a54bb1c345a0775f",
+      "symbol-segment/etsy-arcana.solimet.jsonl": "fd37465936072f57271c42e3cfd64a081069a58c7c6fec5cfff4789bba55329f",
+      "symbol-segment/etsy-celestial.solimet.jsonl": "cee328800691310225a4a7cefa6f25de7fab8ab2cc6919c8f41dec282b94d654",
+      "symbol-segment/etsy-tarot.solimet.jsonl": "4cfc5962f1b378ebfbcd32e651df1c50e3f47b628c39147df062881add9cfe6b",
+      "symbol-segment/etsy-whitegold.solimet.jsonl": "ef01cd56f52cd437f84619134cf8569d8f722218e4cebd824dc10ba6022424d2",
+      "symbol-segment/etsy-zodiac.solimet.jsonl": "15fb20ea2d6fb2fba86c5f481f08d2891da4e98588a57430b0f5b9f7ddc31ca8",
+      "symbol-segment/mercari-us-tarot.solimet.jsonl": "6f68eb26f3300a333892fef6f6d2d42951ea5b8f6525e3f965f776df040ddc76",
+      "symbol-segment/mercari-us-zodiac.solimet.jsonl": "4c5b99f2af8fa847f1996efb9f8b1d85cfc81da86fbcb91f860821532ed64fec",
+      "symbol-segment/poshmark/poshmark-celestial-jewelry.jsonl": "67f7ac1e72731f3d2368f86b1c6c20c7d63d658ca63b022ae746c781fa260627",
+      "symbol-segment/poshmark/poshmark-tarot-necklace.jsonl": "6da9d9672283a69875bb22cd61913952ed454f9ed27d62f5a4016063682a65ef",
+      "symbol-segment/poshmark/poshmark-zodiac-necklace.jsonl": "4040fbec8e9c3efa071db91f6fb5c120406c6e1626b8d6eb8a28b3f866647ea3",
+      "symbol-segment/shein-tarot.solimet.jsonl": "18e9864b7b0617e0b4c25862f1bb4970de6471c273ab3b1ad50b64c47535b16e",
+      "symbol-segment/shein-zodiac-necklace.jsonl": "fb18665c30c9d014426cdb686f5f2fc42f4fa00f89d6ec21cb898211f41712ea",
+      "wear-symbol-segment/depop-everyday-necklace.jsonl": "2d607a852b424a505a4c0b717dd4c2170bfb085c41043974fced0b1e4b2ff35d",
+      "wear-symbol-segment/ebay-alchemical-symbols-necklace.jsonl": "89dad27c44a3c6a8e4d6f4b10812673b09779e6c77917c400c37d0ad28076c58",
+      "wear-symbol-segment/ebay-alchemy-necklace.jsonl": "90f97a1738c44b17e88f9addfe85f993a1e630ae6733e74f1936e59d6e5ced3b",
+      "wear-symbol-segment/ebay-anniversary-band.jsonl": "9e029cd9136b541ac1d7c449311d31df7a305b59c1c95210ba6e7e2eb43d69ec",
+      "wear-symbol-segment/ebay-eternity-band.jsonl": "d59df9de19b6a0e38b859981a882e821f9575a89b417b5d5f900b86e914b8b1c",
+      "wear-symbol-segment/ebay-everyday-necklace.jsonl": "b20cd8328b194e66f122bfdac6c0f2ddd1af2d8d56aafbc17ae5ef0a5043b1f5",
+      "wear-symbol-segment/ebay-promise-ring.jsonl": "ede5309cd7ed1ae007ab4e0991a2816ebb24f2d88fe03324eceb84775c17d01e",
+      "wear-symbol-segment/ebay-stackable-bangle.jsonl": "95b1101d63ae1563fb4ba034f31ff9e081be83e802cbb95f5a130ed05b4b321e",
+      "wear-symbol-segment/ebay-wedding-band.jsonl": "ff4d591a045e1eb3442cc2d4a283e6277813bee1c9701f02160c87c834025ed8",
+      "wear-symbol-segment/etsy-alchemical-symbols-necklace.jsonl": "fab30da377600537889e9972e1cc481a727181e2715c39df43e5eed4cda8c1e4",
+      "wear-symbol-segment/etsy-alchemy-necklace.jsonl": "18cc65afd4579c73bdcaa1e4db569cd6e913f2573e5a180bcfdab2d168ebb524",
+      "wear-symbol-segment/etsy-anniversary-band.jsonl": "e2378f31719543bd265770e1b7348a8fb256e86813a1ae251f5b9e95d1970b16",
+      "wear-symbol-segment/etsy-eternity-band.jsonl": "4363ab1b81fb70c152519d13267e59eb8a00866aa528a11bf4288f90cacffffc",
+      "wear-symbol-segment/etsy-everyday-necklace.jsonl": "06c5547efa0c7b6b4f16b3076d3908bcb7fb7d809107cb7b2a98af845950d40a",
+      "wear-symbol-segment/etsy-promise-ring.jsonl": "c5ef4d5cb6134994113f10699c91a732e3ed0ebecc93ed04a5fc3230633fb8a1",
+      "wear-symbol-segment/etsy-stackable-bangle.jsonl": "c4aef18da6c6b07ef61b09aba87088b78ceae647044cee0e7840cea6ac7e13e1",
+      "wear-symbol-segment/etsy-wedding-band.jsonl": "3b9da3c108d85ad95e48c527fcc8c66117b2fcaacef6ae027ab155f18695aff9",
+      "wear-symbol-segment/mercari-alchemical-symbols-necklace.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "wear-symbol-segment/mercari-alchemy-necklace.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "wear-symbol-segment/mercari-anniversary-band.jsonl": "f0e09a4351a5d06e4cf449a6711ebc40942e8abfe85fe111179e4142fbdf773d",
+      "wear-symbol-segment/mercari-everyday-necklace.jsonl": "94325925000ea7e24fef26572e4111a1f92e74ff9357aab0e2864b6f0e5cf8cb",
+      "wear-symbol-segment/mercari-stackable-bangle.jsonl": "3e82e10f28ead969e1e8f6489279dfb9b8a959d8e87002c5be36fb32beacd6e6",
+      "wear-symbol-segment/mercari-wedding-band.jsonl": "05c331bbfa8d04cad96be0ffe328d8a790e1851e98561188546fdc27f1dcc93f",
+      "wear-symbol-segment/poshmark-alchemical-symbols-necklace.jsonl": "54ba19ec222369921f8698551358dfc2f55134b685bae9224c398f7c3f652b99",
+      "wear-symbol-segment/poshmark-alchemy-necklace.jsonl": "245a10ede3b79786eb33a7fecc68dfd0c355b749f68bc4bcb3af64a45644ffeb",
+      "wear-symbol-segment/poshmark-anniversary-band.jsonl": "b6c216be4db7b022ab6f8c4991e741e4cc4c97b2ca0d81e749f3eeb9c9adc3c6",
+      "wear-symbol-segment/poshmark-everyday-necklace.jsonl": "43a115e7d513f7808816c0325d6bdd8d631c0fbb418ca6b1554724dcb12b0bc8",
+      "wear-symbol-segment/poshmark-stackable-bangle.jsonl": "1a27489980550fd058b6a033c00f2e80947c5caee7de99235fe5a6d751d0834c",
+      "wear-symbol-segment/poshmark-wedding-band.jsonl": "5a800a8a1eccbdb331289f969208d527ba40f3155779883980974a5141bd1def"
     },
     "solimet_only": true,
     "probes_excluded": "co-occurrence probes excluded: their queries bias titles toward the drift edges"
   },
-  "corpus_size": 1724,
-  "corpus_mode": "main-corpus only (unbiased comparison)",
+  "corpus_size": 4180,
+  "corpus_mode": "segment-inclusive (query-biased: segment titles were pulled with segment queries; answers detectability, never an unbiased pass rate)",
   "runs": [
     {
       "profile_id": "profile-001-gothic-biker",
@@ -26,9 +70,9 @@
         "gothic",
         "biker"
       ],
-      "engaged": 39,
+      "engaged": 80,
       "passed": 2,
-      "pass_rate": 0.0513,
+      "pass_rate": 0.025,
       "expected_topk": [
         {
           "term": "brutalist",
@@ -271,9 +315,9 @@
         "metal_silver",
         "sign_cancer"
       ],
-      "engaged": 62,
-      "passed": 0,
-      "pass_rate": 0,
+      "engaged": 240,
+      "passed": 1,
+      "pass_rate": 0.0042,
       "expected_topk": [
         {
           "term": "tarot_moon",
@@ -298,7 +342,7 @@
         {
           "term": "sign_pisces",
           "detectable_in_titles": true,
-          "engaged_listings_matching": 0
+          "engaged_listings_matching": 1
         }
       ],
       "unobserved_expected": [
@@ -364,18 +408,6 @@
               "contribution": 0.7
             }
           ]
-        },
-        {
-          "term": "sign_pisces",
-          "score": 0.20270714,
-          "detectable_in_titles": true,
-          "driven_by_facets": [
-            {
-              "seed": "element_water",
-              "facet": "water",
-              "contribution": 1
-            }
-          ]
         }
       ],
       "notes": [
@@ -395,9 +427,9 @@
         "mid_century_modernist",
         "organic_modern"
       ],
-      "engaged": 160,
-      "passed": 20,
-      "pass_rate": 0.125,
+      "engaged": 165,
+      "passed": 21,
+      "pass_rate": 0.1273,
       "expected_topk": [
         {
           "term": "art_nouveau",
@@ -407,7 +439,7 @@
         {
           "term": "brutalist",
           "detectable_in_titles": true,
-          "engaged_listings_matching": 20
+          "engaged_listings_matching": 21
         },
         {
           "term": "biker",

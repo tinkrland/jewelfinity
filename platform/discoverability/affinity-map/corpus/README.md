@@ -109,10 +109,48 @@ phrases do not participate in affinity scoring). new pass rates:
   echo caveat stated) or an unbiased zodiac corpus.
 - scandinavian-modernist: 20/160 (0.125) - unchanged
 
+## segment-inclusive sim (2026-10-10, --segment mode)
+
+the harness now has a second mode (`node simulate-matching-runs.mjs
+--segment`) that adds every processed segment capture to the main
+corpus (4,180 clean listings vs 1,724). QUERY-BIASED by construction:
+segment titles were pulled with segment queries, so the pass rates
+here answer "is the symbol layer detectable at all", never "what is
+the unbiased pass rate". the default main-corpus run stays the
+unbiased comparison and is unchanged.
+
+- gothic-biker: 2/80 (0.025) - dilution: same passes over a larger
+  engaged pool (segment occult titles engage the gothic seeds)
+- antique-cluster: 0/2 - unchanged
+- celestial-dreamer: 1/240 (0.0042) - the symbol layer's FIRST
+  nonzero pass. the single passing listing is a shein zodiac
+  SEO mega-title naming all twelve signs (engaged via seed
+  "cancer", passed via expected sign_pisces) - the shein register
+  doing exactly what the platform-register notes said it does
+- scandinavian-modernist: 21/165 (0.1273) - stable across modes
+
+honest reading: sign phrases are now detectable, but sign names
+almost never co-title with celestial or white-gold language -
+engagement is common (240), co-occurrence is the rare event. the
+buying-language model for symbol-layer engagement may want profiles
+seeded on signs themselves (a "zodiac buyer" profile), not celestial
+proxies. profiles remain evidence-gated per the standing rule.
+
+segment corpus provenance: raw captures processed by
+symbol-segment/process-raw-segments.py (segment-solimet-v1 filter,
+committed and deterministic; calibration: etsy-tarot 94, ebay-tarot
+89, etsy-zodiac 71 exact matches to recorded counts; mercari-us-tarot
+85 vs recorded 88 and shein-tarot 79 vs 80, the earlier inline passes
+were not perfectly uniform - the committed gate is the conservative
+variant and is now the single source of truth). solisdivinitytarot
+(tarot decks), sabrinabi (404), and the two 0-item mercari files are
+excluded from the corpus on the same non-evidence principle as the
+graph loader.
+
 ## open items
 
-- symbol phrases exist now (0.2.0); the remaining eval gap is corpus
-  coverage, not detectability. tarot_card records still a separate
-  owner decision (proposal section "flagged for a separate decision")
+- a "zodiac buyer" profile (seeded on signs) is the natural next
+  eval step once evidence supports one; profiles stay evidence-gated
+- tarot_card records are DONE (v0.2.1, 2026-10-10)
 - more profiles only as evidence supports them; thin styles get honest
   thin representation, not padding
