@@ -59,8 +59,9 @@ QUERY_TERM_MAP = {
     "promise ring": ["ceremony_commitment"],
     # zodiac queries now map per-query (was capture-level only, so
     # the poshmark zodiac run sat unlinked. fixed 2026-10-10).
-    # tarot queries deliberately UNMAPPED: no tarot terms exist in
-    # v0.1; awaiting the owner's tarot vocabulary decision.
+    # tarot queries now map to the 20 evidenced major-arcana cards
+    # (owner-authorized 2026-10-10; emperor/hierophant absent: zero
+    # title evidence in 300 pooled segment titles - honest thinness).
     "zodiac necklace": [
         "sign_aries", "sign_taurus", "sign_gemini", "sign_cancer",
         "sign_leo", "sign_virgo", "sign_libra", "sign_scorpio",
@@ -75,6 +76,9 @@ QUERY_TERM_MAP = {
     "art nouveau jewelry": ["art_nouveau"], "edwardian jewelry": ["edwardian"],
     "art deco jewelry": ["art_deco"], "retro 1940s jewelry": ["retro"],
     "mid century modern jewelry": ["mid_century_modernist"],
+    "tarot jewelry": ["tarot_fool", "tarot_magician", "tarot_high_priestess", "tarot_empress", "tarot_lovers", "tarot_chariot", "tarot_strength", "tarot_hermit", "tarot_wheel_of_fortune", "tarot_justice", "tarot_hanged_man", "tarot_death", "tarot_temperance", "tarot_devil", "tarot_tower", "tarot_star", "tarot_moon", "tarot_sun", "tarot_judgement", "tarot_world"],
+    "tarot necklace": ["tarot_fool", "tarot_magician", "tarot_high_priestess", "tarot_empress", "tarot_lovers", "tarot_chariot", "tarot_strength", "tarot_hermit", "tarot_wheel_of_fortune", "tarot_justice", "tarot_hanged_man", "tarot_death", "tarot_temperance", "tarot_devil", "tarot_tower", "tarot_star", "tarot_moon", "tarot_sun", "tarot_judgement", "tarot_world"],
+    "major arcana necklace": ["tarot_fool", "tarot_magician", "tarot_high_priestess", "tarot_empress", "tarot_lovers", "tarot_chariot", "tarot_strength", "tarot_hermit", "tarot_wheel_of_fortune", "tarot_justice", "tarot_hanged_man", "tarot_death", "tarot_temperance", "tarot_devil", "tarot_tower", "tarot_star", "tarot_moon", "tarot_sun", "tarot_judgement", "tarot_world"],
     "celestial jewelry": ["celestial"], "gothic jewelry": ["gothic"],
     "biker jewelry": ["biker"], "egyptian revival jewelry": ["egyptian_revival"],
 }
@@ -144,7 +148,16 @@ def main():
                  "note": run.get("note"), "capture": name}
             out.append(f"MERGE (e:Evidence {{evidence_id: {cy(evid)}}}) SET e += {props(e)}")
             non_evidence = (name, run.get("query") or run.get("store")) in NON_EVIDENCE
-            terms = [] if (zero_items or non_evidence) else (SUPPORTS_MAP.get(name, []) or QUERY_TERM_MAP.get(run.get("query"), []))
+            # union (deduped), not OR: a run in a curated capture whose
+            # query is also query-mapped supports both lists. found
+            # 2026-10-10: the OR short-circuited, so the 5 tarot runs in
+            # the symbol-segment capture got celestial/signs but no card
+            # terms (capture-level list won before QUERY_TERM_MAP was
+            # consulted). the union changes exactly those 5 runs.
+            terms = []
+            if not (zero_items or non_evidence):
+                for t in (SUPPORTS_MAP.get(name, []) + QUERY_TERM_MAP.get(run.get("query"), [])):
+                    if t not in terms: terms.append(t)
             for tid in terms:
                 out.append(f"MATCH (e:Evidence {{evidence_id: {cy(evid)}}}), (t:Term {{id: {cy(tid)}}}) "
                            f"MERGE (e)-[s:SUPPORTS]->(t) SET s += {props({'items': run.get('items'), 'note': (run.get('note') or '')[:120]})}")

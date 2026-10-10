@@ -6,8 +6,8 @@
     "version": "0.1.0"
   },
   "config": {
-    "version": "0.1.0",
-    "sha256": "0a99d2fe9c319d3024eac8ebe98916b36df5c0920f93ac36ecda1d84e9f40f69"
+    "version": "0.2.0",
+    "sha256": "cac6b7e0b797bb621602e2ca03a5231051e7dd966303f21c3a485ed46555f93c"
   },
   "vocabularies": [
     {
@@ -28,10 +28,10 @@
     {
       "key": "symbol",
       "path": "offerings/styles/symbol-vocabulary.jsonl",
-      "sha256": "d1496435563ba51d0055b96c04f899256c7758bec477cfa89146a4b10bd85eec",
-      "records": 24,
+      "sha256": "126147c562b28b36ec07b92213bfd1d29d923ad5b76387f7b9ec59fba1b6c2f0",
+      "records": 44,
       "versions": {
-        "0.1.0": 10,
+        "0.1.0": 30,
         "0.2.0": 14
       }
     },
@@ -47,8 +47,8 @@
   ],
   "determinism": {
     "schema": "affinity-map-determinism-v1",
-    "input_hash": "53f3ea1b950c03764f817596672cc6052e906822f4d611f0cc97662cb34c9c3f",
-    "output_hash": "9ff0fe43f6e690a1802a29e58977ebf0b485608d95fcb7f6a86e3c702fb32ca5",
+    "input_hash": "bb5296f3ce4893777a4515493ddf089ebdbbb3079531724667d3900d2d050a51",
+    "output_hash": "a146ae0d18d08ae64fdb76dfce8c7a8bda9cfd9bbe24f283009e225e89fe1db6",
     "method": "input hash: sha256 over the engine version, config sha256, and each vocabulary key, path and sha256 in config input order. output hash: sha256 over this table serialized canonically (json, two-space indent, trailing newline) with determinism.output_hash set to null. same inputs and config produce identical output, verified by check-affinity-table.mjs.",
     "corpus": null,
     "corpus_note": "the authored affinity corpus is an open item in the spec. v0.1 is the structural prior from the governed vocabulary alone and blends with real co-occurrence counts deterministically later. decay has no meaning here: the structural prior carries no time component."
@@ -2478,6 +2478,69 @@
       "norm": 1.9672315573,
       "neighbors": [
         {
+          "term": "tarot_star",
+          "vocabulary": "symbol",
+          "score": 0.5083285678,
+          "norms": [
+            1.9672315573,
+            1
+          ],
+          "shared_facets": [
+            {
+              "facet": "star",
+              "left": 1,
+              "right": 1,
+              "left_class": "feature",
+              "right_class": "feature",
+              "left_weight": 1,
+              "right_weight": 1,
+              "contribution": 1
+            }
+          ]
+        },
+        {
+          "term": "tarot_moon",
+          "vocabulary": "symbol",
+          "score": 0.457495711,
+          "norms": [
+            1.9672315573,
+            1
+          ],
+          "shared_facets": [
+            {
+              "facet": "moon",
+              "left": 0.9,
+              "right": 1,
+              "left_class": "feature",
+              "right_class": "feature",
+              "left_weight": 1,
+              "right_weight": 1,
+              "contribution": 0.9
+            }
+          ]
+        },
+        {
+          "term": "tarot_sun",
+          "vocabulary": "symbol",
+          "score": 0.3558299974,
+          "norms": [
+            1.9672315573,
+            1
+          ],
+          "shared_facets": [
+            {
+              "facet": "sun",
+              "left": 0.7,
+              "right": 1,
+              "left_class": "feature",
+              "right_class": "feature",
+              "left_weight": 1,
+              "right_weight": 1,
+              "contribution": 0.7
+            }
+          ]
+        },
+        {
           "term": "metal_silver",
           "vocabulary": "symbol",
           "score": 0.3234983196,
@@ -2516,79 +2579,6 @@
               "left_weight": 1,
               "right_weight": 1,
               "contribution": 0.9
-            }
-          ]
-        },
-        {
-          "term": "metal_gold",
-          "vocabulary": "symbol",
-          "score": 0.2516098041,
-          "norms": [
-            1.9672315573,
-            1.4142135624
-          ],
-          "shared_facets": [
-            {
-              "facet": "sun",
-              "left": 0.7,
-              "right": 1,
-              "left_class": "feature",
-              "right_class": "feature",
-              "left_weight": 1,
-              "right_weight": 1,
-              "contribution": 0.7
-            }
-          ]
-        },
-        {
-          "term": "sign_leo",
-          "vocabulary": "symbol",
-          "score": 0.2054385448,
-          "norms": [
-            1.9672315573,
-            1.7320508076
-          ],
-          "shared_facets": [
-            {
-              "facet": "sun",
-              "left": 0.7,
-              "right": 1,
-              "left_class": "feature",
-              "right_class": "feature",
-              "left_weight": 1,
-              "right_weight": 1,
-              "contribution": 0.7
-            }
-          ]
-        },
-        {
-          "term": "gothic",
-          "vocabulary": "style-vocabulary",
-          "score": 0.0961724649,
-          "norms": [
-            1.9672315573,
-            2.1142374512
-          ],
-          "shared_facets": [
-            {
-              "facet": "ornate",
-              "left": 0.4,
-              "right": 0.6,
-              "left_class": "axis",
-              "right_class": "axis",
-              "left_weight": 1,
-              "right_weight": 1,
-              "contribution": 0.24
-            },
-            {
-              "facet": "dark_celestial_motif",
-              "left": 0.4,
-              "right": 0.4,
-              "left_class": "feature",
-              "right_class": "feature",
-              "left_weight": 1,
-              "right_weight": 1,
-              "contribution": 0.16
             }
           ]
         }
@@ -3277,6 +3267,27 @@
       "norm": 1.4142135624,
       "neighbors": [
         {
+          "term": "tarot_sun",
+          "vocabulary": "symbol",
+          "score": 0.7071067812,
+          "norms": [
+            1.4142135624,
+            1
+          ],
+          "shared_facets": [
+            {
+              "facet": "sun",
+              "left": 1,
+              "right": 1,
+              "left_class": "feature",
+              "right_class": "feature",
+              "left_weight": 1,
+              "right_weight": 1,
+              "contribution": 1
+            }
+          ]
+        },
+        {
           "term": "element_earth",
           "vocabulary": "symbol",
           "score": 0.5,
@@ -3390,6 +3401,27 @@
       },
       "norm": 1.4142135624,
       "neighbors": [
+        {
+          "term": "tarot_moon",
+          "vocabulary": "symbol",
+          "score": 0.7071067812,
+          "norms": [
+            1.4142135624,
+            1
+          ],
+          "shared_facets": [
+            {
+              "facet": "moon",
+              "left": 1,
+              "right": 1,
+              "left_class": "feature",
+              "right_class": "feature",
+              "left_weight": 1,
+              "right_weight": 1,
+              "contribution": 1
+            }
+          ]
+        },
         {
           "term": "element_air",
           "vocabulary": "symbol",
@@ -4866,6 +4898,27 @@
       "norm": 1.7320508076,
       "neighbors": [
         {
+          "term": "tarot_moon",
+          "vocabulary": "symbol",
+          "score": 0.5773502692,
+          "norms": [
+            1.7320508076,
+            1
+          ],
+          "shared_facets": [
+            {
+              "facet": "moon",
+              "left": 1,
+              "right": 1,
+              "left_class": "feature",
+              "right_class": "feature",
+              "left_weight": 1,
+              "right_weight": 1,
+              "contribution": 1
+            }
+          ]
+        },
+        {
           "term": "element_water",
           "vocabulary": "symbol",
           "score": 0.4082482905,
@@ -4948,27 +5001,6 @@
               "contribution": 1
             }
           ]
-        },
-        {
-          "term": "sign_libra",
-          "vocabulary": "symbol",
-          "score": 0.3333333333,
-          "norms": [
-            1.7320508076,
-            1.7320508076
-          ],
-          "shared_facets": [
-            {
-              "facet": "cardinal",
-              "left": 1,
-              "right": 1,
-              "left_class": "feature",
-              "right_class": "feature",
-              "left_weight": 1,
-              "right_weight": 1,
-              "contribution": 1
-            }
-          ]
         }
       ]
     },
@@ -5008,6 +5040,27 @@
       },
       "norm": 1.7320508076,
       "neighbors": [
+        {
+          "term": "tarot_sun",
+          "vocabulary": "symbol",
+          "score": 0.5773502692,
+          "norms": [
+            1.7320508076,
+            1
+          ],
+          "shared_facets": [
+            {
+              "facet": "sun",
+              "left": 1,
+              "right": 1,
+              "left_class": "feature",
+              "right_class": "feature",
+              "left_weight": 1,
+              "right_weight": 1,
+              "contribution": 1
+            }
+          ]
+        },
         {
           "term": "element_fire",
           "vocabulary": "symbol",
@@ -5073,27 +5126,6 @@
         },
         {
           "term": "sign_aries",
-          "vocabulary": "symbol",
-          "score": 0.3333333333,
-          "norms": [
-            1.7320508076,
-            1.7320508076
-          ],
-          "shared_facets": [
-            {
-              "facet": "fire",
-              "left": 1,
-              "right": 1,
-              "left_class": "feature",
-              "right_class": "feature",
-              "left_weight": 1,
-              "right_weight": 1,
-              "contribution": 1
-            }
-          ]
-        },
-        {
-          "term": "sign_sagittarius",
           "vocabulary": "symbol",
           "score": 0.3333333333,
           "norms": [
@@ -6147,6 +6179,423 @@
       ]
     },
     {
+      "term": "tarot_fool",
+      "name": "the fool",
+      "vocabulary": "symbol",
+      "kind": "tarot_card",
+      "version": "0.1.0",
+      "updated": "2026-10-10",
+      "facet_count": 0,
+      "facets": {},
+      "norm": 0,
+      "neighbors": []
+    },
+    {
+      "term": "tarot_magician",
+      "name": "the magician",
+      "vocabulary": "symbol",
+      "kind": "tarot_card",
+      "version": "0.1.0",
+      "updated": "2026-10-10",
+      "facet_count": 0,
+      "facets": {},
+      "norm": 0,
+      "neighbors": []
+    },
+    {
+      "term": "tarot_high_priestess",
+      "name": "the high priestess",
+      "vocabulary": "symbol",
+      "kind": "tarot_card",
+      "version": "0.1.0",
+      "updated": "2026-10-10",
+      "facet_count": 0,
+      "facets": {},
+      "norm": 0,
+      "neighbors": []
+    },
+    {
+      "term": "tarot_empress",
+      "name": "the empress",
+      "vocabulary": "symbol",
+      "kind": "tarot_card",
+      "version": "0.1.0",
+      "updated": "2026-10-10",
+      "facet_count": 0,
+      "facets": {},
+      "norm": 0,
+      "neighbors": []
+    },
+    {
+      "term": "tarot_lovers",
+      "name": "the lovers",
+      "vocabulary": "symbol",
+      "kind": "tarot_card",
+      "version": "0.1.0",
+      "updated": "2026-10-10",
+      "facet_count": 0,
+      "facets": {},
+      "norm": 0,
+      "neighbors": []
+    },
+    {
+      "term": "tarot_chariot",
+      "name": "the chariot",
+      "vocabulary": "symbol",
+      "kind": "tarot_card",
+      "version": "0.1.0",
+      "updated": "2026-10-10",
+      "facet_count": 0,
+      "facets": {},
+      "norm": 0,
+      "neighbors": []
+    },
+    {
+      "term": "tarot_strength",
+      "name": "strength",
+      "vocabulary": "symbol",
+      "kind": "tarot_card",
+      "version": "0.1.0",
+      "updated": "2026-10-10",
+      "facet_count": 0,
+      "facets": {},
+      "norm": 0,
+      "neighbors": []
+    },
+    {
+      "term": "tarot_hermit",
+      "name": "the hermit",
+      "vocabulary": "symbol",
+      "kind": "tarot_card",
+      "version": "0.1.0",
+      "updated": "2026-10-10",
+      "facet_count": 0,
+      "facets": {},
+      "norm": 0,
+      "neighbors": []
+    },
+    {
+      "term": "tarot_wheel_of_fortune",
+      "name": "wheel of fortune",
+      "vocabulary": "symbol",
+      "kind": "tarot_card",
+      "version": "0.1.0",
+      "updated": "2026-10-10",
+      "facet_count": 0,
+      "facets": {},
+      "norm": 0,
+      "neighbors": []
+    },
+    {
+      "term": "tarot_justice",
+      "name": "justice",
+      "vocabulary": "symbol",
+      "kind": "tarot_card",
+      "version": "0.1.0",
+      "updated": "2026-10-10",
+      "facet_count": 0,
+      "facets": {},
+      "norm": 0,
+      "neighbors": []
+    },
+    {
+      "term": "tarot_hanged_man",
+      "name": "the hanged man",
+      "vocabulary": "symbol",
+      "kind": "tarot_card",
+      "version": "0.1.0",
+      "updated": "2026-10-10",
+      "facet_count": 0,
+      "facets": {},
+      "norm": 0,
+      "neighbors": []
+    },
+    {
+      "term": "tarot_death",
+      "name": "death",
+      "vocabulary": "symbol",
+      "kind": "tarot_card",
+      "version": "0.1.0",
+      "updated": "2026-10-10",
+      "facet_count": 0,
+      "facets": {},
+      "norm": 0,
+      "neighbors": []
+    },
+    {
+      "term": "tarot_temperance",
+      "name": "temperance",
+      "vocabulary": "symbol",
+      "kind": "tarot_card",
+      "version": "0.1.0",
+      "updated": "2026-10-10",
+      "facet_count": 0,
+      "facets": {},
+      "norm": 0,
+      "neighbors": []
+    },
+    {
+      "term": "tarot_devil",
+      "name": "the devil",
+      "vocabulary": "symbol",
+      "kind": "tarot_card",
+      "version": "0.1.0",
+      "updated": "2026-10-10",
+      "facet_count": 0,
+      "facets": {},
+      "norm": 0,
+      "neighbors": []
+    },
+    {
+      "term": "tarot_tower",
+      "name": "the tower",
+      "vocabulary": "symbol",
+      "kind": "tarot_card",
+      "version": "0.1.0",
+      "updated": "2026-10-10",
+      "facet_count": 0,
+      "facets": {},
+      "norm": 0,
+      "neighbors": []
+    },
+    {
+      "term": "tarot_star",
+      "name": "the star",
+      "vocabulary": "symbol",
+      "kind": "tarot_card",
+      "version": "0.1.0",
+      "updated": "2026-10-10",
+      "facet_count": 1,
+      "facets": {
+        "star": {
+          "raw": 1,
+          "class": "feature",
+          "weight": 1,
+          "sources": [
+            "motifs"
+          ]
+        }
+      },
+      "norm": 1,
+      "neighbors": [
+        {
+          "term": "celestial",
+          "vocabulary": "style-vocabulary",
+          "score": 0.5083285678,
+          "norms": [
+            1,
+            1.9672315573
+          ],
+          "shared_facets": [
+            {
+              "facet": "star",
+              "left": 1,
+              "right": 1,
+              "left_class": "feature",
+              "right_class": "feature",
+              "left_weight": 1,
+              "right_weight": 1,
+              "contribution": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "term": "tarot_moon",
+      "name": "the moon",
+      "vocabulary": "symbol",
+      "kind": "tarot_card",
+      "version": "0.1.0",
+      "updated": "2026-10-10",
+      "facet_count": 1,
+      "facets": {
+        "moon": {
+          "raw": 1,
+          "class": "feature",
+          "weight": 1,
+          "sources": [
+            "motifs"
+          ]
+        }
+      },
+      "norm": 1,
+      "neighbors": [
+        {
+          "term": "metal_silver",
+          "vocabulary": "symbol",
+          "score": 0.7071067812,
+          "norms": [
+            1,
+            1.4142135624
+          ],
+          "shared_facets": [
+            {
+              "facet": "moon",
+              "left": 1,
+              "right": 1,
+              "left_class": "feature",
+              "right_class": "feature",
+              "left_weight": 1,
+              "right_weight": 1,
+              "contribution": 1
+            }
+          ]
+        },
+        {
+          "term": "sign_cancer",
+          "vocabulary": "symbol",
+          "score": 0.5773502692,
+          "norms": [
+            1,
+            1.7320508076
+          ],
+          "shared_facets": [
+            {
+              "facet": "moon",
+              "left": 1,
+              "right": 1,
+              "left_class": "feature",
+              "right_class": "feature",
+              "left_weight": 1,
+              "right_weight": 1,
+              "contribution": 1
+            }
+          ]
+        },
+        {
+          "term": "celestial",
+          "vocabulary": "style-vocabulary",
+          "score": 0.457495711,
+          "norms": [
+            1,
+            1.9672315573
+          ],
+          "shared_facets": [
+            {
+              "facet": "moon",
+              "left": 1,
+              "right": 0.9,
+              "left_class": "feature",
+              "right_class": "feature",
+              "left_weight": 1,
+              "right_weight": 1,
+              "contribution": 0.9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "term": "tarot_sun",
+      "name": "the sun",
+      "vocabulary": "symbol",
+      "kind": "tarot_card",
+      "version": "0.1.0",
+      "updated": "2026-10-10",
+      "facet_count": 1,
+      "facets": {
+        "sun": {
+          "raw": 1,
+          "class": "feature",
+          "weight": 1,
+          "sources": [
+            "motifs"
+          ]
+        }
+      },
+      "norm": 1,
+      "neighbors": [
+        {
+          "term": "metal_gold",
+          "vocabulary": "symbol",
+          "score": 0.7071067812,
+          "norms": [
+            1,
+            1.4142135624
+          ],
+          "shared_facets": [
+            {
+              "facet": "sun",
+              "left": 1,
+              "right": 1,
+              "left_class": "feature",
+              "right_class": "feature",
+              "left_weight": 1,
+              "right_weight": 1,
+              "contribution": 1
+            }
+          ]
+        },
+        {
+          "term": "sign_leo",
+          "vocabulary": "symbol",
+          "score": 0.5773502692,
+          "norms": [
+            1,
+            1.7320508076
+          ],
+          "shared_facets": [
+            {
+              "facet": "sun",
+              "left": 1,
+              "right": 1,
+              "left_class": "feature",
+              "right_class": "feature",
+              "left_weight": 1,
+              "right_weight": 1,
+              "contribution": 1
+            }
+          ]
+        },
+        {
+          "term": "celestial",
+          "vocabulary": "style-vocabulary",
+          "score": 0.3558299974,
+          "norms": [
+            1,
+            1.9672315573
+          ],
+          "shared_facets": [
+            {
+              "facet": "sun",
+              "left": 1,
+              "right": 0.7,
+              "left_class": "feature",
+              "right_class": "feature",
+              "left_weight": 1,
+              "right_weight": 1,
+              "contribution": 0.7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "term": "tarot_judgement",
+      "name": "judgement",
+      "vocabulary": "symbol",
+      "kind": "tarot_card",
+      "version": "0.1.0",
+      "updated": "2026-10-10",
+      "facet_count": 0,
+      "facets": {},
+      "norm": 0,
+      "neighbors": []
+    },
+    {
+      "term": "tarot_world",
+      "name": "the world",
+      "vocabulary": "symbol",
+      "kind": "tarot_card",
+      "version": "0.1.0",
+      "updated": "2026-10-10",
+      "facet_count": 0,
+      "facets": {},
+      "norm": 0,
+      "neighbors": []
+    },
+    {
       "term": "everyday_wear",
       "name": "everyday wear",
       "vocabulary": "wear-context",
@@ -6317,23 +6766,30 @@
       "target": "art_deco",
       "status": "drift",
       "target_score": 0.0517411242,
-      "rank": 12,
+      "rank": 15,
       "in_top_k": false,
       "computed_neighbors": [
+        "tarot_star",
+        "tarot_moon",
+        "tarot_sun",
         "metal_silver",
-        "sign_cancer",
-        "metal_gold",
-        "sign_leo",
-        "gothic"
+        "sign_cancer"
       ]
     },
     {
       "term": "celestial",
       "target": "gothic",
-      "status": "confirmed",
+      "status": "drift",
       "target_score": 0.0961724649,
-      "rank": 5,
-      "in_top_k": true
+      "rank": 8,
+      "in_top_k": false,
+      "computed_neighbors": [
+        "tarot_star",
+        "tarot_moon",
+        "tarot_sun",
+        "metal_silver",
+        "sign_cancer"
+      ]
     },
     {
       "term": "gothic",
@@ -6361,24 +6817,41 @@
     }
   ],
   "summary": {
-    "term_count": 41,
+    "term_count": 61,
     "by_vocabulary": {
       "style-vocabulary": 13,
-      "symbol": 24,
+      "symbol": 44,
       "wear-context": 4
     },
-    "neighbor_edge_count": 162,
-    "scored_pair_count": 117,
+    "neighbor_edge_count": 171,
+    "scored_pair_count": 124,
     "empty_neighborhoods": [
       "metal_platinum",
+      "tarot_fool",
+      "tarot_magician",
+      "tarot_high_priestess",
+      "tarot_empress",
+      "tarot_lovers",
+      "tarot_chariot",
+      "tarot_strength",
+      "tarot_hermit",
+      "tarot_wheel_of_fortune",
+      "tarot_justice",
+      "tarot_hanged_man",
+      "tarot_death",
+      "tarot_temperance",
+      "tarot_devil",
+      "tarot_tower",
+      "tarot_judgement",
+      "tarot_world",
       "everyday_wear",
       "stacks",
       "special_occasion",
       "ceremony_commitment"
     ],
     "confusable_edge_count": 19,
-    "confusable_confirmed": 17,
-    "confusable_drift": 2,
+    "confusable_confirmed": 16,
+    "confusable_drift": 3,
     "confusable_unknown_targets": 0,
     "top_k": 5,
     "min_score": 0

@@ -1,8 +1,8 @@
 {
   "schema": "affinity-map-config-v1",
-  "version": "0.1.0",
-  "updated": "2026-10-06",
-  "description": "scoring configuration for the structural affinity table. every weight and every facet crosswalk choice lives here, never in a code constant and never in a model. changing any value in this file is a versioned config change and changes the output hash.",
+  "version": "0.2.0",
+  "updated": "2026-10-10",
+  "description": "scoring configuration for the structural affinity table. every weight and every facet crosswalk choice lives here, never in a code constant and never in a model. changing any value in this file is a versioned config change and changes the output hash. 2026-10-10: v0.2.0 adds the tarot_card facet crosswalk (owner-authorized tarot records; motifs-only, no pseudo-facets).",
   "inputs": [
     {
       "key": "style-vocabulary",
@@ -33,23 +33,68 @@
   },
   "facet_sources": {
     "style-vocabulary": [
-      { "field": "features", "class": "feature", "weight": 1.0 },
-      { "field": "axes", "class": "axis", "weight": 1.0 }
+      {
+        "field": "features",
+        "class": "feature",
+        "weight": 1.0
+      },
+      {
+        "field": "axes",
+        "class": "axis",
+        "weight": 1.0
+      }
     ],
     "metal_symbol": [
-      { "field": "symbol_id", "strip_prefix": "metal_", "class": "feature", "weight": 1.0 },
-      { "field": "planet", "class": "feature", "weight": 1.0 }
+      {
+        "field": "symbol_id",
+        "strip_prefix": "metal_",
+        "class": "feature",
+        "weight": 1.0
+      },
+      {
+        "field": "planet",
+        "class": "feature",
+        "weight": 1.0
+      }
     ],
     "element": [
-      { "field": "symbol_id", "strip_prefix": "element_", "class": "feature", "weight": 1.0 },
-      { "field": "metal_affinity", "class": "feature", "weight": 1.0 }
+      {
+        "field": "symbol_id",
+        "strip_prefix": "element_",
+        "class": "feature",
+        "weight": 1.0
+      },
+      {
+        "field": "metal_affinity",
+        "class": "feature",
+        "weight": 1.0
+      }
     ],
     "zodiac_sign": [
-      { "field": "element", "class": "feature", "weight": 1.0 },
-      { "field": "modality", "class": "feature", "weight": 1.0 },
-      { "field": "ruler", "class": "feature", "weight": 1.0 }
+      {
+        "field": "element",
+        "class": "feature",
+        "weight": 1.0
+      },
+      {
+        "field": "modality",
+        "class": "feature",
+        "weight": 1.0
+      },
+      {
+        "field": "ruler",
+        "class": "feature",
+        "weight": 1.0
+      }
     ],
-    "wear-context": []
+    "wear-context": [],
+    "tarot_card": [
+      {
+        "field": "motifs",
+        "class": "feature",
+        "weight": 1.0
+      }
+    ]
   },
   "notes": [
     "keys of facet_sources: the vocabulary field value for styles and wear contexts, the kind field for symbols. each entry says which record fields become facets, what class each facet lands in, and a per-field weight multiplier on top of the class weight.",

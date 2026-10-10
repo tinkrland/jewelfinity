@@ -2,8 +2,8 @@
   "schema": "corpus-simulated-runs-v1",
   "description": "per-profile simulated matching runs over the solimet-clean marketplace corpus. a listing passes when it matches a profile's seed phrases and at least one non-seed expected-top-k term's phrases. pass rate = passed / engaged.",
   "pinned_to": {
-    "table_input_hash": "53f3ea1b950c03764f817596672cc6052e906822f4d611f0cc97662cb34c9c3f",
-    "table_output_hash": "9ff0fe43f6e690a1802a29e58977ebf0b485608d95fcb7f6a86e3c702fb32ca5",
+    "table_input_hash": "bb5296f3ce4893777a4515493ddf089ebdbbb3079531724667d3900d2d050a51",
+    "table_output_hash": "a146ae0d18d08ae64fdb76dfce8c7a8bda9cfd9bbe24f283009e225e89fe1db6",
     "corpus_files": {
       "ebay-listings.jsonl": "63b27199aee0cb7f1e81fcdf15e97380a786a2600da96ac2d0859dbc5978c6e7",
       "etsy-listings.jsonl": "fcdbdc477dec0feea77a4deea6e8672760265ade3efe2f5815a2ae5c57d019d3"
@@ -275,7 +275,22 @@
       "pass_rate": 0,
       "expected_topk": [
         {
+          "term": "tarot_moon",
+          "detectable_in_titles": false,
+          "engaged_listings_matching": 0
+        },
+        {
+          "term": "tarot_star",
+          "detectable_in_titles": false,
+          "engaged_listings_matching": 0
+        },
+        {
           "term": "element_air",
+          "detectable_in_titles": false,
+          "engaged_listings_matching": 0
+        },
+        {
+          "term": "tarot_sun",
           "detectable_in_titles": false,
           "engaged_listings_matching": 0
         },
@@ -283,24 +298,43 @@
           "term": "sign_pisces",
           "detectable_in_titles": true,
           "engaged_listings_matching": 0
-        },
-        {
-          "term": "sign_scorpio",
-          "detectable_in_titles": true,
-          "engaged_listings_matching": 0
-        },
-        {
-          "term": "metal_gold",
-          "detectable_in_titles": false,
-          "engaged_listings_matching": 0
-        },
-        {
-          "term": "sign_leo",
-          "detectable_in_titles": true,
-          "engaged_listings_matching": 0
         }
       ],
       "unobserved_expected": [
+        {
+          "term": "tarot_moon",
+          "score": 0.625911902,
+          "detectable_in_titles": false,
+          "driven_by_facets": [
+            {
+              "seed": "metal_silver",
+              "facet": "moon",
+              "contribution": 1
+            },
+            {
+              "seed": "sign_cancer",
+              "facet": "moon",
+              "contribution": 1
+            },
+            {
+              "seed": "celestial",
+              "facet": "moon",
+              "contribution": 0.9
+            }
+          ]
+        },
+        {
+          "term": "tarot_star",
+          "score": 0.305347597,
+          "detectable_in_titles": false,
+          "driven_by_facets": [
+            {
+              "seed": "celestial",
+              "facet": "star",
+              "contribution": 1
+            }
+          ]
+        },
         {
           "term": "element_air",
           "score": 0.300344714,
@@ -319,32 +353,8 @@
           ]
         },
         {
-          "term": "sign_pisces",
-          "score": 0.20270714,
-          "detectable_in_titles": true,
-          "driven_by_facets": [
-            {
-              "seed": "element_water",
-              "facet": "water",
-              "contribution": 1
-            }
-          ]
-        },
-        {
-          "term": "sign_scorpio",
-          "score": 0.20270714,
-          "detectable_in_titles": true,
-          "driven_by_facets": [
-            {
-              "seed": "element_water",
-              "facet": "water",
-              "contribution": 1
-            }
-          ]
-        },
-        {
-          "term": "metal_gold",
-          "score": 0.151139349,
+          "term": "tarot_sun",
+          "score": 0.213743318,
           "detectable_in_titles": false,
           "driven_by_facets": [
             {
@@ -355,21 +365,21 @@
           ]
         },
         {
-          "term": "sign_leo",
-          "score": 0.123404762,
+          "term": "sign_pisces",
+          "score": 0.20270714,
           "detectable_in_titles": true,
           "driven_by_facets": [
             {
-              "seed": "celestial",
-              "facet": "sun",
-              "contribution": 0.7
+              "seed": "element_water",
+              "facet": "water",
+              "contribution": 1
             }
           ]
         }
       ],
       "notes": [
         "seeds without marketplace phrases (undetectable engagement): element_water",
-        "expected results without marketplace phrases (undetectable): element_air, metal_gold; a zero pass rate against them means not measurable yet, not engine-wrong"
+        "expected results without marketplace phrases (undetectable): tarot_moon, tarot_star, element_air, tarot_sun; a zero pass rate against them means not measurable yet, not engine-wrong"
       ]
     },
     {

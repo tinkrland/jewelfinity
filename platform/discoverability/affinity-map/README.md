@@ -153,3 +153,36 @@ package.json validate chain, live storage, or any other leg's branches.
 - no co-occurrence blending yet: the prior answers cold start; real counts
   arrive with signal volume.
 - nothing goes to live storage, and nothing touches the security leg.
+
+## tarot_card records (v0.2.1, 2026-10-10, owner-authorized option (a))
+
+20 evidenced major-arcana cards added as kind: tarot_card. emperor
+and hierophant deliberately absent: zero title evidence in 300 pooled
+segment titles (honest thinness). phrase policy is evidence-based,
+measured across every clean title in the repo: only six cards get
+bare-word phrases (fool, tower, hermit, temperance, hanged,
+judgement - zero off-tarot hits); the rest are phraseless by
+measured conflation (sun 64 / moon 188 / star 125 clean off-tarot
+titles = the celestial register; death/devil = gothic-occult
+register; bare-word phrases rejected same as bare 'silver').
+motifs only for the three luminous cards (sun/moon/star - the same
+glyph as celestial, so the adjacency is structural, not authored:
+tarot_moon -> celestial 0.626 is the strongest edge in the table
+and it is honest: a moon-card pendant is a moon pendant). the 17
+other cards carry empty facet vectors: phrase/detection structure
+and evidence anchors, not padded facets.
+
+table: 61 terms, 171 edges, 273 checks pass. celestial-dreamer's
+pinned top-5 now leads with tarot_moon 0.626, tarot_star 0.305 -
+the profile reads as "moon pendant buyer" through the tarot layer.
+sims unchanged (rates 0.0513 / 0 / 0 / 0.125): tarot phrases on
+unambiguous words engage nothing in the main corpus, and the
+luminous cards are phraseless, so the reshuffle stays structural.
+loader bug found and fixed: capture-level SUPPORTS_MAP short-
+circuited query-level mapping (OR instead of union), so the 5
+tarot runs in the symbol-segment capture initially linked
+celestial/signs but no cards; the union changes exactly those 5
+runs. SUPPORTS 465 -> 585, live-verified on falkordb (1521 stmts,
+all assertions pass). citations for card imagery/correspondences
+in querit-citations-2026-10-10/ (rider-waite deck tradition,
+golden dawn correspondences, kerykeion celestial symbols).

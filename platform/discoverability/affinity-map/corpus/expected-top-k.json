@@ -7,8 +7,8 @@
       "version": "0.1.0"
     },
     "table_schema": "affinity-table-v1",
-    "input_hash": "53f3ea1b950c03764f817596672cc6052e906822f4d611f0cc97662cb34c9c3f",
-    "output_hash": "9ff0fe43f6e690a1802a29e58977ebf0b485608d95fcb7f6a86e3c702fb32ca5"
+    "input_hash": "bb5296f3ce4893777a4515493ddf089ebdbbb3079531724667d3900d2d050a51",
+    "output_hash": "a146ae0d18d08ae64fdb76dfce8c7a8bda9cfd9bbe24f283009e225e89fe1db6"
   },
   "method": "latent similarity affinity matching: expected score = cosine between the profile's latent taste vector (sum of seed unit facet directions weighted by the profile's affinity weights) and each candidate term's facet vector. not pairwise semantic similarity to the seeds. candidates exclude the profile's own seeds; k = config scoring.top_k.",
   "profiles": [
@@ -75,24 +75,24 @@
       "file": "profile-003-celestial-dreamer.json",
       "expected_topk": [
         {
+          "term": "tarot_moon",
+          "score": 0.625911902
+        },
+        {
+          "term": "tarot_star",
+          "score": 0.305347597
+        },
+        {
           "term": "element_air",
           "score": 0.300344714
         },
         {
+          "term": "tarot_sun",
+          "score": 0.213743318
+        },
+        {
           "term": "sign_pisces",
           "score": 0.20270714
-        },
-        {
-          "term": "sign_scorpio",
-          "score": 0.20270714
-        },
-        {
-          "term": "metal_gold",
-          "score": 0.151139349
-        },
-        {
-          "term": "sign_leo",
-          "score": 0.123404762
         }
       ]
     },
