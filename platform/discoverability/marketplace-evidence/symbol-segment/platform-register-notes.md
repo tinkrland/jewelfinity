@@ -44,3 +44,16 @@ mass and resale marketplaces keyword their titles; DTC brands do not.
 - mercari us first two attempts failed on the wrong actor (mercari
   japan, piotrv1001) and a wrong field name (searchQueries -> keywords);
   the automation-lab us actor with {"keywords":[...]} works.
+
+
+## poshmark added (2026-10-10)
+
+poshmark joins the resale register: short keyworded titles, sign
+names in 83 clean zodiac titles, all twelve signs, card names in
+90 clean tarot titles, brand-forward ("dark zodiac gemini gold
+necklace"). its "alchemical symbols" query surfaces the
+occult/goth register (satanic, wiccan, sigil, vegvisir, runes,
+chemistry pendants) rather than the etsy DTC element niche -
+exactly one element title in 100. mercari us has no alchemical
+inventory at all (0 items on both queries). niche-symbol language
+is platform-local; the three-registers conclusion holds.

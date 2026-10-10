@@ -296,6 +296,132 @@
           "note": "81/100 solimet-clean"
         }
       ]
+    },
+    {
+      "name": "poshmark-mercari capture 2026-10-10",
+      "purpose": "extend full evidence battery to poshmark (symbol + wear queries) and mercari us (wear queries); poshmark via piotrv1001/poshmark-listings-scraper (searchUrls), mercari via getascraper/mercari-us-scraper (keyword)",
+      "runs": [
+        {
+          "query": "tarot necklace",
+          "platform": "poshmark",
+          "run_id": "oOGR9Ne7s7AMIA8hz",
+          "items": 100,
+          "sha256": "cb1a2ce2c722c871ca81c20615131dbb00680c23841965b1e2ebebd1be55afa4",
+          "note": "94/100 solimet-clean"
+        },
+        {
+          "query": "celestial jewelry",
+          "platform": "poshmark",
+          "run_id": "Dagx2UdkMP04AMXyl",
+          "items": 100,
+          "sha256": "c25920b6d372b4fb4778d126ae68c50be1de566aa2298656b7d9b4142666bf32",
+          "note": "67/100 solimet-clean"
+        },
+        {
+          "query": "stackable bangle",
+          "platform": "poshmark",
+          "run_id": "xCLn3EwhYvkhErSJd",
+          "items": 100,
+          "sha256": "a6c69e616ab0204b5f831403fe96586f464d55cd32bbde056cce65e4a32d16eb",
+          "note": "91/100 solimet-clean"
+        },
+        {
+          "query": "everyday necklace",
+          "platform": "poshmark",
+          "run_id": "6Zl5qFPfXeytBHtLi",
+          "items": 100,
+          "sha256": "f99a80c9a2af82c40ff776d721f9e3cb520268178cf40326473552e302402d25",
+          "note": "85/100 solimet-clean"
+        },
+        {
+          "query": "zodiac necklace",
+          "platform": "poshmark",
+          "run_id": "pKCdhAgm8er3iwtnt",
+          "items": 100,
+          "sha256": "1c8f3e0cfee78fac74d2fba605861d772d575efbac6e71b4fd361ad5349ad264",
+          "note": "90/100 solimet-clean"
+        },
+        {
+          "query": "anniversary band",
+          "platform": "poshmark",
+          "run_id": "Y5EY1BzNY8WhIs9er",
+          "items": 100,
+          "sha256": "9fd45b1acb956c0fa43c7670df747d924c82bc04278e3883172fc2b151024c19",
+          "note": "27/100 solimet-clean"
+        },
+        {
+          "query": "alchemy necklace",
+          "platform": "poshmark",
+          "run_id": "UmqbS7nAcHJcAX1WN",
+          "items": 100,
+          "sha256": "327f0196a316e0e6d64519982ff5d5c2e566504296a31c802b5bc18d14337b6e",
+          "note": "79/100 solimet-clean"
+        },
+        {
+          "query": "wedding band",
+          "platform": "poshmark",
+          "run_id": "QsogSQRuTKRU7X0hB",
+          "items": 100,
+          "sha256": "a7d1e9e394bf814cebb72511ef1214b10281a3465d874b76ab1f1204bcfb5941",
+          "note": "79/100 solimet-clean"
+        },
+        {
+          "query": "alchemical symbols necklace",
+          "platform": "poshmark",
+          "run_id": "kXrDyiMEbl8b0ZiWm",
+          "items": 100,
+          "sha256": "732c1cb76fd0f9b5ff04b4877cb1f1dec62b64cb08c67064798aabea735a9511",
+          "note": "98/100 solimet-clean"
+        },
+        {
+          "query": "everyday necklace",
+          "platform": "mercari",
+          "run_id": "NtRpd6h3cGJ0ZjEVw",
+          "items": 25,
+          "sha256": "691e4704783c83a197c3e550c9fc3b031bca8081590dad35d7d6695138ee1896",
+          "note": "19/25 solimet-clean"
+        },
+        {
+          "query": "anniversary band",
+          "platform": "mercari",
+          "run_id": "pUdgsciznzxpeMcx4",
+          "items": 25,
+          "sha256": "1dae7f7d1bbe8764290a4d7775d4e9536a4e4816df867dbd1b7eaa3f173cf115",
+          "note": "8/25 solimet-clean"
+        },
+        {
+          "query": "alchemy necklace",
+          "platform": "mercari",
+          "run_id": "KiJpQLW9zkW3HxIFF",
+          "items": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "note": "0/0 solimet-clean"
+        },
+        {
+          "query": "stackable bangle",
+          "platform": "mercari",
+          "run_id": "bk632MSZu8djiiUmJ",
+          "items": 25,
+          "sha256": "ed8b900f1e3828989393eb9d421b9c5b5e62ac526aeda0c814e35758ab115776",
+          "note": "23/25 solimet-clean"
+        },
+        {
+          "query": "wedding band",
+          "platform": "mercari",
+          "run_id": "Bg2ULcHku3Ug3p54M",
+          "items": 25,
+          "sha256": "be31e2d4ed99e21862db7be6f7213ddc5af8cad60b5154db118e41147be62c13",
+          "note": "21/25 solimet-clean"
+        },
+        {
+          "query": "alchemical symbols necklace",
+          "platform": "mercari",
+          "run_id": "NihVDSZXl29haLMr4",
+          "items": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "note": "0/0 solimet-clean"
+        }
+      ]
     }
   ],
   "method_notes": "ebay style assignment is deterministic title matching (a listing can match several styles). etsy rows carry their search query. solimet_title_check is a deterministic offline filter flagging stone/plastic terms in titles; false negatives possible (listing photos may show stones). apify free-plan dataset retention is 7 days; these files are the durable snapshot. the skonvirke and scandinavian-modern queries (2026-10-08 follow-up), and the balance pass over the remaining ten styles, are kept as raw listings under style_query organic_modern and are not folded into phrase-frequencies.jsonl, to avoid double-counting that style's bucket.",

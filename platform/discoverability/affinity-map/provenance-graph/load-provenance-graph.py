@@ -19,6 +19,14 @@ def cy(v):
 def props(d):
     return "{" + ", ".join(f"{k}: {cy(v)}" for k, v in sorted(d.items())) + "}"
 
+# runs that must NEVER support a term, even with items present:
+# failed pulls (products 0), empty runs (items 0), and captures
+# explicitly excluded by note (solisdivinitytarot sells tarot DECKS,
+# not jewelry - "excluded as evidence" in its own provenance note).
+NON_EVIDENCE = {
+    ("symbol-segment capture 2026-10-09", "solisdivinitytarot.com"),
+}
+
 # curated evidence->term support links. declared, not inferred.
 # (evidence key -> term ids) edit HERE when curation changes.
 SUPPORTS_MAP = {
@@ -109,6 +117,11 @@ def main():
             run_list = [capture]
         for run in run_list:
             if not isinstance(run, dict): continue
+            # a run with zero items is NOT evidence (e.g. mercari alchemy:
+            # 0 listings). record it as an Evidence node for transparency,
+            # but never let it SUPPORT a term. found 2026-10-10: a 0-item
+            # mercari run was SUPPORTS-ing element_* and metal_mercury.
+            zero_items = (run.get("items") == 0) or (run.get("products") == 0)
             ev_i += 1
             evid = f"ev-{ev_i:03d}"
             e = {"evidence_id": evid, "kind": "apify_run" if "run_id" in run else (run.get("source") or "unknown"),
@@ -116,7 +129,8 @@ def main():
                  "run_id": run.get("run_id"), "sha256": run.get("sha256"), "items": run.get("items"),
                  "note": run.get("note"), "capture": name}
             out.append(f"MERGE (e:Evidence {{evidence_id: {cy(evid)}}}) SET e += {props(e)}")
-            terms = SUPPORTS_MAP.get(name, []) or QUERY_TERM_MAP.get(run.get("query"), [])
+            non_evidence = (name, run.get("query") or run.get("store")) in NON_EVIDENCE
+            terms = [] if (zero_items or non_evidence) else (SUPPORTS_MAP.get(name, []) or QUERY_TERM_MAP.get(run.get("query"), []))
             for tid in terms:
                 out.append(f"MATCH (e:Evidence {{evidence_id: {cy(evid)}}}), (t:Term {{id: {cy(tid)}}}) "
                            f"MERGE (e)-[s:SUPPORTS]->(t) SET s += {props({'items': run.get('items'), 'note': (run.get('note') or '')[:120]})}")

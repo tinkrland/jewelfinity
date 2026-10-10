@@ -45,3 +45,14 @@ findings:
 corpus rows: one jsonl per query, solimet_title_check on every row,
 sha256 and run ids in provenance.json under
 "wear-symbol segment capture 2026-10-09".
+
+
+## cross-platform check (2026-10-10, see poshmark-mercari-battery-README.md)
+
+poshmark titles the wear phrases strongly (everyday 49, stack*
+97, wedding 91 in clean titles). mercari us does not title
+"everyday" at all (0 of 19 clean - description-matched) but does
+title stack* and wedding. the alchemical element niche is
+etsy-specific: poshmark's equivalent query is the occult register,
+mercari has none. wear-context evidence is now platform-general;
+element-name evidence stays platform-local.
