@@ -228,6 +228,12 @@
           "products": 12,
           "sha256": "544c0dc6132c90170125858f40b9c7c0e7965a43c5ebc9d7c54650adb412a68e",
           "note": "tarot decks not jewelry - excluded as evidence"
+        },
+        {
+          "source": "shopify products.json",
+          "store": "sabrinabi.com",
+          "products": 0,
+          "note": "failed pull: products.json 404s behind redirects; saved 404 page as sabrinabi-404.html, no evidence extracted"
         }
       ],
       "querit": [
