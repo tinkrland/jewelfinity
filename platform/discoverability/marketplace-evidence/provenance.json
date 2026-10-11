@@ -556,6 +556,54 @@
           "note": "actor returned 0 items on both attempts (7 runs total, all empty except zodiac probe). non-evidence."
         }
       ]
+    },
+    {
+      "name": "risk-register battery 2026-10-11",
+      "purpose": "measure the prospective phrase risks flagged by the 2026-10-10 cortex adversarial cross-check (tower/fool/hermit/temperance in souvenir, pun-engraving, marine, and fan registers) with real etsy+ebay captures, converting hypothetical risk into measured misfire rates; follow-up to cortex-crosscheck-report-2026-10-10.",
+      "runs": [
+        {
+          "query": "tower charm",
+          "platform": "etsy",
+          "run_id": "k4q7Y4EXC70qYLp7A",
+          "items": 64,
+          "sha256": "51c5489ab433deabf20d840d57208c5322017c2da86f6b293f8c6de104315908"
+        },
+        {
+          "query": "hermit crab charm",
+          "platform": "etsy",
+          "run_id": "TBaG9H23iuh5Kik7J",
+          "items": 64,
+          "sha256": null
+        },
+        {
+          "query": "nobody's fool",
+          "platform": "etsy",
+          "run_id": "HgGBiMDUdbIydJsof",
+          "items": 64,
+          "sha256": null
+        },
+        {
+          "query": "no judgement bracelet",
+          "platform": "etsy",
+          "run_id": "nzm3Rwbri7Y9KfolP",
+          "items": 64,
+          "sha256": null
+        },
+        {
+          "query": "temperance",
+          "platform": "etsy",
+          "run_id": "UvsV8STIQUaoXxxec",
+          "items": 64,
+          "sha256": "9a7901130cd8b232c35187135085d4302f7de8291ec283b9a484212ba71e1926"
+        },
+        {
+          "query": "tower charm",
+          "platform": "ebay",
+          "run_id": "KRafNRKH8bOdLWZsK",
+          "items": 100,
+          "sha256": "4eb3244eb109c3d2e2c95cb143e982812fec43993875edcc60c9619be894451a"
+        }
+      ]
     }
   ],
   "method_notes": "ebay style assignment is deterministic title matching (a listing can match several styles). etsy rows carry their search query. solimet_title_check is a deterministic offline filter flagging stone/plastic terms in titles; false negatives possible (listing photos may show stones). apify free-plan dataset retention is 7 days; these files are the durable snapshot. the skonvirke and scandinavian-modern queries (2026-10-08 follow-up), and the balance pass over the remaining ten styles, are kept as raw listings under style_query organic_modern and are not folded into phrase-frequencies.jsonl, to avoid double-counting that style's bucket.",
