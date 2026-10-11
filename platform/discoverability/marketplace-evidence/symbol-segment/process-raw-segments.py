@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""segment-solimet v1: process raw segment captures into solimet-checked
+"""segment-solimet v2 (v1 + non-jewelry media words): process raw segment captures into solimet-checked
 jsonl for the segment-inclusive sim corpus.
 
 the raw .json captures (apify/actor dumps) predate the processed jsonl
@@ -30,6 +30,14 @@ STONE = ["diamond", "diamonds", "cz", "cubic zirconia", "zircon", "zirconia",
     "carnelian", "jasper", "amber", "stone", "stones", "gem", "gems"]
 PLASTIC = ["resin", "acrylic", "plastic", "polymer", "clay"]
 NON_JEWELRY = ["t-shirt", "tee shirt", "shoe charm", "gift card", "sticker",
+    # segment-solimet-v2 (2026-10-11): non-jewelry MEDIA register, added after
+    # the risk-register measurement showed posters/prints/props pass the v1
+    # metal-only filter (cortex-crosscheck-report-2026-10-11-measured.md).
+    # collision-tested against the entire existing corpus first: these five
+    # words flag ZERO existing clean titles (no paw-print charms, no book
+    # chains in corpus). bookmark deliberately NOT added: metal bookmark
+    # charms are legit accessories and there is no measured evidence for it.
+    "poster", "print", "prop", "canvas", "book",
     "ring box"]
 PATS = [re.compile(r"\b" + re.escape(t) + r"\b", re.I)
         for t in STONE + PLASTIC + NON_JEWELRY]
@@ -85,7 +93,7 @@ def main():
             out.append({
                 "source": platform, "query": query, "run_id": rid,
                 "title": t, "solimet_title_check": solimet_check(t),
-                "filter": "segment-solimet-v1", "raw_sha256_12": sha,
+                "filter": "segment-solimet-v2", "raw_sha256_12": sha,
             })
         dest = os.path.join(HERE, fn.replace(".json", ".solimet.jsonl"))
         with open(dest, "w") as f:
@@ -107,7 +115,7 @@ def main():
             out.append({
                 "source": platform, "query": query, "run_id": None,
                 "title": t, "solimet_title_check": solimet_check(t),
-                "filter": "segment-solimet-v1",
+                "filter": "segment-solimet-v2",
             })
         dest = os.path.join(HERE, fn.replace(".json", ".solimet.jsonl"))
         with open(dest, "w") as f:
