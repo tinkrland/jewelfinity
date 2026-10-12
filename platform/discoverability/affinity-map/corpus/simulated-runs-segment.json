@@ -523,6 +523,90 @@
         }
       ],
       "notes": []
+    },
+    {
+      "profile_id": "profile-005-zodiac-buyer",
+      "profile_version": "0.1.0",
+      "status": "draft",
+      "seeds": [
+        "sign_libra",
+        "metal_gold"
+      ],
+      "detectable_seeds": [
+        "sign_libra"
+      ],
+      "engaged": 36,
+      "passed": 3,
+      "pass_rate": 0.0833,
+      "expected_topk": [
+        {
+          "term": "element_air",
+          "detectable_in_titles": false,
+          "engaged_listings_matching": 0
+        },
+        {
+          "term": "metal_copper",
+          "detectable_in_titles": false,
+          "engaged_listings_matching": 0
+        },
+        {
+          "term": "tarot_sun",
+          "detectable_in_titles": false,
+          "engaged_listings_matching": 0
+        },
+        {
+          "term": "sign_aquarius",
+          "detectable_in_titles": true,
+          "engaged_listings_matching": 3
+        },
+        {
+          "term": "sign_aries",
+          "detectable_in_titles": true,
+          "engaged_listings_matching": 1
+        }
+      ],
+      "unobserved_expected": [
+        {
+          "term": "element_air",
+          "score": 0.365148372,
+          "detectable_in_titles": false,
+          "driven_by_facets": [
+            {
+              "seed": "sign_libra",
+              "facet": "air",
+              "contribution": 1
+            }
+          ]
+        },
+        {
+          "term": "metal_copper",
+          "score": 0.365148372,
+          "detectable_in_titles": false,
+          "driven_by_facets": [
+            {
+              "seed": "sign_libra",
+              "facet": "venus",
+              "contribution": 1
+            }
+          ]
+        },
+        {
+          "term": "tarot_sun",
+          "score": 0.316227766,
+          "detectable_in_titles": false,
+          "driven_by_facets": [
+            {
+              "seed": "metal_gold",
+              "facet": "sun",
+              "contribution": 1
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "seeds without marketplace phrases (undetectable engagement): metal_gold",
+        "expected results without marketplace phrases (undetectable): element_air, metal_copper, tarot_sun; a zero pass rate against them means not measurable yet, not engine-wrong"
+      ]
     }
   ]
 }

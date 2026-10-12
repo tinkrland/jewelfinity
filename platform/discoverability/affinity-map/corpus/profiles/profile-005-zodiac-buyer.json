@@ -1,0 +1,10 @@
+{
+  "schema": "affinity-corpus-profile-v1",
+  "profile_id": "profile-005-zodiac-buyer",
+  "version": "0.1.0",
+  "updated": "2026-10-12",
+  "status": "draft",
+  "persona": "libra zodiac buyer; buys their own sign as pendants and necklaces, gold-leaning",
+  "seeded_affinities": { "sign_libra": 1.0, "metal_gold": 0.5 },
+  "rationale": "the natural next eval step per corpus/README open items, now evidence-gated: the zodiac segments hold 235 clean titles across five platforms (etsy 71, ebay, mercari-us 90, poshmark, shein probe), 193 of which say 'zodiac'; every one of the 12 signs is present (libra 21, virgo 20, scorpio 16 ... taurus 7) and only 6/235 titles co-mention two signs - zodiac listings name ONE sign, which is the buyer shape this profile simulates. libra is the most prevalent sign and its titles are the necklace-pendant register (18/21 'necklace', 11 'pendant') with gold the leading metal word (8/21, silver 4) - hence metal_gold 0.5 as the secondary seed. what this profile exercises that the other four do not: a sign as PRIMARY identity, matching purely through facet geometry (element air, modality cardinal, ruler venus) - the structural table computes libra's neighbors as element_air, metal_copper (venus-ruled) and sign_aquarius (fellow air) with no title-level co-mention behind them; sign-to-sign affinity can only be tested this way because the corpus almost never co-titles signs. evidence: marketplace-evidence zodiac segments (all platforms), affinity-table.json sign_libra neighbors"
+}

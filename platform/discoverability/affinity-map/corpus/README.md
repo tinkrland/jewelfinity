@@ -149,8 +149,14 @@ graph loader.
 
 ## open items
 
-- a "zodiac buyer" profile (seeded on signs) is the natural next
-  eval step once evidence supports one; profiles stay evidence-gated
+- a "zodiac buyer" profile is DONE (profile-005-zodiac-buyer,
+  2026-10-12): evidence-gated on the 235-clean-title zodiac segments
+  (all 12 signs present, libra 21 most prevalent, only 6/235 titles
+  co-mention two signs). first sign-primary profile - matches purely
+  through facet geometry (element/modality/ruler), the only way
+  sign-to-sign affinity can be tested given the corpus almost never
+  co-titles signs. expected top-k: element_air, metal_copper (venus),
+  tarot_sun, sign_aquarius, sign_aries.
 - tarot_card records are DONE (v0.2.1, 2026-10-10)
 - more profiles only as evidence supports them; thin styles get honest
   thin representation, not padding

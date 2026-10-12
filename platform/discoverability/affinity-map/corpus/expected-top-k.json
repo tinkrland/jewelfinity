@@ -123,6 +123,34 @@
           "score": 0.092817138
         }
       ]
+    },
+    {
+      "profile_id": "profile-005-zodiac-buyer",
+      "profile_version": "0.1.0",
+      "status": "draft",
+      "file": "profile-005-zodiac-buyer.json",
+      "expected_topk": [
+        {
+          "term": "element_air",
+          "score": 0.365148372
+        },
+        {
+          "term": "metal_copper",
+          "score": 0.365148372
+        },
+        {
+          "term": "tarot_sun",
+          "score": 0.316227766
+        },
+        {
+          "term": "sign_aquarius",
+          "score": 0.298142397
+        },
+        {
+          "term": "sign_aries",
+          "score": 0.298142397
+        }
+      ]
     }
   ]
 }
