@@ -57,3 +57,43 @@ representing a sun), the awedeco deco-sunburst dealer article, and celestial
 corpus counts (sun 30/102 titles, sun moon co-listings 14/102). the edge
 celestial-art_deco flips to confirmed rank ~0.105; edwardian drops out of
 art_deco top-5 (side effect previously reviewed and accepted as a possibility).
+
+## 2026-10-12 re-measurement on the full corpus (for the yes/no reads)
+
+the 2026-10-08 table above was measured on 1,352 listings (852 ebay +
+500 etsy, pre-segment). the corpus now holds 3,372 solimet-clean titles
+across 16 files (main + symbol/wear segments + brand catalogs + risk
+registers). every candidate was re-measured two ways: total occurrences
+anywhere in the corpus, and co-titled (candidate AND style word in the
+same listing title - the apples-to-apples metric the original table
+used).
+
+| style | candidate | 10-08 (ebay) | now: anywhere | now: co-titled | corroboration |
+|---|---|---|---|---|---|
+| art_deco | filigree | 12 | 40 | 12 | ebay, etsy, aweinspired, tarot/zodiac segs |
+| retro | bow | 7 | 13 | 9 | ebay, etsy, evryjewels |
+| celestial | crescent moon | 23 | 35 | 30 | 8 files incl. zodiac+tarot segments |
+| celestial | moon star | 20 | 40 | 35 | 7 files incl. shein+mercari |
+| celestial | sun moon | 14 | 29 | 17 | 8 files incl. arcana+tarot segments |
+| mid_century_modernist | mcm | 19 | 30 | 24 | ebay, etsy (same two files as 10-08) |
+| victorian | victorian mourning | 4 | 19 | 12 | ebay, etsy, aweinspired, celestial seg |
+| biker | stainless steel | 51 | 169 | 59 | everywhere (generic material language) |
+| gothic | gothic biker | 27 | 33 | 33 | ebay, etsy, celestial seg |
+
+what the re-measurement changes:
+- every candidate HOLDS or grows. the three celestial phrases are now
+  corroborated in 7-8 files including the zodiac and tarot segments -
+  the strongest cross-platform case on the table.
+- "victorian mourning" grew 4 -> 19 (12 co-titled) - stronger than the
+  original cautious read, though the solimet caveat stands (mourning
+  jewelry is often hairwork/stone-set; the co-titled register here is
+  era-language usage).
+- "stainless steel" at 169 total confirms it is generic material
+  language, not style-discriminative - the original "already implied
+  by metal facets" read is reinforced.
+- "mcm" is confirmed ebay+etsy only; no segment corroborates it. the
+  alias candidate stands but on the same two-file base as before.
+- the organic_modern skonvirke notes amendment from this file HAS
+  landed (verified in style-vocabulary.jsonl) - off the queue.
+
+nothing here is merged; all candidates remain for owner yes/no reads.
