@@ -6,6 +6,20 @@ and wear-symbol-segment/ with poshmark-/mercari- prefixes, run ids
 and sha256 in ../provenance.json under "poshmark-mercari capture
 2026-10-10".
 
+RECOVERY + CONSOLIDATION (2026-10-12): the poshmark raw captures were
+re-fetched from the apify datasets (all 9 runs still live, 100 items
+each, run ids unchanged) and committed as raw .json alongside v3-gated
+.solimet.jsonl outputs; the earlier v1 .jsonl processed rows are
+superseded and removed. the original per-run sha256 form is not
+reproducible from a dataset re-fetch (re-serialization); verification =
+run-id identity + item counts + clean-count calibration within the
+recorded inline variance, plus new file hashes in provenance.json.
+clean counts moved under the v3 gate (recorded inline -> v3): tarot
+94 -> 92, celestial 67 -> 66, zodiac 90 -> 90, everyday 85 -> 80,
+stackable 91 -> 85, wedding 79 -> 73, anniversary 27 -> 17 (moissanite),
+alchemy 79 -> 79, alchemical 98 -> 98. the committed gate is the single
+source of truth.
+
 ## poshmark (9 queries, 100 items each)
 
 - symbol register: zodiac 90/100 clean, sign names in 83 clean

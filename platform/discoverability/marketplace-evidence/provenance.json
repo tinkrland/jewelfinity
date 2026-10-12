@@ -1,628 +1,644 @@
 {
-  "captured": "2026-10-08",
-  "purpose": "marketplace listing-language evidence for the style vocabularies and confusable_with edges. evidence only: nothing here authors vocabulary content without review",
-  "runs": [
+ "captured": "2026-10-08",
+ "purpose": "marketplace listing-language evidence for the style vocabularies and confusable_with edges. evidence only: nothing here authors vocabulary content without review",
+ "runs": [
+  {
+   "platform": "ebay",
+   "actor": "automation-lab/ebay-scraper",
+   "run_id": "OL5BTOSiu8QiiMBjo",
+   "dataset_id": "RNpqbPNkbxei1KRFa",
+   "items": 852,
+   "queries": [
+    "georgian jewelry",
+    "victorian jewelry",
+    "art nouveau jewelry",
+    "edwardian jewelry",
+    "art deco jewelry",
+    "retro 1940s jewelry",
+    "mid century modern jewelry",
+    "brutalist jewelry",
+    "organic modern jewelry",
+    "celestial jewelry",
+    "gothic jewelry",
+    "biker jewelry",
+    "egyptian revival jewelry"
+   ],
+   "exclusions": "-diamond -gemstone -sapphire -ruby -emerald -pearl -opal -amethyst -stone -bakelite -lucite -plastic -resin -crystal"
+  },
+  {
+   "platform": "etsy",
+   "actor": "automation-lab/etsy-scraper",
+   "items": 1500,
+   "runs": [
     {
-      "platform": "ebay",
-      "actor": "automation-lab/ebay-scraper",
-      "run_id": "OL5BTOSiu8QiiMBjo",
-      "dataset_id": "RNpqbPNkbxei1KRFa",
-      "items": 852,
-      "queries": [
-        "georgian jewelry",
-        "victorian jewelry",
-        "art nouveau jewelry",
-        "edwardian jewelry",
-        "art deco jewelry",
-        "retro 1940s jewelry",
-        "mid century modern jewelry",
-        "brutalist jewelry",
-        "organic modern jewelry",
-        "celestial jewelry",
-        "gothic jewelry",
-        "biker jewelry",
-        "egyptian revival jewelry"
-      ],
-      "exclusions": "-diamond -gemstone -sapphire -ruby -emerald -pearl -opal -amethyst -stone -bakelite -lucite -plastic -resin -crystal"
+     "query": "brutalist jewelry",
+     "run_id": "WremJcxSDq7NNPQdN"
     },
     {
-      "platform": "etsy",
-      "actor": "automation-lab/etsy-scraper",
-      "items": 1500,
-      "runs": [
-        {
-          "query": "brutalist jewelry",
-          "run_id": "WremJcxSDq7NNPQdN"
-        },
-        {
-          "query": "organic modern jewelry",
-          "run_id": "75fUSuU1nOruf4r7Q"
-        },
-        {
-          "query": "egyptian revival jewelry",
-          "run_id": "NlMk17klLsJ9AQ3xD"
-        },
-        {
-          "query": "skonvirke jewelry",
-          "run_id": "vrwweozPhnz5ehXfk"
-        },
-        {
-          "query": "scandinavian modern jewelry",
-          "run_id": "8AVThCBBSoijw3NLS"
-        },
-        {
-          "query": "georgian era jewelry",
-          "run_id": "wjORe71jJLuXAhHlC",
-          "note": "plain 'georgian jewelry' returned zero items on etsy; 'georgian era jewelry' used"
-        },
-        {
-          "query": "victorian jewelry",
-          "run_id": "ZDTqIuHxC0Gk9m3Ql",
-          "note": null
-        },
-        {
-          "query": "art nouveau jewelry",
-          "run_id": "oanH5wk9llTDtH3Ww",
-          "note": null
-        },
-        {
-          "query": "edwardian jewelry",
-          "run_id": "H0qI3XxLFEBWt7SZp",
-          "note": null
-        },
-        {
-          "query": "art deco jewelry",
-          "run_id": "4hyHnBJuCCiljaRJ5",
-          "note": null
-        },
-        {
-          "query": "retro 40s jewelry",
-          "run_id": "QM0Se6JHJeQbiI9y1",
-          "note": null
-        },
-        {
-          "query": "mid century modern jewelry",
-          "run_id": "S53SEaalwJzzqfzJf",
-          "note": null
-        },
-        {
-          "query": "celestial jewelry",
-          "run_id": "yXttahULeQWp7hQCB",
-          "note": null
-        },
-        {
-          "query": "gothic jewelry",
-          "run_id": "OhgEIPTem8lS5Fwni",
-          "note": null
-        },
-        {
-          "query": "biker jewelry",
-          "run_id": "1PPY1CE7nTUwQIiVp",
-          "note": null
-        }
-      ]
+     "query": "organic modern jewelry",
+     "run_id": "75fUSuU1nOruf4r7Q"
     },
     {
-      "name": "drift-edge co-occurrence probes 2026-10-09",
-      "purpose": "test whether the two remaining drift edges (celestial->art_deco, retro->mid_century_modernist) are real marketplace crossovers, per the celestial->gothic precedent",
-      "runs": [
-        {
-          "query": "art deco celestial jewelry",
-          "platform": "etsy",
-          "run_id": "v8j0gsCzxSXrVZudC",
-          "items": 100
-        },
-        {
-          "query": "art deco celestial jewelry",
-          "platform": "ebay",
-          "run_id": "hyw7ikDchIZajyFm3",
-          "items": 100
-        },
-        {
-          "query": "retro mid century jewelry",
-          "platform": "ebay",
-          "run_id": "abiMX0CnL3oDNcTfK",
-          "items": 100
-        }
-      ],
-      "method_note": "co-titling rates are biased upward by query echo (sellers keyword-stuff search terms into titles); the evidence that counts is specific crossover exemplars, named in the probe README. also 6 querit search-API passes saved under querit-2026-10-09/ with search_ids in each file."
+     "query": "egyptian revival jewelry",
+     "run_id": "NlMk17klLsJ9AQ3xD"
     },
     {
-      "name": "symbol-segment capture 2026-10-09",
-      "purpose": "symbol marketplace phrase evidence: zodiac signs, tarot, celestial objects, white gold",
-      "runs": [
-        {
-          "query": "zodiac necklace",
-          "platform": "etsy",
-          "run_id": "5rW00Wz1q2pKgGV7c",
-          "items": 100,
-          "note": "71% solimet-clean, all 12 signs present"
-        },
-        {
-          "query": "zodiac jewelry",
-          "platform": "ebay",
-          "run_id": "F1w0ZIlLuZdg4mDDv",
-          "items": 100,
-          "note": "CORRECTION: not empty - 74/100 on-segment, but stone-heavy crystal-healing segment, outside solimet"
-        },
-        {
-          "query": "tarot jewelry",
-          "platform": "etsy",
-          "run_id": "PnyAYpCpTlw4GRS6P",
-          "items": 100,
-          "note": "94% solimet-clean; sun 20, moon 15, star 13 cards"
-        },
-        {
-          "query": "celestial jewelry",
-          "platform": "etsy",
-          "run_id": "qdjbTeYbKmrEo0IBC",
-          "items": 100,
-          "note": "41% solimet-clean, moonstone pollution"
-        },
-        {
-          "query": "white gold necklace",
-          "platform": "etsy",
-          "run_id": "XvGKHmBq4jOmhGMoq",
-          "items": 100,
-          "note": "white gold title language; 0 platinum"
-        },
-        {
-          "query": "major arcana necklace",
-          "platform": "etsy",
-          "run_id": "X8wbkmJu9gYlEPoG9",
-          "items": 100,
-          "note": "99 clean; card counts pooled into proposal appendix"
-        },
-        {
-          "query": "tarot necklace",
-          "platform": "ebay",
-          "run_id": "lOH5pbAfUvInBB86y",
-          "items": 100,
-          "note": "98/100 on-segment, 89 clean - tarot lives on ebay"
-        },
-        {
-          "query": "tarot necklace",
-          "platform": "mercari-us",
-          "run_id": "101dhvACIUqVTiMXO",
-          "items": 100,
-          "note": "91/100 on-segment, 88 clean; resale register"
-        },
-        {
-          "query": "zodiac necklace",
-          "platform": "mercari-us",
-          "run_id": "iBMiM4UJm2l5kzgkJ",
-          "items": 100,
-          "note": "97/100 on-segment, 90 clean, all 12 signs"
-        },
-        {
-          "query": "tarot jewelry",
-          "platform": "shein",
-          "run_id": "RebJEMKIsN3xoJuNk",
-          "items": 100,
-          "note": "80/100 on-segment, 80 clean; SEO keyword-essay register"
-        },
-        {
-          "source": "shopify products.json",
-          "store": "evryjewels.com",
-          "products": 250,
-          "sha256": "952fabb365e68afe546e7d180656af3aa5e70a9eafb48bfe1cd59b9530f0b606",
-          "note": "DTC register: punny names, symbols not in titles"
-        },
-        {
-          "source": "shopify products.json",
-          "store": "aweinspired.com",
-          "products": 250,
-          "sha256": "b4c60145d5bf95e0a163258ea29a365850aa1a1834b335994c29c93b2f3e94a5",
-          "note": "celestial 23, moon 15, tarot 3 in title+tags"
-        },
-        {
-          "source": "shopify products.json",
-          "store": "caitlynminimalist.com",
-          "products": 250,
-          "sha256": "4ae0caecf9bf580f529fb032d740d9efc87ae1472ad26675e89e63cea19c309b",
-          "note": "symbol words largely out of titles; moonstone/diamond products outside solimet"
-        },
-        {
-          "source": "shopify products.json",
-          "store": "solisdivinitytarot.com",
-          "products": 12,
-          "sha256": "544c0dc6132c90170125858f40b9c7c0e7965a43c5ebc9d7c54650adb412a68e",
-          "note": "tarot decks not jewelry - excluded as evidence"
-        },
-        {
-          "source": "shopify products.json",
-          "store": "sabrinabi.com",
-          "products": 0,
-          "note": "failed pull: products.json 404s behind redirects; saved 404 page as sabrinabi-404.html, no evidence extracted"
-        }
-      ],
-      "querit": [
-        "tarot jewelry motifs (search_id 484506263637973405)",
-        "zodiac sign jewelry market (search_id 1824280908952667630)",
-        "tarot shopify stores (search_id 415468486036996252)"
-      ],
-      "output": "symbol-phrase-extension-proposal.md"
+     "query": "skonvirke jewelry",
+     "run_id": "vrwweozPhnz5ehXfk"
     },
     {
-      "name": "wear-symbol segment capture 2026-10-09",
-      "purpose": "wear-context and metal-symbol phrase evidence: everyday, stackable, wedding/anniversary, alchemical metals",
-      "runs": [
-        {
-          "query": "everyday necklace",
-          "platform": "etsy",
-          "run_id": "6491eagoznGlXW5IJ",
-          "items": 100,
-          "sha256": "6edd4f9555c1ce8c8bea37c9917b1431a61d96dbd6b854857e3272ae0ddf5687",
-          "note": "72/100 solimet-clean"
-        },
-        {
-          "query": "stackable bangle",
-          "platform": "etsy",
-          "run_id": "eD6b0Q07Jdf0bgjxa",
-          "items": 100,
-          "sha256": "3664fca80296dfa3319c4ebc37cc8030967b9ee8b9a0be60dfdf2f8e88b9fc2a",
-          "note": "82/100 solimet-clean"
-        },
-        {
-          "query": "wedding band",
-          "platform": "etsy",
-          "run_id": "e2GGvEgyPoAzpPWgZ",
-          "items": 100,
-          "sha256": "161ba5f110ec7311a3e8e997acafb4ed82df56588a214e7d4fb7242a07f4cd5e",
-          "note": "41/100 solimet-clean"
-        },
-        {
-          "query": "anniversary band",
-          "platform": "etsy",
-          "run_id": "khtzxsOv9NYNtukPc",
-          "items": 100,
-          "sha256": "a30e51e35f4d13b7560f08f2f62c479074a84ef8859823041c930e459733b959",
-          "note": "10/100 solimet-clean"
-        },
-        {
-          "query": "alchemy necklace",
-          "platform": "etsy",
-          "run_id": "lQlkN1OcfbwNGctH5",
-          "items": 100,
-          "sha256": "ec0f1e71f052a6f9493ca0f143155a9e6c6679f5acf644237e35e8cb05032016",
-          "note": "68/100 solimet-clean"
-        },
-        {
-          "query": "alchemical symbols necklace",
-          "platform": "etsy",
-          "run_id": "ps1pBzK0FRuxJhQNH",
-          "items": 100,
-          "sha256": "eea95b6014e61a05c66ce0aa2bc8327c378dcc827e90c332e1fce2dcbff35965",
-          "note": "81/100 solimet-clean"
-        }
-      ]
+     "query": "scandinavian modern jewelry",
+     "run_id": "8AVThCBBSoijw3NLS"
     },
     {
-      "name": "poshmark-mercari capture 2026-10-10",
-      "purpose": "extend full evidence battery to poshmark (symbol + wear queries) and mercari us (wear queries); poshmark via piotrv1001/poshmark-listings-scraper (searchUrls), mercari via getascraper/mercari-us-scraper (keyword)",
-      "runs": [
-        {
-          "query": "tarot necklace",
-          "platform": "poshmark",
-          "run_id": "oOGR9Ne7s7AMIA8hz",
-          "items": 100,
-          "sha256": "cb1a2ce2c722c871ca81c20615131dbb00680c23841965b1e2ebebd1be55afa4",
-          "note": "94/100 solimet-clean"
-        },
-        {
-          "query": "celestial jewelry",
-          "platform": "poshmark",
-          "run_id": "Dagx2UdkMP04AMXyl",
-          "items": 100,
-          "sha256": "c25920b6d372b4fb4778d126ae68c50be1de566aa2298656b7d9b4142666bf32",
-          "note": "67/100 solimet-clean"
-        },
-        {
-          "query": "stackable bangle",
-          "platform": "poshmark",
-          "run_id": "xCLn3EwhYvkhErSJd",
-          "items": 100,
-          "sha256": "a6c69e616ab0204b5f831403fe96586f464d55cd32bbde056cce65e4a32d16eb",
-          "note": "91/100 solimet-clean"
-        },
-        {
-          "query": "everyday necklace",
-          "platform": "poshmark",
-          "run_id": "6Zl5qFPfXeytBHtLi",
-          "items": 100,
-          "sha256": "f99a80c9a2af82c40ff776d721f9e3cb520268178cf40326473552e302402d25",
-          "note": "85/100 solimet-clean"
-        },
-        {
-          "query": "zodiac necklace",
-          "platform": "poshmark",
-          "run_id": "pKCdhAgm8er3iwtnt",
-          "items": 100,
-          "sha256": "1c8f3e0cfee78fac74d2fba605861d772d575efbac6e71b4fd361ad5349ad264",
-          "note": "90/100 solimet-clean"
-        },
-        {
-          "query": "anniversary band",
-          "platform": "poshmark",
-          "run_id": "Y5EY1BzNY8WhIs9er",
-          "items": 100,
-          "sha256": "9fd45b1acb956c0fa43c7670df747d924c82bc04278e3883172fc2b151024c19",
-          "note": "27/100 solimet-clean"
-        },
-        {
-          "query": "alchemy necklace",
-          "platform": "poshmark",
-          "run_id": "UmqbS7nAcHJcAX1WN",
-          "items": 100,
-          "sha256": "327f0196a316e0e6d64519982ff5d5c2e566504296a31c802b5bc18d14337b6e",
-          "note": "79/100 solimet-clean"
-        },
-        {
-          "query": "wedding band",
-          "platform": "poshmark",
-          "run_id": "QsogSQRuTKRU7X0hB",
-          "items": 100,
-          "sha256": "a7d1e9e394bf814cebb72511ef1214b10281a3465d874b76ab1f1204bcfb5941",
-          "note": "79/100 solimet-clean"
-        },
-        {
-          "query": "alchemical symbols necklace",
-          "platform": "poshmark",
-          "run_id": "kXrDyiMEbl8b0ZiWm",
-          "items": 100,
-          "sha256": "732c1cb76fd0f9b5ff04b4877cb1f1dec62b64cb08c67064798aabea735a9511",
-          "note": "98/100 solimet-clean"
-        },
-        {
-          "query": "everyday necklace",
-          "platform": "mercari",
-          "run_id": "NtRpd6h3cGJ0ZjEVw",
-          "items": 25,
-          "sha256": "691e4704783c83a197c3e550c9fc3b031bca8081590dad35d7d6695138ee1896",
-          "note": "19/25 solimet-clean"
-        },
-        {
-          "query": "anniversary band",
-          "platform": "mercari",
-          "run_id": "pUdgsciznzxpeMcx4",
-          "items": 25,
-          "sha256": "1dae7f7d1bbe8764290a4d7775d4e9536a4e4816df867dbd1b7eaa3f173cf115",
-          "note": "8/25 solimet-clean"
-        },
-        {
-          "query": "alchemy necklace",
-          "platform": "mercari",
-          "run_id": "KiJpQLW9zkW3HxIFF",
-          "items": 0,
-          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-          "note": "0/0 solimet-clean"
-        },
-        {
-          "query": "stackable bangle",
-          "platform": "mercari",
-          "run_id": "bk632MSZu8djiiUmJ",
-          "items": 25,
-          "sha256": "ed8b900f1e3828989393eb9d421b9c5b5e62ac526aeda0c814e35758ab115776",
-          "note": "23/25 solimet-clean"
-        },
-        {
-          "query": "wedding band",
-          "platform": "mercari",
-          "run_id": "Bg2ULcHku3Ug3p54M",
-          "items": 25,
-          "sha256": "be31e2d4ed99e21862db7be6f7213ddc5af8cad60b5154db118e41147be62c13",
-          "note": "21/25 solimet-clean"
-        },
-        {
-          "query": "alchemical symbols necklace",
-          "platform": "mercari",
-          "run_id": "NihVDSZXl29haLMr4",
-          "items": 0,
-          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-          "note": "0/0 solimet-clean"
-        }
-      ]
+     "query": "georgian era jewelry",
+     "run_id": "wjORe71jJLuXAhHlC",
+     "note": "plain 'georgian jewelry' returned zero items on etsy; 'georgian era jewelry' used"
     },
     {
-      "name": "ebay-shein-depop-etsy battery 2026-10-10",
-      "purpose": "close platform gaps: ebay wear-context set (8 queries), ceremony alternatives (eternity band, promise ring on etsy+ebay), depop probe (zodiac+everyday), shein zodiac; shein wear queries failed on all 7 attempts (actor returned 0 items, flaky/blocking) except the zodiac probe run which returned 100. etsy runs used sort most_relevant (sort=relevance is rejected by actor validation).",
-      "runs": [
-        {
-          "query": "everyday necklace",
-          "platform": "ebay",
-          "run_id": "hFf0YkynaWBbqDcTZ",
-          "items": 60,
-          "sha256": "22efd788e09ac471c47fe192d54ba3c66dd029c56ccaba8187727ce3a85dbc02",
-          "note": "43/60 solimet-clean"
-        },
-        {
-          "query": "stackable bangle",
-          "platform": "ebay",
-          "run_id": "1zQhYMhAmwOawX2Sy",
-          "items": 60,
-          "sha256": "f10f3f57b0263bcb7cca30f165477c9927bd2c513bfabfbaa3f220354b5764b2",
-          "note": "33/60 solimet-clean"
-        },
-        {
-          "query": "wedding band",
-          "platform": "ebay",
-          "run_id": "68CW876mMAutGkCK0",
-          "items": 60,
-          "sha256": "85823cdcba27b61db26f28f3e3bd5fadf0de66a50653a1cf33812dcbdf65c6c3",
-          "note": "23/60 solimet-clean"
-        },
-        {
-          "query": "anniversary band",
-          "platform": "ebay",
-          "run_id": "oZIFnh3Dh2LPwBiWe",
-          "items": 60,
-          "sha256": "dfd18ee298866e850090193fa20901122bb467a91d3cce2f2d646d6fb1f4a7b8",
-          "note": "12/60 solimet-clean"
-        },
-        {
-          "query": "eternity band",
-          "platform": "etsy",
-          "run_id": "2EbDJV2Fe1g6G7Jmc",
-          "items": 100,
-          "sha256": "575536a514f84e2b78184696a01fa2a5317ab3983ad35cce9da1c87e0b1f3e1c",
-          "note": "3/100 solimet-clean"
-        },
-        {
-          "query": "eternity band",
-          "platform": "ebay",
-          "run_id": "sT8m6hOJLdGTWByOc",
-          "items": 60,
-          "sha256": "4cac1aed1babebb5ebe7472a9ef9f07eaa5e6e55b280316011f9292a7210a3bf",
-          "note": "0/60 solimet-clean"
-        },
-        {
-          "query": "promise ring",
-          "platform": "etsy",
-          "run_id": "0Vzjuc28jXYz5ZA81",
-          "items": 100,
-          "sha256": "9bf987f3e9a196e4786832f9d4818f77c90381bde822393f483532cf1bc03d81",
-          "note": "26/100 solimet-clean"
-        },
-        {
-          "query": "promise ring",
-          "platform": "ebay",
-          "run_id": "9oX1L7NJFNNctTqX0",
-          "items": 60,
-          "sha256": "2c304bee8cf3bda04c03c78f462db52425ba860063e3e2295f41fb00c4a96cef",
-          "note": "29/60 solimet-clean"
-        },
-        {
-          "query": "zodiac necklace",
-          "platform": "depop",
-          "run_id": "CnyoxDQsRXIi1RzjJ",
-          "items": 100,
-          "sha256": "747922a6dd9279bdeebb892ff06f37beacbcb62d15f194b32675058818fa3c5f",
-          "note": "86/100 solimet-clean"
-        },
-        {
-          "query": "alchemy necklace",
-          "platform": "ebay",
-          "run_id": "wMv4K5OfiFiPY36VP",
-          "items": 60,
-          "sha256": "76c78ffe50355afe92cad354a540ed45241506e6d8db1e737f64eb3d06f6e769",
-          "note": "53/60 solimet-clean"
-        },
-        {
-          "query": "everyday necklace",
-          "platform": "depop",
-          "run_id": "uVnc0PfW1qhvTakll",
-          "items": 100,
-          "sha256": "8f96b7def29a8f44c17ff22d2e2c05367bf33b12422e985128e79042e84c0727",
-          "note": "84/100 solimet-clean"
-        },
-        {
-          "query": "alchemical symbols necklace",
-          "platform": "ebay",
-          "run_id": "vf0a0tyH5PxGhktl9",
-          "items": 76,
-          "sha256": "934c64baed98d1823cdbef3dae3ed59be8159bb07d178a2a35ff3e5367ab911e",
-          "note": "71/76 solimet-clean"
-        },
-        {
-          "query": "zodiac necklace",
-          "platform": "shein",
-          "run_id": "kjW7CTr9FAyOV3IDu",
-          "items": 100,
-          "sha256": "c3a1306b55dfe3e4b98b069b55f39f8ed703452d990a81480374ef7ffe7a7d57",
-          "note": "76/100 solimet-clean; probe-format input, actor ignores maxItems"
-        },
-        {
-          "query": "everyday necklace",
-          "platform": "shein",
-          "run_id": null,
-          "items": 0,
-          "sha256": null,
-          "note": "actor returned 0 items on both attempts (7 runs total, all empty except zodiac probe). non-evidence."
-        },
-        {
-          "query": "stackable bangle",
-          "platform": "shein",
-          "run_id": null,
-          "items": 0,
-          "sha256": null,
-          "note": "actor returned 0 items on both attempts (7 runs total, all empty except zodiac probe). non-evidence."
-        },
-        {
-          "query": "wedding band",
-          "platform": "shein",
-          "run_id": null,
-          "items": 0,
-          "sha256": null,
-          "note": "actor returned 0 items on both attempts (7 runs total, all empty except zodiac probe). non-evidence."
-        }
-      ]
+     "query": "victorian jewelry",
+     "run_id": "ZDTqIuHxC0Gk9m3Ql",
+     "note": null
     },
     {
-      "name": "risk-register battery 2026-10-11",
-      "purpose": "measure the prospective phrase risks flagged by the 2026-10-10 cortex adversarial cross-check (tower/fool/hermit/temperance in souvenir, pun-engraving, marine, and fan registers) with real etsy+ebay captures, converting hypothetical risk into measured misfire rates; follow-up to cortex-crosscheck-report-2026-10-10.",
-      "runs": [
-        {
-          "query": "tower charm",
-          "platform": "etsy",
-          "run_id": "k4q7Y4EXC70qYLp7A",
-          "items": 64,
-          "sha256": "51c5489ab433deabf20d840d57208c5322017c2da86f6b293f8c6de104315908"
-        },
-        {
-          "query": "hermit crab charm",
-          "platform": "etsy",
-          "run_id": "TBaG9H23iuh5Kik7J",
-          "items": 64,
-          "sha256": null
-        },
-        {
-          "query": "nobody's fool",
-          "platform": "etsy",
-          "run_id": "HgGBiMDUdbIydJsof",
-          "items": 64,
-          "sha256": null
-        },
-        {
-          "query": "no judgement bracelet",
-          "platform": "etsy",
-          "run_id": "nzm3Rwbri7Y9KfolP",
-          "items": 64,
-          "sha256": null
-        },
-        {
-          "query": "temperance",
-          "platform": "etsy",
-          "run_id": "UvsV8STIQUaoXxxec",
-          "items": 64,
-          "sha256": "9a7901130cd8b232c35187135085d4302f7de8291ec283b9a484212ba71e1926"
-        },
-        {
-          "query": "tower charm",
-          "platform": "ebay",
-          "run_id": "KRafNRKH8bOdLWZsK",
-          "items": 100,
-          "sha256": "4eb3244eb109c3d2e2c95cb143e982812fec43993875edcc60c9619be894451a"
-        }
-      ]
+     "query": "art nouveau jewelry",
+     "run_id": "oanH5wk9llTDtH3Ww",
+     "note": null
+    },
+    {
+     "query": "edwardian jewelry",
+     "run_id": "H0qI3XxLFEBWt7SZp",
+     "note": null
+    },
+    {
+     "query": "art deco jewelry",
+     "run_id": "4hyHnBJuCCiljaRJ5",
+     "note": null
+    },
+    {
+     "query": "retro 40s jewelry",
+     "run_id": "QM0Se6JHJeQbiI9y1",
+     "note": null
+    },
+    {
+     "query": "mid century modern jewelry",
+     "run_id": "S53SEaalwJzzqfzJf",
+     "note": null
+    },
+    {
+     "query": "celestial jewelry",
+     "run_id": "yXttahULeQWp7hQCB",
+     "note": null
+    },
+    {
+     "query": "gothic jewelry",
+     "run_id": "OhgEIPTem8lS5Fwni",
+     "note": null
+    },
+    {
+     "query": "biker jewelry",
+     "run_id": "1PPY1CE7nTUwQIiVp",
+     "note": null
     }
-  ],
-  "method_notes": "ebay style assignment is deterministic title matching (a listing can match several styles). etsy rows carry their search query. solimet_title_check is a deterministic offline filter flagging stone/plastic terms in titles; false negatives possible (listing photos may show stones). apify free-plan dataset retention is 7 days; these files are the durable snapshot. the skonvirke and scandinavian-modern queries (2026-10-08 follow-up), and the balance pass over the remaining ten styles, are kept as raw listings under style_query organic_modern and are not folded into phrase-frequencies.jsonl, to avoid double-counting that style's bucket.",
-  "files": {
-    "ebay-listings.jsonl": {
-      "rows": 852,
-      "sha256": "63b27199aee0cb7f1e81fcdf15e97380a786a2600da96ac2d0859dbc5978c6e7"
+   ]
+  },
+  {
+   "name": "drift-edge co-occurrence probes 2026-10-09",
+   "purpose": "test whether the two remaining drift edges (celestial->art_deco, retro->mid_century_modernist) are real marketplace crossovers, per the celestial->gothic precedent",
+   "runs": [
+    {
+     "query": "art deco celestial jewelry",
+     "platform": "etsy",
+     "run_id": "v8j0gsCzxSXrVZudC",
+     "items": 100
     },
-    "etsy-listings.jsonl": {
-      "rows": 1500,
-      "sha256": "fcdbdc477dec0feea77a4deea6e8672760265ade3efe2f5815a2ae5c57d019d3"
+    {
+     "query": "art deco celestial jewelry",
+     "platform": "ebay",
+     "run_id": "hyw7ikDchIZajyFm3",
+     "items": 100
     },
-    "phrase-frequencies.jsonl": {
-      "rows": 1226,
-      "sha256": "b12b736a928759d37a32ed7ed890a60a7b2524101d23bfca9fc1ae80b303dfd1"
-    },
-    "co-occurrence-probes/probes.jsonl": {
-      "rows": 300,
-      "sha256": "1d8abc97d3a1a9ed5e08ae8688c1c24f697091417ba80ab12ef61c53f3eef761"
+    {
+     "query": "retro mid century jewelry",
+     "platform": "ebay",
+     "run_id": "abiMX0CnL3oDNcTfK",
+     "items": 100
     }
+   ],
+   "method_note": "co-titling rates are biased upward by query echo (sellers keyword-stuff search terms into titles); the evidence that counts is specific crossover exemplars, named in the probe README. also 6 querit search-API passes saved under querit-2026-10-09/ with search_ids in each file."
+  },
+  {
+   "name": "symbol-segment capture 2026-10-09",
+   "purpose": "symbol marketplace phrase evidence: zodiac signs, tarot, celestial objects, white gold",
+   "runs": [
+    {
+     "query": "zodiac necklace",
+     "platform": "etsy",
+     "run_id": "5rW00Wz1q2pKgGV7c",
+     "items": 100,
+     "note": "71% solimet-clean, all 12 signs present"
+    },
+    {
+     "query": "zodiac jewelry",
+     "platform": "ebay",
+     "run_id": "F1w0ZIlLuZdg4mDDv",
+     "items": 100,
+     "note": "CORRECTION: not empty - 74/100 on-segment, but stone-heavy crystal-healing segment, outside solimet"
+    },
+    {
+     "query": "tarot jewelry",
+     "platform": "etsy",
+     "run_id": "PnyAYpCpTlw4GRS6P",
+     "items": 100,
+     "note": "94% solimet-clean; sun 20, moon 15, star 13 cards"
+    },
+    {
+     "query": "celestial jewelry",
+     "platform": "etsy",
+     "run_id": "qdjbTeYbKmrEo0IBC",
+     "items": 100,
+     "note": "41% solimet-clean, moonstone pollution"
+    },
+    {
+     "query": "white gold necklace",
+     "platform": "etsy",
+     "run_id": "XvGKHmBq4jOmhGMoq",
+     "items": 100,
+     "note": "white gold title language; 0 platinum"
+    },
+    {
+     "query": "major arcana necklace",
+     "platform": "etsy",
+     "run_id": "X8wbkmJu9gYlEPoG9",
+     "items": 100,
+     "note": "99 clean; card counts pooled into proposal appendix"
+    },
+    {
+     "query": "tarot necklace",
+     "platform": "ebay",
+     "run_id": "lOH5pbAfUvInBB86y",
+     "items": 100,
+     "note": "98/100 on-segment, 89 clean - tarot lives on ebay"
+    },
+    {
+     "query": "tarot necklace",
+     "platform": "mercari-us",
+     "run_id": "101dhvACIUqVTiMXO",
+     "items": 100,
+     "note": "91/100 on-segment, 88 clean; resale register"
+    },
+    {
+     "query": "zodiac necklace",
+     "platform": "mercari-us",
+     "run_id": "iBMiM4UJm2l5kzgkJ",
+     "items": 100,
+     "note": "97/100 on-segment, 90 clean, all 12 signs"
+    },
+    {
+     "query": "tarot jewelry",
+     "platform": "shein",
+     "run_id": "RebJEMKIsN3xoJuNk",
+     "items": 100,
+     "note": "80/100 on-segment, 80 clean; SEO keyword-essay register"
+    },
+    {
+     "source": "shopify products.json",
+     "store": "evryjewels.com",
+     "products": 250,
+     "sha256": "952fabb365e68afe546e7d180656af3aa5e70a9eafb48bfe1cd59b9530f0b606",
+     "note": "DTC register: punny names, symbols not in titles"
+    },
+    {
+     "source": "shopify products.json",
+     "store": "aweinspired.com",
+     "products": 250,
+     "sha256": "b4c60145d5bf95e0a163258ea29a365850aa1a1834b335994c29c93b2f3e94a5",
+     "note": "celestial 23, moon 15, tarot 3 in title+tags"
+    },
+    {
+     "source": "shopify products.json",
+     "store": "caitlynminimalist.com",
+     "products": 250,
+     "sha256": "4ae0caecf9bf580f529fb032d740d9efc87ae1472ad26675e89e63cea19c309b",
+     "note": "symbol words largely out of titles; moonstone/diamond products outside solimet"
+    },
+    {
+     "source": "shopify products.json",
+     "store": "solisdivinitytarot.com",
+     "products": 12,
+     "sha256": "544c0dc6132c90170125858f40b9c7c0e7965a43c5ebc9d7c54650adb412a68e",
+     "note": "tarot decks not jewelry - excluded as evidence"
+    },
+    {
+     "source": "shopify products.json",
+     "store": "sabrinabi.com",
+     "products": 0,
+     "note": "failed pull: products.json 404s behind redirects; saved 404 page as sabrinabi-404.html, no evidence extracted"
+    }
+   ],
+   "querit": [
+    "tarot jewelry motifs (search_id 484506263637973405)",
+    "zodiac sign jewelry market (search_id 1824280908952667630)",
+    "tarot shopify stores (search_id 415468486036996252)"
+   ],
+   "output": "symbol-phrase-extension-proposal.md"
+  },
+  {
+   "name": "wear-symbol segment capture 2026-10-09",
+   "purpose": "wear-context and metal-symbol phrase evidence: everyday, stackable, wedding/anniversary, alchemical metals",
+   "runs": [
+    {
+     "query": "everyday necklace",
+     "platform": "etsy",
+     "run_id": "6491eagoznGlXW5IJ",
+     "items": 100,
+     "sha256": "6edd4f9555c1ce8c8bea37c9917b1431a61d96dbd6b854857e3272ae0ddf5687",
+     "note": "72/100 solimet-clean"
+    },
+    {
+     "query": "stackable bangle",
+     "platform": "etsy",
+     "run_id": "eD6b0Q07Jdf0bgjxa",
+     "items": 100,
+     "sha256": "3664fca80296dfa3319c4ebc37cc8030967b9ee8b9a0be60dfdf2f8e88b9fc2a",
+     "note": "82/100 solimet-clean"
+    },
+    {
+     "query": "wedding band",
+     "platform": "etsy",
+     "run_id": "e2GGvEgyPoAzpPWgZ",
+     "items": 100,
+     "sha256": "161ba5f110ec7311a3e8e997acafb4ed82df56588a214e7d4fb7242a07f4cd5e",
+     "note": "41/100 solimet-clean"
+    },
+    {
+     "query": "anniversary band",
+     "platform": "etsy",
+     "run_id": "khtzxsOv9NYNtukPc",
+     "items": 100,
+     "sha256": "a30e51e35f4d13b7560f08f2f62c479074a84ef8859823041c930e459733b959",
+     "note": "10/100 solimet-clean"
+    },
+    {
+     "query": "alchemy necklace",
+     "platform": "etsy",
+     "run_id": "lQlkN1OcfbwNGctH5",
+     "items": 100,
+     "sha256": "ec0f1e71f052a6f9493ca0f143155a9e6c6679f5acf644237e35e8cb05032016",
+     "note": "68/100 solimet-clean"
+    },
+    {
+     "query": "alchemical symbols necklace",
+     "platform": "etsy",
+     "run_id": "ps1pBzK0FRuxJhQNH",
+     "items": 100,
+     "sha256": "eea95b6014e61a05c66ce0aa2bc8327c378dcc827e90c332e1fce2dcbff35965",
+     "note": "81/100 solimet-clean"
+    }
+   ]
+  },
+  {
+   "name": "poshmark-mercari capture 2026-10-10",
+   "purpose": "extend full evidence battery to poshmark (symbol + wear queries) and mercari us (wear queries); poshmark via piotrv1001/poshmark-listings-scraper (searchUrls), mercari via getascraper/mercari-us-scraper (keyword)",
+   "runs": [
+    {
+     "query": "tarot necklace",
+     "platform": "poshmark",
+     "run_id": "oOGR9Ne7s7AMIA8hz",
+     "items": 100,
+     "sha256": "cb1a2ce2c722c871ca81c20615131dbb00680c23841965b1e2ebebd1be55afa4",
+     "note": "94/100 solimet-clean"
+    },
+    {
+     "query": "celestial jewelry",
+     "platform": "poshmark",
+     "run_id": "Dagx2UdkMP04AMXyl",
+     "items": 100,
+     "sha256": "c25920b6d372b4fb4778d126ae68c50be1de566aa2298656b7d9b4142666bf32",
+     "note": "67/100 solimet-clean"
+    },
+    {
+     "query": "stackable bangle",
+     "platform": "poshmark",
+     "run_id": "xCLn3EwhYvkhErSJd",
+     "items": 100,
+     "sha256": "a6c69e616ab0204b5f831403fe96586f464d55cd32bbde056cce65e4a32d16eb",
+     "note": "91/100 solimet-clean"
+    },
+    {
+     "query": "everyday necklace",
+     "platform": "poshmark",
+     "run_id": "6Zl5qFPfXeytBHtLi",
+     "items": 100,
+     "sha256": "f99a80c9a2af82c40ff776d721f9e3cb520268178cf40326473552e302402d25",
+     "note": "85/100 solimet-clean"
+    },
+    {
+     "query": "zodiac necklace",
+     "platform": "poshmark",
+     "run_id": "pKCdhAgm8er3iwtnt",
+     "items": 100,
+     "sha256": "1c8f3e0cfee78fac74d2fba605861d772d575efbac6e71b4fd361ad5349ad264",
+     "note": "90/100 solimet-clean"
+    },
+    {
+     "query": "anniversary band",
+     "platform": "poshmark",
+     "run_id": "Y5EY1BzNY8WhIs9er",
+     "items": 100,
+     "sha256": "9fd45b1acb956c0fa43c7670df747d924c82bc04278e3883172fc2b151024c19",
+     "note": "27/100 solimet-clean"
+    },
+    {
+     "query": "alchemy necklace",
+     "platform": "poshmark",
+     "run_id": "UmqbS7nAcHJcAX1WN",
+     "items": 100,
+     "sha256": "327f0196a316e0e6d64519982ff5d5c2e566504296a31c802b5bc18d14337b6e",
+     "note": "79/100 solimet-clean"
+    },
+    {
+     "query": "wedding band",
+     "platform": "poshmark",
+     "run_id": "QsogSQRuTKRU7X0hB",
+     "items": 100,
+     "sha256": "a7d1e9e394bf814cebb72511ef1214b10281a3465d874b76ab1f1204bcfb5941",
+     "note": "79/100 solimet-clean"
+    },
+    {
+     "query": "alchemical symbols necklace",
+     "platform": "poshmark",
+     "run_id": "kXrDyiMEbl8b0ZiWm",
+     "items": 100,
+     "sha256": "732c1cb76fd0f9b5ff04b4877cb1f1dec62b64cb08c67064798aabea735a9511",
+     "note": "98/100 solimet-clean"
+    },
+    {
+     "query": "everyday necklace",
+     "platform": "mercari",
+     "run_id": "NtRpd6h3cGJ0ZjEVw",
+     "items": 25,
+     "sha256": "691e4704783c83a197c3e550c9fc3b031bca8081590dad35d7d6695138ee1896",
+     "note": "19/25 solimet-clean"
+    },
+    {
+     "query": "anniversary band",
+     "platform": "mercari",
+     "run_id": "pUdgsciznzxpeMcx4",
+     "items": 25,
+     "sha256": "1dae7f7d1bbe8764290a4d7775d4e9536a4e4816df867dbd1b7eaa3f173cf115",
+     "note": "8/25 solimet-clean"
+    },
+    {
+     "query": "alchemy necklace",
+     "platform": "mercari",
+     "run_id": "KiJpQLW9zkW3HxIFF",
+     "items": 0,
+     "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+     "note": "0/0 solimet-clean"
+    },
+    {
+     "query": "stackable bangle",
+     "platform": "mercari",
+     "run_id": "bk632MSZu8djiiUmJ",
+     "items": 25,
+     "sha256": "ed8b900f1e3828989393eb9d421b9c5b5e62ac526aeda0c814e35758ab115776",
+     "note": "23/25 solimet-clean"
+    },
+    {
+     "query": "wedding band",
+     "platform": "mercari",
+     "run_id": "Bg2ULcHku3Ug3p54M",
+     "items": 25,
+     "sha256": "be31e2d4ed99e21862db7be6f7213ddc5af8cad60b5154db118e41147be62c13",
+     "note": "21/25 solimet-clean"
+    },
+    {
+     "query": "alchemical symbols necklace",
+     "platform": "mercari",
+     "run_id": "NihVDSZXl29haLMr4",
+     "items": 0,
+     "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+     "note": "0/0 solimet-clean"
+    }
+   ]
+  },
+  {
+   "name": "ebay-shein-depop-etsy battery 2026-10-10",
+   "purpose": "close platform gaps: ebay wear-context set (8 queries), ceremony alternatives (eternity band, promise ring on etsy+ebay), depop probe (zodiac+everyday), shein zodiac; shein wear queries failed on all 7 attempts (actor returned 0 items, flaky/blocking) except the zodiac probe run which returned 100. etsy runs used sort most_relevant (sort=relevance is rejected by actor validation).",
+   "runs": [
+    {
+     "query": "everyday necklace",
+     "platform": "ebay",
+     "run_id": "hFf0YkynaWBbqDcTZ",
+     "items": 60,
+     "sha256": "22efd788e09ac471c47fe192d54ba3c66dd029c56ccaba8187727ce3a85dbc02",
+     "note": "43/60 solimet-clean"
+    },
+    {
+     "query": "stackable bangle",
+     "platform": "ebay",
+     "run_id": "1zQhYMhAmwOawX2Sy",
+     "items": 60,
+     "sha256": "f10f3f57b0263bcb7cca30f165477c9927bd2c513bfabfbaa3f220354b5764b2",
+     "note": "33/60 solimet-clean"
+    },
+    {
+     "query": "wedding band",
+     "platform": "ebay",
+     "run_id": "68CW876mMAutGkCK0",
+     "items": 60,
+     "sha256": "85823cdcba27b61db26f28f3e3bd5fadf0de66a50653a1cf33812dcbdf65c6c3",
+     "note": "23/60 solimet-clean"
+    },
+    {
+     "query": "anniversary band",
+     "platform": "ebay",
+     "run_id": "oZIFnh3Dh2LPwBiWe",
+     "items": 60,
+     "sha256": "dfd18ee298866e850090193fa20901122bb467a91d3cce2f2d646d6fb1f4a7b8",
+     "note": "12/60 solimet-clean"
+    },
+    {
+     "query": "eternity band",
+     "platform": "etsy",
+     "run_id": "2EbDJV2Fe1g6G7Jmc",
+     "items": 100,
+     "sha256": "575536a514f84e2b78184696a01fa2a5317ab3983ad35cce9da1c87e0b1f3e1c",
+     "note": "3/100 solimet-clean"
+    },
+    {
+     "query": "eternity band",
+     "platform": "ebay",
+     "run_id": "sT8m6hOJLdGTWByOc",
+     "items": 60,
+     "sha256": "4cac1aed1babebb5ebe7472a9ef9f07eaa5e6e55b280316011f9292a7210a3bf",
+     "note": "0/60 solimet-clean"
+    },
+    {
+     "query": "promise ring",
+     "platform": "etsy",
+     "run_id": "0Vzjuc28jXYz5ZA81",
+     "items": 100,
+     "sha256": "9bf987f3e9a196e4786832f9d4818f77c90381bde822393f483532cf1bc03d81",
+     "note": "26/100 solimet-clean"
+    },
+    {
+     "query": "promise ring",
+     "platform": "ebay",
+     "run_id": "9oX1L7NJFNNctTqX0",
+     "items": 60,
+     "sha256": "2c304bee8cf3bda04c03c78f462db52425ba860063e3e2295f41fb00c4a96cef",
+     "note": "29/60 solimet-clean"
+    },
+    {
+     "query": "zodiac necklace",
+     "platform": "depop",
+     "run_id": "CnyoxDQsRXIi1RzjJ",
+     "items": 100,
+     "sha256": "747922a6dd9279bdeebb892ff06f37beacbcb62d15f194b32675058818fa3c5f",
+     "note": "86/100 solimet-clean"
+    },
+    {
+     "query": "alchemy necklace",
+     "platform": "ebay",
+     "run_id": "wMv4K5OfiFiPY36VP",
+     "items": 60,
+     "sha256": "76c78ffe50355afe92cad354a540ed45241506e6d8db1e737f64eb3d06f6e769",
+     "note": "53/60 solimet-clean"
+    },
+    {
+     "query": "everyday necklace",
+     "platform": "depop",
+     "run_id": "uVnc0PfW1qhvTakll",
+     "items": 100,
+     "sha256": "8f96b7def29a8f44c17ff22d2e2c05367bf33b12422e985128e79042e84c0727",
+     "note": "84/100 solimet-clean"
+    },
+    {
+     "query": "alchemical symbols necklace",
+     "platform": "ebay",
+     "run_id": "vf0a0tyH5PxGhktl9",
+     "items": 76,
+     "sha256": "934c64baed98d1823cdbef3dae3ed59be8159bb07d178a2a35ff3e5367ab911e",
+     "note": "71/76 solimet-clean"
+    },
+    {
+     "query": "zodiac necklace",
+     "platform": "shein",
+     "run_id": "kjW7CTr9FAyOV3IDu",
+     "items": 100,
+     "sha256": "c3a1306b55dfe3e4b98b069b55f39f8ed703452d990a81480374ef7ffe7a7d57",
+     "note": "76/100 solimet-clean; probe-format input, actor ignores maxItems"
+    },
+    {
+     "query": "everyday necklace",
+     "platform": "shein",
+     "run_id": null,
+     "items": 0,
+     "sha256": null,
+     "note": "actor returned 0 items on both attempts (7 runs total, all empty except zodiac probe). non-evidence."
+    },
+    {
+     "query": "stackable bangle",
+     "platform": "shein",
+     "run_id": null,
+     "items": 0,
+     "sha256": null,
+     "note": "actor returned 0 items on both attempts (7 runs total, all empty except zodiac probe). non-evidence."
+    },
+    {
+     "query": "wedding band",
+     "platform": "shein",
+     "run_id": null,
+     "items": 0,
+     "sha256": null,
+     "note": "actor returned 0 items on both attempts (7 runs total, all empty except zodiac probe). non-evidence."
+    }
+   ]
+  },
+  {
+   "name": "risk-register battery 2026-10-11",
+   "purpose": "measure the prospective phrase risks flagged by the 2026-10-10 cortex adversarial cross-check (tower/fool/hermit/temperance in souvenir, pun-engraving, marine, and fan registers) with real etsy+ebay captures, converting hypothetical risk into measured misfire rates; follow-up to cortex-crosscheck-report-2026-10-10.",
+   "runs": [
+    {
+     "query": "tower charm",
+     "platform": "etsy",
+     "run_id": "k4q7Y4EXC70qYLp7A",
+     "items": 64,
+     "sha256": "51c5489ab433deabf20d840d57208c5322017c2da86f6b293f8c6de104315908"
+    },
+    {
+     "query": "hermit crab charm",
+     "platform": "etsy",
+     "run_id": "TBaG9H23iuh5Kik7J",
+     "items": 64,
+     "sha256": null
+    },
+    {
+     "query": "nobody's fool",
+     "platform": "etsy",
+     "run_id": "HgGBiMDUdbIydJsof",
+     "items": 64,
+     "sha256": null
+    },
+    {
+     "query": "no judgement bracelet",
+     "platform": "etsy",
+     "run_id": "nzm3Rwbri7Y9KfolP",
+     "items": 64,
+     "sha256": null
+    },
+    {
+     "query": "temperance",
+     "platform": "etsy",
+     "run_id": "UvsV8STIQUaoXxxec",
+     "items": 64,
+     "sha256": "9a7901130cd8b232c35187135085d4302f7de8291ec283b9a484212ba71e1926"
+    },
+    {
+     "query": "tower charm",
+     "platform": "ebay",
+     "run_id": "KRafNRKH8bOdLWZsK",
+     "items": 100,
+     "sha256": "4eb3244eb109c3d2e2c95cb143e982812fec43993875edcc60c9619be894451a"
+    }
+   ]
+  },
+  {
+   "name": "poshmark dataset recovery 2026-10-12",
+   "purpose": "recover the poshmark-mercari capture 2026-10-10 raws that were documented but never committed; re-downloaded from apify datasets by run id (piotrv1001/poshmark-listings-scraper), all SUCCEEDED, 100 items each",
+   "verification": "run-id identity + item counts + clean-count calibration within recorded inline variance; original per-run sha256 form not reproducible from re-fetch",
+   "recovered_files_sha256_12": {
+    "poshmark-celestial.json": "63c887523260",
+    "poshmark-tarot.json": "27f444e8e143",
+    "poshmark-zodiac.json": "2d5d2220066e",
+    "poshmark-alchemical-symbols-necklace.json": "c90fe8c65cbc",
+    "poshmark-alchemy-necklace.json": "8353b35edfad",
+    "poshmark-anniversary-band.json": "69ecc2aaef6e",
+    "poshmark-everyday-necklace.json": "f2a08d62c02a",
+    "poshmark-stackable-bangle.json": "bb120ee2f7ed",
+    "poshmark-wedding-band.json": "f5443053ce8e"
+   }
   }
+ ],
+ "method_notes": "ebay style assignment is deterministic title matching (a listing can match several styles). etsy rows carry their search query. solimet_title_check is a deterministic offline filter flagging stone/plastic terms in titles; false negatives possible (listing photos may show stones). apify free-plan dataset retention is 7 days; these files are the durable snapshot. the skonvirke and scandinavian-modern queries (2026-10-08 follow-up), and the balance pass over the remaining ten styles, are kept as raw listings under style_query organic_modern and are not folded into phrase-frequencies.jsonl, to avoid double-counting that style's bucket.",
+ "files": {
+  "ebay-listings.jsonl": {
+   "rows": 852,
+   "sha256": "63b27199aee0cb7f1e81fcdf15e97380a786a2600da96ac2d0859dbc5978c6e7"
+  },
+  "etsy-listings.jsonl": {
+   "rows": 1500,
+   "sha256": "fcdbdc477dec0feea77a4deea6e8672760265ade3efe2f5815a2ae5c57d019d3"
+  },
+  "phrase-frequencies.jsonl": {
+   "rows": 1226,
+   "sha256": "b12b736a928759d37a32ed7ed890a60a7b2524101d23bfca9fc1ae80b303dfd1"
+  },
+  "co-occurrence-probes/probes.jsonl": {
+   "rows": 300,
+   "sha256": "1d8abc97d3a1a9ed5e08ae8688c1c24f697091417ba80ab12ef61c53f3eef761"
+  }
+ }
 }

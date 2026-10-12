@@ -36,6 +36,13 @@ merge, per the standing gate.
   entered scandinavian-modernist's and antique-cluster's expected
   results (retro dropped from scandinavian-modernist's); pisces and
   scorpio rose above leo for celestial-dreamer.
+- CORPUS CONVENTION (2026-10-12 consolidation): every processed segment
+  capture is now *.solimet.jsonl under segment-solimet-v3 (v2 media words +
+  moissanite/spinel stone words, added after the wear-battery regate
+  exposed 122 moissanite-set bands passing as clean). the v1 .jsonl
+  processed files (poshmark + the whole wear battery) were re-gated and
+  superseded. segment corpus: 4179 -> 2902 clean (the delta is mostly
+  moissanite/diamond-set ceremony bands the old files let through).
 - check-corpus-profiles.mjs validates every profile (schema, fields,
   weight bounds, seed terms against the governed vocabulary, rationale
   evidence citation, filename = profile_id) and verifies the pin is

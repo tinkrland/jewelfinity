@@ -126,7 +126,7 @@
     },
     {
       "profile_id": "profile-005-zodiac-buyer",
-      "profile_version": "0.1.0",
+      "profile_version": "0.1.1",
       "status": "draft",
       "file": "profile-005-zodiac-buyer.json",
       "expected_topk": [
