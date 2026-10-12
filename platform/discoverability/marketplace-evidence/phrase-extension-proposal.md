@@ -96,4 +96,15 @@ what the re-measurement changes:
 - the organic_modern skonvirke notes amendment from this file HAS
   landed (verified in style-vocabulary.jsonl) - off the queue.
 
-nothing here is merged; all candidates remain for owner yes/no reads.
+STATUS CORRECTION (2026-10-12, later same day): the closing line above was
+wrong. checking the style-vocabulary records against this queue shows every
+"yes" candidate was ALREADY MERGED in the 2026-10-09 authorized round (all
+notes fields carry the authorization trail): filigree (art_deco v0.3.0),
+victorian mourning (victorian v0.4.0), bow (retro v0.4.0), mcm
+(mid_century_modernist v0.4.0), and crescent moon / moon star / sun moon
+(celestial v0.4.0). the 10-12 re-measurement is therefore a POST-MERGE
+corroboration, not an open queue: all five merged phrases hold or grow on
+the full corpus, which strengthens those records rather than proposing new
+work. the two "no-add" reads (stainless steel, gothic biker) were never
+merged and are now CLOSED as measured no-adds. this queue is exhausted;
+no candidates remain open.
