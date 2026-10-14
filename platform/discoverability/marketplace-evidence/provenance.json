@@ -620,6 +620,31 @@
     "poshmark-stackable-bangle.json": "bb120ee2f7ed",
     "poshmark-wedding-band.json": "f5443053ce8e"
    }
+  },
+  {
+   "name": "creator-commerce register probe 2026-10-14",
+   "purpose": "owner request: look at ltk and similar creator-commerce platforms as evidence sources; assess coverage and capture what is public",
+   "findings": "ltk blocked (shopltk.com web renders shells only, product data app-gated; the only apify actor exposes no input contract and returns 0 items). shopmy public: consumer search shopmy.us/shop?query=... captured live",
+   "method": "browserbase live browser, anonymous, first-load product cards only (no scroll pagination); 7 queries x 12 cards = 84; parsed to shopmy-creator-search.solimet.jsonl under segment-solimet v3",
+   "queries": [
+    "jewelry",
+    "tarot necklace",
+    "zodiac necklace",
+    "celestial jewelry",
+    "gold necklace",
+    "everyday necklace",
+    "stackable rings"
+   ],
+   "tool": "browserbase (not apify; no run ids)",
+   "raw_files_sha256": {
+    "shopmy-celestial-jewelry.raw.txt": "014d95fc130e2171dc84459b542735e08d7b93956d03bcedea4867d304589f94",
+    "shopmy-everyday-necklace.raw.txt": "94b87fdef10d1448a87b93163cfa6e5b85ff2eb0a6f5c903657d4362e61f3db4",
+    "shopmy-gold-necklace.raw.txt": "2fa5feeb3ebcb72a67c317485c24ac95315d1010ccf125586d1c1f410ff9919e",
+    "shopmy-jewelry.raw.txt": "08fb05845087c1f329429299738e71ef5ab6cb031f593c7eef0f515a2190511f",
+    "shopmy-stackable-rings.raw.txt": "155125ff4274d82ab77f9b3768054c636938f9ffa20c044437d5cc469d0704d6",
+    "shopmy-tarot-necklace.raw.txt": "437d8194f6bcdb8ee39a637e0ce33a9b158f4cae8b85ec2cc5e03f7dc13b6006",
+    "shopmy-zodiac-necklace.raw.txt": "bcbb99a4703da63dc2176bc15325b89fb8cc954096dbf43c38c993e3986daad9"
+   }
   }
  ],
  "method_notes": "ebay style assignment is deterministic title matching (a listing can match several styles). etsy rows carry their search query. solimet_title_check is a deterministic offline filter flagging stone/plastic terms in titles; false negatives possible (listing photos may show stones). apify free-plan dataset retention is 7 days; these files are the durable snapshot. the skonvirke and scandinavian-modern queries (2026-10-08 follow-up), and the balance pass over the remaining ten styles, are kept as raw listings under style_query organic_modern and are not folded into phrase-frequencies.jsonl, to avoid double-counting that style's bucket.",

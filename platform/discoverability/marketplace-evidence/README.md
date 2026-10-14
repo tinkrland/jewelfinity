@@ -36,3 +36,16 @@ honest findings from this snapshot, kept here so they are not relearned:
 datasets on apify expire after 7 days on the free plan; these files are the
 durable record. input hashes per file are in provenance.json so any later
 rebuild can be checked against them.
+
+## registers
+
+two titling voices are captured as evidence batteries:
+
+- the seller register (ebay, etsy, poshmark, mercari, shein, depop):
+  sellers titling their own listings
+- the creator-commerce register ([creator-commerce/](creator-commerce/),
+  added 2026-10-14): products as curated by creators (shopmy captured;
+  ltk assessed and blocked for now)
+
+this evidence layer is the visual data curation and style analysis
+research portion of the repo (named 2026-10-14).
