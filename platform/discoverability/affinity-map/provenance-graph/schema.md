@@ -74,4 +74,10 @@ nothing.
   (:Term)-[:CO_CURATED_WITH]->(:Term) - is BUILT (build-co-curation.py)
   but empty at search-card depth: 0 co-curated term pairs from 247
   curator-attributed products. gate to non-empty: storefront-level
-  capture of curators' full product lists.
+  capture of curators' full product lists. a THIRD family exists now:
+  merchandising-act co-membership (build-co-merchandising.py,
+  brand-merchandising-structure/) - 216 cross-collection products over
+  23 themed collections, one brand-asserted cross-term bridge
+  (celestial x tarot, aweinspired, family level), the rest gated by
+  vocabulary coverage of the brand theme axes (goddess, snake, y2k,
+  pearl, charm, etc. - extension candidates, owner-authorized).

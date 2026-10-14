@@ -78,3 +78,43 @@ the gate to a non-empty family is storefront-level capture - a
 curator's FULL product list (shopmy curator storefronts, or ltk
 creator product pages behind the auth0 login) - not more search
 cards. when that capture exists, rerun the builder.
+
+## the merchandising-act family: brand collection co-membership (2026-10-14)
+
+owner challenge, correct: latent similarities do not need human
+endorsement to prop up. a brand's own merchandising structure is the
+act: placing a product in a themed collection asserts its style.
+captured the structure for the three brand catalogs (public shopify
+products.json endpoints; 23 themed collections, 1,374 products,
+manifest with urls + sha256s in
+marketplace-evidence/brand-merchandising-structure/).
+
+the structure is real and endorsement-free:
+- 216 cross-membership products across 23 collection pairs
+- biggest: caitlynminimalist celestial x golden-goddess (67 shared
+  products - the brand sells the same pieces as both celestial and
+  goddess-themed), golden-goddess x vintage (35), aweinspired
+  astrology x charms/amulets (43), medusa x snake (3)
+
+what term projection honestly yields:
+- brand titles do NOT carry the phrase vocabulary (40 of 1,374
+  term-bearing, zero multi-term) - title-keyword extraction cannot
+  read brand catalogs at all; merchandising structure is the right
+  instrument, which was the point
+- after a curated, declared collection->term map (visible in the
+  builder; unmapped axes are listed, not guessed), exactly ONE
+  cross-term assertion survives: aweinspired merchandises the
+  "Tarot Pendant" and "5-Card Spread Tarot Necklace" in BOTH its
+  astrology-celestial collections AND its tarot collection -
+  celestial x tarot, asserted by the brand itself. recorded at
+  family level (tarot cards are phraseless by policy; no card is
+  named in the titles); no cypher edge is emitted against a
+  non-existent family term
+- the real gate is vocabulary COVERAGE: the brands' theme axes -
+  goddess/mythic, medusa, serpent/snake, y2k, pearl, charm, butterfly,
+  initial, angel number, heart, evil eye - exist as merchandised
+  collections with real cross-memberships but have no solimet
+  vocabulary terms to project onto. these are extension candidates
+  awaiting explicit owner authorization (standing rule), and they
+  would make this family dense: e.g. 67-product goddess x celestial
+  overlap is a brand-asserted bridge the vocabulary cannot express
