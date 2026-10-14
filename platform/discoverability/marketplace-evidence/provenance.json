@@ -692,6 +692,36 @@
     "shopmy-wing-jewelry.raw.md": "b0b467bbe159bc856f0bd3e15b55d8146a6eedbdb9a6b54ceea1c30f0d00ac1c",
     "shopmy-zodiac-necklace.raw.md": "abb6448e91149ee889c801477ce19882e678748c2d494c13e95c82cf7e86e6c5"
    }
+  },
+  {
+   "name": "affinity corpus co-occurrence 2026-10-14 (phase-two seller-register edition)",
+   "purpose": "owner asked for the co-occurrence/latent-similarity layer and confirmed falkordb as backend; first systematic cross-term measure over the committed corpora",
+   "method": "derived, not scraped: deterministic build from the 20 committed .solimet.jsonl gated corpora (probes excluded); token-boundary phrase matching (same matcher as the sim harness); unordered pairs per clean title",
+   "results": "3050 titles scanned, 38 multi-term (1.2%), 93 pairs, 69 edges with count>=3; 83/93 pairs are zodiac menu-mode; genuine bridges: celestial+ceremony_commitment (9), witchy tarot cluster (gothic+tarot_hanged_man, celestial+gothic, art_deco+gothic)",
+   "gating": "inputs are already segment-solimet v3 gated",
+   "tool": "none (derived from committed corpora); input_hash pins the 20 corpora",
+   "input_files_sha256": {
+    "platform/discoverability/marketplace-evidence/creator-commerce/shopmy-creator-search-vol.solimet.jsonl": "bfa1715e7a83629da27a082f91ee3e3dec74c0f37f471d1e3027f89c8e6aeeac",
+    "platform/discoverability/marketplace-evidence/creator-commerce/shopmy-creator-search.solimet.jsonl": "8d0b6af8b07ea4ea4a7721dbbe6f91cc1447c642b29b6cfa59c635dc248f6518",
+    "platform/discoverability/marketplace-evidence/risk-registers/risk-registers.solimet.jsonl": "8b16f97f5798eaba25b9297860126b9c0ba4b931467fe310e5c35a930e909b49",
+    "platform/discoverability/marketplace-evidence/symbol-segment/ebay-tarot.solimet.jsonl": "0f7b45bc732963f9cf7ef9b8296fe9554dc4dee81b9e7e0e72b58f63d54077eb",
+    "platform/discoverability/marketplace-evidence/symbol-segment/ebay-zodiac.solimet.jsonl": "aef8403ea7e7ad4851136e390c704f7a0e5f672e5a19ed03dd683146c503385e",
+    "platform/discoverability/marketplace-evidence/symbol-segment/etsy-arcana.solimet.jsonl": "51551fee39d5ce2345ffa8fa69b2ea10d9b1c68c585777cb168496786136275d",
+    "platform/discoverability/marketplace-evidence/symbol-segment/etsy-celestial.solimet.jsonl": "520ee6028c65c1979666ccf5ead41162c12997e3d32db5ede68f45112e41819f",
+    "platform/discoverability/marketplace-evidence/symbol-segment/etsy-tarot.solimet.jsonl": "40b8658d18237c13fa21acec51936b4f4c368c629d8c19b2d8f432d511495243",
+    "platform/discoverability/marketplace-evidence/symbol-segment/etsy-whitegold.solimet.jsonl": "c56d8101f3e6e06139d47784dd822c4f9017b7b873aeeeabd036253f8f1990f3",
+    "platform/discoverability/marketplace-evidence/symbol-segment/etsy-zodiac.solimet.jsonl": "3ac482779d38e50dd4cc4fdb053f153af187df288d20cdfe2909776d1d979780",
+    "platform/discoverability/marketplace-evidence/symbol-segment/mercari-us-tarot.solimet.jsonl": "1206caa7dad144d209b606dd40fbebe442159e5ac4f94b486247f59243794ad7",
+    "platform/discoverability/marketplace-evidence/symbol-segment/mercari-us-zodiac.solimet.jsonl": "0f3f929ecea5b889be0163927846837f8e9f7cc5de987887538c6cc391a79f60",
+    "platform/discoverability/marketplace-evidence/symbol-segment/poshmark/poshmark-celestial.solimet.jsonl": "c33586c2a3ce6085e27a56cb57318ac6194d90bb28f9638c0f72ad03582cbcf9",
+    "platform/discoverability/marketplace-evidence/symbol-segment/poshmark/poshmark-tarot.solimet.jsonl": "acad056d24a92017420839c69eb632245cfa38ba48c46aecf3d8f977b191b249",
+    "platform/discoverability/marketplace-evidence/symbol-segment/poshmark/poshmark-zodiac.solimet.jsonl": "d48f231d7cfffb662f441deb4fc68f28eb0fb3cf75312543f7b270ddc75d2bcd",
+    "platform/discoverability/marketplace-evidence/symbol-segment/shein-tarot.solimet.jsonl": "3f73c9cf0bc9125130d4d1875b4acb598359c9ef1f7ab9dd24684ac657e9f231",
+    "platform/discoverability/marketplace-evidence/symbol-segment/shein-zodiac-necklace.solimet.jsonl": "9014a7edcbc45b76c7121b9a436bae8eb018e7a4c3221f1de80c06ed5ebb6e5d",
+    "platform/discoverability/marketplace-evidence/symbol-segment/shopify/aweinspired.solimet.jsonl": "6fad9ba7eb80544c0c188164cb2a1a8fdab9d27c790f4a30af40233470124cff",
+    "platform/discoverability/marketplace-evidence/symbol-segment/shopify/caitlynminimalist.solimet.jsonl": "6ab1c73891eacaea4e59755dba60a0f67a8257ac7c27ff5514efcf3db3ed8d3d",
+    "platform/discoverability/marketplace-evidence/symbol-segment/shopify/evryjewels.solimet.jsonl": "d8cdd4d2e5d13e0a3c30c407d4c024c005482f3235d32e52852348f6d459d5c3"
+   }
   }
  ],
  "method_notes": "ebay style assignment is deterministic title matching (a listing can match several styles). etsy rows carry their search query. solimet_title_check is a deterministic offline filter flagging stone/plastic terms in titles; false negatives possible (listing photos may show stones). apify free-plan dataset retention is 7 days; these files are the durable snapshot. the skonvirke and scandinavian-modern queries (2026-10-08 follow-up), and the balance pass over the remaining ten styles, are kept as raw listings under style_query organic_modern and are not folded into phrase-frequencies.jsonl, to avoid double-counting that style's bucket.",

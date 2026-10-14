@@ -62,6 +62,11 @@ nothing.
   docker run -p 6379:6379 falkordb/falkordb, then GRAPH.QUERY.
 - SUPPORTS links are curated in the loader's map, not inferred from
   query text. wrong or missing links are a curation bug, fixable there.
-- when the phase-two co-occurrence graph arrives, it loads into the
-  same instance as a separate relationship family; the why-layer does
-  not depend on it.
+- the phase-two seller-register co-occurrence family ARRIVED
+  2026-10-14: [../corpus-co-occurrence/](../corpus-co-occurrence/),
+  (:Term)-[:CO_OCCURS_WITH]->(:Term), 69 edges from 3,050 clean titles,
+  applied after load.cypher via load-cooccurrence.cypher. menu-mode
+  (zodiac sign pairs) dominates and must not be read as buyer affinity;
+  the honest recommend() surface is query 2 in co-occurrence-queries.
+  behavioral co-occurrence (co-saves, co-follows) remains future work
+  and will load as a further family in the same instance.
