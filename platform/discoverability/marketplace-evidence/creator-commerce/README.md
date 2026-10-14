@@ -78,3 +78,20 @@ parsed, solimet-v3-gated `shopmy-creator-search.solimet.jsonl`.
   clean counts in the .solimet.jsonl
 - resale is its own sub-register (the realreal's pre-owned cards read
   like appraisals: "14k emerald & diamond station necklace")
+
+## volume battery (2026-10-14, firecrawl)
+
+owner provided a firecrawl key; `shopmy-search-2026-10-14-vol/` scales the
+probe to 36 queries x 12 cards = 396 cards, 383 unique products, gated to
+`shopmy-creator-search-vol.solimet.jsonl` (279 clean, 70.5%).
+
+- the public search grid caps at ~12 cards per query with no scroll
+  pagination (verified in a live browser), so volume comes from query
+  breadth, not depth
+- shopmy search is exact-phrase substring: "arrow necklace", "star
+  necklace" and "lotus jewelry" return zero curated products - real
+  vocabulary-coverage gaps in this register (marketplaces carry
+  thousands for the same phrases)
+- capture method is firecrawl v2 scrape of the same public search
+  pages the depth probe used (markdown, waitFor 6000, anonymous);
+  raw markdown per query carries the product ids and urls
