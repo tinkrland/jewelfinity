@@ -69,4 +69,9 @@ nothing.
   (zodiac sign pairs) dominates and must not be read as buyer affinity;
   the honest recommend() surface is query 2 in co-occurrence-queries.
   behavioral co-occurrence (co-saves, co-follows) remains future work
-  and will load as a further family in the same instance.
+  and will load as a further family in the same instance. the first
+  taste-act family - shopmy curator co-endorsement,
+  (:Term)-[:CO_CURATED_WITH]->(:Term) - is BUILT (build-co-curation.py)
+  but empty at search-card depth: 0 co-curated term pairs from 247
+  curator-attributed products. gate to non-empty: storefront-level
+  capture of curators' full product lists.

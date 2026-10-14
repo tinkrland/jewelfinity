@@ -50,3 +50,31 @@ any corpus change.
   separate family in the same instance and these edges stay labeled
   by their register
 - edges are stored a->b with a<b; query them undirected
+
+## the taste-act family: curator co-endorsement (built 2026-10-14, empty)
+
+per owner "build it when this lands": the classic behavioral family
+(co-saves, co-follows) has no signal source yet. what HAS landed is
+shopmy curator endorsement - named curators visible on every card of
+the 2026-10-14 volume battery. build-co-curation.py parses the 36 raw
+captures (segment-based: a card's avatars, count and title belong to
+one segment; firecrawl strips some card images to base64 notes, so
+image-link attribution alone loses ~113 cards), matches titles to
+the phrase vocabularies, and projects curator co-endorsement onto
+term pairs.
+
+result, honestly EMPTY at current capture depth:
+- 280 products attributed, 247 with named curators (786 avatar names)
+- only 20 products carry any vocabulary term (7%) - the curator
+  register's brand-catalog titles rarely contain the phrase vocabulary
+- 35 distinct curators endorse those 20 products, and NO curator
+  endorses two different term-bearing products -> 0 co-curated pairs,
+  0 edges (load-cocuration.cypher is an empty skeleton)
+
+the empty result is the finding, for two compounding reasons: cards
+display only ~6 avatar names (curator sets are partial, shared counts
+would be lower bounds) and search cards sample one query at a time.
+the gate to a non-empty family is storefront-level capture - a
+curator's FULL product list (shopmy curator storefronts, or ltk
+creator product pages behind the auth0 login) - not more search
+cards. when that capture exists, rerun the builder.
