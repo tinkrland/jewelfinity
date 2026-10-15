@@ -4,7 +4,11 @@ owner direction 2026-10-09: falkordb under the hood holds "how the
 thinking even is" - the reason for every affinity, the provenance of
 what makes the engine think one thing relates to another. the engine
 is a deep-understanding engine first: affinity for understanding,
-recommendations as a surface on top, never a marketing push.
+recommendations as a surface on top, never a marketing push. the
+  consumer surface EXISTS now: ../suggest/suggest.mjs (2026-10-15) -
+  query-time fused ranking over this graph's families, qloo-style,
+  with a provenance trail on every row; suggest-queries.cypher is the
+  falkordb port.
 
 falkordb here is the WHY layer. the committed artifacts remain primary
 truth (vocabularies, affinity-table.json, marketplace evidence,

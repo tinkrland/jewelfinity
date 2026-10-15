@@ -893,6 +893,21 @@
      "sha256": "4d402b927084aa20a4c6cd9efa0fd9d0e0e8f97af6615c746106893177ce3e85"
     }
    }
+  },
+  {
+   "name": "suggest() consumer surface 2026-10-15 (qloo-style, ours transparent)",
+   "purpose": "owner: do it - build the query-time fused recommendation surface per the qloo reconnaissance (recon only, no production use)",
+   "method": "deterministic reference implementation suggest.mjs: composed signals (seeds or profile seeded_affinities), additive per-family evidence (sum capped 1), declared weights prior .55 / seller .20 / merch .15 / curator .025 / popularity .075, popularity as sqrt-damped prior from prevalence.jsonl (20 gated corpora, input_hash pinned), menu-filter enforced (no sign-to-sign seller edges)",
+   "results": "validated: celestial -> silver + tarot star/moon/sun + ceremony_commitment (moon-bridal bridge); sign_scorpio -> aries/iron/water via MARS facets with menu filter holding; profile-003 -> the moon at rank 2 (silver's top prior neighbor). every row carries its provenance trail",
+   "gating": "reads committed artifacts only; no new capture",
+   "tool": "none (derived); node mjs reference implementation + falkordb port sketch",
+   "input_files_sha256": {
+    "affinity-table.json": "committed",
+    "co-occurrence.jsonl": "committed",
+    "collection-overlaps.jsonl": "committed",
+    "co-curation.jsonl": "committed",
+    "prevalence.jsonl": "derived from the 20 gated corpora, input_hash pinned inside"
+   }
   }
  ],
  "method_notes": "ebay style assignment is deterministic title matching (a listing can match several styles). etsy rows carry their search query. solimet_title_check is a deterministic offline filter flagging stone/plastic terms in titles; false negatives possible (listing photos may show stones). apify free-plan dataset retention is 7 days; these files are the durable snapshot. the skonvirke and scandinavian-modern queries (2026-10-08 follow-up), and the balance pass over the remaining ten styles, are kept as raw listings under style_query organic_modern and are not folded into phrase-frequencies.jsonl, to avoid double-counting that style's bucket.",
